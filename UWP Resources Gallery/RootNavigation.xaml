@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="UWPResourcesGallery.RootNavigation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <muxc:NavigationView ItemInvoked="NavigationView_ItemInvoked">
+        <muxc:NavigationView.MenuItems>
+            <muxc:NavigationViewItem x:Name="_StartPage" Content="Start" IsSelected="True">
+                <muxc:NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF167;"/>
+                </muxc:NavigationViewItem.Icon>
+            </muxc:NavigationViewItem>
+            <muxc:NavigationViewItem Icon="List" Content="Icon list" x:Name="_IconsListPage"/>
+        </muxc:NavigationView.MenuItems>
+        <Frame x:Name="RootFrame" />
+    </muxc:NavigationView>
+</Page>

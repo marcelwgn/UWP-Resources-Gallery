@@ -1,0 +1,5440 @@
+﻿{
+  "icons": [
+    {
+      "code": "E700",
+      "name": "GlobalNavigationButton"
+    },
+    {
+      "code": "E701",
+      "name": "Wifi"
+    },
+    {
+      "code": "E702",
+      "name": "Bluetooth"
+    },
+    {
+      "code": "E703",
+      "name": "Connect"
+    },
+    {
+      "code": "E704",
+      "name": "InternetSharing"
+    },
+    {
+      "code": "E705",
+      "name": "VPN"
+    },
+    {
+      "code": "E706",
+      "name": "Brightness"
+    },
+    {
+      "code": "E707",
+      "name": "MapPin"
+    },
+    {
+      "code": "E708",
+      "name": "QuietHours"
+    },
+    {
+      "code": "E709",
+      "name": "Airplane"
+    },
+    {
+      "code": "E70A",
+      "name": "Tablet"
+    },
+    {
+      "code": "E70B",
+      "name": "QuickNote"
+    },
+    {
+      "code": "E70C",
+      "name": "RememberedDevice"
+    },
+    {
+      "code": "E70D",
+      "name": "ChevronDown"
+    },
+    {
+      "code": "E70E",
+      "name": "ChevronUp"
+    },
+    {
+      "code": "E70F",
+      "name": "Edit"
+    },
+    {
+      "code": "E710",
+      "name": "Add"
+    },
+    {
+      "code": "E711",
+      "name": "Cancel"
+    },
+    {
+      "code": "E712",
+      "name": "More"
+    },
+    {
+      "code": "E713",
+      "name": "Settings"
+    },
+    {
+      "code": "E714",
+      "name": "Video"
+    },
+    {
+      "code": "E715",
+      "name": "Mail"
+    },
+    {
+      "code": "E716",
+      "name": "People"
+    },
+    {
+      "code": "E717",
+      "name": "Phone"
+    },
+    {
+      "code": "E718",
+      "name": "Pin"
+    },
+    {
+      "code": "E719",
+      "name": "Shop"
+    },
+    {
+      "code": "E71A",
+      "name": "Stop"
+    },
+    {
+      "code": "E71B",
+      "name": "Link"
+    },
+    {
+      "code": "E71C",
+      "name": "Filter"
+    },
+    {
+      "code": "E71D",
+      "name": "AllApps"
+    },
+    {
+      "code": "E71E",
+      "name": "Zoom"
+    },
+    {
+      "code": "E71F",
+      "name": "ZoomOut"
+    },
+    {
+      "code": "E720",
+      "name": "Microphone"
+    },
+    {
+      "code": "E721",
+      "name": "Search"
+    },
+    {
+      "code": "E722",
+      "name": "Camera"
+    },
+    {
+      "code": "E723",
+      "name": "Attach"
+    },
+    {
+      "code": "E724",
+      "name": "Send"
+    },
+    {
+      "code": "E725",
+      "name": "SendFill"
+    },
+    {
+      "code": "E726",
+      "name": "WalkSolid"
+    },
+    {
+      "code": "E727",
+      "name": "InPrivate"
+    },
+    {
+      "code": "E728",
+      "name": "FavoriteList"
+    },
+    {
+      "code": "E729",
+      "name": "PageSolid"
+    },
+    {
+      "code": "E72A",
+      "name": "Forward"
+    },
+    {
+      "code": "E72B",
+      "name": "Back"
+    },
+    {
+      "code": "E72C",
+      "name": "Refresh"
+    },
+    {
+      "code": "E72D",
+      "name": "Share"
+    },
+    {
+      "code": "E72E",
+      "name": "Lock"
+    },
+    {
+      "code": "E730",
+      "name": "ReportHacked"
+    },
+    {
+      "code": "E731",
+      "name": "EMI"
+    },
+    {
+      "code": "E734",
+      "name": "FavoriteStar"
+    },
+    {
+      "code": "E735",
+      "name": "FavoriteStarFill"
+    },
+    {
+      "code": "E736",
+      "name": "ReadingMode"
+    },
+    {
+      "code": "E737",
+      "name": "Favicon"
+    },
+    {
+      "code": "E738",
+      "name": "Remove"
+    },
+    {
+      "code": "E739",
+      "name": "Checkbox"
+    },
+    {
+      "code": "E73A",
+      "name": "CheckboxComposite"
+    },
+    {
+      "code": "E73B",
+      "name": "CheckboxFill"
+    },
+    {
+      "code": "E73C",
+      "name": "CheckboxIndeterminate"
+    },
+    {
+      "code": "E73D",
+      "name": "CheckboxCompositeReversed"
+    },
+    {
+      "code": "E73E",
+      "name": "CheckMark"
+    },
+    {
+      "code": "E73F",
+      "name": "BackToWindow"
+    },
+    {
+      "code": "E740",
+      "name": "FullScreen"
+    },
+    {
+      "code": "E741",
+      "name": "ResizeTouchLarger"
+    },
+    {
+      "code": "E742",
+      "name": "ResizeTouchSmaller"
+    },
+    {
+      "code": "E743",
+      "name": "ResizeMouseSmall"
+    },
+    {
+      "code": "E744",
+      "name": "ResizeMouseMedium"
+    },
+    {
+      "code": "E745",
+      "name": "ResizeMouseWide"
+    },
+    {
+      "code": "E746",
+      "name": "ResizeMouseTall"
+    },
+    {
+      "code": "E747",
+      "name": "ResizeMouseLarge"
+    },
+    {
+      "code": "E748",
+      "name": "SwitchUser"
+    },
+    {
+      "code": "E749",
+      "name": "Print"
+    },
+    {
+      "code": "E74A",
+      "name": "Up"
+    },
+    {
+      "code": "E74B",
+      "name": "Down"
+    },
+    {
+      "code": "E74C",
+      "name": "OEM"
+    },
+    {
+      "code": "E74D",
+      "name": "Delete"
+    },
+    {
+      "code": "E74E",
+      "name": "Save"
+    },
+    {
+      "code": "E74F",
+      "name": "Mute"
+    },
+    {
+      "code": "E750",
+      "name": "BackSpaceQWERTY"
+    },
+    {
+      "code": "E751",
+      "name": "ReturnKey"
+    },
+    {
+      "code": "E752",
+      "name": "UpArrowShiftKey"
+    },
+    {
+      "code": "E753",
+      "name": "Cloud"
+    },
+    {
+      "code": "E754",
+      "name": "Flashlight"
+    },
+    {
+      "code": "E755",
+      "name": "RotationLock"
+    },
+    {
+      "code": "E756",
+      "name": "CommandPrompt"
+    },
+    {
+      "code": "E759",
+      "name": "SIPMove"
+    },
+    {
+      "code": "E75A",
+      "name": "SIPUndock"
+    },
+    {
+      "code": "E75B",
+      "name": "SIPRedock"
+    },
+    {
+      "code": "E75C",
+      "name": "EraseTool"
+    },
+    {
+      "code": "E75D",
+      "name": "UnderscoreSpace"
+    },
+    {
+      "code": "E75E",
+      "name": "GripperTool"
+    },
+    {
+      "code": "E75F",
+      "name": "Dialpad"
+    },
+    {
+      "code": "E760",
+      "name": "PageLeft"
+    },
+    {
+      "code": "E761",
+      "name": "PageRight"
+    },
+    {
+      "code": "E762",
+      "name": "MultiSelect"
+    },
+    {
+      "code": "E763",
+      "name": "KeyboardLeftHanded"
+    },
+    {
+      "code": "E764",
+      "name": "KeyboardRightHanded"
+    },
+    {
+      "code": "E765",
+      "name": "KeyboardClassic"
+    },
+    {
+      "code": "E766",
+      "name": "KeyboardSplit"
+    },
+    {
+      "code": "E767",
+      "name": "Volume"
+    },
+    {
+      "code": "E768",
+      "name": "Play"
+    },
+    {
+      "code": "E769",
+      "name": "Pause"
+    },
+    {
+      "code": "E76B",
+      "name": "ChevronLeft"
+    },
+    {
+      "code": "E76C",
+      "name": "ChevronRight"
+    },
+    {
+      "code": "E76D",
+      "name": "InkingTool"
+    },
+    {
+      "code": "E76E",
+      "name": "Emoji2"
+    },
+    {
+      "code": "E76F",
+      "name": "GripperBarHorizontal"
+    },
+    {
+      "code": "E770",
+      "name": "System"
+    },
+    {
+      "code": "E771",
+      "name": "Personalize"
+    },
+    {
+      "code": "E772",
+      "name": "Devices"
+    },
+    {
+      "code": "E773",
+      "name": "SearchAndApps"
+    },
+    {
+      "code": "E774",
+      "name": "Globe"
+    },
+    {
+      "code": "E775",
+      "name": "TimeLanguage"
+    },
+    {
+      "code": "E776",
+      "name": "EaseOfAccess"
+    },
+    {
+      "code": "E777",
+      "name": "UpdateRestore"
+    },
+    {
+      "code": "E778",
+      "name": "HangUp"
+    },
+    {
+      "code": "E779",
+      "name": "ContactInfo"
+    },
+    {
+      "code": "E77A",
+      "name": "Unpin"
+    },
+    {
+      "code": "E77B",
+      "name": "Contact"
+    },
+    {
+      "code": "E77C",
+      "name": "Memo"
+    },
+    {
+      "code": "E77E",
+      "name": "IncomingCall"
+    },
+    {
+      "code": "E77F",
+      "name": "Paste"
+    },
+    {
+      "code": "E780",
+      "name": "PhoneBook"
+    },
+    {
+      "code": "E781",
+      "name": "LEDLight"
+    },
+    {
+      "code": "E783",
+      "name": "Error"
+    },
+    {
+      "code": "E784",
+      "name": "GripperBarVertical"
+    },
+    {
+      "code": "E785",
+      "name": "Unlock"
+    },
+    {
+      "code": "E786",
+      "name": "Slideshow"
+    },
+    {
+      "code": "E787",
+      "name": "Calendar"
+    },
+    {
+      "code": "E788",
+      "name": "GripperResize"
+    },
+    {
+      "code": "E789",
+      "name": "Megaphone"
+    },
+    {
+      "code": "E78A",
+      "name": "Trim"
+    },
+    {
+      "code": "E78B",
+      "name": "NewWindow"
+    },
+    {
+      "code": "E78C",
+      "name": "SaveLocal"
+    },
+    {
+      "code": "E790",
+      "name": "Color"
+    },
+    {
+      "code": "E791",
+      "name": "DataSense"
+    },
+    {
+      "code": "E792",
+      "name": "SaveAs"
+    },
+    {
+      "code": "E793",
+      "name": "Light"
+    },
+    {
+      "code": "E799",
+      "name": "AspectRatio"
+    },
+    {
+      "code": "E7A5",
+      "name": "DataSenseBar"
+    },
+    {
+      "code": "E7A6",
+      "name": "Redo"
+    },
+    {
+      "code": "E7A7",
+      "name": "Undo"
+    },
+    {
+      "code": "E7A8",
+      "name": "Crop"
+    },
+    {
+      "code": "E7AC",
+      "name": "OpenWith"
+    },
+    {
+      "code": "E7AD",
+      "name": "Rotate"
+    },
+    {
+      "code": "E7B3",
+      "name": "RedEye"
+    },
+    {
+      "code": "E7B5",
+      "name": "SetlockScreen"
+    },
+    {
+      "code": "E7B7",
+      "name": "MapPin2"
+    },
+    {
+      "code": "E7B8",
+      "name": "Package"
+    },
+    {
+      "code": "E7BA",
+      "name": "Warning"
+    },
+    {
+      "code": "E7BC",
+      "name": "ReadingList"
+    },
+    {
+      "code": "E7BE",
+      "name": "Education"
+    },
+    {
+      "code": "E7BF",
+      "name": "ShoppingCart"
+    },
+    {
+      "code": "E7C0",
+      "name": "Train"
+    },
+    {
+      "code": "E7C1",
+      "name": "Flag"
+    },
+    {
+      "code": "E7C3",
+      "name": "Page"
+    },
+    {
+      "code": "E7C4",
+      "name": "TaskView"
+    },
+    {
+      "code": "E7C5",
+      "name": "BrowsePhotos"
+    },
+    {
+      "code": "E7C6",
+      "name": "HalfStarLeft"
+    },
+    {
+      "code": "E7C7",
+      "name": "HalfStarRight"
+    },
+    {
+      "code": "E7C8",
+      "name": "Record"
+    },
+    {
+      "code": "E7C9",
+      "name": "TouchPointer"
+    },
+    {
+      "code": "E7DE",
+      "name": "LangJPN"
+    },
+    {
+      "code": "E7E3",
+      "name": "Ferry"
+    },
+    {
+      "code": "E7E6",
+      "name": "Highlight"
+    },
+    {
+      "code": "E7E7",
+      "name": "ActionCenterNotification"
+    },
+    {
+      "code": "E7E8",
+      "name": "PowerButton"
+    },
+    {
+      "code": "E7EA",
+      "name": "ResizeTouchNarrower"
+    },
+    {
+      "code": "E7EB",
+      "name": "ResizeTouchShorter"
+    },
+    {
+      "code": "E7EC",
+      "name": "DrivingMode"
+    },
+    {
+      "code": "E7ED",
+      "name": "RingerSilent"
+    },
+    {
+      "code": "E7EE",
+      "name": "OtherUser"
+    },
+    {
+      "code": "E7EF",
+      "name": "Admin"
+    },
+    {
+      "code": "E7F0",
+      "name": "CC"
+    },
+    {
+      "code": "E7F1",
+      "name": "SDCard"
+    },
+    {
+      "code": "E7F2",
+      "name": "CallForwarding"
+    },
+    {
+      "code": "E7F3",
+      "name": "SettingsDisplaySound"
+    },
+    {
+      "code": "E7F4",
+      "name": "TVMonitor"
+    },
+    {
+      "code": "E7F5",
+      "name": "Speakers"
+    },
+    {
+      "code": "E7F6",
+      "name": "Headphone"
+    },
+    {
+      "code": "E7F7",
+      "name": "DeviceLaptopPic"
+    },
+    {
+      "code": "E7F8",
+      "name": "DeviceLaptopNoPic"
+    },
+    {
+      "code": "E7F9",
+      "name": "DeviceMonitorRightPic"
+    },
+    {
+      "code": "E7FA",
+      "name": "DeviceMonitorLeftPic"
+    },
+    {
+      "code": "E7FB",
+      "name": "DeviceMonitorNoPic"
+    },
+    {
+      "code": "E7FC",
+      "name": "Game"
+    },
+    {
+      "code": "E7FD",
+      "name": "HorizontalTabKey"
+    },
+    {
+      "code": "E802",
+      "name": "StreetsideSplitMinimize"
+    },
+    {
+      "code": "E803",
+      "name": "StreetsideSplitExpand"
+    },
+    {
+      "code": "E804",
+      "name": "Car"
+    },
+    {
+      "code": "E805",
+      "name": "Walk"
+    },
+    {
+      "code": "E806",
+      "name": "Bus"
+    },
+    {
+      "code": "E809",
+      "name": "TiltUp"
+    },
+    {
+      "code": "E80A",
+      "name": "TiltDown"
+    },
+    {
+      "code": "E80B",
+      "name": "CallControl"
+    },
+    {
+      "code": "E80C",
+      "name": "RotateMapRight"
+    },
+    {
+      "code": "E80D",
+      "name": "RotateMapLeft"
+    },
+    {
+      "code": "E80F",
+      "name": "Home"
+    },
+    {
+      "code": "E811",
+      "name": "ParkingLocation"
+    },
+    {
+      "code": "E812",
+      "name": "MapCompassTop"
+    },
+    {
+      "code": "E813",
+      "name": "MapCompassBottom"
+    },
+    {
+      "code": "E814",
+      "name": "IncidentTriangle"
+    },
+    {
+      "code": "E815",
+      "name": "Touch"
+    },
+    {
+      "code": "E816",
+      "name": "MapDirections"
+    },
+    {
+      "code": "E819",
+      "name": "StartPoint"
+    },
+    {
+      "code": "E81A",
+      "name": "StopPoint"
+    },
+    {
+      "code": "E81B",
+      "name": "EndPoint"
+    },
+    {
+      "code": "E81C",
+      "name": "History"
+    },
+    {
+      "code": "E81D",
+      "name": "Location"
+    },
+    {
+      "code": "E81E",
+      "name": "MapLayers"
+    },
+    {
+      "code": "E81F",
+      "name": "Accident"
+    },
+    {
+      "code": "E821",
+      "name": "Work"
+    },
+    {
+      "code": "E822",
+      "name": "Construction"
+    },
+    {
+      "code": "E823",
+      "name": "Recent"
+    },
+    {
+      "code": "E825",
+      "name": "Bank"
+    },
+    {
+      "code": "E826",
+      "name": "DownloadMap"
+    },
+    {
+      "code": "E829",
+      "name": "InkingToolFill2"
+    },
+    {
+      "code": "E82A",
+      "name": "HighlightFill2"
+    },
+    {
+      "code": "E82B",
+      "name": "EraseToolFill"
+    },
+    {
+      "code": "E82C",
+      "name": "EraseToolFill2"
+    },
+    {
+      "code": "E82D",
+      "name": "Dictionary"
+    },
+    {
+      "code": "E82E",
+      "name": "DictionaryAdd"
+    },
+    {
+      "code": "E82F",
+      "name": "ToolTip"
+    },
+    {
+      "code": "E830",
+      "name": "ChromeBack"
+    },
+    {
+      "code": "E835",
+      "name": "ProvisioningPackage"
+    },
+    {
+      "code": "E836",
+      "name": "AddRemoteDevice"
+    },
+    {
+      "code": "E838",
+      "name": "FolderOpen"
+    },
+    {
+      "code": "E839",
+      "name": "Ethernet"
+    },
+    {
+      "code": "E83A",
+      "name": " ShareBroadband"
+    },
+    {
+      "code": "E83B",
+      "name": "DirectAccess"
+    },
+    {
+      "code": "E83C",
+      "name": " DialUp"
+    },
+    {
+      "code": "E83D",
+      "name": "DefenderApp "
+    },
+    {
+      "code": "E83E",
+      "name": "BatteryCharging9"
+    },
+    {
+      "code": "E83F",
+      "name": "Battery10"
+    },
+    {
+      "code": "E840",
+      "name": "Pinned"
+    },
+    {
+      "code": "E841",
+      "name": "PinFill"
+    },
+    {
+      "code": "E842",
+      "name": "PinnedFill"
+    },
+    {
+      "code": "E843",
+      "name": "PeriodKey"
+    },
+    {
+      "code": "E844",
+      "name": "PuncKey"
+    },
+    {
+      "code": "E845",
+      "name": "RevToggleKey"
+    },
+    {
+      "code": "E846",
+      "name": "RightArrowKeyTime1"
+    },
+    {
+      "code": "E847",
+      "name": "RightArrowKeyTime2"
+    },
+    {
+      "code": "E848",
+      "name": "LeftQuote"
+    },
+    {
+      "code": "E849",
+      "name": "RightQuote"
+    },
+    {
+      "code": "E84A",
+      "name": "DownShiftKey"
+    },
+    {
+      "code": "E84B",
+      "name": "UpShiftKey"
+    },
+    {
+      "code": "E84C",
+      "name": "PuncKey0"
+    },
+    {
+      "code": "E84D",
+      "name": "PuncKeyLeftBottom"
+    },
+    {
+      "code": "E84E",
+      "name": "RightArrowKeyTime3"
+    },
+    {
+      "code": "E84F",
+      "name": "RightArrowKeyTime4"
+    },
+    {
+      "code": "E850",
+      "name": "Battery0"
+    },
+    {
+      "code": "E851",
+      "name": "Battery1"
+    },
+    {
+      "code": "E852",
+      "name": "Battery2"
+    },
+    {
+      "code": "E853",
+      "name": "Battery3"
+    },
+    {
+      "code": "E854",
+      "name": "Battery4"
+    },
+    {
+      "code": "E855",
+      "name": "Battery5"
+    },
+    {
+      "code": "E856",
+      "name": "Battery6"
+    },
+    {
+      "code": "E857",
+      "name": "Battery7"
+    },
+    {
+      "code": "E858",
+      "name": "Battery8"
+    },
+    {
+      "code": "E859",
+      "name": "Battery9"
+    },
+    {
+      "code": "E85A",
+      "name": "BatteryCharging0"
+    },
+    {
+      "code": "E85B",
+      "name": "BatteryCharging1"
+    },
+    {
+      "code": "E85C",
+      "name": "BatteryCharging2"
+    },
+    {
+      "code": "E85D",
+      "name": "BatteryCharging3"
+    },
+    {
+      "code": "E85E",
+      "name": "BatteryCharging4"
+    },
+    {
+      "code": "E85F",
+      "name": "BatteryCharging5"
+    },
+    {
+      "code": "E860",
+      "name": "BatteryCharging6"
+    },
+    {
+      "code": "E861",
+      "name": "BatteryCharging7"
+    },
+    {
+      "code": "E862",
+      "name": "BatteryCharging8"
+    },
+    {
+      "code": "E863",
+      "name": "BatterySaver0"
+    },
+    {
+      "code": "E864",
+      "name": "BatterySaver1"
+    },
+    {
+      "code": "E865",
+      "name": "BatterySaver2"
+    },
+    {
+      "code": "E866",
+      "name": "BatterySaver3"
+    },
+    {
+      "code": "E867",
+      "name": "BatterySaver4"
+    },
+    {
+      "code": "E868",
+      "name": "BatterySaver5"
+    },
+    {
+      "code": "E869",
+      "name": "BatterySaver6"
+    },
+    {
+      "code": "E86A",
+      "name": "BatterySaver7"
+    },
+    {
+      "code": "E86B",
+      "name": "BatterySaver8"
+    },
+    {
+      "code": "E86C",
+      "name": "SignalBars1"
+    },
+    {
+      "code": "E86D",
+      "name": "SignalBars2"
+    },
+    {
+      "code": "E86E",
+      "name": "SignalBars3"
+    },
+    {
+      "code": "E86F",
+      "name": "SignalBars4"
+    },
+    {
+      "code": "E870",
+      "name": "SignalBars5"
+    },
+    {
+      "code": "E871",
+      "name": "SignalNotConnected"
+    },
+    {
+      "code": "E872",
+      "name": "Wifi1"
+    },
+    {
+      "code": "E873",
+      "name": "Wifi2"
+    },
+    {
+      "code": "E874",
+      "name": "Wifi3"
+    },
+    {
+      "code": "E875",
+      "name": "MobSIMLock"
+    },
+    {
+      "code": "E876",
+      "name": "MobSIMMissing"
+    },
+    {
+      "code": "E877",
+      "name": "Vibrate"
+    },
+    {
+      "code": "E878",
+      "name": "RoamingInternational"
+    },
+    {
+      "code": "E879",
+      "name": "RoamingDomestic"
+    },
+    {
+      "code": "E87A",
+      "name": "CallForwardInternational"
+    },
+    {
+      "code": "E87B",
+      "name": "CallForwardRoaming"
+    },
+    {
+      "code": "E87C",
+      "name": "JpnRomanji"
+    },
+    {
+      "code": "E87D",
+      "name": "JpnRomanjiLock"
+    },
+    {
+      "code": "E87E",
+      "name": "JpnRomanjiShift"
+    },
+    {
+      "code": "E87F",
+      "name": "JpnRomanjiShiftLock"
+    },
+    {
+      "code": "E880",
+      "name": "StatusDataTransfer"
+    },
+    {
+      "code": "E881",
+      "name": "StatusDataTransferVPN"
+    },
+    {
+      "code": "E882",
+      "name": "StatusDualSIM2"
+    },
+    {
+      "code": "E883",
+      "name": "StatusDualSIM2VPN"
+    },
+    {
+      "code": "E884",
+      "name": "StatusDualSIM1"
+    },
+    {
+      "code": "E885",
+      "name": "StatusDualSIM1VPN"
+    },
+    {
+      "code": "E886",
+      "name": "StatusSGLTE"
+    },
+    {
+      "code": "E887",
+      "name": "StatusSGLTECell"
+    },
+    {
+      "code": "E888",
+      "name": "StatusSGLTEDataVPN"
+    },
+    {
+      "code": "E889",
+      "name": "StatusVPN"
+    },
+    {
+      "code": "E88A",
+      "name": "WifiHotspot"
+    },
+    {
+      "code": "E88B",
+      "name": "LanguageKor"
+    },
+    {
+      "code": "E88C",
+      "name": "LanguageCht"
+    },
+    {
+      "code": "E88D",
+      "name": "LanguageChs"
+    },
+    {
+      "code": "E88E",
+      "name": "USB"
+    },
+    {
+      "code": "E88F",
+      "name": "InkingToolFill"
+    },
+    {
+      "code": "E890",
+      "name": "View"
+    },
+    {
+      "code": "E891",
+      "name": "HighlightFill"
+    },
+    {
+      "code": "E892",
+      "name": "Previous"
+    },
+    {
+      "code": "E893",
+      "name": "Next"
+    },
+    {
+      "code": "E894",
+      "name": "Clear"
+    },
+    {
+      "code": "E895",
+      "name": "Sync"
+    },
+    {
+      "code": "E896",
+      "name": "Download"
+    },
+    {
+      "code": "E897",
+      "name": "Help"
+    },
+    {
+      "code": "E898",
+      "name": "Upload"
+    },
+    {
+      "code": "E899",
+      "name": "Emoji"
+    },
+    {
+      "code": "E89A",
+      "name": "TwoPage"
+    },
+    {
+      "code": "E89B",
+      "name": "LeaveChat"
+    },
+    {
+      "code": "E89C",
+      "name": "MailForward"
+    },
+    {
+      "code": "E89E",
+      "name": "RotateCamera"
+    },
+    {
+      "code": "E89F",
+      "name": "ClosePane"
+    },
+    {
+      "code": "E8A0",
+      "name": "OpenPane"
+    },
+    {
+      "code": "E8A1",
+      "name": "PreviewLink"
+    },
+    {
+      "code": "E8A2",
+      "name": "AttachCamera"
+    },
+    {
+      "code": "E8A3",
+      "name": "ZoomIn"
+    },
+    {
+      "code": "E8A4",
+      "name": "Bookmarks"
+    },
+    {
+      "code": "E8A5",
+      "name": "Document"
+    },
+    {
+      "code": "E8A6",
+      "name": "ProtectedDocument"
+    },
+    {
+      "code": "E8A7",
+      "name": "OpenInNewWindow"
+    },
+    {
+      "code": "E8A8",
+      "name": "MailFill"
+    },
+    {
+      "code": "E8A9",
+      "name": "ViewAll"
+    },
+    {
+      "code": "E8AA",
+      "name": "VideoChat"
+    },
+    {
+      "code": "E8AB",
+      "name": "Switch"
+    },
+    {
+      "code": "E8AC",
+      "name": "Rename"
+    },
+    {
+      "code": "E8AD",
+      "name": "Go"
+    },
+    {
+      "code": "E8AE",
+      "name": "SurfaceHub"
+    },
+    {
+      "code": "E8AF",
+      "name": "Remote"
+    },
+    {
+      "code": "E8B0",
+      "name": "Click"
+    },
+    {
+      "code": "E8B1",
+      "name": "Shuffle"
+    },
+    {
+      "code": "E8B2",
+      "name": "Movies"
+    },
+    {
+      "code": "E8B3",
+      "name": "SelectAll"
+    },
+    {
+      "code": "E8B4",
+      "name": "Orientation"
+    },
+    {
+      "code": "E8B5",
+      "name": "Import"
+    },
+    {
+      "code": "E8B6",
+      "name": "ImportAll"
+    },
+    {
+      "code": "E8B7",
+      "name": "Folder"
+    },
+    {
+      "code": "E8B8",
+      "name": "Webcam"
+    },
+    {
+      "code": "E8B9",
+      "name": "Picture"
+    },
+    {
+      "code": "E8BA",
+      "name": "Caption"
+    },
+    {
+      "code": "E8BB",
+      "name": "ChromeClose"
+    },
+    {
+      "code": "E8BC",
+      "name": "ShowResults"
+    },
+    {
+      "code": "E8BD",
+      "name": "Message"
+    },
+    {
+      "code": "E8BE",
+      "name": "Leaf"
+    },
+    {
+      "code": "E8BF",
+      "name": "CalendarDay"
+    },
+    {
+      "code": "E8C0",
+      "name": "CalendarWeek"
+    },
+    {
+      "code": "E8C1",
+      "name": "Characters"
+    },
+    {
+      "code": "E8C2",
+      "name": "MailReplyAll"
+    },
+    {
+      "code": "E8C3",
+      "name": "Read"
+    },
+    {
+      "code": "E8C4",
+      "name": "ShowBcc"
+    },
+    {
+      "code": "E8C5",
+      "name": "HideBcc"
+    },
+    {
+      "code": "E8C6",
+      "name": "Cut"
+    },
+    {
+      "code": "E8C7",
+      "name": "PaymentCard"
+    },
+    {
+      "code": "E8C8",
+      "name": "Copy"
+    },
+    {
+      "code": "E8C9",
+      "name": "Important"
+    },
+    {
+      "code": "E8CA",
+      "name": "MailReply"
+    },
+    {
+      "code": "E8CB",
+      "name": "Sort"
+    },
+    {
+      "code": "E8CC",
+      "name": "MobileTablet"
+    },
+    {
+      "code": "E8CD",
+      "name": "DisconnectDrive"
+    },
+    {
+      "code": "E8CE",
+      "name": "MapDrive"
+    },
+    {
+      "code": "E8CF",
+      "name": "ContactPresence"
+    },
+    {
+      "code": "E8D0",
+      "name": "Priority"
+    },
+    {
+      "code": "E8D1",
+      "name": "GotoToday"
+    },
+    {
+      "code": "E8D2",
+      "name": "Font"
+    },
+    {
+      "code": "E8D3",
+      "name": "FontColor"
+    },
+    {
+      "code": "E8D4",
+      "name": "Contact2"
+    },
+    {
+      "code": "E8D5",
+      "name": "FolderFill"
+    },
+    {
+      "code": "E8D6",
+      "name": "Audio"
+    },
+    {
+      "code": "E8D7",
+      "name": "Permissions"
+    },
+    {
+      "code": "E8D8",
+      "name": "DisableUpdates"
+    },
+    {
+      "code": "E8D9",
+      "name": "Unfavorite"
+    },
+    {
+      "code": "E8DA",
+      "name": "OpenLocal"
+    },
+    {
+      "code": "E8DB",
+      "name": "Italic"
+    },
+    {
+      "code": "E8DC",
+      "name": "Underline"
+    },
+    {
+      "code": "E8DD",
+      "name": "Bold"
+    },
+    {
+      "code": "E8DE",
+      "name": "MoveToFolder"
+    },
+    {
+      "code": "E8DF",
+      "name": "LikeDislike"
+    },
+    {
+      "code": "E8E0",
+      "name": "Dislike"
+    },
+    {
+      "code": "E8E1",
+      "name": "Like"
+    },
+    {
+      "code": "E8E2",
+      "name": "AlignRight"
+    },
+    {
+      "code": "E8E3",
+      "name": "AlignCenter"
+    },
+    {
+      "code": "E8E4",
+      "name": "AlignLeft"
+    },
+    {
+      "code": "E8E5",
+      "name": "OpenFile"
+    },
+    {
+      "code": "E8E6",
+      "name": "ClearSelection"
+    },
+    {
+      "code": "E8E7",
+      "name": "FontDecrease"
+    },
+    {
+      "code": "E8E8",
+      "name": "FontIncrease"
+    },
+    {
+      "code": "E8E9",
+      "name": "FontSize"
+    },
+    {
+      "code": "E8EA",
+      "name": "CellPhone"
+    },
+    {
+      "code": "E8EB",
+      "name": "Reshare"
+    },
+    {
+      "code": "E8EC",
+      "name": "Tag"
+    },
+    {
+      "code": "E8ED",
+      "name": "RepeatOne"
+    },
+    {
+      "code": "E8EE",
+      "name": "RepeatAll"
+    },
+    {
+      "code": "E8EF",
+      "name": "Calculator"
+    },
+    {
+      "code": "E8F0",
+      "name": "Directions"
+    },
+    {
+      "code": "E8F1",
+      "name": "Library"
+    },
+    {
+      "code": "E8F2",
+      "name": "ChatBubbles"
+    },
+    {
+      "code": "E8F3",
+      "name": "PostUpdate"
+    },
+    {
+      "code": "E8F4",
+      "name": "NewFolder"
+    },
+    {
+      "code": "E8F5",
+      "name": "CalendarReply"
+    },
+    {
+      "code": "E8F6",
+      "name": "UnsyncFolder"
+    },
+    {
+      "code": "E8F7",
+      "name": "SyncFolder"
+    },
+    {
+      "code": "E8F8",
+      "name": "BlockContact"
+    },
+    {
+      "code": "E8F9",
+      "name": "SwitchApps"
+    },
+    {
+      "code": "E8FA",
+      "name": "AddFriend"
+    },
+    {
+      "code": "E8FB",
+      "name": "Accept"
+    },
+    {
+      "code": "E8FC",
+      "name": "GoToStart"
+    },
+    {
+      "code": "E8FD",
+      "name": "BulletedList"
+    },
+    {
+      "code": "E8FE",
+      "name": "Scan"
+    },
+    {
+      "code": "E8FF",
+      "name": "Preview"
+    },
+    {
+      "code": "E902",
+      "name": "Group"
+    },
+    {
+      "code": "E904",
+      "name": "ZeroBars"
+    },
+    {
+      "code": "E905",
+      "name": "OneBar"
+    },
+    {
+      "code": "E906",
+      "name": "TwoBars"
+    },
+    {
+      "code": "E907",
+      "name": "ThreeBars"
+    },
+    {
+      "code": "E908",
+      "name": "FourBars"
+    },
+    {
+      "code": "E909",
+      "name": "World"
+    },
+    {
+      "code": "E90A",
+      "name": "Comment"
+    },
+    {
+      "code": "E90B",
+      "name": "MusicInfo"
+    },
+    {
+      "code": "E90C",
+      "name": "DockLeft"
+    },
+    {
+      "code": "E90D",
+      "name": "DockRight"
+    },
+    {
+      "code": "E90E",
+      "name": "DockBottom"
+    },
+    {
+      "code": "E90F",
+      "name": "Repair"
+    },
+    {
+      "code": "E910",
+      "name": "Accounts"
+    },
+    {
+      "code": "E911",
+      "name": "DullSound"
+    },
+    {
+      "code": "E912",
+      "name": "Manage"
+    },
+    {
+      "code": "E913",
+      "name": "Street"
+    },
+    {
+      "code": "E914",
+      "name": "Printer3D"
+    },
+    {
+      "code": "E915",
+      "name": "RadioBullet"
+    },
+    {
+      "code": "E916",
+      "name": "Stopwatch"
+    },
+    {
+      "code": "E91B",
+      "name": "Photo"
+    },
+    {
+      "code": "E91C",
+      "name": "ActionCenter"
+    },
+    {
+      "code": "E91F",
+      "name": "FullCircleMask"
+    },
+    {
+      "code": "E921",
+      "name": "ChromeMinimize"
+    },
+    {
+      "code": "E922",
+      "name": "ChromeMaximize"
+    },
+    {
+      "code": "E923",
+      "name": "ChromeRestore"
+    },
+    {
+      "code": "E924",
+      "name": "Annotation"
+    },
+    {
+      "code": "E925",
+      "name": "BackSpaceQWERTYSm"
+    },
+    {
+      "code": "E926",
+      "name": "BackSpaceQWERTYMd"
+    },
+    {
+      "code": "E927",
+      "name": "Swipe"
+    },
+    {
+      "code": "E928",
+      "name": "Fingerprint"
+    },
+    {
+      "code": "E929",
+      "name": "Handwriting"
+    },
+    {
+      "code": "E92C",
+      "name": "ChromeBackToWindow"
+    },
+    {
+      "code": "E92D",
+      "name": "ChromeFullScreen"
+    },
+    {
+      "code": "E92E",
+      "name": "KeyboardStandard"
+    },
+    {
+      "code": "E92F",
+      "name": "KeyboardDismiss"
+    },
+    {
+      "code": "E930",
+      "name": "Completed"
+    },
+    {
+      "code": "E931",
+      "name": "ChromeAnnotate"
+    },
+    {
+      "code": "E932",
+      "name": "Label"
+    },
+    {
+      "code": "E933",
+      "name": "IBeam"
+    },
+    {
+      "code": "E934",
+      "name": "IBeamOutline"
+    },
+    {
+      "code": "E935",
+      "name": "FlickDown"
+    },
+    {
+      "code": "E936",
+      "name": "FlickUp"
+    },
+    {
+      "code": "E937",
+      "name": "FlickLeft"
+    },
+    {
+      "code": "E938",
+      "name": "FlickRight"
+    },
+    {
+      "code": "E939",
+      "name": "FeedbackApp"
+    },
+    {
+      "code": "E93C",
+      "name": "MusicAlbum"
+    },
+    {
+      "code": "E93E",
+      "name": "Streaming"
+    },
+    {
+      "code": "E943",
+      "name": "Code"
+    },
+    {
+      "code": "E944",
+      "name": "ReturnToWindow"
+    },
+    {
+      "code": "E945",
+      "name": "LightningBolt"
+    },
+    {
+      "code": "E946",
+      "name": "Info"
+    },
+    {
+      "code": "E947",
+      "name": "CalculatorMultiply"
+    },
+    {
+      "code": "E948",
+      "name": "CalculatorAddition"
+    },
+    {
+      "code": "E949",
+      "name": "CalculatorSubtract"
+    },
+    {
+      "code": "E94A",
+      "name": "CalculatorDivide"
+    },
+    {
+      "code": "E94B",
+      "name": "CalculatorSquareroot"
+    },
+    {
+      "code": "E94C",
+      "name": "CalculatorPercentage"
+    },
+    {
+      "code": "E94D",
+      "name": "CalculatorNegate"
+    },
+    {
+      "code": "E94E",
+      "name": "CalculatorEqualTo"
+    },
+    {
+      "code": "E94F",
+      "name": "CalculatorBackspace"
+    },
+    {
+      "code": "E950",
+      "name": "Component"
+    },
+    {
+      "code": "E951",
+      "name": "DMC"
+    },
+    {
+      "code": "E952",
+      "name": "Dock"
+    },
+    {
+      "code": "E953",
+      "name": "MultimediaDMS"
+    },
+    {
+      "code": "E954",
+      "name": "MultimediaDVR"
+    },
+    {
+      "code": "E955",
+      "name": "MultimediaPMP"
+    },
+    {
+      "code": "E956",
+      "name": "PrintfaxPrinterFile"
+    },
+    {
+      "code": "E957",
+      "name": "Sensor"
+    },
+    {
+      "code": "E958",
+      "name": "StorageOptical"
+    },
+    {
+      "code": "E95A",
+      "name": "Communications"
+    },
+    {
+      "code": "E95B",
+      "name": "Headset"
+    },
+    {
+      "code": "E95D",
+      "name": "Projector"
+    },
+    {
+      "code": "E95E",
+      "name": "Health"
+    },
+    {
+      "code": "E95F",
+      "name": "Wire"
+    },
+    {
+      "code": "E960",
+      "name": "Webcam2"
+    },
+    {
+      "code": "E961",
+      "name": "Input"
+    },
+    {
+      "code": "E962",
+      "name": "Mouse"
+    },
+    {
+      "code": "E963",
+      "name": "Smartcard"
+    },
+    {
+      "code": "E964",
+      "name": "SmartcardVirtual"
+    },
+    {
+      "code": "E965",
+      "name": "MediaStorageTower"
+    },
+    {
+      "code": "E966",
+      "name": "ReturnKeySm"
+    },
+    {
+      "code": "E967",
+      "name": "GameConsole"
+    },
+    {
+      "code": "E968",
+      "name": "Network"
+    },
+    {
+      "code": "E969",
+      "name": "StorageNetworkWireless"
+    },
+    {
+      "code": "E96A",
+      "name": "StorageTape"
+    },
+    {
+      "code": "E96D",
+      "name": "ChevronUpSmall"
+    },
+    {
+      "code": "E96E",
+      "name": "ChevronDownSmall"
+    },
+    {
+      "code": "E96F",
+      "name": "ChevronLeftSmall"
+    },
+    {
+      "code": "E970",
+      "name": "ChevronRightSmall"
+    },
+    {
+      "code": "E971",
+      "name": "ChevronUpMed"
+    },
+    {
+      "code": "E972",
+      "name": "ChevronDownMed"
+    },
+    {
+      "code": "E973",
+      "name": "ChevronLeftMed"
+    },
+    {
+      "code": "E974",
+      "name": "ChevronRightMed"
+    },
+    {
+      "code": "E975",
+      "name": "Devices2"
+    },
+    {
+      "code": "E976",
+      "name": "ExpandTile"
+    },
+    {
+      "code": "E977",
+      "name": "PC1"
+    },
+    {
+      "code": "E978",
+      "name": "PresenceChicklet"
+    },
+    {
+      "code": "E979",
+      "name": "PresenceChickletVideo"
+    },
+    {
+      "code": "E97A",
+      "name": "Reply"
+    },
+    {
+      "code": "E97B",
+      "name": "SetTile"
+    },
+    {
+      "code": "E97C",
+      "name": "Type"
+    },
+    {
+      "code": "E97D",
+      "name": "Korean"
+    },
+    {
+      "code": "E97E",
+      "name": "HalfAlpha"
+    },
+    {
+      "code": "E97F",
+      "name": "FullAlpha"
+    },
+    {
+      "code": "E980",
+      "name": "Key12On"
+    },
+    {
+      "code": "E981",
+      "name": "ChineseChangjie"
+    },
+    {
+      "code": "E982",
+      "name": "QWERTYOn"
+    },
+    {
+      "code": "E983",
+      "name": "QWERTYOff"
+    },
+    {
+      "code": "E984",
+      "name": "ChineseQuick"
+    },
+    {
+      "code": "E985",
+      "name": "Japanese"
+    },
+    {
+      "code": "E986",
+      "name": "FullHiragana"
+    },
+    {
+      "code": "E987",
+      "name": "FullKatakana"
+    },
+    {
+      "code": "E988",
+      "name": "HalfKatakana"
+    },
+    {
+      "code": "E989",
+      "name": "ChineseBoPoMoFo"
+    },
+    {
+      "code": "E98A",
+      "name": "ChinesePinyin"
+    },
+    {
+      "code": "E98F",
+      "name": "ConstructionCone"
+    },
+    {
+      "code": "E990",
+      "name": "XboxOneConsole"
+    },
+    {
+      "code": "E992",
+      "name": "Volume0"
+    },
+    {
+      "code": "E993",
+      "name": "Volume1"
+    },
+    {
+      "code": "E994",
+      "name": "Volume2"
+    },
+    {
+      "code": "E995",
+      "name": "Volume3"
+    },
+    {
+      "code": "E996",
+      "name": "BatteryUnknown"
+    },
+    {
+      "code": "E998",
+      "name": "WifiAttentionOverlay"
+    },
+    {
+      "code": "E99A",
+      "name": "Robot"
+    },
+    {
+      "code": "E9A1",
+      "name": "TapAndSend"
+    },
+    {
+      "code": "E9A6",
+      "name": "FitPage"
+    },
+    {
+      "code": "E9A8",
+      "name": "PasswordKeyShow"
+    },
+    {
+      "code": "E9A9",
+      "name": "PasswordKeyHide"
+    },
+    {
+      "code": "E9AA",
+      "name": "BidiLtr"
+    },
+    {
+      "code": "E9AB",
+      "name": "BidiRtl"
+    },
+    {
+      "code": "E9AC",
+      "name": "ForwardSm"
+    },
+    {
+      "code": "E9AD",
+      "name": "CommaKey"
+    },
+    {
+      "code": "E9AE",
+      "name": "DashKey"
+    },
+    {
+      "code": "E9AF",
+      "name": "DullSoundKey"
+    },
+    {
+      "code": "E9B0",
+      "name": "HalfDullSound"
+    },
+    {
+      "code": "E9B1",
+      "name": "RightDoubleQuote"
+    },
+    {
+      "code": "E9B2",
+      "name": "LeftDoubleQuote"
+    },
+    {
+      "code": "E9B3",
+      "name": "PuncKeyRightBottom"
+    },
+    {
+      "code": "E9B4",
+      "name": "PuncKey1"
+    },
+    {
+      "code": "E9B5",
+      "name": "PuncKey2"
+    },
+    {
+      "code": "E9B6",
+      "name": "PuncKey3"
+    },
+    {
+      "code": "E9B7",
+      "name": "PuncKey4"
+    },
+    {
+      "code": "E9B8",
+      "name": "PuncKey5"
+    },
+    {
+      "code": "E9B9",
+      "name": "PuncKey6"
+    },
+    {
+      "code": "E9BA",
+      "name": "PuncKey9"
+    },
+    {
+      "code": "E9BB",
+      "name": "PuncKey7"
+    },
+    {
+      "code": "E9BC",
+      "name": "PuncKey8"
+    },
+    {
+      "code": "E9CA",
+      "name": "Frigid"
+    },
+    {
+      "code": "E9CE",
+      "name": "Unknown"
+    },
+    {
+      "code": "E9D2",
+      "name": "AreaChart"
+    },
+    {
+      "code": "E9D5",
+      "name": "CheckList"
+    },
+    {
+      "code": "E9D9",
+      "name": "Diagnostic"
+    },
+    {
+      "code": "E9E9",
+      "name": "Equalizer"
+    },
+    {
+      "code": "E9F3",
+      "name": "Process"
+    },
+    {
+      "code": "E9F5",
+      "name": "Processing"
+    },
+    {
+      "code": "E9F9",
+      "name": "ReportDocument"
+    },
+    {
+      "code": "EA0C",
+      "name": "VideoSolid"
+    },
+    {
+      "code": "EA0D",
+      "name": "MixedMediaBadge"
+    },
+    {
+      "code": "EA14",
+      "name": "DisconnectDisplay"
+    },
+    {
+      "code": "EA18",
+      "name": "Shield"
+    },
+    {
+      "code": "EA1F",
+      "name": "Info2"
+    },
+    {
+      "code": "EA21",
+      "name": "ActionCenterAsterisk"
+    },
+    {
+      "code": "EA24",
+      "name": "Beta"
+    },
+    {
+      "code": "EA35",
+      "name": "SaveCopy"
+    },
+    {
+      "code": "EA37",
+      "name": "List"
+    },
+    {
+      "code": "EA38",
+      "name": "Asterisk"
+    },
+    {
+      "code": "EA39",
+      "name": "ErrorBadge"
+    },
+    {
+      "code": "EA3A",
+      "name": "CircleRing"
+    },
+    {
+      "code": "EA3B",
+      "name": "CircleFill"
+    },
+    {
+      "code": "EA3C",
+      "name": "MergeCall"
+    },
+    {
+      "code": "EA3D",
+      "name": "PrivateCall"
+    },
+    {
+      "code": "EA3F",
+      "name": "Record2"
+    },
+    {
+      "code": "EA40",
+      "name": "AllAppsMirrored"
+    },
+    {
+      "code": "EA41",
+      "name": "BookmarksMirrored"
+    },
+    {
+      "code": "EA42",
+      "name": "BulletedListMirrored"
+    },
+    {
+      "code": "EA43",
+      "name": "CallForwardInternationalMirrored"
+    },
+    {
+      "code": "EA44",
+      "name": "CallForwardRoamingMirrored"
+    },
+    {
+      "code": "EA47",
+      "name": "ChromeBackMirrored"
+    },
+    {
+      "code": "EA48",
+      "name": "ClearSelectionMirrored"
+    },
+    {
+      "code": "EA49",
+      "name": "ClosePaneMirrored"
+    },
+    {
+      "code": "EA4A",
+      "name": "ContactInfoMirrored"
+    },
+    {
+      "code": "EA4B",
+      "name": "DockRightMirrored"
+    },
+    {
+      "code": "EA4C",
+      "name": "DockLeftMirrored"
+    },
+    {
+      "code": "EA4E",
+      "name": "ExpandTileMirrored"
+    },
+    {
+      "code": "EA4F",
+      "name": "GoMirrored"
+    },
+    {
+      "code": "EA50",
+      "name": "GripperResizeMirrored"
+    },
+    {
+      "code": "EA51",
+      "name": "HelpMirrored"
+    },
+    {
+      "code": "EA52",
+      "name": "ImportMirrored"
+    },
+    {
+      "code": "EA53",
+      "name": "ImportAllMirrored"
+    },
+    {
+      "code": "EA54",
+      "name": "LeaveChatMirrored"
+    },
+    {
+      "code": "EA55",
+      "name": "ListMirrored"
+    },
+    {
+      "code": "EA56",
+      "name": "MailForwardMirrored"
+    },
+    {
+      "code": "EA57",
+      "name": "MailReplyMirrored"
+    },
+    {
+      "code": "EA58",
+      "name": "MailReplyAllMirrored"
+    },
+    {
+      "code": "EA5B",
+      "name": "OpenPaneMirrored"
+    },
+    {
+      "code": "EA5C",
+      "name": "OpenWithMirrored"
+    },
+    {
+      "code": "EA5E",
+      "name": "ParkingLocationMirrored"
+    },
+    {
+      "code": "EA5F",
+      "name": "ResizeMouseMediumMirrored"
+    },
+    {
+      "code": "EA60",
+      "name": "ResizeMouseSmallMirrored"
+    },
+    {
+      "code": "EA61",
+      "name": "ResizeMouseTallMirrored"
+    },
+    {
+      "code": "EA62",
+      "name": "ResizeTouchNarrowerMirrored"
+    },
+    {
+      "code": "EA63",
+      "name": "SendMirrored"
+    },
+    {
+      "code": "EA64",
+      "name": "SendFillMirrored"
+    },
+    {
+      "code": "EA65",
+      "name": "ShowResultsMirrored"
+    },
+    {
+      "code": "EA69",
+      "name": "Media"
+    },
+    {
+      "code": "EA6A",
+      "name": "SyncError"
+    },
+    {
+      "code": "EA6C",
+      "name": "Devices3"
+    },
+    {
+      "code": "EA79",
+      "name": "SlowMotionOn"
+    },
+    {
+      "code": "EA80",
+      "name": "Lightbulb"
+    },
+    {
+      "code": "EA81",
+      "name": "StatusCircle"
+    },
+    {
+      "code": "EA82",
+      "name": "StatusTriangle"
+    },
+    {
+      "code": "EA83",
+      "name": "StatusError"
+    },
+    {
+      "code": "EA84",
+      "name": "StatusWarning"
+    },
+    {
+      "code": "EA86",
+      "name": "Puzzle"
+    },
+    {
+      "code": "EA89",
+      "name": "CalendarSolid"
+    },
+    {
+      "code": "EA8A",
+      "name": "HomeSolid"
+    },
+    {
+      "code": "EA8B",
+      "name": "ParkingLocationSolid"
+    },
+    {
+      "code": "EA8C",
+      "name": "ContactSolid"
+    },
+    {
+      "code": "EA8D",
+      "name": "ConstructionSolid"
+    },
+    {
+      "code": "EA8E",
+      "name": "AccidentSolid"
+    },
+    {
+      "code": "EA8F",
+      "name": "Ringer"
+    },
+    {
+      "code": "EA90",
+      "name": "PDF"
+    },
+    {
+      "code": "EA91",
+      "name": "ThoughtBubble"
+    },
+    {
+      "code": "EA92",
+      "name": "HeartBroken"
+    },
+    {
+      "code": "EA93",
+      "name": "BatteryCharging10"
+    },
+    {
+      "code": "EA94",
+      "name": "BatterySaver9"
+    },
+    {
+      "code": "EA95",
+      "name": "BatterySaver10"
+    },
+    {
+      "code": "EA97",
+      "name": "CallForwardingMirrored"
+    },
+    {
+      "code": "EA98",
+      "name": "MultiSelectMirrored"
+    },
+    {
+      "code": "EA99",
+      "name": "Broom"
+    },
+    {
+      "code": "EAC2",
+      "name": "ForwardCall"
+    },
+    {
+      "code": "EADF",
+      "name": "Trackers"
+    },
+    {
+      "code": "EAFC",
+      "name": "Market"
+    },
+    {
+      "code": "EB05",
+      "name": "PieSingle"
+    },
+    {
+      "code": "EB0F",
+      "name": "StockDown"
+    },
+    {
+      "code": "EB11",
+      "name": "StockUp"
+    },
+    {
+      "code": "EB3C",
+      "name": "Design"
+    },
+    {
+      "code": "EB41",
+      "name": "Website"
+    },
+    {
+      "code": "EB42",
+      "name": "Drop"
+    },
+    {
+      "code": "EB44",
+      "name": "Radar"
+    },
+    {
+      "code": "EB47",
+      "name": "BusSolid"
+    },
+    {
+      "code": "EB48",
+      "name": "FerrySolid"
+    },
+    {
+      "code": "EB49",
+      "name": "StartPointSolid"
+    },
+    {
+      "code": "EB4A",
+      "name": "StopPointSolid"
+    },
+    {
+      "code": "EB4B",
+      "name": "EndPointSolid"
+    },
+    {
+      "code": "EB4C",
+      "name": "AirplaneSolid"
+    },
+    {
+      "code": "EB4D",
+      "name": "TrainSolid"
+    },
+    {
+      "code": "EB4E",
+      "name": "WorkSolid"
+    },
+    {
+      "code": "EB4F",
+      "name": "ReminderFill"
+    },
+    {
+      "code": "EB50",
+      "name": "Reminder"
+    },
+    {
+      "code": "EB51",
+      "name": "Heart"
+    },
+    {
+      "code": "EB52",
+      "name": "HeartFill"
+    },
+    {
+      "code": "EB55",
+      "name": "EthernetError"
+    },
+    {
+      "code": "EB56",
+      "name": "EthernetWarning"
+    },
+    {
+      "code": "EB57",
+      "name": "StatusConnecting1"
+    },
+    {
+      "code": "EB58",
+      "name": "StatusConnecting2"
+    },
+    {
+      "code": "EB59",
+      "name": "StatusUnsecure"
+    },
+    {
+      "code": "EB5A",
+      "name": "WifiError0"
+    },
+    {
+      "code": "EB5B",
+      "name": "WifiError1"
+    },
+    {
+      "code": "EB5C",
+      "name": "WifiError2"
+    },
+    {
+      "code": "EB5D",
+      "name": "WifiError3"
+    },
+    {
+      "code": "EB5E",
+      "name": "WifiError4"
+    },
+    {
+      "code": "EB5F",
+      "name": "WifiWarning0"
+    },
+    {
+      "code": "EB60",
+      "name": "WifiWarning1"
+    },
+    {
+      "code": "EB61",
+      "name": "WifiWarning2"
+    },
+    {
+      "code": "EB62",
+      "name": "WifiWarning3"
+    },
+    {
+      "code": "EB63",
+      "name": "WifiWarning4"
+    },
+    {
+      "code": "EB66",
+      "name": "Devices4"
+    },
+    {
+      "code": "EB67",
+      "name": "NUIIris"
+    },
+    {
+      "code": "EB68",
+      "name": "NUIFace"
+    },
+    {
+      "code": "EB7E",
+      "name": "EditMirrored"
+    },
+    {
+      "code": "EB82",
+      "name": "NUIFPStartSlideHand "
+    },
+    {
+      "code": "EB83",
+      "name": "NUIFPStartSlideAction "
+    },
+    {
+      "code": "EB84",
+      "name": "NUIFPContinueSlideHand "
+    },
+    {
+      "code": "EB85",
+      "name": "NUIFPContinueSlideAction"
+    },
+    {
+      "code": "EB86",
+      "name": "NUIFPRollRightHand "
+    },
+    {
+      "code": "EB87",
+      "name": "NUIFPRollRightHandAction"
+    },
+    {
+      "code": "EB88",
+      "name": "NUIFPRollLeftHand "
+    },
+    {
+      "code": "EB89",
+      "name": "NUIFPRollLeftAction"
+    },
+    {
+      "code": "EB8A",
+      "name": "NUIFPPressHand "
+    },
+    {
+      "code": "EB8B",
+      "name": "NUIFPPressAction"
+    },
+    {
+      "code": "EB8C",
+      "name": "NUIFPPressRepeatHand "
+    },
+    {
+      "code": "EB8D",
+      "name": "NUIFPPressRepeatAction"
+    },
+    {
+      "code": "EB90",
+      "name": "StatusErrorFull"
+    },
+    {
+      "code": "EB91",
+      "name": "TaskViewExpanded"
+    },
+    {
+      "code": "EB95",
+      "name": "Certificate"
+    },
+    {
+      "code": "EB96",
+      "name": "BackSpaceQWERTYLg"
+    },
+    {
+      "code": "EB97",
+      "name": "ReturnKeyLg"
+    },
+    {
+      "code": "EB9D",
+      "name": "FastForward"
+    },
+    {
+      "code": "EB9E",
+      "name": "Rewind"
+    },
+    {
+      "code": "EB9F",
+      "name": "Photo2"
+    },
+    {
+      "code": "EBA0",
+      "name": " MobBattery0"
+    },
+    {
+      "code": "EBA1",
+      "name": " MobBattery1"
+    },
+    {
+      "code": "EBA2",
+      "name": " MobBattery2"
+    },
+    {
+      "code": "EBA3",
+      "name": " MobBattery3"
+    },
+    {
+      "code": "EBA4",
+      "name": " MobBattery4"
+    },
+    {
+      "code": "EBA5",
+      "name": " MobBattery5"
+    },
+    {
+      "code": "EBA6",
+      "name": " MobBattery6"
+    },
+    {
+      "code": "EBA7",
+      "name": " MobBattery7"
+    },
+    {
+      "code": "EBA8",
+      "name": " MobBattery8"
+    },
+    {
+      "code": "EBA9",
+      "name": " MobBattery9"
+    },
+    {
+      "code": "EBAA",
+      "name": "MobBattery10"
+    },
+    {
+      "code": "EBAB",
+      "name": " MobBatteryCharging0"
+    },
+    {
+      "code": "EBAC",
+      "name": " MobBatteryCharging1"
+    },
+    {
+      "code": "EBAD",
+      "name": " MobBatteryCharging2"
+    },
+    {
+      "code": "EBAE",
+      "name": " MobBatteryCharging3"
+    },
+    {
+      "code": "EBAF",
+      "name": " MobBatteryCharging4"
+    },
+    {
+      "code": "EBB0",
+      "name": " MobBatteryCharging5"
+    },
+    {
+      "code": "EBB1",
+      "name": " MobBatteryCharging6"
+    },
+    {
+      "code": "EBB2",
+      "name": " MobBatteryCharging7"
+    },
+    {
+      "code": "EBB3",
+      "name": " MobBatteryCharging8"
+    },
+    {
+      "code": "EBB4",
+      "name": " MobBatteryCharging9"
+    },
+    {
+      "code": "EBB5",
+      "name": " MobBatteryCharging10"
+    },
+    {
+      "code": "EBB6",
+      "name": " MobBatterySaver0"
+    },
+    {
+      "code": "EBB7",
+      "name": " MobBatterySaver1"
+    },
+    {
+      "code": "EBB8",
+      "name": " MobBatterySaver2"
+    },
+    {
+      "code": "EBB9",
+      "name": " MobBatterySaver3"
+    },
+    {
+      "code": "EBBA",
+      "name": " MobBatterySaver4"
+    },
+    {
+      "code": "EBBB",
+      "name": " MobBatterySaver5"
+    },
+    {
+      "code": "EBBC",
+      "name": " MobBatterySaver6"
+    },
+    {
+      "code": "EBBD",
+      "name": " MobBatterySaver7"
+    },
+    {
+      "code": "EBBE",
+      "name": " MobBatterySaver8"
+    },
+    {
+      "code": "EBBF",
+      "name": " MobBatterySaver9"
+    },
+    {
+      "code": "EBC0",
+      "name": " MobBatterySaver10"
+    },
+    {
+      "code": "EBC3",
+      "name": "DictionaryCloud"
+    },
+    {
+      "code": "EBC4",
+      "name": "ResetDrive"
+    },
+    {
+      "code": "EBC5",
+      "name": "VolumeBars"
+    },
+    {
+      "code": "EBC6",
+      "name": "Project"
+    },
+    {
+      "code": "EBD2",
+      "name": "AdjustHologram"
+    },
+    {
+      "code": "EBD4",
+      "name": "WifiCallBars"
+    },
+    {
+      "code": "EBD5",
+      "name": "WifiCall0"
+    },
+    {
+      "code": "EBD6",
+      "name": "WifiCall1"
+    },
+    {
+      "code": "EBD7",
+      "name": "WifiCall2"
+    },
+    {
+      "code": "EBD8",
+      "name": "WifiCall3"
+    },
+    {
+      "code": "EBD9",
+      "name": "WifiCall4"
+    },
+    {
+      "code": "EBDA",
+      "name": "Family"
+    },
+    {
+      "code": "EBDB",
+      "name": "LockFeedback"
+    },
+    {
+      "code": "EBDE",
+      "name": "DeviceDiscovery"
+    },
+    {
+      "code": "EBE6",
+      "name": "WindDirection"
+    },
+    {
+      "code": "EBE7",
+      "name": "RightArrowKeyTime0"
+    },
+    {
+      "code": "EBE8",
+      "name": "Bug"
+    },
+    {
+      "code": "EBFC",
+      "name": "TabletMode"
+    },
+    {
+      "code": "EBFD",
+      "name": "StatusCircleLeft"
+    },
+    {
+      "code": "EBFE",
+      "name": "StatusTriangleLeft"
+    },
+    {
+      "code": "EBFF",
+      "name": "StatusErrorLeft"
+    },
+    {
+      "code": "EC00",
+      "name": "StatusWarningLeft"
+    },
+    {
+      "code": "EC02",
+      "name": "MobBatteryUnknown"
+    },
+    {
+      "code": "EC05",
+      "name": "NetworkTower"
+    },
+    {
+      "code": "EC06",
+      "name": "CityNext"
+    },
+    {
+      "code": "EC07",
+      "name": "CityNext2"
+    },
+    {
+      "code": "EC08",
+      "name": "Courthouse"
+    },
+    {
+      "code": "EC09",
+      "name": "Groceries"
+    },
+    {
+      "code": "EC0A",
+      "name": "Sustainable"
+    },
+    {
+      "code": "EC0B",
+      "name": "BuildingEnergy"
+    },
+    {
+      "code": "EC11",
+      "name": "ToggleFilled"
+    },
+    {
+      "code": "EC12",
+      "name": "ToggleBorder"
+    },
+    {
+      "code": "EC13",
+      "name": "SliderThumb"
+    },
+    {
+      "code": "EC14",
+      "name": "ToggleThumb"
+    },
+    {
+      "code": "EC15",
+      "name": "MiracastLogoSmall"
+    },
+    {
+      "code": "EC16",
+      "name": "MiracastLogoLarge"
+    },
+    {
+      "code": "EC19",
+      "name": "PLAP"
+    },
+    {
+      "code": "EC1B",
+      "name": "Badge"
+    },
+    {
+      "code": "EC1E",
+      "name": "SignalRoaming"
+    },
+    {
+      "code": "EC20",
+      "name": "MobileLocked"
+    },
+    {
+      "code": "EC24",
+      "name": "InsiderHubApp"
+    },
+    {
+      "code": "EC25",
+      "name": "PersonalFolder"
+    },
+    {
+      "code": "EC26",
+      "name": "HomeGroup"
+    },
+    {
+      "code": "EC27",
+      "name": "MyNetwork"
+    },
+    {
+      "code": "EC31",
+      "name": "KeyboardFull"
+    },
+    {
+      "code": "EC32",
+      "name": "Cafe"
+    },
+    {
+      "code": "EC37",
+      "name": "MobSignal1"
+    },
+    {
+      "code": "EC38",
+      "name": "MobSignal2"
+    },
+    {
+      "code": "EC39",
+      "name": "MobSignal3"
+    },
+    {
+      "code": "EC3A",
+      "name": "MobSignal4"
+    },
+    {
+      "code": "EC3B",
+      "name": "MobSignal5"
+    },
+    {
+      "code": "EC3C",
+      "name": "MobWifi1"
+    },
+    {
+      "code": "EC3D",
+      "name": "MobWifi2"
+    },
+    {
+      "code": "EC3E",
+      "name": "MobWifi3"
+    },
+    {
+      "code": "EC3F",
+      "name": "MobWifi4"
+    },
+    {
+      "code": "EC40",
+      "name": "MobAirplane"
+    },
+    {
+      "code": "EC41",
+      "name": "MobBluetooth"
+    },
+    {
+      "code": "EC42",
+      "name": "MobActionCenter"
+    },
+    {
+      "code": "EC43",
+      "name": "MobLocation"
+    },
+    {
+      "code": "EC44",
+      "name": "MobWifiHotspot"
+    },
+    {
+      "code": "EC45",
+      "name": "LanguageJpn"
+    },
+    {
+      "code": "EC46",
+      "name": "MobQuietHours"
+    },
+    {
+      "code": "EC47",
+      "name": "MobDrivingMode"
+    },
+    {
+      "code": "EC48",
+      "name": "SpeedOff"
+    },
+    {
+      "code": "EC49",
+      "name": "SpeedMedium"
+    },
+    {
+      "code": "EC4A",
+      "name": "SpeedHigh"
+    },
+    {
+      "code": "EC4E",
+      "name": "ThisPC"
+    },
+    {
+      "code": "EC4F",
+      "name": "MusicNote"
+    },
+    {
+      "code": "EC50",
+      "name": "FileExplorer"
+    },
+    {
+      "code": "EC51",
+      "name": "FileExplorerApp"
+    },
+    {
+      "code": "EC52",
+      "name": "LeftArrowKeyTime0"
+    },
+    {
+      "code": "EC54",
+      "name": "MicOff"
+    },
+    {
+      "code": "EC55",
+      "name": "MicSleep"
+    },
+    {
+      "code": "EC56",
+      "name": "MicError"
+    },
+    {
+      "code": "EC57",
+      "name": "PlaybackRate1x"
+    },
+    {
+      "code": "EC58",
+      "name": "PlaybackRateOther"
+    },
+    {
+      "code": "EC59",
+      "name": "CashDrawer"
+    },
+    {
+      "code": "EC5A",
+      "name": "BarcodeScanner"
+    },
+    {
+      "code": "EC5B",
+      "name": "ReceiptPrinter"
+    },
+    {
+      "code": "EC5C",
+      "name": "MagStripeReader"
+    },
+    {
+      "code": "EC61",
+      "name": "CompletedSolid"
+    },
+    {
+      "code": "EC64",
+      "name": "CompanionApp"
+    },
+    {
+      "code": "EC6C",
+      "name": "Favicon2"
+    },
+    {
+      "code": "EC6D",
+      "name": "SwipeRevealArt"
+    },
+    {
+      "code": "EC71",
+      "name": "MicOn"
+    },
+    {
+      "code": "EC72",
+      "name": "MicClipping"
+    },
+    {
+      "code": "EC74",
+      "name": "TabletSelected"
+    },
+    {
+      "code": "EC75",
+      "name": "MobileSelected"
+    },
+    {
+      "code": "EC76",
+      "name": "LaptopSelected"
+    },
+    {
+      "code": "EC77",
+      "name": "TVMonitorSelected"
+    },
+    {
+      "code": "EC7A",
+      "name": "DeveloperTools"
+    },
+    {
+      "code": "EC7E",
+      "name": "MobCallForwarding"
+    },
+    {
+      "code": "EC7F",
+      "name": "MobCallForwardingMirrored"
+    },
+    {
+      "code": "EC80",
+      "name": "BodyCam"
+    },
+    {
+      "code": "EC81",
+      "name": "PoliceCar"
+    },
+    {
+      "code": "EC87",
+      "name": "Draw"
+    },
+    {
+      "code": "EC88",
+      "name": "DrawSolid"
+    },
+    {
+      "code": "EC8A",
+      "name": "LowerBrightness"
+    },
+    {
+      "code": "EC8F",
+      "name": "ScrollUpDown"
+    },
+    {
+      "code": "EC92",
+      "name": "DateTime"
+    },
+    {
+      "code": "ECA5",
+      "name": "Tiles"
+    },
+    {
+      "code": "ECA7",
+      "name": "PartyLeader"
+    },
+    {
+      "code": "ECAA",
+      "name": "AppIconDefault"
+    },
+    {
+      "code": "ECAD",
+      "name": "Calories"
+    },
+    {
+      "code": "ECB9",
+      "name": "BandBattery0"
+    },
+    {
+      "code": "ECBA",
+      "name": "BandBattery1"
+    },
+    {
+      "code": "ECBB",
+      "name": "BandBattery2"
+    },
+    {
+      "code": "ECBC",
+      "name": "BandBattery3"
+    },
+    {
+      "code": "ECBD",
+      "name": "BandBattery4"
+    },
+    {
+      "code": "ECBE",
+      "name": "BandBattery5"
+    },
+    {
+      "code": "ECBF",
+      "name": "BandBattery6"
+    },
+    {
+      "code": "ECC4",
+      "name": "AddSurfaceHub"
+    },
+    {
+      "code": "ECC5",
+      "name": "DevUpdate"
+    },
+    {
+      "code": "ECC6",
+      "name": "Unit"
+    },
+    {
+      "code": "ECC8",
+      "name": "AddTo"
+    },
+    {
+      "code": "ECC9",
+      "name": "RemoveFrom"
+    },
+    {
+      "code": "ECCA",
+      "name": "RadioBtnOff"
+    },
+    {
+      "code": "ECCB",
+      "name": "RadioBtnOn"
+    },
+    {
+      "code": "ECCC",
+      "name": "RadioBullet2"
+    },
+    {
+      "code": "ECCD",
+      "name": "ExploreContent"
+    },
+    {
+      "code": "ECE4",
+      "name": "Blocked2"
+    },
+    {
+      "code": "ECE7",
+      "name": "ScrollMode"
+    },
+    {
+      "code": "ECE8",
+      "name": "ZoomMode"
+    },
+    {
+      "code": "ECE9",
+      "name": "PanMode"
+    },
+    {
+      "code": "ECF0",
+      "name": "WiredUSB  "
+    },
+    {
+      "code": "ECF1",
+      "name": "WirelessUSB"
+    },
+    {
+      "code": "ECF3",
+      "name": "USBSafeConnect"
+    },
+    {
+      "code": "ED0C",
+      "name": "ActionCenterNotificationMirrored"
+    },
+    {
+      "code": "ED0D",
+      "name": "ActionCenterMirrored"
+    },
+    {
+      "code": "ED0E",
+      "name": "SubscriptionAdd"
+    },
+    {
+      "code": "ED10",
+      "name": "ResetDevice"
+    },
+    {
+      "code": "ED11",
+      "name": "SubscriptionAddMirrored"
+    },
+    {
+      "code": "ED14",
+      "name": "QRCode"
+    },
+    {
+      "code": "ED15",
+      "name": "Feedback"
+    },
+    {
+      "code": "ED1E",
+      "name": "Subtitles"
+    },
+    {
+      "code": "ED1F",
+      "name": "SubtitlesAudio"
+    },
+    {
+      "code": "ED25",
+      "name": "OpenFolderHorizontal"
+    },
+    {
+      "code": "ED28",
+      "name": "CalendarMirrored"
+    },
+    {
+      "code": "ED2A",
+      "name": "MobeSIM"
+    },
+    {
+      "code": "ED2B",
+      "name": "MobeSIMNoProfile"
+    },
+    {
+      "code": "ED2C",
+      "name": "MobeSIMLocked"
+    },
+    {
+      "code": "ED2D",
+      "name": "MobeSIMBusy"
+    },
+    {
+      "code": "ED2E",
+      "name": "SignalError"
+    },
+    {
+      "code": "ED2F",
+      "name": "StreamingEnterprise"
+    },
+    {
+      "code": "ED30",
+      "name": "Headphone0"
+    },
+    {
+      "code": "ED31",
+      "name": "Headphone1"
+    },
+    {
+      "code": "ED32",
+      "name": "Headphone2"
+    },
+    {
+      "code": "ED33",
+      "name": "Headphone3"
+    },
+    {
+      "code": "ED35",
+      "name": "Apps"
+    },
+    {
+      "code": "ED39",
+      "name": "KeyboardBrightness"
+    },
+    {
+      "code": "ED3A",
+      "name": "KeyboardLowerBrightness"
+    },
+    {
+      "code": "ED3C",
+      "name": "SkipBack10"
+    },
+    {
+      "code": "ED3D",
+      "name": "SkipForward30 "
+    },
+    {
+      "code": "ED41",
+      "name": "TreeFolderFolder"
+    },
+    {
+      "code": "ED42",
+      "name": "TreeFolderFolderFill"
+    },
+    {
+      "code": "ED43",
+      "name": "TreeFolderFolderOpen"
+    },
+    {
+      "code": "ED44",
+      "name": "TreeFolderFolderOpenFill"
+    },
+    {
+      "code": "ED47",
+      "name": "MultimediaDMP"
+    },
+    {
+      "code": "ED4C",
+      "name": "KeyboardOneHanded"
+    },
+    {
+      "code": "ED4D",
+      "name": "Narrator"
+    },
+    {
+      "code": "ED53",
+      "name": "EmojiTabPeople"
+    },
+    {
+      "code": "ED54",
+      "name": "EmojiTabSmilesAnimals"
+    },
+    {
+      "code": "ED55",
+      "name": "EmojiTabCelebrationObjects"
+    },
+    {
+      "code": "ED56",
+      "name": "EmojiTabFoodPlants"
+    },
+    {
+      "code": "ED57",
+      "name": "EmojiTabTransitPlaces"
+    },
+    {
+      "code": "ED58",
+      "name": "EmojiTabSymbols"
+    },
+    {
+      "code": "ED59",
+      "name": "EmojiTabTextSmiles"
+    },
+    {
+      "code": "ED5A",
+      "name": "EmojiTabFavorites"
+    },
+    {
+      "code": "ED5B",
+      "name": "EmojiSwatch"
+    },
+    {
+      "code": "ED5C",
+      "name": "ConnectApp"
+    },
+    {
+      "code": "ED5D",
+      "name": "CompanionDeviceFramework"
+    },
+    {
+      "code": "ED5E",
+      "name": "Ruler"
+    },
+    {
+      "code": "ED5F",
+      "name": "FingerInking"
+    },
+    {
+      "code": "ED60",
+      "name": "StrokeErase"
+    },
+    {
+      "code": "ED61",
+      "name": "PointErase"
+    },
+    {
+      "code": "ED62",
+      "name": "ClearAllInk"
+    },
+    {
+      "code": "ED63",
+      "name": "Pencil"
+    },
+    {
+      "code": "ED64",
+      "name": "Marker"
+    },
+    {
+      "code": "ED65",
+      "name": "InkingCaret"
+    },
+    {
+      "code": "ED66",
+      "name": "InkingColorOutline"
+    },
+    {
+      "code": "ED67",
+      "name": "InkingColorFill"
+    },
+    {
+      "code": "EDA2",
+      "name": "HardDrive"
+    },
+    {
+      "code": "EDA3",
+      "name": "NetworkAdapter"
+    },
+    {
+      "code": "EDA4",
+      "name": "Touchscreen"
+    },
+    {
+      "code": "EDA5",
+      "name": "NetworkPrinter"
+    },
+    {
+      "code": "EDA6",
+      "name": "CloudPrinter"
+    },
+    {
+      "code": "EDA7",
+      "name": "KeyboardShortcut"
+    },
+    {
+      "code": "EDA8",
+      "name": "BrushSize"
+    },
+    {
+      "code": "EDA9",
+      "name": "NarratorForward"
+    },
+    {
+      "code": "EDAA",
+      "name": "NarratorForwardMirrored"
+    },
+    {
+      "code": "EDAB",
+      "name": "SyncBadge12"
+    },
+    {
+      "code": "EDAC",
+      "name": "RingerBadge12"
+    },
+    {
+      "code": "EDAD",
+      "name": "AsteriskBadge12"
+    },
+    {
+      "code": "EDAE",
+      "name": "ErrorBadge12"
+    },
+    {
+      "code": "EDAF",
+      "name": "CircleRingBadge12"
+    },
+    {
+      "code": "EDB0",
+      "name": "CircleFillBadge12"
+    },
+    {
+      "code": "EDB1",
+      "name": "ImportantBadge12"
+    },
+    {
+      "code": "EDB3",
+      "name": "MailBadge12"
+    },
+    {
+      "code": "EDB4",
+      "name": "PauseBadge12"
+    },
+    {
+      "code": "EDB5",
+      "name": "PlayBadge12"
+    },
+    {
+      "code": "EDC6",
+      "name": "PenWorkspace"
+    },
+    {
+      "code": "EDD6",
+      "name": "CaretRight8"
+    },
+    {
+      "code": "EDD9",
+      "name": "CaretLeftSolid8"
+    },
+    {
+      "code": "EDDA",
+      "name": "CaretRightSolid8"
+    },
+    {
+      "code": "EDDB",
+      "name": "CaretUpSolid8"
+    },
+    {
+      "code": "EDDC",
+      "name": "CaretDownSolid8"
+    },
+    {
+      "code": "EDE1",
+      "name": "Export"
+    },
+    {
+      "code": "EDE2",
+      "name": "ExportMirrored"
+    },
+    {
+      "code": "EDE3",
+      "name": "ButtonMenu"
+    },
+    {
+      "code": "EDE4",
+      "name": "CloudSeach"
+    },
+    {
+      "code": "EDE5",
+      "name": "PinyinIMELogo"
+    },
+    {
+      "code": "EDFB",
+      "name": "CalligraphyPen"
+    },
+    {
+      "code": "EE35",
+      "name": "ReplyMirrored"
+    },
+    {
+      "code": "EE3F",
+      "name": "LockscreenDesktop"
+    },
+    {
+      "code": "EE40",
+      "name": "TaskViewSettings"
+    },
+    {
+      "code": "EE4A",
+      "name": "Play36"
+    },
+    {
+      "code": "EE56",
+      "name": "PenPalette"
+    },
+    {
+      "code": "EE57",
+      "name": "GuestUser"
+    },
+    {
+      "code": "EE63",
+      "name": "SettingsBattery"
+    },
+    {
+      "code": "EE64",
+      "name": "TaskbarPhone"
+    },
+    {
+      "code": "EE65",
+      "name": "LockScreenGlance"
+    },
+    {
+      "code": "EE6F",
+      "name": "GenericScan"
+    },
+    {
+      "code": "EE71",
+      "name": "ImageExport "
+    },
+    {
+      "code": "EE77",
+      "name": "WifiEthernet"
+    },
+    {
+      "code": "EE79",
+      "name": "ActionCenterQuiet"
+    },
+    {
+      "code": "EE7A",
+      "name": "ActionCenterQuietNotification"
+    },
+    {
+      "code": "EE92",
+      "name": "TrackersMirrored"
+    },
+    {
+      "code": "EE93",
+      "name": "DateTimeMirrored"
+    },
+    {
+      "code": "EE94",
+      "name": "Wheel"
+    },
+    {
+      "code": "EEA3",
+      "name": "VirtualMachineGroup"
+    },
+    {
+      "code": "EECA",
+      "name": "ButtonView2"
+    },
+    {
+      "code": "EF15",
+      "name": "PenWorkspaceMirrored"
+    },
+    {
+      "code": "EF16",
+      "name": "PenPaletteMirrored"
+    },
+    {
+      "code": "EF17",
+      "name": "StrokeEraseMirrored"
+    },
+    {
+      "code": "EF18",
+      "name": "PointEraseMirrored"
+    },
+    {
+      "code": "EF19",
+      "name": "ClearAllInkMirrored"
+    },
+    {
+      "code": "EF1F",
+      "name": "BackgroundToggle"
+    },
+    {
+      "code": "EF20",
+      "name": "Marquee"
+    },
+    {
+      "code": "EF2C",
+      "name": "ChromeCloseContrast"
+    },
+    {
+      "code": "EF2D",
+      "name": "ChromeMinimizeContrast"
+    },
+    {
+      "code": "EF2E",
+      "name": "ChromeMaximizeContrast"
+    },
+    {
+      "code": "EF2F",
+      "name": "ChromeRestoreContrast"
+    },
+    {
+      "code": "EF31",
+      "name": "TrafficLight"
+    },
+    {
+      "code": "EF3B",
+      "name": "Replay"
+    },
+    {
+      "code": "EF3C",
+      "name": "Eyedropper"
+    },
+    {
+      "code": "EF3D",
+      "name": "LineDisplay"
+    },
+    {
+      "code": "EF3E",
+      "name": "PINPad"
+    },
+    {
+      "code": "EF3F",
+      "name": "SignatureCapture"
+    },
+    {
+      "code": "EF40",
+      "name": "ChipCardCreditCardReader"
+    },
+    {
+      "code": "EF58",
+      "name": "PlayerSettings"
+    },
+    {
+      "code": "EF6B",
+      "name": "LandscapeOrientation"
+    },
+    {
+      "code": "EF90",
+      "name": "Flow"
+    },
+    {
+      "code": "EFA5",
+      "name": "Touchpad"
+    },
+    {
+      "code": "EFA9",
+      "name": "Speech"
+    },
+    {
+      "code": "F000",
+      "name": "KnowledgeArticle"
+    },
+    {
+      "code": "F003",
+      "name": "Relationship"
+    },
+    {
+      "code": "F080",
+      "name": "DefaultAPN"
+    },
+    {
+      "code": "F081",
+      "name": "UserAPN "
+    },
+    {
+      "code": "F085",
+      "name": "DoublePinyin"
+    },
+    {
+      "code": "F08C",
+      "name": "BlueLight"
+    },
+    {
+      "code": "F093",
+      "name": "ButtonA"
+    },
+    {
+      "code": "F094",
+      "name": "ButtonB"
+    },
+    {
+      "code": "F095",
+      "name": "ButtonY"
+    },
+    {
+      "code": "F096",
+      "name": "ButtonX"
+    },
+    {
+      "code": "F0AD",
+      "name": "ArrowUp8"
+    },
+    {
+      "code": "F0AE",
+      "name": "ArrowDown8"
+    },
+    {
+      "code": "F0AF",
+      "name": "ArrowRight8"
+    },
+    {
+      "code": "F0B0",
+      "name": "ArrowLeft8"
+    },
+    {
+      "code": "F0B2",
+      "name": "QuarentinedItems"
+    },
+    {
+      "code": "F0B3",
+      "name": "QuarentinedItemsMirrored"
+    },
+    {
+      "code": "F0B4",
+      "name": "Protractor"
+    },
+    {
+      "code": "F0B5",
+      "name": "ChecklistMirrored"
+    },
+    {
+      "code": "F0B6",
+      "name": "StatusCircle7"
+    },
+    {
+      "code": "F0B7",
+      "name": "StatusCheckmark7"
+    },
+    {
+      "code": "F0B8",
+      "name": "StatusErrorCircle7"
+    },
+    {
+      "code": "F0B9",
+      "name": "Connected"
+    },
+    {
+      "code": "F0C6",
+      "name": "PencilFill"
+    },
+    {
+      "code": "F0C7",
+      "name": "CalligraphyFill"
+    },
+    {
+      "code": "F0CA",
+      "name": "QuarterStarLeft"
+    },
+    {
+      "code": "F0CB",
+      "name": "QuarterStarRight"
+    },
+    {
+      "code": "F0CC",
+      "name": "ThreeQuarterStarLeft"
+    },
+    {
+      "code": "F0CD",
+      "name": "ThreeQuarterStarRight"
+    },
+    {
+      "code": "F0CE",
+      "name": "QuietHoursBadge12"
+    },
+    {
+      "code": "F0D2",
+      "name": "BackMirrored"
+    },
+    {
+      "code": "F0D3",
+      "name": "ForwardMirrored"
+    },
+    {
+      "code": "F0D5",
+      "name": "ChromeBackContrast"
+    },
+    {
+      "code": "F0D6",
+      "name": "ChromeBackContrastMirrored"
+    },
+    {
+      "code": "F0D7",
+      "name": "ChromeBackToWindowContrast"
+    },
+    {
+      "code": "F0D8",
+      "name": "ChromeFullScreenContrast"
+    },
+    {
+      "code": "F0E2",
+      "name": "GridView"
+    },
+    {
+      "code": "F0E3",
+      "name": "ClipboardList"
+    },
+    {
+      "code": "F0E4",
+      "name": "ClipboardListMirrored"
+    },
+    {
+      "code": "F0E5",
+      "name": "OutlineQuarterStarLeft"
+    },
+    {
+      "code": "F0E6",
+      "name": "OutlineQuarterStarRight"
+    },
+    {
+      "code": "F0E7",
+      "name": "OutlineHalfStarLeft"
+    },
+    {
+      "code": "F0E8",
+      "name": "OutlineHalfStarRight"
+    },
+    {
+      "code": "F0E9",
+      "name": "OutlineThreeQuarterStarLeft"
+    },
+    {
+      "code": "F0EA",
+      "name": "OutlineThreeQuarterStarRight"
+    },
+    {
+      "code": "F0EB",
+      "name": "SpatialVolume0"
+    },
+    {
+      "code": "F0EC",
+      "name": "SpatialVolume1"
+    },
+    {
+      "code": "F0ED",
+      "name": "SpatialVolume2"
+    },
+    {
+      "code": "F0EE",
+      "name": "SpatialVolume3"
+    },
+    {
+      "code": "F0F7",
+      "name": "OutlineStarLeftHalf"
+    },
+    {
+      "code": "F0F8",
+      "name": "OutlineStarRightHalf"
+    },
+    {
+      "code": "F0F9",
+      "name": "ChromeAnnotateContrast"
+    },
+    {
+      "code": "F0FB",
+      "name": "DefenderBadge12"
+    },
+    {
+      "code": "F103",
+      "name": "DetachablePC"
+    },
+    {
+      "code": "F108",
+      "name": "LeftStick"
+    },
+    {
+      "code": "F109",
+      "name": "RightStick"
+    },
+    {
+      "code": "F10A",
+      "name": "TriggerLeft"
+    },
+    {
+      "code": "F10B",
+      "name": "TriggerRight"
+    },
+    {
+      "code": "F10C",
+      "name": "BumperLeft"
+    },
+    {
+      "code": "F10D",
+      "name": "BumperRight"
+    },
+    {
+      "code": "F10E",
+      "name": "Dpad"
+    },
+    {
+      "code": "F110",
+      "name": "EnglishPunctuation"
+    },
+    {
+      "code": "F111",
+      "name": "ChinesePunctuation"
+    },
+    {
+      "code": "F119",
+      "name": "HMD"
+    },
+    {
+      "code": "F11B",
+      "name": "CtrlSpatialRight"
+    },
+    {
+      "code": "F126",
+      "name": "PaginationDotOutline10"
+    },
+    {
+      "code": "F127",
+      "name": "PaginationDotSolid10"
+    },
+    {
+      "code": "F128",
+      "name": "StrokeErase2"
+    },
+    {
+      "code": "F129",
+      "name": "SmallErase"
+    },
+    {
+      "code": "F12A",
+      "name": "LargeErase"
+    },
+    {
+      "code": "F12B",
+      "name": "FolderHorizontal"
+    },
+    {
+      "code": "F12E",
+      "name": "MicrophoneListening"
+    },
+    {
+      "code": "F12F",
+      "name": "StatusExclamationCircle7 "
+    },
+    {
+      "code": "F131",
+      "name": "Video360"
+    },
+    {
+      "code": "F133",
+      "name": "GiftboxOpen"
+    },
+    {
+      "code": "F136",
+      "name": "StatusCircleOuter"
+    },
+    {
+      "code": "F137",
+      "name": "StatusCircleInner"
+    },
+    {
+      "code": "F138",
+      "name": "StatusCircleRing"
+    },
+    {
+      "code": "F139",
+      "name": "StatusTriangleOuter"
+    },
+    {
+      "code": "F13A",
+      "name": "StatusTriangleInner"
+    },
+    {
+      "code": "F13B",
+      "name": "StatusTriangleExclamation"
+    },
+    {
+      "code": "F13C",
+      "name": "StatusCircleExclamation"
+    },
+    {
+      "code": "F13D",
+      "name": "StatusCircleErrorX"
+    },
+    {
+      "code": "F13E",
+      "name": "StatusCircleCheckmark"
+    },
+    {
+      "code": "F13F",
+      "name": "StatusCircleInfo"
+    },
+    {
+      "code": "F140",
+      "name": "StatusCircleBlock"
+    },
+    {
+      "code": "F141",
+      "name": "StatusCircleBlock2"
+    },
+    {
+      "code": "F142",
+      "name": "StatusCircleQuestionMark"
+    },
+    {
+      "code": "F143",
+      "name": "StatusCircleSync"
+    },
+    {
+      "code": "F146",
+      "name": "Dial1"
+    },
+    {
+      "code": "F147",
+      "name": "Dial2"
+    },
+    {
+      "code": "F148",
+      "name": "Dial3"
+    },
+    {
+      "code": "F149",
+      "name": "Dial4"
+    },
+    {
+      "code": "F14A",
+      "name": "Dial5"
+    },
+    {
+      "code": "F14B",
+      "name": "Dial6"
+    },
+    {
+      "code": "F14C",
+      "name": "Dial7"
+    },
+    {
+      "code": "F14D",
+      "name": "Dial8"
+    },
+    {
+      "code": "F14E",
+      "name": "Dial9"
+    },
+    {
+      "code": "F14F",
+      "name": "Dial10"
+    },
+    {
+      "code": "F150",
+      "name": "Dial11"
+    },
+    {
+      "code": "F151",
+      "name": "Dial12"
+    },
+    {
+      "code": "F152",
+      "name": "Dial13"
+    },
+    {
+      "code": "F153",
+      "name": "Dial14"
+    },
+    {
+      "code": "F154",
+      "name": "Dial15"
+    },
+    {
+      "code": "F155",
+      "name": "Dial16"
+    },
+    {
+      "code": "F156",
+      "name": "DialShape1"
+    },
+    {
+      "code": "F157",
+      "name": "DialShape2"
+    },
+    {
+      "code": "F158",
+      "name": "DialShape3"
+    },
+    {
+      "code": "F159",
+      "name": "DialShape4"
+    },
+    {
+      "code": "F161",
+      "name": "TollSolid"
+    },
+    {
+      "code": "F163",
+      "name": "TrafficCongestionSolid"
+    },
+    {
+      "code": "F164",
+      "name": "ExploreContentSingle"
+    },
+    {
+      "code": "F165",
+      "name": "CollapseContent"
+    },
+    {
+      "code": "F166",
+      "name": "CollapseContentSingle"
+    },
+    {
+      "code": "F167",
+      "name": "InfoSolid"
+    },
+    {
+      "code": "F168",
+      "name": "GroupList"
+    },
+    {
+      "code": "F169",
+      "name": "CaretBottomRightSolidCenter8"
+    },
+    {
+      "code": "F16A",
+      "name": "ProgressRingDots"
+    },
+    {
+      "code": "F16B",
+      "name": "Checkbox14"
+    },
+    {
+      "code": "F16C",
+      "name": "CheckboxComposite14"
+    },
+    {
+      "code": "F16D",
+      "name": "CheckboxIndeterminateCombo14"
+    },
+    {
+      "code": "F16E",
+      "name": "CheckboxIndeterminateCombo"
+    },
+    {
+      "code": "F175",
+      "name": "StatusPause7"
+    },
+    {
+      "code": "F17F",
+      "name": "CharacterAppearance"
+    },
+    {
+      "code": "F180",
+      "name": "Lexicon "
+    },
+    {
+      "code": "F182",
+      "name": "ScreenTime"
+    },
+    {
+      "code": "F191",
+      "name": "HeadlessDevice"
+    },
+    {
+      "code": "F193",
+      "name": "NetworkSharing"
+    },
+    {
+      "code": "F19D",
+      "name": "EyeGaze"
+    },
+    {
+      "code": "F1AD",
+      "name": "WindowsInsider"
+    },
+    {
+      "code": "F1CB",
+      "name": "ChromeSwitch"
+    },
+    {
+      "code": "F1CC",
+      "name": "ChromeSwitchContast"
+    },
+    {
+      "code": "F1D8",
+      "name": "StatusCheckmark"
+    },
+    {
+      "code": "F1D9",
+      "name": "StatusCheckmarkLeft"
+    },
+    {
+      "code": "F20C",
+      "name": "KeyboardLeftAligned"
+    },
+    {
+      "code": "F20D",
+      "name": "KeyboardRightAligned"
+    },
+    {
+      "code": "F210",
+      "name": "KeyboardSettings"
+    },
+    {
+      "code": "F211",
+      "name": "NetworkPhysical"
+    },
+    {
+      "code": "F22C",
+      "name": "IOT"
+    },
+    {
+      "code": "F22E",
+      "name": "UnknownMirrored"
+    },
+    {
+      "code": "F246",
+      "name": "ViewDashboard"
+    },
+    {
+      "code": "F259",
+      "name": "ExploitProtectionSettings"
+    },
+    {
+      "code": "F260",
+      "name": "KeyboardNarrow"
+    },
+    {
+      "code": "F261",
+      "name": "Keyboard12Key"
+    },
+    {
+      "code": "F26B",
+      "name": "KeyboardDock"
+    },
+    {
+      "code": "F26C",
+      "name": "KeyboardUndock"
+    },
+    {
+      "code": "F26D",
+      "name": "KeyboardLeftDock"
+    },
+    {
+      "code": "F26E",
+      "name": "KeyboardRightDock"
+    },
+    {
+      "code": "F270",
+      "name": "Ear"
+    },
+    {
+      "code": "F271",
+      "name": "PointerHand"
+    },
+    {
+      "code": "F272",
+      "name": "Bullseye"
+    },
+    {
+      "code": "F2B7",
+      "name": "LocaleLanguage"
+    },
+    {
+      "code": "F32A",
+      "name": "PassiveAuthentication"
+    },
+    {
+      "code": "F384",
+      "name": "NetworkOffline"
+    },
+    {
+      "code": "F385",
+      "name": "NetworkConnected"
+    },
+    {
+      "code": "F386",
+      "name": "NetworkConnectedCheckmark"
+    },
+    {
+      "code": "F3B1",
+      "name": "SignOut"
+    },
+    {
+      "code": "F3CC",
+      "name": "StatusInfo"
+    },
+    {
+      "code": "F3CD",
+      "name": "StatusInfoLeft"
+    },
+    {
+      "code": "F3E2",
+      "name": "NearbySharing"
+    },
+    {
+      "code": "F3E7",
+      "name": "CtrlSpatialLeft"
+    },
+    {
+      "code": "F404",
+      "name": "InteractiveDashboard"
+    },
+    {
+      "code": "F406",
+      "name": "ClippingTool"
+    },
+    {
+      "code": "F407",
+      "name": "RectangularClipping "
+    },
+    {
+      "code": "F408",
+      "name": "FreeFormClipping"
+    },
+    {
+      "code": "F413",
+      "name": "CopyTo"
+    },
+    {
+      "code": "F439",
+      "name": "DynamicLock"
+    },
+    {
+      "code": "F45E",
+      "name": "PenTips"
+    },
+    {
+      "code": "F45F",
+      "name": "PenTipsMirrored"
+    },
+    {
+      "code": "F460",
+      "name": "HWPJoin"
+    },
+    {
+      "code": "F461",
+      "name": "HWPInsert"
+    },
+    {
+      "code": "F462",
+      "name": "HWPStrikeThrough"
+    },
+    {
+      "code": "F463",
+      "name": "HWPScratchOut"
+    },
+    {
+      "code": "F464",
+      "name": "HWPSplit"
+    },
+    {
+      "code": "F465",
+      "name": "HWPNewLine"
+    },
+    {
+      "code": "F466",
+      "name": "HWPOverwrite"
+    },
+    {
+      "code": "F473",
+      "name": "MobWifiWarning1"
+    },
+    {
+      "code": "F474",
+      "name": "MobWifiWarning2"
+    },
+    {
+      "code": "F475",
+      "name": "MobWifiWarning3"
+    },
+    {
+      "code": "F476",
+      "name": "MobWifiWarning4"
+    },
+    {
+      "code": "F49A",
+      "name": "Globe2"
+    },
+    {
+      "code": "F4A9",
+      "name": "GIF"
+    },
+    {
+      "code": "F4AA",
+      "name": "Sticker2"
+    },
+    {
+      "code": "F4BE",
+      "name": "SurfaceHubSelected"
+    },
+    {
+      "code": "F4BF",
+      "name": "HoloLensSelected"
+    },
+    {
+      "code": "F4C0",
+      "name": "Earbud"
+    },
+    {
+      "code": "F4C3",
+      "name": "MixVolumes"
+    },
+    {
+      "code": "F540",
+      "name": "Safe"
+    },
+    {
+      "code": "F552",
+      "name": "LaptopSecure"
+    },
+    {
+      "code": "F56D",
+      "name": "PrintDefault"
+    },
+    {
+      "code": "F56E",
+      "name": "PageMirrored"
+    },
+    {
+      "code": "F56F",
+      "name": "LandscapeOrientationMirrored"
+    },
+    {
+      "code": "F570",
+      "name": "ColorOff"
+    },
+    {
+      "code": "F571",
+      "name": "PrintAllPages"
+    },
+    {
+      "code": "F572",
+      "name": "PrintCustomRange"
+    },
+    {
+      "code": "F573",
+      "name": "PageMarginPortraitNarrow"
+    },
+    {
+      "code": "F574",
+      "name": "PageMarginPortraitNormal"
+    },
+    {
+      "code": "F575",
+      "name": "PageMarginPortraitModerate"
+    },
+    {
+      "code": "F576",
+      "name": "PageMarginPortraitWide"
+    },
+    {
+      "code": "F577",
+      "name": "PageMarginLandscapeNarrow"
+    },
+    {
+      "code": "F578",
+      "name": "PageMarginLandscapeNormal"
+    },
+    {
+      "code": "F579",
+      "name": "PageMarginLandscapeModerate"
+    },
+    {
+      "code": "F57A",
+      "name": "PageMarginLandscapeWide"
+    },
+    {
+      "code": "F57B",
+      "name": "CollateLandscape"
+    },
+    {
+      "code": "F57C",
+      "name": "CollatePortrait"
+    },
+    {
+      "code": "F57D",
+      "name": "CollatePortraitSeparated"
+    },
+    {
+      "code": "F57E",
+      "name": "DuplexLandscapeOneSided"
+    },
+    {
+      "code": "F57F",
+      "name": "DuplexLandscapeOneSidedMirrored"
+    },
+    {
+      "code": "F580",
+      "name": "DuplexLandscapeTwoSidedLongEdge"
+    },
+    {
+      "code": "F581",
+      "name": "DuplexLandscapeTwoSidedLongEdgeMirrored"
+    },
+    {
+      "code": "F582",
+      "name": "DuplexLandscapeTwoSidedShortEdge"
+    },
+    {
+      "code": "F583",
+      "name": "DuplexLandscapeTwoSidedShortEdgeMirrored"
+    },
+    {
+      "code": "F584",
+      "name": "DuplexPortraitOneSided"
+    },
+    {
+      "code": "F585",
+      "name": "DuplexPortraitOneSidedMirrored"
+    },
+    {
+      "code": "F586",
+      "name": "DuplexPortraitTwoSidedLongEdge"
+    },
+    {
+      "code": "F587",
+      "name": "DuplexPortraitTwoSidedLongEdgeMirrored"
+    },
+    {
+      "code": "F588",
+      "name": "DuplexPortraitTwoSidedShortEdge"
+    },
+    {
+      "code": "F589",
+      "name": "DuplexPortraitTwoSidedShortEdgeMirrored"
+    },
+    {
+      "code": "F58A",
+      "name": "PPSOneLandscape"
+    },
+    {
+      "code": "F58B",
+      "name": "PPSTwoLandscape"
+    },
+    {
+      "code": "F58C",
+      "name": "PPSTwoPortrait"
+    },
+    {
+      "code": "F58D",
+      "name": "PPSFourLandscape"
+    },
+    {
+      "code": "F58E",
+      "name": "PPSFourPortrait"
+    },
+    {
+      "code": "F58F",
+      "name": "HolePunchOff"
+    },
+    {
+      "code": "F590",
+      "name": "HolePunchPortraitLeft"
+    },
+    {
+      "code": "F591",
+      "name": "HolePunchPortraitRight"
+    },
+    {
+      "code": "F592",
+      "name": "HolePunchPortraitTop"
+    },
+    {
+      "code": "F593",
+      "name": "HolePunchPortraitBottom"
+    },
+    {
+      "code": "F594",
+      "name": "HolePunchLandscapeLeft"
+    },
+    {
+      "code": "F595",
+      "name": "HolePunchLandscapeRight"
+    },
+    {
+      "code": "F596",
+      "name": "HolePunchLandscapeTop"
+    },
+    {
+      "code": "F597",
+      "name": "HolePunchLandscapeBottom"
+    },
+    {
+      "code": "F598",
+      "name": "StaplingOff"
+    },
+    {
+      "code": "F599",
+      "name": "StaplingPortraitTopLeft"
+    },
+    {
+      "code": "F59A",
+      "name": "StaplingPortraitTopRight"
+    },
+    {
+      "code": "F59B",
+      "name": "StaplingPortraitBottomRight"
+    },
+    {
+      "code": "F59C",
+      "name": "StaplingPortraitTwoLeft"
+    },
+    {
+      "code": "F59D",
+      "name": "StaplingPortraitTwoRight"
+    },
+    {
+      "code": "F59E",
+      "name": "StaplingPortraitTwoTop"
+    },
+    {
+      "code": "F59F",
+      "name": "StaplingPortraitTwoBottom"
+    },
+    {
+      "code": "F5A0",
+      "name": "StaplingPortraitBookBinding"
+    },
+    {
+      "code": "F5A1",
+      "name": "StaplingLandscapeTopLeft"
+    },
+    {
+      "code": "F5A2",
+      "name": "StaplingLandscapeTopRight"
+    },
+    {
+      "code": "F5A3",
+      "name": "StaplingLandscapeBottomLeft"
+    },
+    {
+      "code": "F5A4",
+      "name": "StaplingLandscapeBottomRight"
+    },
+    {
+      "code": "F5A5",
+      "name": "StaplingLandscapeTwoLeft"
+    },
+    {
+      "code": "F5A6",
+      "name": "StaplingLandscapeTwoRight"
+    },
+    {
+      "code": "F5A7",
+      "name": "StaplingLandscapeTwoTop"
+    },
+    {
+      "code": "F5A8",
+      "name": "StaplingLandscapeTwoBottom"
+    },
+    {
+      "code": "F5A9",
+      "name": "StaplingLandscapeBookBinding"
+    },
+    {
+      "code": "F5AA",
+      "name": "StatusDataTransferRoaming"
+    },
+    {
+      "code": "F5AB",
+      "name": "MobSIMError"
+    },
+    {
+      "code": "F5AC",
+      "name": "CollateLandscapeSeparated"
+    },
+    {
+      "code": "F5AD",
+      "name": "PPSOnePortrait"
+    },
+    {
+      "code": "F5AE",
+      "name": "StaplingPortraitBottomLeft"
+    },
+    {
+      "code": "F5B0",
+      "name": "PlaySolid"
+    },
+    {
+      "code": "F5E7",
+      "name": "RepeatOff"
+    },
+    {
+      "code": "F5ED",
+      "name": "Set"
+    },
+    {
+      "code": "F5EE",
+      "name": "SetSolid"
+    },
+    {
+      "code": "F5EF",
+      "name": "FuzzyReading"
+    },
+    {
+      "code": "F5F2",
+      "name": "VerticalBattery0"
+    },
+    {
+      "code": "F5F3",
+      "name": "VerticalBattery1"
+    },
+    {
+      "code": "F5F4",
+      "name": "VerticalBattery2"
+    },
+    {
+      "code": "F5F5",
+      "name": "VerticalBattery3"
+    },
+    {
+      "code": "F5F6",
+      "name": "VerticalBattery4"
+    },
+    {
+      "code": "F5F7",
+      "name": "VerticalBattery5"
+    },
+    {
+      "code": "F5F8",
+      "name": "VerticalBattery6"
+    },
+    {
+      "code": "F5F9",
+      "name": "VerticalBattery7"
+    },
+    {
+      "code": "F5FA",
+      "name": "VerticalBattery8"
+    },
+    {
+      "code": "F5FB",
+      "name": "VerticalBattery9"
+    },
+    {
+      "code": "F5FC",
+      "name": "VerticalBattery10"
+    },
+    {
+      "code": "F5FD",
+      "name": "VerticalBatteryCharging0"
+    },
+    {
+      "code": "F5FE",
+      "name": "VerticalBatteryCharging1"
+    },
+    {
+      "code": "F5FF",
+      "name": "VerticalBatteryCharging2"
+    },
+    {
+      "code": "F600",
+      "name": "VerticalBatteryCharging3"
+    },
+    {
+      "code": "F601",
+      "name": "VerticalBatteryCharging4"
+    },
+    {
+      "code": "F602",
+      "name": "VerticalBatteryCharging5"
+    },
+    {
+      "code": "F603",
+      "name": "VerticalBatteryCharging6"
+    },
+    {
+      "code": "F604",
+      "name": "VerticalBatteryCharging7"
+    },
+    {
+      "code": "F605",
+      "name": "VerticalBatteryCharging8"
+    },
+    {
+      "code": "F606",
+      "name": "VerticalBatteryCharging9"
+    },
+    {
+      "code": "F607",
+      "name": "VerticalBatteryCharging10"
+    },
+    {
+      "code": "F608",
+      "name": "VerticalBatteryUnknown"
+    },
+    {
+      "code": "F614",
+      "name": "DoublePortrait"
+    },
+    {
+      "code": "F615",
+      "name": "DoubleLandscape"
+    },
+    {
+      "code": "F616",
+      "name": "SinglePortrait"
+    },
+    {
+      "code": "F617",
+      "name": "SingleLandscape"
+    },
+    {
+      "code": "F618",
+      "name": "SIMError"
+    },
+    {
+      "code": "F619",
+      "name": "SIMMissing"
+    },
+    {
+      "code": "F61A",
+      "name": "SIMLock"
+    },
+    {
+      "code": "F61B",
+      "name": "eSIM"
+    },
+    {
+      "code": "F61C",
+      "name": "eSIMNoProfile"
+    },
+    {
+      "code": "F61D",
+      "name": "eSIMLocked"
+    },
+    {
+      "code": "F61E",
+      "name": "eSIMBusy"
+    },
+    {
+      "code": "F61F",
+      "name": "NoiseCancelation"
+    },
+    {
+      "code": "F620",
+      "name": "NoiseCancelationOff"
+    },
+    {
+      "code": "F623",
+      "name": "MusicSharing"
+    },
+    {
+      "code": "F624",
+      "name": "MusicSharingOff"
+    },
+    {
+      "code": "F63C",
+      "name": "CircleShapeSolid"
+    },
+    {
+      "code": "F657",
+      "name": "WifiCallBars"
+    },
+    {
+      "code": "F658",
+      "name": "WifiCall0"
+    },
+    {
+      "code": "F659",
+      "name": "WifiCall1"
+    },
+    {
+      "code": "F65A",
+      "name": "WifiCall2"
+    },
+    {
+      "code": "F65B",
+      "name": "WifiCall3"
+    },
+    {
+      "code": "F65C",
+      "name": "WifiCall4"
+    },
+    {
+      "code": "F69E",
+      "name": "CHTLanguageBar"
+    },
+    {
+      "code": "F6BA",
+      "name": "EmojiTabMoreSymbols"
+    },
+    {
+      "code": "F6FA",
+      "name": "WebSearch"
+    },
+    {
+      "code": "F712",
+      "name": "Kiosk"
+    },
+    {
+      "code": "F714",
+      "name": "RTTLogo"
+    },
+    {
+      "code": "F715",
+      "name": "VoiceCall"
+    },
+    {
+      "code": "F716",
+      "name": "GoToMessage"
+    },
+    {
+      "code": "F71A",
+      "name": "ReturnToCall"
+    },
+    {
+      "code": "F71C",
+      "name": "StartPresenting"
+    },
+    {
+      "code": "F71D",
+      "name": "StopPresenting"
+    },
+    {
+      "code": "F71E",
+      "name": "ProductivityMode"
+    },
+    {
+      "code": "F738",
+      "name": "SetHistoryStatus"
+    },
+    {
+      "code": "F739",
+      "name": "SetHistoryStatus2"
+    },
+    {
+      "code": "F73D",
+      "name": "Keyboardsettings20"
+    },
+    {
+      "code": "F73E",
+      "name": "OneHandedRight20"
+    },
+    {
+      "code": "F73F",
+      "name": "OneHandedLeft20"
+    },
+    {
+      "code": "F740",
+      "name": "Split20"
+    },
+    {
+      "code": "F741",
+      "name": "Full20"
+    },
+    {
+      "code": "F742",
+      "name": "Handwriting20"
+    },
+    {
+      "code": "F743",
+      "name": "CheveronLeft20"
+    },
+    {
+      "code": "F744",
+      "name": "CheveronLeft32"
+    },
+    {
+      "code": "F745",
+      "name": "CheveronRight20"
+    },
+    {
+      "code": "F746",
+      "name": "CheveronRight32"
+    },
+    {
+      "code": "F781",
+      "name": "MicOff2"
+    },
+    {
+      "code": "F785",
+      "name": "DeliveryOptimization"
+    },
+    {
+      "code": "F78A",
+      "name": "CancelMedium"
+    },
+    {
+      "code": "F78B",
+      "name": "SearchMedium"
+    },
+    {
+      "code": "F78C",
+      "name": "AcceptMedium"
+    },
+    {
+      "code": "F78D",
+      "name": "RevealPasswordMedium"
+    },
+    {
+      "code": "F7AD",
+      "name": "DeleteWord"
+    },
+    {
+      "code": "F7AE",
+      "name": "DeleteWordFill"
+    },
+    {
+      "code": "F7AF",
+      "name": "DeleteLines"
+    },
+    {
+      "code": "F7B0",
+      "name": "DeleteLinesFill"
+    },
+    {
+      "code": "F7B1",
+      "name": "InstertWords"
+    },
+    {
+      "code": "F7B2",
+      "name": "InstertWordsFill"
+    },
+    {
+      "code": "F7B3",
+      "name": "JoinWords"
+    },
+    {
+      "code": "F7B4",
+      "name": "JoinWordsFill"
+    },
+    {
+      "code": "F7B5",
+      "name": "OverwriteWords"
+    },
+    {
+      "code": "F7B6",
+      "name": "OverwriteWordsFill"
+    },
+    {
+      "code": "F7B7",
+      "name": "AddNewLine"
+    },
+    {
+      "code": "F7B8",
+      "name": "AddNewLineFill"
+    },
+    {
+      "code": "F7B9",
+      "name": "OverwriteWordsKorean"
+    },
+    {
+      "code": "F7BA",
+      "name": "OverwriteWordsFillKorean"
+    },
+    {
+      "code": "F7BB",
+      "name": "EducationIcon"
+    },
+    {
+      "code": "F7ED",
+      "name": "WindowSnipping"
+    },
+    {
+      "code": "F7EE",
+      "name": "VideoCapture"
+    },
+    {
+      "code": "F809",
+      "name": "StatusSecured"
+    },
+    {
+      "code": "F83B",
+      "name": "NarratorApp"
+    },
+    {
+      "code": "F83D",
+      "name": "PowerButtonUpdate"
+    },
+    {
+      "code": "F83E",
+      "name": "RestartUpdate"
+    },
+    {
+      "code": "F83F",
+      "name": "UpdateStatusDot"
+    },
+    {
+      "code": "F847",
+      "name": "Eject"
+    }
+  ]
+}
