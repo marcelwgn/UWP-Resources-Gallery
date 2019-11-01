@@ -20,16 +20,11 @@ namespace UWPResourcesGallery.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class StartPage : Page
+    public sealed partial class SystemBrushesListPage : Page
     {
-        public StartPage()
+        public SystemBrushesListPage()
         {
             this.InitializeComponent();
-        }
-
-        private void NavigateToStartPage_Click(object sender, RoutedEventArgs e)
-        {
-            Navigation.NavigateToIconsListPage();
         }
     }
 }

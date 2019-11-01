@@ -910,7 +910,7 @@
     },
     {
       "code": "E83A",
-      "name": " ShareBroadband"
+      "name": "ShareBroadband"
     },
     {
       "code": "E83B",
@@ -918,7 +918,7 @@
     },
     {
       "code": "E83C",
-      "name": " DialUp"
+      "name": "DialUp"
     },
     {
       "code": "E83D",
@@ -2866,43 +2866,43 @@
     },
     {
       "code": "EBA0",
-      "name": " MobBattery0"
+      "name": "MobBattery0"
     },
     {
       "code": "EBA1",
-      "name": " MobBattery1"
+      "name": "MobBattery1"
     },
     {
       "code": "EBA2",
-      "name": " MobBattery2"
+      "name": "MobBattery2"
     },
     {
       "code": "EBA3",
-      "name": " MobBattery3"
+      "name": "MobBattery3"
     },
     {
       "code": "EBA4",
-      "name": " MobBattery4"
+      "name": "MobBattery4"
     },
     {
       "code": "EBA5",
-      "name": " MobBattery5"
+      "name": "MobBattery5"
     },
     {
       "code": "EBA6",
-      "name": " MobBattery6"
+      "name": "MobBattery6"
     },
     {
       "code": "EBA7",
-      "name": " MobBattery7"
+      "name": "MobBattery7"
     },
     {
       "code": "EBA8",
-      "name": " MobBattery8"
+      "name": "MobBattery8"
     },
     {
       "code": "EBA9",
-      "name": " MobBattery9"
+      "name": "MobBattery9"
     },
     {
       "code": "EBAA",
@@ -2910,91 +2910,91 @@
     },
     {
       "code": "EBAB",
-      "name": " MobBatteryCharging0"
+      "name": "MobBatteryCharging0"
     },
     {
       "code": "EBAC",
-      "name": " MobBatteryCharging1"
+      "name": "MobBatteryCharging1"
     },
     {
       "code": "EBAD",
-      "name": " MobBatteryCharging2"
+      "name": "MobBatteryCharging2"
     },
     {
       "code": "EBAE",
-      "name": " MobBatteryCharging3"
+      "name": "MobBatteryCharging3"
     },
     {
       "code": "EBAF",
-      "name": " MobBatteryCharging4"
+      "name": "MobBatteryCharging4"
     },
     {
       "code": "EBB0",
-      "name": " MobBatteryCharging5"
+      "name": "MobBatteryCharging5"
     },
     {
       "code": "EBB1",
-      "name": " MobBatteryCharging6"
+      "name": "MobBatteryCharging6"
     },
     {
       "code": "EBB2",
-      "name": " MobBatteryCharging7"
+      "name": "MobBatteryCharging7"
     },
     {
       "code": "EBB3",
-      "name": " MobBatteryCharging8"
+      "name": "MobBatteryCharging8"
     },
     {
       "code": "EBB4",
-      "name": " MobBatteryCharging9"
+      "name": "MobBatteryCharging9"
     },
     {
       "code": "EBB5",
-      "name": " MobBatteryCharging10"
+      "name": "MobBatteryCharging10"
     },
     {
       "code": "EBB6",
-      "name": " MobBatterySaver0"
+      "name": "MobBatterySaver0"
     },
     {
       "code": "EBB7",
-      "name": " MobBatterySaver1"
+      "name": "MobBatterySaver1"
     },
     {
       "code": "EBB8",
-      "name": " MobBatterySaver2"
+      "name": "MobBatterySaver2"
     },
     {
       "code": "EBB9",
-      "name": " MobBatterySaver3"
+      "name": "MobBatterySaver3"
     },
     {
       "code": "EBBA",
-      "name": " MobBatterySaver4"
+      "name": "MobBatterySaver4"
     },
     {
       "code": "EBBB",
-      "name": " MobBatterySaver5"
+      "name": "MobBatterySaver5"
     },
     {
       "code": "EBBC",
-      "name": " MobBatterySaver6"
+      "name": "MobBatterySaver6"
     },
     {
       "code": "EBBD",
-      "name": " MobBatterySaver7"
+      "name": "MobBatterySaver7"
     },
     {
       "code": "EBBE",
-      "name": " MobBatterySaver8"
+      "name": "MobBatterySaver8"
     },
     {
       "code": "EBBF",
-      "name": " MobBatterySaver9"
+      "name": "MobBatterySaver9"
     },
     {
       "code": "EBC0",
-      "name": " MobBatterySaver10"
+      "name": "MobBatterySaver10"
     },
     {
       "code": "EBC3",

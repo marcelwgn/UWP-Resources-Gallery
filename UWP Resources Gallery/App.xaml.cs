@@ -17,6 +17,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using UWPResourcesGallery.Models.Icon;
+using Windows.UI.ViewManagement;
+using Windows.ApplicationModel.Core;
 
 namespace UWPResourcesGallery
 {
@@ -33,7 +35,6 @@ namespace UWPResourcesGallery
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-
         }
 
         /// <summary>
@@ -70,7 +71,7 @@ namespace UWPResourcesGallery
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(RootNavigation), e.Arguments);
+                    rootFrame.Navigate(typeof(Navigation), e.Arguments);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();
@@ -78,6 +79,8 @@ namespace UWPResourcesGallery
             await EnsureWindow(e);
 
             ThemeHelper.Initialize();
+
+            CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
         }
 
         /// <summary>

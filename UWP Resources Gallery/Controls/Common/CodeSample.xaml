@@ -39,11 +39,11 @@
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
-        <Grid Background="{ThemeResource SystemBaseLowColor}" Padding="10,0"
+        <Grid Background="{ThemeResource SystemBaseLowColor}" Padding="5,0"
                     VerticalAlignment="Center" MinHeight="30"> 
             <RichTextBlock Name="CodeBlock" TextWrapping="Wrap" Margin="0,0,0,2"
                            FontFamily="Consolas" IsTextSelectionEnabled="True"
-                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                           HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </Grid>
         <Button Click="Copy_Click" Grid.Column="1" Style="{ThemeResource CopyButtonStyle}"/>
     </Grid>

@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="UWPResourcesGallery.Navigation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <Border x:Name="AppTitleBar"
+                IsHitTestVisible="True"
+                VerticalAlignment="Top"
+                Background="Transparent"
+                Canvas.ZIndex="1"
+                Height="30"
+                Grid.Column="1"
+                Margin="45,5,0,0">
+            <Windows10version1809:Border.TranslationTransition>
+                <Vector3Transition />
+            </Windows10version1809:Border.TranslationTransition>
+            <TextBlock x:Name="AppTitle"
+                       Text="UWP Resources Gallery"
+                       VerticalAlignment="Center"
+                       Style="{StaticResource CaptionTextBlockStyle}" >
+            </TextBlock>
+        </Border>
+        <muxc:NavigationView x:Name="RootNavigation"
+                             Grid.Column="1"
+                             ItemInvoked="RootNavigation_ItemInvoked" 
+                             PaneOpening="RootNavigation_PaneOpening"
+                             PaneClosing="RootNavigation_PaneClosing"
+                             DisplayModeChanged="RootNavigation_DisplayModeChanged"
+                             IsTitleBarAutoPaddingEnabled="False">
+            <muxc:NavigationView.MenuItems>
+                <muxc:NavigationViewItem x:Name="_StartPage" Content="Start" IsSelected="True">
+                    <muxc:NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xF167;"/>
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+                <muxc:NavigationViewItem Icon="List" Content="Icon list" x:Name="_IconsListPage"/>
+                <muxc:NavigationViewItem Icon="List" Content="Systembrush list" x:Name="_BrushesListPage"/>
+            </muxc:NavigationView.MenuItems>
+            <Frame x:Name="RootFrame" Padding="0,30,0,0"/>
+        </muxc:NavigationView>
+    </Grid>
+</Page>
