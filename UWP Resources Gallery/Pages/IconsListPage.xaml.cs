@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using UWPResourcesGallery.Controls.IconControls;
+using Windows.UI.Xaml.Media.Animation;
+using System.Diagnostics;
 
 namespace UWPResourcesGallery.Pages
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// Page displaying list of icons
     /// </summary>
     public sealed partial class IconsListPage : Page
     {
@@ -40,8 +42,10 @@ namespace UWPResourcesGallery.Pages
 
         private void ItemsGridView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ContentDialog dialog = new IconDetailDialog(e.ClickedItem as IconItem);
-            _ = dialog.ShowAsync();
+            //ContentDialog dialog = new IconDetailPage(e.ClickedItem as IconItem);
+            //_ = dialog.ShowAsync();
+            Frame.Navigate(typeof(IconDetailPage),e.ClickedItem as IconItem,new SuppressNavigationTransitionInfo());
+            Debug.WriteLine(Frame.CanGoBack);
         }
     }
 }

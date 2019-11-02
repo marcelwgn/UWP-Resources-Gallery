@@ -9,7 +9,18 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <Grid>
+    <StackPanel Orientation="Horizontal" MinHeight="20" MinWidth="100">
+        <TextBlock x:Name="BrushName" Text="{x:Bind Brush.Key}"/>
 
-    </Grid>
+        <StackPanel RequestedTheme="Light" x:Name="LightContainer">
+            <Border Background="{x:Bind Brush.LightHex}" Width="40" Height="40"/>
+            <TextBlock x:Name="LightHexLabel" Text="{x:Bind Brush.LightHex}"/>
+        </StackPanel>
+
+        <StackPanel RequestedTheme="Dark" x:Name="DarkContainer">
+            <Border Background="{x:Bind Brush.DarkHex}" Width="40" Height="40"/>
+            <TextBlock x:Name="DarkHexLabel" Text="{x:Bind Brush.DarkHex}"/>
+        </StackPanel>
+            
+    </StackPanel>
 </UserControl>

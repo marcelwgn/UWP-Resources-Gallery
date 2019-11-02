@@ -1,10 +1,13 @@
-﻿using UWPResourcesGallery.Pages;
+﻿using System;
+using UWPResourcesGallery.Pages;
 using Windows.ApplicationModel.Core;
 using Windows.Foundation.Metadata;
 using Windows.UI;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Navigation;
 using MUXC = Microsoft.UI.Xaml.Controls;
 
 namespace UWPResourcesGallery
@@ -16,6 +19,11 @@ namespace UWPResourcesGallery
     {
 
         private static Navigation Instance;
+
+        public static void NavigateToPageType(Type pageType)
+        {
+            Instance.RootFrame.Navigate(pageType);
+        }
 
         public static void NavigateToIconsListPage()
         {
@@ -30,7 +38,7 @@ namespace UWPResourcesGallery
 
             Window.Current.SetTitleBar(AppTitleBar);
 
-        
+
             RootFrame.Navigate(typeof(StartPage));
 
             Loaded += delegate (object sender, RoutedEventArgs e)
@@ -38,7 +46,40 @@ namespace UWPResourcesGallery
                 ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
                 titleBar.ButtonBackgroundColor = Colors.Transparent;
                 titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
+
+                RootFrame.Navigated += this.RootFrame_Navigated;
+                RootNavigation.BackRequested += this.RootNavigation_BackRequested;
             };
+        }
+
+        private void RootNavigation_BackRequested(MUXC.NavigationView sender, MUXC.NavigationViewBackRequestedEventArgs args)
+        {
+            if (RootFrame.CanGoBack)
+            {
+                RootFrame.GoBack();
+            }
+            RootNavigation.IsBackEnabled = RootFrame.CanGoBack;
+        }
+
+        private void RootFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+            RootNavigation.IsBackEnabled = RootFrame.CanGoBack;
+            if (RootFrame.CurrentSourcePageType == typeof(SettingsPage))
+            {
+                RootNavigation.SelectedItem = RootNavigation.SettingsItem;
+            }
+            if (RootFrame.CurrentSourcePageType == typeof(StartPage))
+            {
+                RootNavigation.SelectedItem = _StartPage;
+            }
+            if (RootFrame.CurrentSourcePageType == typeof(IconsListPage))
+            {
+                RootNavigation.SelectedItem = _IconsListPage;
+            }
+            if (RootFrame.CurrentSourcePageType == typeof(SystemBrushesListPage))
+            {
+                RootNavigation.SelectedItem = _BrushesListPage;
+            }
         }
 
         private void RootNavigation_ItemInvoked(MUXC.NavigationView sender, MUXC.NavigationViewItemInvokedEventArgs args)
@@ -57,30 +98,34 @@ namespace UWPResourcesGallery
             {
                 RootFrame.Navigate(typeof(IconsListPage));
             }
-            if(selectedItem == _BrushesListPage)
+            if (selectedItem == _BrushesListPage)
             {
                 RootFrame.Navigate(typeof(SystemBrushesListPage));
             }
         }
-        private void UpdateAppTitleMargin(float offSet)
+
+
+        private void UpdateAppTitleBarPosition(float offSet)
         {
-            // We need to check if translations are enabled to update
+            // We need to check if translations are available to update
             if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 7))
             {
+                // They are available, use smooth transitions
                 AppTitleBar.Translation = new System.Numerics.Vector3(offSet, 0, 0);
             }
             else
             {
+                // They are not, use margin
                 Thickness old = AppTitle.Margin;
-                AppTitleBar.Margin = new Thickness(45 + offSet,5,0,0);
+                AppTitleBar.Margin = new Thickness(45 + offSet, 5, 0, 0);
             }
         }
 
         private void RootNavigation_PaneClosing(MUXC.NavigationView sender, MUXC.NavigationViewPaneClosingEventArgs args)
         {
-            if(sender.DisplayMode != MUXC.NavigationViewDisplayMode.Minimal)
+            if (sender.DisplayMode != MUXC.NavigationViewDisplayMode.Minimal)
             {
-                UpdateAppTitleMargin(10);
+                UpdateAppTitleBarPosition(10);
             }
         }
 
@@ -88,7 +133,7 @@ namespace UWPResourcesGallery
         {
             if (sender.DisplayMode != MUXC.NavigationViewDisplayMode.Minimal)
             {
-                UpdateAppTitleMargin(0);
+                UpdateAppTitleBarPosition(0);
             }
         }
 
@@ -97,19 +142,19 @@ namespace UWPResourcesGallery
             switch (sender.DisplayMode)
             {
                 case MUXC.NavigationViewDisplayMode.Minimal:
-                    UpdateAppTitleMargin((float)sender.CompactPaneLength);
+                    UpdateAppTitleBarPosition((float)sender.CompactPaneLength);
                     break;
                 case MUXC.NavigationViewDisplayMode.Compact:
-                    UpdateAppTitleMargin(10);
+                    UpdateAppTitleBarPosition(10);
                     break;
                 case MUXC.NavigationViewDisplayMode.Expanded:
                     if (sender.IsPaneOpen)
                     {
-                        UpdateAppTitleMargin(0);
+                        UpdateAppTitleBarPosition(0);
                     }
                     else
                     {
-                        UpdateAppTitleMargin(10);
+                        UpdateAppTitleBarPosition(10);
                     }
                     break;
             }

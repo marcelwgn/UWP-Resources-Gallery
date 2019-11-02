@@ -126,13 +126,17 @@
     <Compile Include="Controls\Common\CodeSample.xaml.cs">
       <DependentUpon>CodeSample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\IconControls\IconDetailDialog.xaml.cs">
-      <DependentUpon>IconDetailDialog.xaml</DependentUpon>
+    <Compile Include="Controls\Common\PageHeader.xaml.cs">
+      <DependentUpon>PageHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IconControls\IconDetailPage.xaml.cs">
+      <DependentUpon>IconDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\IconControls\IconItemControl.xaml.cs">
       <DependentUpon>IconItemControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Brush\BrushItem.cs" />
+    <Compile Include="Models\Brush\BrushItemSource.cs" />
     <Compile Include="Models\GenericItemsSource.cs" />
     <Compile Include="Models\IFilterable.cs" />
     <Compile Include="Common\ThemeHelper.cs" />
@@ -183,7 +187,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\IconControls\IconDetailDialog.xaml">
+    <Page Include="Controls\Common\PageHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\IconControls\IconDetailPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -227,11 +235,11 @@
       <Version>6.2.9</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml">
-      <Version>2.2.190917002</Version>
+      <Version>2.3.191007001-prerelease</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\ThemeBrushes.json" />
+    <Content Include="Assets\ThemeBrushes.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\IconList.json" />

@@ -45,12 +45,7 @@ namespace UWPResourcesGallery.Controls.IconControls
 
         private void IconChanged()
         {
-            if (Icon != null)
-            {
-                OwnIcon.Glyph = Icon.Character;
-                IconName.Text = Icon.Name;
-                IconCode.Text = Icon.Code;
-            }
+            this.Bindings.Update();
         }
     }
 }

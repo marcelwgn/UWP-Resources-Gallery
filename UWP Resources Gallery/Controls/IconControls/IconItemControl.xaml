@@ -12,7 +12,6 @@
     <Grid Background="{ThemeResource SystemBaseLowColor}" Padding="5,0,5,0" MinWidth="260">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="5" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -21,17 +20,18 @@
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
-        <Viewbox Grid.Column="0" Height="60" Width="60" Margin="10,10,0,0">
-            <FontIcon x:Name="OwnIcon" Margin="10"
+        <Viewbox Grid.Column="0" Height="50" Width="50" Margin="10,10,0,0">
+            <FontIcon Margin="10" Glyph="{x:Bind Icon.Character}"
                         FontFamily="{StaticResource SymbolThemeFontFamily}"
                         Grid.Row="1"/>
         </Viewbox>
-        <TextBlock x:Name="IconCode" Grid.Row="0" Grid.Column="2" Margin="0,10,30,0"
+        <TextBlock Text="{x:Bind Icon.Code}"
+                    Grid.Row="0" Grid.Column="2" Margin="0,10,30,0"
                     VerticalAlignment="Center" Foreground="{ThemeResource SystemControlForegroundBaseMediumBrush}"/>
 
-        <TextBlock x:Name="IconName" Grid.Row="2" 
+        <TextBlock Text="{x:Bind Icon.Name}" Grid.Row="1" 
                     Grid.ColumnSpan="3" HorizontalAlignment="Center" TextWrapping="Wrap"
-                    FontSize="20" Height="60"
+                    FontSize="18" Height="54"
                     Foreground="{ThemeResource SystemControlForegroundAccentBrush}"/>
     </Grid>
 </UserControl>

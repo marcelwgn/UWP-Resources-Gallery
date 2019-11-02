@@ -6,16 +6,21 @@ using UWPResourcesGallery.Common;
 
 namespace UWPResourcesGallery.Controls.IconControls
 {
-    public sealed partial class IconDetailDialog : ContentDialog
+    public sealed partial class IconDetailPage : Page
     {
         private readonly IconItem icon;
 
-        public IconDetailDialog(IconItem icon)
+        public IconDetailPage()
         {
-            this.icon = icon;
+            //this.icon = icon;
             this.InitializeComponent();
             this.RequestedTheme = ThemeHelper.AppTheme;
-            this.FontIconCodeSample.Code = SampleTemplateProvider.GetFontIconCodeFromGlyph(icon.StringGlyph);
+            //this.FontIconCodeSample.Code = SampleTemplateProvider.GetFontIconCodeFromGlyph(icon.StringGlyph);
+        }
+
+        private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+
         }
     }
 }

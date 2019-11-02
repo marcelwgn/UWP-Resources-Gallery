@@ -19,6 +19,8 @@ using Windows.UI.Xaml.Navigation;
 using UWPResourcesGallery.Models.Icon;
 using Windows.UI.ViewManagement;
 using Windows.ApplicationModel.Core;
+using UWPResourcesGallery.Models.Brush;
+using Windows.UI.Input;
 
 namespace UWPResourcesGallery
 {
@@ -81,6 +83,8 @@ namespace UWPResourcesGallery
             ThemeHelper.Initialize();
 
             CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
+            Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += App_BackRequested;
+            rootFrame.PointerPressed += On_PointerPressed;
         }
 
         /// <summary>
@@ -107,11 +111,44 @@ namespace UWPResourcesGallery
             deferral.Complete();
         }
 
+        /// <summary>
+        /// All code related to loading data when app starts
+        /// </summary>
+        /// <param name="e"></param>
+        /// <returns></returns>
         private async Task EnsureWindow(IActivatedEventArgs e)
         {
             // Load all lists since we will need them anyway
             await IconItemSource.LoadIconsList();
+            await BrushItemSource.LoadBrushList();
         }
 
+
+        private void App_BackRequested(object sender, Windows.UI.Core.BackRequestedEventArgs e)
+        {
+            e.Handled = On_BackRequested();
+        }
+
+        private void On_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            bool isXButton1Pressed =
+                e.GetCurrentPoint(sender as UIElement).Properties.PointerUpdateKind == PointerUpdateKind.XButton1Pressed;
+
+            if (isXButton1Pressed)
+            {
+                e.Handled = On_BackRequested();
+            }
+        }
+
+        private bool On_BackRequested()
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+            if (rootFrame.CanGoBack)
+            {
+                rootFrame.GoBack();
+                return true;
+            }
+            return false;
+        }
     }
 }

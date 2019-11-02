@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:common="using:UWPResourcesGallery.Controls.Common"
     xmlns:controls="using:UWPResourcesGallery.Controls.IconControls"
+    xmlns:brushcontrols="using:UWPResourcesGallery.Controls.BrushControls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
@@ -31,5 +32,12 @@
             <!--<TextBox Grid.Column="2" MinWidth="250" VerticalAlignment="Center" Margin="0,1,0,1" TextChanged="SearchTextBox_TextChanged"></TextBox>-->
             <Border VerticalAlignment="Bottom" BorderThickness="1" BorderBrush="{StaticResource SystemBaseMediumLowColor}" Grid.ColumnSpan="100"/>
         </Grid>
+        <ListView x:Name="SystemBrushesPresenter" Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <brushcontrols:BrushItemControl Brush="{Binding}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>

@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Xml;
+using UWPResourcesGallery.Common;
 using UWPResourcesGallery.Models.Brush;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -11,6 +14,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Markup;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
@@ -27,7 +31,8 @@ namespace UWPResourcesGallery.Controls.BrushControls
                 new PropertyMetadata(default(BrushItem), new PropertyChangedCallback(BrushItemChanged))
             );
 
-        public BrushItem Brush {
+        public BrushItem Brush
+        {
             get
             {
                 return (BrushItem)GetValue(BrushDependencyProperty);
@@ -52,7 +57,7 @@ namespace UWPResourcesGallery.Controls.BrushControls
 
         private void BrushChanged()
         {
-
+            this.Bindings.Update();
         }
     }
 }
