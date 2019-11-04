@@ -119,6 +119,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\BoolToVisibilityConverter.cs" />
     <Compile Include="Common\SampleTemplateProvider.cs" />
     <Compile Include="Controls\BrushControls\BrushItemControl.xaml.cs">
       <DependentUpon>BrushItemControl.xaml</DependentUpon>
