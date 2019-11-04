@@ -9,7 +9,7 @@
     BorderBrush="AliceBlue"
     d:DesignWidth="200">
 
-    <Grid Background="{ThemeResource SystemBaseLowColor}" Padding="5,0,5,0" MinWidth="260">
+    <Grid Background="{ThemeResource SystemControlBackgroundListLowBrush}" Padding="5,0,5,0" MinWidth="260">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />

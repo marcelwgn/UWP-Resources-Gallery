@@ -2,28 +2,4 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-
-    <!-- Style defining the look of a copy text button -->
-    <Style x:Key="CopyButtonStyle" TargetType="Button">
-        <Setter Property="Margin" Value="15,5,0,5"/>
-        <Setter Property="Padding" Value="3" />
-        <Setter Property="Height" Value="30" />
-        <Setter Property="Grid.Column" Value="4" />
-        <Setter Property="ContentTemplate" >
-            <Setter.Value>
-                <DataTemplate>
-                    <SymbolIcon Symbol="Copy"/>
-                </DataTemplate>
-            </Setter.Value>
-        </Setter>
-        <Setter Property="ToolTipService.ToolTip">
-            <Setter.Value>
-                <ToolTip Windows10version1809:PlacementRect="0,0,40,0">
-                    Copy value to clipboard
-                </ToolTip>
-            </Setter.Value>
-        </Setter>
-        <Setter Property="ToolTipService.Placement" Value="Right" />
-    </Style>
-
 </ResourceDictionary>

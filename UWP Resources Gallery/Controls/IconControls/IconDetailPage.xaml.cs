@@ -2,25 +2,30 @@
 using Windows.UI.Xaml.Controls;
 using Windows.ApplicationModel.DataTransfer;
 using UWPResourcesGallery.Common;
-
+using Windows.UI.Xaml.Navigation;
 
 namespace UWPResourcesGallery.Controls.IconControls
 {
     public sealed partial class IconDetailPage : Page
     {
-        private readonly IconItem icon;
+        private IconItem icon;
 
         public IconDetailPage()
         {
-            //this.icon = icon;
             this.InitializeComponent();
-            this.RequestedTheme = ThemeHelper.AppTheme;
-            //this.FontIconCodeSample.Code = SampleTemplateProvider.GetFontIconCodeFromGlyph(icon.StringGlyph);
         }
 
-        private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-
+            base.OnNavigatedTo(e);
+            IconItem ownIcon = e.Parameter as IconItem;
+            if (ownIcon != null)
+            {
+                this.icon = ownIcon;
+                this.FontIconCodeSample.Code = SampleTemplateProvider.GetFontIconCodeFromGlyph(icon.StringGlyph);
+                this.Bindings.Update();
+            }
         }
+
     }
 }

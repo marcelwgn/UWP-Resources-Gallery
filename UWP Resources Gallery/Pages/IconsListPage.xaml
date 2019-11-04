@@ -21,7 +21,7 @@
 
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="14" />
+                <ColumnDefinition Width="25" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
@@ -29,14 +29,14 @@
             </Grid.ColumnDefinitions>
             <TextBlock Margin="0,0,10,1" Grid.Column="1" Text="Search icons:" VerticalAlignment="Center"/>
             <TextBox Grid.Column="2" MinWidth="250" VerticalAlignment="Center" Margin="0,1,0,1" TextChanged="SearchTextBox_TextChanged"></TextBox>
-            <Border VerticalAlignment="Bottom" BorderThickness="1" BorderBrush="{StaticResource SystemBaseMediumLowColor}" Grid.ColumnSpan="100"/>
+            <Border VerticalAlignment="Bottom" BorderThickness="1" BorderBrush="{ThemeResource SystemBaseMediumLowColor}" Grid.ColumnSpan="100"/>
         </Grid>
 
         <GridView x:Name="ItemsGridView" 
                     SelectionMode="None"
                     IsItemClickEnabled="True"
                     ItemClick="ItemsGridView_ItemClick"
-                    Padding="10" 
+                    Padding="19" 
                     Grid.Row="1">
             <GridView.Transitions>
                 <TransitionCollection>

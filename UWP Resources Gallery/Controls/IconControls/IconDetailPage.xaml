@@ -10,24 +10,27 @@
 
     <Page.Resources>
         <Style x:Key="CodeNameTextBlock" TargetType="common:CodeSample">
-            <Setter Property="Grid.Column" Value="3" />
+            <Setter Property="Grid.Column" Value="2" />
             <Setter Property="VerticalAlignment" Value="Center" />
             <Setter Property="HorizontalAlignment" Value="Stretch" />
         </Style>
 
     </Page.Resources>
 
-    <StackPanel>
+    <StackPanel Padding="25,10">
         <!--Title-->
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,20">
             <Viewbox>
                 <FontIcon x:Name="IconDisplay" Glyph="{x:Bind icon.Character}" 
                             Height="36" Width="36" FontSize="36"/>
             </Viewbox>
+            <TextBlock VerticalAlignment="Center" Margin="10,0,0,0"
+                        FontSize="20"  Text="{x:Bind icon.Name}"/>
         </StackPanel>
-        <Border Margin="0,10,0,5" BorderThickness="1" BorderBrush="{StaticResource SystemBaseMediumLowColor}" VerticalAlignment="Bottom" />
 
-        <Grid>
+        <TextBlock Style="{ThemeResource SectionHeader}">Info</TextBlock>
+        <Grid MaxWidth="800" HorizontalAlignment="Left" Padding="10"
+              BorderBrush="{ThemeResource SystemBaseLowColor}" BorderThickness="1" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -36,27 +39,29 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="5"/>
-                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
 
             </Grid.ColumnDefinitions>
 
             <!--Identifier values-->
-            <TextBlock Text="Icon name:" Margin="0,0,10,0" FontSize="16"
+            <TextBlock Text="Icon name" Margin="0,0,10,0" FontSize="16"
                         Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
-            <common:CodeSample Code="{x:Bind icon.Name}" Grid.Row="0" Style="{ThemeResource CodeNameTextBlock}"/>
+            <common:CodeSample Code="{x:Bind icon.Name}" Grid.Row="0" 
+                               Style="{ThemeResource CodeNameTextBlock}"/>
 
-            <TextBlock Text="Unicode point:" Margin="0,0,10,0" FontSize="16"
+            <TextBlock Text="Unicode point" Margin="0,0,10,0" FontSize="16"
                         Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
-            <common:CodeSample Code="{x:Bind icon.Code}" Grid.Row="1" Style="{ThemeResource CodeNameTextBlock}"/>
+            <common:CodeSample Code="{x:Bind icon.Code}" Grid.Row="1" 
+                               Style="{ThemeResource CodeNameTextBlock}"/>
 
-            <TextBlock Text="Text glyph:" Margin="0,0,10,0" FontSize="16"
+            <TextBlock Text="Text glyph" Margin="0,0,10,0" FontSize="16"
                         Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
-            <common:CodeSample Code="{x:Bind icon.StringGlyph}" Grid.Row="2" Style="{ThemeResource CodeNameTextBlock}"/>
-            <Button Click="Button_Click">Button</Button>
+            <common:CodeSample Code="{x:Bind icon.StringGlyph}" Grid.Row="2" 
+                               Style="{ThemeResource CodeNameTextBlock}"/>
         </Grid>
 
         <TextBlock Margin="0,10,0,0">FontIcon</TextBlock>
-        <common:CodeSample x:Name="FontIconCodeSample" IsSyntaxHighlightingEnabled="True"/>
+        <common:CodeSample x:Name="FontIconCodeSample" HorizontalAlignment="Left" IsSyntaxHighlightingEnabled="True"/>
     </StackPanel>
 </Page>

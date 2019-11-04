@@ -125,7 +125,7 @@ namespace UWPResourcesGallery
         {
             if (sender.DisplayMode != MUXC.NavigationViewDisplayMode.Minimal)
             {
-                UpdateAppTitleBarPosition(10);
+                UpdateAppTitleBarPosition(20);
             }
         }
 
@@ -145,7 +145,7 @@ namespace UWPResourcesGallery
                     UpdateAppTitleBarPosition((float)sender.CompactPaneLength);
                     break;
                 case MUXC.NavigationViewDisplayMode.Compact:
-                    UpdateAppTitleBarPosition(10);
+                    UpdateAppTitleBarPosition(20);
                     break;
                 case MUXC.NavigationViewDisplayMode.Expanded:
                     if (sender.IsPaneOpen)
@@ -154,7 +154,7 @@ namespace UWPResourcesGallery
                     }
                     else
                     {
-                        UpdateAppTitleBarPosition(10);
+                        UpdateAppTitleBarPosition(20);
                     }
                     break;
             }

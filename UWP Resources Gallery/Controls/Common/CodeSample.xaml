@@ -11,7 +11,7 @@
     d:DesignWidth="400">
 
     <UserControl.Resources>
-        <Style x:Key="CopyButtonStyle" TargetType="Button">
+        <!--<Style x:Key="CopyButtonStyle" TargetType="Button">
             <Setter Property="Margin" Value="10,0,0,0"/>
             <Setter Property="Padding" Value="3" />
             <Setter Property="Height" Value="30" />
@@ -31,7 +31,7 @@
                 </Setter.Value>
             </Setter>
             <Setter Property="ToolTipService.Placement" Value="Right" />
-        </Style>
+        </Style>-->
     </UserControl.Resources>
     
     <Grid Padding="0,5" HorizontalAlignment="Stretch" >
