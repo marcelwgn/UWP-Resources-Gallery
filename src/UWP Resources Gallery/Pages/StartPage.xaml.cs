@@ -7,11 +7,6 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,9 +22,15 @@ namespace UWPResourcesGallery.Pages
             this.InitializeComponent();
         }
 
-        private void NavigateToStartPage_Click(object sender, RoutedEventArgs e)
+        private void NavigateToIconListPage_Click(object sender, RoutedEventArgs e)
         {
             Navigation.NavigateToIconsListPage();
+        }
+
+
+        private void NavigateToSystemBrushesPage_Click(object sender, RoutedEventArgs e)
+        {
+            Navigation.NavigateToPageType(typeof(SystemBrushesListPage));
         }
     }
 }

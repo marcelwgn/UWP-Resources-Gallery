@@ -1,0 +1,22 @@
+﻿<UserControl
+    x:Class="UWPResourcesGallery.Controls.Common.CodeSample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPResourcesGallery.Controls.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+
+    <Grid Padding="0,5" HorizontalAlignment="Stretch" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid Background="{ThemeResource SystemBaseLowColor}" Padding="5,0"
+            VerticalAlignment="Center" MinHeight="30"> 
+            <RichTextBlock Name="CodeBlock" TextWrapping="Wrap" Margin="0,0,0,2"
+                FontFamily="Consolas" IsTextSelectionEnabled="True"
+                HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        </Grid>
+        <Button Click="Copy_Click" Grid.Column="1" Style="{ThemeResource CopyButtonStyle}" Margin="5,0"/>
+    </Grid>
+</UserControl>

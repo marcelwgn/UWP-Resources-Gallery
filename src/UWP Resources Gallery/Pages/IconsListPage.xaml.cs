@@ -42,8 +42,6 @@ namespace UWPResourcesGallery.Pages
 
         private void ItemsGridView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //ContentDialog dialog = new IconDetailPage(e.ClickedItem as IconItem);
-            //_ = dialog.ShowAsync();
             Frame.Navigate(typeof(IconDetailPage),e.ClickedItem as IconItem,new SuppressNavigationTransitionInfo());
             Debug.WriteLine(Frame.CanGoBack);
         }

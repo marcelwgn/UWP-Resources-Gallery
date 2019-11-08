@@ -23,6 +23,7 @@ namespace UWPResourcesGallery.Controls.IconControls
             {
                 this.icon = ownIcon;
                 this.FontIconCodeSample.Code = SampleTemplateProvider.GetFontIconCodeFromGlyph(icon.StringGlyph);
+                this.SymbolIconCodeSample.Code = SampleTemplateProvider.GetSymbolIconCodeFromGlyph(icon.Name);
                 this.Bindings.Update();
             }
         }

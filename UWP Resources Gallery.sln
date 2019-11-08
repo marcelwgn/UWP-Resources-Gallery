@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UWP Resources Gallery", "UWP Resources Gallery\UWP Resources Gallery.csproj", "{45C7F2FE-580E-4A64-BD5F-DFF8E21F2EE6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{44DBB23E-4C53-4482-A04C-92EE0515150C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UWP Resources Gallery", "src\UWP Resources Gallery\UWP Resources Gallery.csproj", "{45C7F2FE-580E-4A64-BD5F-DFF8E21F2EE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{45C7F2FE-580E-4A64-BD5F-DFF8E21F2EE6} = {44DBB23E-4C53-4482-A04C-92EE0515150C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {751E228E-9AE5-4F15-867D-1FE372A548C1}

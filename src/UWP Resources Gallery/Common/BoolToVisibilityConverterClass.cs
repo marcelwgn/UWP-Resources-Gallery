@@ -8,20 +8,16 @@ using Windows.UI.Xaml.Data;
 
 namespace UWPResourcesGallery.Common
 {
-    class BoolToVisibilityConverter : IValueConverter
+    class BoolToVisibilityConverterClass : IValueConverter
     {
-        public Visibility FalseValue { get; set; } = Visibility.Collapsed;
-        public Visibility TrueValue { get; set; } = Visibility.Visible;
-
-
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            return ((bool)value) ? TrueValue : FalseValue;
+            return ((bool)value) ? Visibility.Visible : Visibility.Collapsed;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
         {
-            throw new NotImplementedException();
+            return ((Visibility)value) == Visibility.Visible;
         }
     }
 }

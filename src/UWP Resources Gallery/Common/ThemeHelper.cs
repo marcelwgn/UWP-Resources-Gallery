@@ -12,6 +12,7 @@ namespace UWPResourcesGallery.Common
         private const string SelectedAppThemeKey = "SelectedAppTheme";
         private static Window ApplicationWindow = null;
 
+        private static UISettings uiSettings;
         public static ElementTheme AppTheme
         {
             get
@@ -52,18 +53,19 @@ namespace UWPResourcesGallery.Common
             var savedTheme = ApplicationData.Current.LocalSettings.Values[SelectedAppThemeKey];
             if (savedTheme != null)
             {
-                //AppTheme = ElementThemeFromName(savedTheme.ToString());
                 if (Window.Current.Content is FrameworkElement rootElement)
                 {
                     rootElement.RequestedTheme = ElementThemeFromName(savedTheme.ToString());
                 }
+
                 UpdateTitleBarButtonColors();
-                UISettings uiSettings = new UISettings();
-                uiSettings.ColorValuesChanged += UiSettings_ColorValuesChanged;
             }
+
+            uiSettings = new UISettings();
+            uiSettings.ColorValuesChanged += UiSettings_ColorValuesChanged;
         }
 
-        private async static void UiSettings_ColorValuesChanged(UISettings sender, object args)
+        private static async void UiSettings_ColorValuesChanged(UISettings sender, object args)
         {
             if(ApplicationWindow != null)
             {

@@ -12,20 +12,21 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="10"/>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="10"/>
-            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Button Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="NavigateToStartPage_Click" >Go to full list of icons</Button>
-        <Button Grid.Row="3" Grid.Column="3">Visit icon combinator</Button>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+            <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" 
+                Click="NavigateToIconListPage_Click" >Visit Icon list</Button>
+            <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" 
+                Click="NavigateToSystemBrushesPage_Click" >Go to overview of system brushes</Button>
+        </StackPanel>
+
     </Grid>
 </Page>
