@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Windows.Data.Json;
 using Windows.Storage;
@@ -43,7 +41,7 @@ namespace UWPResourcesGallery.Model
         /// <returns>The JSON object stored in the document</returns>
         protected async static Task<JsonObject> GetJSONFile(string fileName)
         {
-            Uri iconListJson = new Uri("ms-appx:///ResourceModel/Assets/"+fileName);
+            Uri iconListJson = new Uri("ms-appx:///ResourceModel/Assets/" + fileName);
             StorageFile iconFile = await StorageFile.GetFileFromApplicationUriAsync(iconListJson);
             string jsonText = await FileIO.ReadTextAsync(iconFile);
 

@@ -1,26 +1,16 @@
-﻿using UWPResourcesGallery.Common;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
+﻿using System;
 using System.Threading.Tasks;
+using UWPResourcesGallery.Common;
+using UWPResourcesGallery.Model.Brush;
+using UWPResourcesGallery.Model.Icon;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using Windows.ApplicationModel.Core;
+using Windows.UI.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using UWPResourcesGallery.Model.Icon;
-using Windows.UI.ViewManagement;
-using Windows.ApplicationModel.Core;
-using UWPResourcesGallery.Model.Brush;
-using Windows.UI.Input;
 
 namespace UWPResourcesGallery
 {
@@ -35,8 +25,8 @@ namespace UWPResourcesGallery
         /// </summary>
         public App()
         {
-            this.InitializeComponent();
-            this.Suspending += OnSuspending;
+            InitializeComponent();
+            Suspending += OnSuspending;
         }
 
         /// <summary>

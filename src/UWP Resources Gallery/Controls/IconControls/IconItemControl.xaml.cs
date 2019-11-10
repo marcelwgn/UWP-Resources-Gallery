@@ -1,9 +1,6 @@
 ﻿using UWPResourcesGallery.Model.Icon;
-using System;
-using System.Diagnostics;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
 
 namespace UWPResourcesGallery.Controls.IconControls
 {
@@ -40,12 +37,12 @@ namespace UWPResourcesGallery.Controls.IconControls
 
         public IconItemControl()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         private void IconChanged()
         {
-            this.Bindings.Update();
+            Bindings.Update();
         }
     }
 }

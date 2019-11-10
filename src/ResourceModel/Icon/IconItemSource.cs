@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Windows.Data.Json;
-using Windows.Storage;
 
 namespace UWPResourcesGallery.Model.Icon
 {

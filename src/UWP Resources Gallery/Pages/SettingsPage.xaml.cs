@@ -12,7 +12,7 @@ namespace UWPResourcesGallery.Pages
     {
         public SettingsPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
 
             foreach (FrameworkElement element in ThemePanel.Children)
             {

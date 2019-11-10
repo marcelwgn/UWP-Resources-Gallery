@@ -67,7 +67,7 @@ namespace UWPResourcesGallery.Common
 
         private static async void UiSettings_ColorValuesChanged(UISettings sender, object args)
         {
-            if(ApplicationWindow != null)
+            if (ApplicationWindow != null)
             {
                 await ApplicationWindow.Dispatcher.RunAsync(CoreDispatcherPriority.High, () =>
                     {

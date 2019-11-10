@@ -1,12 +1,10 @@
 ﻿using System;
 using UWPResourcesGallery.Pages;
-using Windows.ApplicationModel.Core;
 using Windows.Foundation.Metadata;
 using Windows.UI;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Navigation;
 using MUXC = Microsoft.UI.Xaml.Controls;
 
@@ -33,7 +31,7 @@ namespace UWPResourcesGallery
 
         public Navigation()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             Instance = this;
 
             Window.Current.SetTitleBar(AppTitleBar);
@@ -47,8 +45,8 @@ namespace UWPResourcesGallery
                 titleBar.ButtonBackgroundColor = Colors.Transparent;
                 titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
 
-                RootFrame.Navigated += this.RootFrame_Navigated;
-                RootNavigation.BackRequested += this.RootNavigation_BackRequested;
+                RootFrame.Navigated += RootFrame_Navigated;
+                RootNavigation.BackRequested += RootNavigation_BackRequested;
             };
         }
 

@@ -1,22 +1,10 @@
 ﻿using ColorCode;
 using ColorCode.Common;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using UWPResourcesGallery.Common;
 using Windows.ApplicationModel.DataTransfer;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Documents;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 // The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 
@@ -79,13 +67,13 @@ namespace UWPResourcesGallery.Controls.Common
 
         public CodeSample()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         private void CodeChanged()
         {
             CodeBlock.Blocks.Clear();
-            if(Code == null)
+            if (Code == null)
             {
                 return;
             }
@@ -96,7 +84,7 @@ namespace UWPResourcesGallery.Controls.Common
                 {
                     UpdateFormatterDarkThemeColors(formatter);
                 }
-                formatter.FormatRichTextBlock(this.Code, Languages.Xml, CodeBlock);
+                formatter.FormatRichTextBlock(Code, Languages.Xml, CodeBlock);
             }
             else
             {
@@ -110,7 +98,7 @@ namespace UWPResourcesGallery.Controls.Common
             }
         }
 
-        private void UpdateFormatterDarkThemeColors(RichTextBlockFormatter formatter)
+        private static void UpdateFormatterDarkThemeColors(RichTextBlockFormatter formatter)
         {
             // Replace the default dark theme resources with ones that more closely align to VS Code dark theme.
             formatter.Styles.Remove(formatter.Styles[ScopeName.XmlAttribute]);
@@ -155,7 +143,7 @@ namespace UWPResourcesGallery.Controls.Common
         private void Copy_Click(object sender, RoutedEventArgs e)
         {
             DataPackage package = new DataPackage();
-            package.SetText(this.Code);
+            package.SetText(Code);
             Clipboard.SetContent(package);
         }
     }

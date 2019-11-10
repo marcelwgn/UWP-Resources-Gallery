@@ -13,19 +13,19 @@ namespace UWPResourcesGallery.Model.Brush
 
         public BrushItem(string key, string name, string lightHEX, string darkHEX)
         {
-            this.Key = key;
-            this.Name = name;
-            this.LightHex = lightHEX;
-            this.DarkHex = darkHEX;
+            Key = key;
+            Name = name;
+            LightHex = lightHEX;
+            DarkHex = darkHEX;
         }
 
         public bool FitsFilter(string[] filter)
         {
             return filter.All(entry =>
-                Key.Contains(entry,System.StringComparison.CurrentCultureIgnoreCase)
-                || Name.Contains(entry,System.StringComparison.CurrentCultureIgnoreCase)
-                || LightHex.Contains(entry,System.StringComparison.CurrentCultureIgnoreCase)
-                || DarkHex.Contains(entry,System.StringComparison.CurrentCultureIgnoreCase)
+                Key.Contains(entry, System.StringComparison.CurrentCultureIgnoreCase)
+                || Name.Contains(entry, System.StringComparison.CurrentCultureIgnoreCase)
+                || LightHex.Contains(entry, System.StringComparison.CurrentCultureIgnoreCase)
+                || DarkHex.Contains(entry, System.StringComparison.CurrentCultureIgnoreCase)
             );
         }
     }

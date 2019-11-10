@@ -1,12 +1,9 @@
-﻿using UWPResourcesGallery.Controls;
-using UWPResourcesGallery.Model.Icon;
-using System.Collections.Generic;
+﻿using System.Diagnostics;
 using System.Threading.Tasks;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
 using UWPResourcesGallery.Controls.IconControls;
+using UWPResourcesGallery.Model.Icon;
+using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
-using System.Diagnostics;
 
 namespace UWPResourcesGallery.Pages
 {
@@ -19,9 +16,9 @@ namespace UWPResourcesGallery.Pages
 
         public IconsListPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
 
-            this.Loaded += this.LoadIcons;
+            Loaded += LoadIcons;
         }
 
         private void LoadIcons(object sender, Windows.UI.Xaml.RoutedEventArgs e)
@@ -42,7 +39,7 @@ namespace UWPResourcesGallery.Pages
 
         private void ItemsGridView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Frame.Navigate(typeof(IconDetailPage),e.ClickedItem as IconItem,new SuppressNavigationTransitionInfo());
+            Frame.Navigate(typeof(IconDetailPage), e.ClickedItem as IconItem, new SuppressNavigationTransitionInfo());
             Debug.WriteLine(Frame.CanGoBack);
         }
     }

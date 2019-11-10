@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace UWPResourcesGallery.Common
+﻿namespace UWPResourcesGallery.Common
 {
     static class SampleTemplateProvider
     {
         private const string XAMLCore = "<${Type}/>";
 
 
-        private const string FontIconWithGlyph =            
+        private const string FontIconWithGlyph =
             "<FontIcon Glyph=\"${Glyph}\"/>";
 
         private const string SymbolIconWithGlyph =
@@ -19,7 +13,7 @@ namespace UWPResourcesGallery.Common
 
         public static string GetFontIconCodeFromGlyph(string glyph)
         {
-            return FontIconWithGlyph.Replace("${Glyph}",glyph);
+            return FontIconWithGlyph.Replace("${Glyph}", glyph);
         }
 
         internal static string GetSymbolIconCodeFromGlyph(string name)

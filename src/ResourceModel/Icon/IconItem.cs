@@ -11,17 +11,17 @@ namespace UWPResourcesGallery.Model.Icon
 
         public string Character { get; private set; }
 
-        public string StringGlyph { get { return "&#x" + this.Code + ";"; } }
+        public string StringGlyph { get { return "&#x" + Code + ";"; } }
 
         public bool IsSymbol { get; }
 
         public IconItem(string code, string description)
         {
-            this.Code = code;
-            this.Name = description;
-            this.Character = char.ConvertFromUtf32(Convert.ToInt32(this.Code, 16));
-            IsSymbol = Enum.IsDefined(typeof(Symbol),description);
-        
+            Code = code;
+            Name = description;
+            Character = char.ConvertFromUtf32(Convert.ToInt32(Code, 16));
+            IsSymbol = Enum.IsDefined(typeof(Symbol), description);
+
         }
 
         public bool FitsFilter(string[] filter)
