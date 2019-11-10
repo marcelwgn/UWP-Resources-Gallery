@@ -41,7 +41,7 @@ namespace UWPResourcesGallery.Model
         /// <returns>The JSON object stored in the document</returns>
         protected async static Task<JsonObject> GetJSONFile(string fileName)
         {
-            Uri iconListJson = new Uri("ms-appx:///ResourceModel/Assets/" + fileName);
+            Uri iconListJson = new Uri("ms-appx://" + fileName);
             StorageFile iconFile = await StorageFile.GetFileFromApplicationUriAsync(iconListJson);
             string jsonText = await FileIO.ReadTextAsync(iconFile);
 

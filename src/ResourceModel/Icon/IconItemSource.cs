@@ -8,7 +8,7 @@ namespace UWPResourcesGallery.Model.Icon
 
         public static async Task LoadIconsList()
         {
-            var file = await GetJSONFile("IconList.json");
+            var file = await GetJSONFile("/ResourceModel/Assets/IconList.json");
             var list = file["icons"].GetArray();
             lock (Items)
             {
