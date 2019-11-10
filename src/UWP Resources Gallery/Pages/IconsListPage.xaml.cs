@@ -1,5 +1,5 @@
 ﻿using UWPResourcesGallery.Controls;
-using UWPResourcesGallery.Models.Icon;
+using UWPResourcesGallery.Model.Icon;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;

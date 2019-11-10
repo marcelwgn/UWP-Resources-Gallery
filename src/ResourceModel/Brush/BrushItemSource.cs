@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Data.Json;
 
-namespace UWPResourcesGallery.Models.Brush
+namespace UWPResourcesGallery.Model.Brush
 {
     public class BrushItemSource : GenericItemsSource<BrushItem>
     {

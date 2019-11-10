@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Windows.Data.Json;
 using Windows.Storage;
 
-namespace UWPResourcesGallery.Models
+namespace UWPResourcesGallery.Model
 {
     /// <summary>
     /// Creates a generic data source, capable of:
@@ -28,7 +28,7 @@ namespace UWPResourcesGallery.Models
         /// </summary>
         public ObservableCollection<T> FilteredItems { get; } = new ObservableCollection<T>();
 
-        public GenericItemsSource()
+        protected GenericItemsSource()
         {
             foreach (T item in Items)
             {
@@ -43,7 +43,7 @@ namespace UWPResourcesGallery.Models
         /// <returns>The JSON object stored in the document</returns>
         protected async static Task<JsonObject> GetJSONFile(string fileName)
         {
-            Uri iconListJson = new Uri("ms-appx:///Assets/"+fileName);
+            Uri iconListJson = new Uri("ms-appx:///ResourceModel/Assets/"+fileName);
             StorageFile iconFile = await StorageFile.GetFileFromApplicationUriAsync(iconListJson);
             string jsonText = await FileIO.ReadTextAsync(iconFile);
 

@@ -84,20 +84,6 @@
                     IsAlphaEnabled="False"
                     IsAlphaSliderVisible="True"
                     IsAlphaTextInputVisible="True" />
-
-                <TextBlock>Color in dark theme</TextBlock>
-                <FontIcon  Glyph="{x:Bind icon.Character}" />
-                <muxc:ColorPicker
-                    HorizontalAlignment="Left"
-                    IsMoreButtonVisible="False"
-                    IsColorSliderVisible="True"
-                    IsColorChannelTextInputVisible="True"
-                    IsHexInputVisible="True"
-                    IsAlphaEnabled="False"
-                    IsAlphaSliderVisible="True"
-                    IsAlphaTextInputVisible="True" />
-
-
             </StackPanel>
 
             <!--SymbolIcon (only show when icon is present in Symbol enum)-->

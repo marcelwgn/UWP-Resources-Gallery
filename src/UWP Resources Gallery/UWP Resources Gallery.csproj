@@ -127,6 +127,9 @@
     <Compile Include="Controls\Common\CodeSample.xaml.cs">
       <DependentUpon>CodeSample.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Common\DualThemePresenter.cs">
+      <DependentUpon>DualThemePresenter.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Common\PageHeader.xaml.cs">
       <DependentUpon>PageHeader.xaml</DependentUpon>
     </Compile>
@@ -136,13 +139,7 @@
     <Compile Include="Controls\IconControls\IconItemControl.xaml.cs">
       <DependentUpon>IconItemControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\Brush\BrushItem.cs" />
-    <Compile Include="Models\Brush\BrushItemSource.cs" />
-    <Compile Include="Models\GenericItemsSource.cs" />
-    <Compile Include="Models\IFilterable.cs" />
     <Compile Include="Common\ThemeHelper.cs" />
-    <Compile Include="Models\Icon\IconItem.cs" />
-    <Compile Include="Models\Icon\IconItemSource.cs" />
     <Compile Include="Pages\IconsListPage.xaml.cs">
       <DependentUpon>IconsListPage.xaml</DependentUpon>
     </Compile>
@@ -185,6 +182,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\Common\CodeSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\DualThemePresenter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -236,13 +237,13 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\ThemeBrushes.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Assets\IconList.json" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Themes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ResourceModel\ResourceModel.csproj">
+      <Project>{957b1e0e-d863-41e3-8042-7fac37a512dd}</Project>
+      <Name>ResourceModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

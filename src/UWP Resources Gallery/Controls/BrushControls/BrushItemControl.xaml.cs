@@ -6,7 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Xml;
 using UWPResourcesGallery.Common;
-using UWPResourcesGallery.Models.Brush;
+using UWPResourcesGallery.Model.Brush;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;

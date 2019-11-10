@@ -5,6 +5,7 @@
     xmlns:local="using:UWPResourcesGallery.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:common="using:UWPResourcesGallery.Controls.Common"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -26,6 +27,16 @@
                 Click="NavigateToIconListPage_Click" >Visit Icon list</Button>
             <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" 
                 Click="NavigateToSystemBrushesPage_Click" >Go to overview of system brushes</Button>
+
+            <common:DualThemePresenter>
+                <common:DualThemePresenter.LightThemeContent>
+                    <TextBlock>Text</TextBlock>
+                </common:DualThemePresenter.LightThemeContent>
+                <common:DualThemePresenter.DarkThemeContent>
+                    <TextBlock>Text</TextBlock>
+                </common:DualThemePresenter.DarkThemeContent>
+            </common:DualThemePresenter>
+            
         </StackPanel>
 
     </Grid>

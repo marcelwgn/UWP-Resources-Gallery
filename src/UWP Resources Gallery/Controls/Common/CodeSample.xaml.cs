@@ -85,6 +85,10 @@ namespace UWPResourcesGallery.Controls.Common
         private void CodeChanged()
         {
             CodeBlock.Blocks.Clear();
+            if(Code == null)
+            {
+                return;
+            }
             if (IsSyntaxHighlightingEnabled)
             {
                 var formatter = new RichTextBlockFormatter(ThemeHelper.AppTheme);

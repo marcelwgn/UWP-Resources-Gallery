@@ -5,6 +5,7 @@
     xmlns:local="using:UWPResourcesGallery.Controls.BrushControls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:common="using:UWPResourcesGallery.Controls.Common"
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400">
@@ -12,15 +13,21 @@
     <StackPanel Orientation="Horizontal" MinHeight="20" MinWidth="100">
         <TextBlock x:Name="BrushName" Text="{x:Bind Brush.Key}"/>
 
-        <StackPanel RequestedTheme="Light" x:Name="LightContainer">
-            <Border Background="{x:Bind Brush.LightHex}" Width="40" Height="40"/>
-            <TextBlock x:Name="LightHexLabel" Text="{x:Bind Brush.LightHex}"/>
-        </StackPanel>
+        <common:DualThemePresenter>
+            <common:DualThemePresenter.LightThemeContent>
+                <StackPanel>
+                    <Border Background="{x:Bind Brush.LightHex}" Width="60" Height="40"/>
+                    <common:CodeSample Code="{x:Bind Brush.DarkHex}" IsSyntaxHighlightingEnabled="False"/>
+                </StackPanel>
+            </common:DualThemePresenter.LightThemeContent>
 
-        <StackPanel RequestedTheme="Dark" x:Name="DarkContainer">
-            <Border Background="{x:Bind Brush.DarkHex}" Width="40" Height="40"/>
-            <TextBlock x:Name="DarkHexLabel" Text="{x:Bind Brush.DarkHex}"/>
-        </StackPanel>
-            
+            <common:DualThemePresenter.DarkThemeContent>
+                <StackPanel>
+                    <Border Background="{x:Bind Brush.DarkHex}" Width="60" Height="40"/>
+                    <common:CodeSample Code="{x:Bind Brush.DarkHex}" IsSyntaxHighlightingEnabled="False"/>
+                </StackPanel>
+            </common:DualThemePresenter.DarkThemeContent>
+        
+        </common:DualThemePresenter>
     </StackPanel>
 </UserControl>

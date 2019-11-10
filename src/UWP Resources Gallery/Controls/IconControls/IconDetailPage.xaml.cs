@@ -1,4 +1,4 @@
-﻿using UWPResourcesGallery.Models.Icon;
+﻿using UWPResourcesGallery.Model.Icon;
 using Windows.UI.Xaml.Controls;
 using Windows.ApplicationModel.DataTransfer;
 using UWPResourcesGallery.Common;

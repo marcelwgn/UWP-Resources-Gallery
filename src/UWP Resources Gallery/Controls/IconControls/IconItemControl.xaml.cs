@@ -1,4 +1,4 @@
-﻿using UWPResourcesGallery.Models.Icon;
+﻿using UWPResourcesGallery.Model.Icon;
 using System;
 using System.Diagnostics;
 using Windows.UI.Xaml;

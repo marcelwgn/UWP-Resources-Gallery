@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Windows.Data.Json;
 using Windows.Storage;
 
-namespace UWPResourcesGallery.Models.Icon
+namespace UWPResourcesGallery.Model.Icon
 {
     public class IconItemSource : GenericItemsSource<IconItem>
     {

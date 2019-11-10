@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace UWPResourcesGallery.Models.Brush
+namespace UWPResourcesGallery.Model.Brush
 {
     public class BrushItem : IFilterable
     {
