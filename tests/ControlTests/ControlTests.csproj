@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{C2B9B471-9028-46C3-A04E-37DD4B96D059}</ProjectGuid>
+    <ProjectGuid>{40FCF2F6-2D83-4D02-94FF-57F52A73B462}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ResoureModelTests</RootNamespace>
-    <AssemblyName>ResoureModel Tests</AssemblyName>
+    <RootNamespace>ControlTests</RootNamespace>
+    <AssemblyName>ControlTests</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.18362.0</TargetPlatformVersion>
@@ -119,13 +119,14 @@
     <SDKReference Include="TestPlatform.Universal, Version=$(UnitTestPlatformVersion)" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BrushSourceTests.cs" />
-    <Compile Include="IconSourceTests.cs" />
+    <Compile Include="ControlTestPage.xaml.cs">
+      <DependentUpon>ControlTestPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTestApp.xaml.cs">
       <DependentUpon>UnitTestApp.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GenericItemsSourceTests.cs" />
+    <Compile Include="Tests\DualThemePresenterTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="UnitTestApp.xaml">
@@ -139,7 +140,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Properties\TestsDefault.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
@@ -160,15 +161,17 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ResourceModel\ResourceModel.csproj">
-      <Project>{957b1e0e-d863-41e3-8042-7fac37a512dd}</Project>
-      <Name>ResourceModel</Name>
-    </ProjectReference>
+    <Page Include="ControlTestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\testdata.json" />
+    <ProjectReference Include="..\..\src\UWPResourcesGallery\UWPResourcesGallery.csproj">
+      <Project>{45c7f2fe-580e-4a64-bd5f-dff8e21f2ee6}</Project>
+      <Name>UWP Resources Gallery</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

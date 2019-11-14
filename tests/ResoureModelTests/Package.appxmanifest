@@ -1,20 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Package
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   IgnorableNamespaces="uap mp">
 
-  <Identity
-    Name="6245fa1a-e391-413d-9b02-a4ae1f060713"
-    Publisher="CN=Marcel"
-    Version="1.0.0.0" />
+  <Identity Name="65f43dea-85d8-45f1-ac64-f863dbd8159c"
+            Publisher="CN=Marcel"
+            Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="6245fa1a-e391-413d-9b02-a4ae1f060713" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="65f43dea-85d8-45f1-ac64-f863dbd8159c" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>Segoe Icons Gallery</DisplayName>
+    <DisplayName>ResoureModel Tests</DisplayName>
     <PublisherDisplayName>Marcel</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -24,29 +22,25 @@
   </Dependencies>
 
   <Resources>
-    <Resource Language="x-generate"/>
+    <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application Id="App"
-      Executable="$targetnametoken$.exe"
-      EntryPoint="UWP_Resources_Gallery.App">
+    <Application Id="vstest.executionengine.universal.App"
+        Executable="$targetnametoken$.exe"
+        EntryPoint="ResoureModelTests.App">
       <uap:VisualElements
-        DisplayName="UWP Resources Gallery"
+        DisplayName="ResoureModelTests"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="This app displays common resources that are available for UWP Apps such as the Segoe icons and color resources."
+        Description="ResoureModel Tests"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
-        <uap:InitialRotationPreference>
-          <uap:Rotation Preference="landscape"/>
-          <uap:Rotation Preference="portrait"/></uap:InitialRotationPreference>
       </uap:VisualElements>
     </Application>
   </Applications>
-
   <Capabilities>
-    <Capability Name="internetClient" />
+    <Capability Name="internetClientServer" />
+    <Capability Name="privateNetworkClientServer" />
   </Capabilities>
 </Package>

@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="ControlTests.ControlsTestPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:common="using:UWPResourcesGallery.Controls.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <common:DualThemePresenter >
+            <common:DualThemePresenter.LightThemeContent>
+                <TextBlock x:Name="LightThemeText" AutomationProperties.Name="LightThemeText">Light</TextBlock>
+            </common:DualThemePresenter.LightThemeContent>
+
+            <common:DualThemePresenter.DarkThemeContent>
+                <TextBlock x:Name="DarkThemeText">Dark</TextBlock>
+            </common:DualThemePresenter.DarkThemeContent>
+        </common:DualThemePresenter>
+
+    </StackPanel>
+</Page>
