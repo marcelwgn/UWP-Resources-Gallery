@@ -25,7 +25,7 @@ namespace ControlTests
     public sealed partial class ControlsTestPage : Page
     {
 
-        public static ControlsTestPage Instance;
+        public static ControlsTestPage Instance { get; private set; }
         
         public ControlsTestPage()
         {

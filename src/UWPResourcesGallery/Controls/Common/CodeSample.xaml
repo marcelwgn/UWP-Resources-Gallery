@@ -11,12 +11,12 @@
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
-        <Grid Background="{ThemeResource SystemBaseLowColor}" Padding="5,0"
+        <Grid Background="{ThemeResource SystemBaseLowColor}"
             VerticalAlignment="Center" MinHeight="30"> 
-            <RichTextBlock Name="CodeBlock" TextWrapping="Wrap" Margin="0,0,0,2"
+            <RichTextBlock Name="CodeBlock" TextWrapping="Wrap" Margin="5,0,5,2"
                 FontFamily="Consolas" IsTextSelectionEnabled="True"
                 HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </Grid>
-        <Button Click="Copy_Click" Grid.Column="1" Style="{ThemeResource CopyButtonStyle}" Margin="5,0"/>
+        <Button x:Name="CopyButton" Click="Copy_Click" Grid.Column="1" Style="{ThemeResource CopyButtonStyle}" Margin="5,0"/>
     </Grid>
 </UserControl>
