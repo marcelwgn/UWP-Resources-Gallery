@@ -140,16 +140,16 @@
       <DependentUpon>IconItemControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Common\ThemeHelper.cs" />
-    <Compile Include="Pages\IconsListPage.xaml.cs">
+    <Compile Include="MainPages\IconsListPage.xaml.cs">
       <DependentUpon>IconsListPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SettingsPage.xaml.cs">
+    <Compile Include="MainPages\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\StartPage.xaml.cs">
+    <Compile Include="MainPages\StartPage.xaml.cs">
       <DependentUpon>StartPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SystemBrushesListPage.xaml.cs">
+    <Compile Include="MainPages\SystemBrushesListPage.xaml.cs">
       <DependentUpon>SystemBrushesListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="AppNavigation.xaml.cs">
@@ -201,19 +201,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\IconsListPage.xaml">
+    <Page Include="MainPages\IconsListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\SettingsPage.xaml">
+    <Page Include="MainPages\SettingsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\StartPage.xaml">
+    <Page Include="MainPages\StartPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\SystemBrushesListPage.xaml">
+    <Page Include="MainPages\SystemBrushesListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

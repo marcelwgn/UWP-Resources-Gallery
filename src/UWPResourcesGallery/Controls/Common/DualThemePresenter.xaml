@@ -13,8 +13,16 @@
         <Thickness x:Key="ThemedContentPresenterPadding">10</Thickness>
     </UserControl.Resources>
     
-    <StackPanel Orientation="Horizontal">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
         <!-- Light theme content -->
         <Grid Grid.Column="0" RequestedTheme="Light" 
               Padding="{ThemeResource ThemedContentPresenterPadding}"
@@ -25,9 +33,8 @@
             <ContentPresenter Content="{x:Bind LightThemeContent}"/>
         </Grid>
 
-
         <!-- Dark theme content -->
-        <Grid Grid.Column="0" RequestedTheme="Dark" 
+        <Grid Grid.Column="1" RequestedTheme="Dark" 
               Padding="{ThemeResource ThemedContentPresenterPadding}" 
               BorderThickness="1"
               BorderBrush="{ThemeResource SystemControlBackgroundListLowBrush}"
@@ -35,5 +42,5 @@
             <ContentPresenter Content="{x:Bind DarkThemeContent}"/>
         </Grid>
 
-    </StackPanel>
+    </Grid>
 </UserControl>

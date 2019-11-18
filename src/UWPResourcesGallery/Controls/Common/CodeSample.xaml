@@ -6,17 +6,27 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
 
+    <UserControl.Resources>
+        <x:Double x:Key="CodeFontSize">14</x:Double>
+    </UserControl.Resources>
+    
     <Grid Padding="0,5" HorizontalAlignment="Stretch" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
         <Grid Background="{ThemeResource SystemBaseLowColor}"
-            VerticalAlignment="Center" MinHeight="30"> 
+            VerticalAlignment="Stretch" Padding="0,5,0,5"> 
             <RichTextBlock Name="CodeBlock" TextWrapping="Wrap" Margin="5,0,5,2"
                 FontFamily="Consolas" IsTextSelectionEnabled="True"
+                FontSize="{ThemeResource CodeFontSize}"
                 HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </Grid>
-        <Button x:Name="CopyButton" Click="Copy_Click" Grid.Column="1" Style="{ThemeResource CopyButtonStyle}" Margin="5,0"/>
+        <Button x:Name="CopyButton" Click="Copy_Click" 
+                VerticalAlignment="Top" Grid.Column="1" 
+                Style="{ThemeResource CopyButtonStyle}" Margin="5,0"/>
     </Grid>
 </UserControl>

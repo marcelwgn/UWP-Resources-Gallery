@@ -1,5 +1,5 @@
 ﻿using System;
-using UWPResourcesGallery.Pages;
+using UWPResourcesGallery.MainPages;
 using Windows.Foundation.Metadata;
 using Windows.UI;
 using Windows.UI.ViewManagement;

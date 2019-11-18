@@ -5,7 +5,7 @@ using UWPResourcesGallery.Model.Icon;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
 
-namespace UWPResourcesGallery.Pages
+namespace UWPResourcesGallery.MainPages
 {
     /// <summary>
     /// Page displaying list of icons
