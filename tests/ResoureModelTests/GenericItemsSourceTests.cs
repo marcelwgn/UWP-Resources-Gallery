@@ -12,7 +12,7 @@ namespace ResoureModelTests
     public class GenericItemsSourceTests : GenericItemsSource<FilterableString>
     {
         [ClassInitialize]
-        public static async Task ClassSetup(TestContext context)
+        public static async Task ClassSetup(TestContext _)
         {
             var file = await GetJSONFile("/Assets/testdata.json");
 

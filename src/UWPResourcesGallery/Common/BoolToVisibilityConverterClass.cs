@@ -4,7 +4,9 @@ using Windows.UI.Xaml.Data;
 
 namespace UWPResourcesGallery.Common
 {
-    class BoolToVisibilityConverterClass : IValueConverter
+#pragma warning disable CA1812 // Avoid uninstantiated internal classes
+    internal class BoolToVisibilityConverterClass : IValueConverter
+#pragma warning restore CA1812 // Avoid uninstantiated internal classes
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {

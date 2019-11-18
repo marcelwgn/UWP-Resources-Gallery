@@ -21,7 +21,7 @@ namespace UWPResourcesGallery.Controls.Common
                 ThemedContentChanged();
             }
         }
-        public static DependencyProperty LightThemeContentProperty = DependencyProperty.Register(
+        public static readonly DependencyProperty LightThemeContentProperty = DependencyProperty.Register(
                 "LightThemeContent",
                 typeof(FrameworkElement),
                 typeof(DualThemePresenter),
@@ -42,7 +42,7 @@ namespace UWPResourcesGallery.Controls.Common
                 ThemedContentChanged();
             }
         }
-        public static DependencyProperty DarkThemeContentProperty = DependencyProperty.Register(
+        public static readonly DependencyProperty DarkThemeContentProperty = DependencyProperty.Register(
                 "LightThemeContent",
                 typeof(FrameworkElement),
                 typeof(DualThemePresenter),
@@ -61,6 +61,10 @@ namespace UWPResourcesGallery.Controls.Common
 
         public static void ThemedContentPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
+            if(d== null)
+            {
+                return;
+            }
             (d as DualThemePresenter).ThemedContentChanged();
         }
     }

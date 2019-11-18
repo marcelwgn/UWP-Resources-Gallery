@@ -13,10 +13,10 @@ namespace UWPResourcesGallery
     /// <summary>
     /// This is the root page of the application
     /// </summary>
-    public sealed partial class Navigation : Page
+    public sealed partial class AppNavigation : Page
     {
 
-        private static Navigation Instance;
+        private static AppNavigation Instance;
 
         public static void NavigateToPageType(Type pageType)
         {
@@ -29,7 +29,7 @@ namespace UWPResourcesGallery
             Instance.RootFrame.Navigate(typeof(IconsListPage));
         }
 
-        public Navigation()
+        public AppNavigation()
         {
             InitializeComponent();
             Instance = this;
@@ -114,7 +114,6 @@ namespace UWPResourcesGallery
             else
             {
                 // They are not, use margin
-                Thickness old = AppTitle.Margin;
                 AppTitleBar.Margin = new Thickness(45 + offSet, 5, 0, 0);
             }
         }
@@ -126,7 +125,7 @@ namespace UWPResourcesGallery
                 UpdateAppTitleBarPosition(20);
             }
         }
-
+        
         private void RootNavigation_PaneOpening(MUXC.NavigationView sender, object args)
         {
             if (sender.DisplayMode != MUXC.NavigationViewDisplayMode.Minimal)

@@ -17,13 +17,13 @@ namespace UWPResourcesGallery.Pages
 
         private void NavigateToIconListPage_Click(object sender, RoutedEventArgs e)
         {
-            Navigation.NavigateToIconsListPage();
+            AppNavigation.NavigateToIconsListPage();
         }
 
 
         private void NavigateToSystemBrushesPage_Click(object sender, RoutedEventArgs e)
         {
-            Navigation.NavigateToPageType(typeof(SystemBrushesListPage));
+            AppNavigation.NavigateToPageType(typeof(SystemBrushesListPage));
         }
     }
 }

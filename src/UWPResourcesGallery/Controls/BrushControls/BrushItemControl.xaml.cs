@@ -8,7 +8,7 @@ namespace UWPResourcesGallery.Controls.BrushControls
     {
 
         #region BrushItem property
-        public static DependencyProperty BrushDependencyProperty = DependencyProperty.Register(
+        public static readonly DependencyProperty BrushDependencyProperty = DependencyProperty.Register(
                 "Brush",
                 typeof(BrushItem),
                 typeof(BrushItemControl),

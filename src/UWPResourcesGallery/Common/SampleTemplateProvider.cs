@@ -2,9 +2,6 @@
 {
     static class SampleTemplateProvider
     {
-        private const string XAMLCore = "<${Type}/>";
-
-
         private const string FontIconWithGlyph =
             "<FontIcon Glyph=\"${Glyph}\"/>";
 
@@ -13,12 +10,17 @@
 
         public static string GetFontIconCodeFromGlyph(string glyph)
         {
-            return FontIconWithGlyph.Replace("${Glyph}", glyph);
+            return FontIconWithGlyph.Replace("${Glyph}", glyph,System.StringComparison.Ordinal);
         }
 
         internal static string GetSymbolIconCodeFromGlyph(string name)
         {
-            return SymbolIconWithGlyph.Replace("${Symbol}", name);
+            return SymbolIconWithGlyph.Replace("${Symbol}", name, System.StringComparison.Ordinal);
+        }
+
+        internal static string AddColorToSymbolIcon(string symbolIconString, string color)
+        {
+            return symbolIconString.Replace("/>", "Color:\"" + color + "\" />", System.StringComparison.Ordinal);
         }
     }
 }
