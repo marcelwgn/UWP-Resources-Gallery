@@ -12,9 +12,9 @@ namespace ResoureModelTests
     public class IconSourceTests
     {
         [ClassInitialize]
-        public static async Task ClassInitialize(TestContext _)
+        public static void ClassInitialize(TestContext _)
         {
-            await IconItemSource.LoadIconsList();
+            IconItemSource.LoadIconsList();
         }
 
         [TestMethod]

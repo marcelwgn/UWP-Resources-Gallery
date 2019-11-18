@@ -5,9 +5,9 @@ namespace UWPResourcesGallery.Model.Brush
 {
     public class BrushItemSource : GenericItemsSource<BrushItem>
     {
-        public static async Task LoadBrushList()
+        public static void LoadBrushList()
         {
-            var file = await GetJSONFile("/ResourceModel/Assets/ThemeBrushes.json");
+            var file = GetJSONFile("/ResourceModel/Assets/ThemeBrushes.json");
             var list = file["brushes"].GetArray();
             foreach (JsonValue entry in list)
             {

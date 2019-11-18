@@ -6,9 +6,9 @@ namespace UWPResourcesGallery.Model.Icon
     public class IconItemSource : GenericItemsSource<IconItem>
     {
 
-        public static async Task LoadIconsList()
+        public static void LoadIconsList()
         {
-            var file = await GetJSONFile("/ResourceModel/Assets/IconList.json");
+            var file = GetJSONFile("/ResourceModel/Assets/IconList.json");
             var list = file["icons"].GetArray();
             lock (Items)
             {

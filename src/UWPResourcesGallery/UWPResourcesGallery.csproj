@@ -152,8 +152,8 @@
     <Compile Include="Pages\SystemBrushesListPage.xaml.cs">
       <DependentUpon>SystemBrushesListPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Navigation.xaml.cs">
-      <DependentUpon>Navigation.xaml</DependentUpon>
+    <Compile Include="AppNavigation.xaml.cs">
+      <DependentUpon>AppNavigation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -217,7 +217,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Navigation.xaml">
+    <Page Include="AppNavigation.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

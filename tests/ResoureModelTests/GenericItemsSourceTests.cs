@@ -12,9 +12,9 @@ namespace ResoureModelTests
     public class GenericItemsSourceTests : GenericItemsSource<FilterableString>
     {
         [ClassInitialize]
-        public static async Task ClassSetup(TestContext _)
+        public static void ClassSetup(TestContext _)
         {
-            var file = await GetJSONFile("/Assets/testdata.json");
+            var file = GetJSONFile("/Assets/testdata.json");
 
             foreach (var element in file["strings"].GetArray())
             {

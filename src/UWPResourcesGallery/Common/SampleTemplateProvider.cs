@@ -5,6 +5,9 @@
         private const string FontIconWithGlyph =
             "<FontIcon Glyph=\"${Glyph}\"/>";
 
+        private const string FontIconWithGlyphColorSize =
+            "<FontIcon Glyph=\"${Glyph}\" ForeGround=\"${ForeGround}\" FontSize=\"${FontSize}\"/>";
+
         private const string SymbolIconWithGlyph =
             "<SymbolIcon Symbol=\"${Symbol}\"/>";
 
@@ -18,9 +21,9 @@
             return SymbolIconWithGlyph.Replace("${Symbol}", name, System.StringComparison.Ordinal);
         }
 
-        internal static string AddColorToSymbolIcon(string symbolIconString, string color)
+        internal static string GetCustomizedFontIconCode(string glyph,string color,string size)
         {
-            return symbolIconString.Replace("/>", "Color:\"" + color + "\" />", System.StringComparison.Ordinal);
+            return $"<FontIcon Glyph=\"{glyph}\" ForeGround=\"{color}\" FontSize=\"{size}\"/>";
         }
     }
 }

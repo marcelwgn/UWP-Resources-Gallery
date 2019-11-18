@@ -12,9 +12,9 @@ namespace ResoureModelTests
     public class BrushSourceTests
     {
         [ClassInitialize]
-        public static async Task ClassInitialize(TestContext context)
+        public static void ClassInitialize(TestContext context)
         {
-            await BrushItemSource.LoadBrushList();
+            BrushItemSource.LoadBrushList();
         }
 
         [TestMethod]

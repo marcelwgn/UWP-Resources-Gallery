@@ -34,7 +34,7 @@ namespace UWPResourcesGallery
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
-        protected override async void OnLaunched(LaunchActivatedEventArgs e)
+        protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
@@ -66,7 +66,7 @@ namespace UWPResourcesGallery
                 // Ensure the current window is active
                 Window.Current.Activate();
             }
-            await EnsureWindow().ConfigureAwait(true);
+            EnsureWindow();
 
             ThemeHelper.Initialize();
 
@@ -104,11 +104,12 @@ namespace UWPResourcesGallery
         /// </summary>
         /// <param name="e"></param>
         /// <returns></returns>
-        private async Task EnsureWindow()
+        private void EnsureWindow()
         {
             // Load all lists since we will need them anyway
-            await IconItemSource.LoadIconsList().ConfigureAwait(false);
-            await BrushItemSource.LoadBrushList().ConfigureAwait(false);
+            // This must block as the app can not resume without this data being loaded
+            IconItemSource.LoadIconsList();
+            BrushItemSource.LoadBrushList();
         }
 
 
