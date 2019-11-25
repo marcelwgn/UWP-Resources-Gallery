@@ -9,6 +9,8 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
 
+
+
     <Page.Resources>
         <Style x:Key="CodeNameTextBlock" TargetType="common:CodeSample">
             <Setter Property="Grid.Column" Value="2" />
@@ -18,23 +20,37 @@
 
     </Page.Resources>
     <muxc:ScrollViewer>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.Setters>
+                        <Setter Target="RootFontIconPageContent.Orientation" Value="Horizontal" />
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1500"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
         <StackPanel Padding="25,10">
-            <StackPanel Orientation="Horizontal">
+            <!-- Header -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,30">
                 <Viewbox>
                     <FontIcon x:Name="IconDisplay" Glyph="{x:Bind icon.Character}" 
-                            Height="36" Width="36" FontSize="36"/>
+                            Height="42" Width="42" FontSize="42"/>
                 </Viewbox>
-                <TextBlock VerticalAlignment="Center" Margin="10,0,0,0"
-                        FontSize="20"  Text="{x:Bind icon.Name}"/>
+                <TextBlock VerticalAlignment="Center" Margin="16,0,0,0"
+                        FontSize="24"  Text="{x:Bind icon.Name}"/>
             </StackPanel>
-
-            <StackPanel Orientation="Horizontal">
-
-                <!--Standard code samples-->
+            
+            <!-- Content -->
+            <StackPanel x:Name="RootFontIconPageContent" Orientation="Vertical">
+                <!-- Standard code samples -->
                 <StackPanel>
-                    <!--Title-->
-
+                    <!-- Info title -->
                     <TextBlock Style="{ThemeResource SectionHeader}">Info</TextBlock>
+                    <!-- Info panel -->
                     <Grid MaxWidth="800" HorizontalAlignment="Left" Padding="10"
                         BorderBrush="{ThemeResource SystemBaseLowColor}" BorderThickness="1" >
                         <Grid.RowDefinitions>
@@ -50,7 +66,6 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <!--Identifier values-->
                         <TextBlock Text="Icon name" Margin="0,0,10,0" FontSize="16"
                             Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
                         <common:CodeSample Code="{x:Bind icon.Name}" Grid.Row="0" 
@@ -69,23 +84,24 @@
 
                     <!--Normal code sample(s)-->
                     <TextBlock Margin="0,30,0,0" Style="{ThemeResource SectionHeader}">Icon as control</TextBlock>
-
+                    
+                    <!-- SymbolIcon (only show when icon is present in Symbol enum) -->
                     <StackPanel Visibility="{x:Bind icon.IsSymbol,Converter={StaticResource BoolToVisibilityConverter}}">
-                        <!--SymbolIcon (only show when icon is present in Symbol enum)-->
                         <TextBlock  Margin="0,10,0,0" FontSize="16">Symbolicon</TextBlock>
                         <common:CodeSample x:Name="SymbolIconCodeSample" HorizontalAlignment="Left" IsSyntaxHighlightingEnabled="True"/>
                     </StackPanel>
-
+                    
+                    <!-- Font icon-->
                     <TextBlock Margin="0,10,0,0" FontSize="16">Simple FontIcon</TextBlock>
                     <common:CodeSample x:Name="FontIconCodeSample" HorizontalAlignment="Left" IsSyntaxHighlightingEnabled="True"/>
                 </StackPanel>
 
-                <!--Separator-->
-                <Border VerticalAlignment="Stretch" Margin="10,0,10,0"
+                <!-- Separator -->
+                <Border Margin="30,0,20,0"
                         BorderBrush="{ThemeResource SystemBaseLowColor}" 
-                        BorderThickness="1"/>
+                        BorderThickness="0"/>
 
-                <!--Customized FontIcon-->
+                <!-- Customized FontIcon -->
                 <StackPanel>
                     <!--Header-->
                     <TextBlock Style="{ThemeResource SectionHeader}" Margin="10,0,0,0">Custom FontIcon</TextBlock>
@@ -102,28 +118,34 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="50"/>
                         </Grid.RowDefinitions>
-
+                        
                         <!--Left pane-->
                         <StackPanel Grid.Column="0" Grid.Row="1"
                             Margin="0,0,10,0">
+                            <TextBlock FontSize="16" Margin="0,0,0,4">Preview</TextBlock>
                             <common:DualThemePresenter Grid.ColumnSpan="2" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left"
                                 Height="140"  Width="300">
                                 <common:DualThemePresenter.LightThemeContent>
-                                    <FontIcon x:Name="LightThemeIcon" Glyph="{x:Bind icon.Character}"/>
+                                    <FontIcon x:Name="LightThemeIcon" Glyph="{x:Bind icon.Character}" FontSize="20" Foreground="#FFFF0000"/>
                                 </common:DualThemePresenter.LightThemeContent>
 
                                 <common:DualThemePresenter.DarkThemeContent>
-                                    <FontIcon x:Name="DarkThemeIcon" Glyph="{x:Bind icon.Character}"/>
+                                    <FontIcon x:Name="DarkThemeIcon" Glyph="{x:Bind icon.Character}" FontSize="20" Foreground="#FFFF0000"/>
                                 </common:DualThemePresenter.DarkThemeContent>
                             </common:DualThemePresenter>
-                            <TextBlock Margin="0,10,0,0">Fontsize</TextBlock>
+                            
+                            <TextBlock FontSize="16" Margin="0,16,0,4">Source code</TextBlock>
+                            <common:CodeSample x:Name="CustomIconCode" MaxWidth="300"
+                                IsSyntaxHighlightingEnabled="True"/>
+
+                            <TextBlock FontSize="16" Margin="0,8,0,4">Fontsize</TextBlock>
                             <muxc:NumberBox x:Name="Size" ValueChanged="Size_ValueChanged" Minimum="1" Maximum="100" StepFrequency="1" Value="20"
-                                SpinButtonPlacementMode="Inline" BasicValidationMode="InvalidInputOverwritten"/>
+                                SpinButtonPlacementMode="Inline" ValidationMode="InvalidInputOverwritten"/>
                         </StackPanel>
 
                         <!--Right pane-->
-                        <StackPanel Grid.Row="1" Grid.Column="1">
-                            <TextBlock>Color</TextBlock>
+                        <StackPanel Grid.Row="1" Grid.Column="1" Margin="26,0,0,0">
+                            <TextBlock FontSize="16" Margin="0,0,0,4">Color</TextBlock>
                             <muxc:ColorPicker 
                                 x:Name="FontIconColorPicker"
                                 HorizontalAlignment="Left"
@@ -132,14 +154,11 @@
                                 IsColorChannelTextInputVisible="True"
                                 IsHexInputVisible="True"
                                 IsAlphaEnabled="True"
+                                Color="#FFFF0000"
                                 IsAlphaSliderVisible="True"
                                 ColorChanged="ColorPicker_ColorChanged"
                                 IsAlphaTextInputVisible="True" />
                         </StackPanel>
-
-                        <common:CodeSample x:Name="CustomIconCode" 
-                        Margin="0,15,0,0" Grid.ColumnSpan="2" Grid.Row="3"
-                        IsSyntaxHighlightingEnabled="True"/>
                     </Grid>
                 </StackPanel>
             </StackPanel>

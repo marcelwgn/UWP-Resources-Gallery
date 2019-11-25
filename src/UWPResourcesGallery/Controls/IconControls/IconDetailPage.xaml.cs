@@ -1,5 +1,6 @@
 ﻿using UWPResourcesGallery.Common;
 using UWPResourcesGallery.Model.Icon;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
@@ -24,7 +25,7 @@ namespace UWPResourcesGallery.Controls.IconControls
                 icon = ownIcon;
                 fontIconCode = SampleTemplateProvider.GetFontIconCodeFromGlyph(icon.StringGlyph);
                 FontIconCodeSample.Code = fontIconCode;
-                CustomIconCode.Code = 
+                CustomIconCode.Code = SampleTemplateProvider.GetCustomizedFontIconCode(icon.StringGlyph, FontIconColorPicker.Color.ToString(), ((int)Size.Value).ToString());
                 SymbolIconCodeSample.Code = SampleTemplateProvider.GetSymbolIconCodeFromGlyph(icon.Name);
                 Bindings.Update();
             }

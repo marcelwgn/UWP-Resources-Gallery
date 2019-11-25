@@ -2,13 +2,18 @@
     x:Class="UWPResourcesGallery.MainPages.StartPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:UWPResourcesGallery.MainPages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:common="using:UWPResourcesGallery.Controls.Common"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BorderBrush" Value="{ThemeResource SystemControlTransparentRevealBorderBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+    </Page.Resources>
+    
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -22,21 +27,23 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+        <!-- Navigation -->
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
             <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" 
-                Click="NavigateToIconListPage_Click" >Visit Icon list</Button>
+                Click="NavigateToIconListPage_Click" >
+                <StackPanel Orientation="Horizontal">
+                    
+                </StackPanel>
+                
+                
+            </Button>
             <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" 
-                Click="NavigateToSystemBrushesPage_Click" >Go to overview of system brushes</Button>
+                Click="NavigateToSystemBrushesPage_Click" >
+                <StackPanel Orientation="Horizontal">
+                    
+                </StackPanel>                
+            </Button>
 
-            <common:DualThemePresenter>
-                <common:DualThemePresenter.LightThemeContent>
-                    <TextBlock>Text</TextBlock>
-                </common:DualThemePresenter.LightThemeContent>
-                <common:DualThemePresenter.DarkThemeContent>
-                    <TextBlock>Text</TextBlock>
-                </common:DualThemePresenter.DarkThemeContent>
-            </common:DualThemePresenter>
-            
         </StackPanel>
 
     </Grid>

@@ -10,7 +10,10 @@
         <x:Double x:Key="CodeFontSize">14</x:Double>
     </UserControl.Resources>
     
-    <Grid Padding="0,5" HorizontalAlignment="Stretch" >
+    <Grid Margin="0,5" HorizontalAlignment="Stretch" 
+        Background="{ThemeResource SystemChromeMediumColor}"
+        BorderBrush="{ThemeResource SystemControlBackgroundListLowBrush}"
+        BorderThickness="1">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="Auto" />
@@ -18,8 +21,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Grid Background="{ThemeResource SystemBaseLowColor}"
-            VerticalAlignment="Stretch" Padding="0,5,0,5"> 
+        <Grid 
+            VerticalAlignment="Stretch" Padding="0,5,0,5">
             <RichTextBlock Name="CodeBlock" TextWrapping="Wrap" Margin="5,0,5,2"
                 FontFamily="Consolas" IsTextSelectionEnabled="True"
                 FontSize="{ThemeResource CodeFontSize}"
@@ -27,6 +30,6 @@
         </Grid>
         <Button x:Name="CopyButton" Click="Copy_Click" 
                 VerticalAlignment="Top" Grid.Column="1" 
-                Style="{ThemeResource CopyButtonStyle}" Margin="5,0"/>
+                Style="{ThemeResource CopyButtonStyle}" Margin="5,0,0,0"/>
     </Grid>
 </UserControl>
