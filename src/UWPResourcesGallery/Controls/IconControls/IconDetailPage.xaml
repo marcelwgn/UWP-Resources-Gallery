@@ -35,8 +35,8 @@
         
         <StackPanel Padding="25,10">
             <!-- Header -->
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,30">
-                <Viewbox>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,30" >
+                <Viewbox x:Name="IconViewHeader">
                     <FontIcon x:Name="IconDisplay" Glyph="{x:Bind icon.Character}" 
                             Height="42" Width="42" FontSize="42"/>
                 </Viewbox>

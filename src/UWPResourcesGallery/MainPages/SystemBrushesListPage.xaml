@@ -32,10 +32,10 @@
             <!--<TextBox Grid.Column="2" MinWidth="250" VerticalAlignment="Center" Margin="0,1,0,1" TextChanged="SearchTextBox_TextChanged"></TextBox>-->
             <Border VerticalAlignment="Bottom" BorderThickness="1" BorderBrush="{StaticResource SystemBaseMediumLowColor}" Grid.ColumnSpan="100"/>
         </Grid>
-        <ListView x:Name="SystemBrushesPresenter" Grid.Row="1">
+        <ListView x:Name="SystemBrushesPresenter" Grid.Row="1" SelectionMode="None">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <brushcontrols:BrushItemControl Brush="{Binding}"/>
+                    <brushcontrols:BrushItemControl Brush="{Binding}" Margin="10,10,10,10"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

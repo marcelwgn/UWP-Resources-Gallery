@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using UWPResourcesGallery.Controls.IconControls;
 using UWPResourcesGallery.Model.Icon;
+using Windows.Foundation.Metadata;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
 
@@ -39,8 +40,13 @@ namespace UWPResourcesGallery.MainPages
 
         private void ItemsGridView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Frame.Navigate(typeof(IconDetailPage), e.ClickedItem as IconItem, new SuppressNavigationTransitionInfo());
-            Debug.WriteLine(Frame.CanGoBack);
+            var container = ((sender as GridView).ContainerFromItem(e.ClickedItem) as GridViewItem).ContentTemplateRoot as IconItemControl;
+            var animation = ConnectedAnimationService.GetForCurrentView().PrepareToAnimate("ForwardConnectedAnimation", container.IconViewPresenter);
+            if(animation != null && ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 7))
+            {
+                animation.Configuration = new BasicConnectedAnimationConfiguration();
+            }
+            Frame.Navigate(typeof(IconDetailPage), e.ClickedItem as IconItem, new DrillInNavigationTransitionInfo());
         }
     }
 }

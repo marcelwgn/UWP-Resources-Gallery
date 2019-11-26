@@ -6,14 +6,6 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <Page.Resources>
-        <Style TargetType="Button">
-            <Setter Property="BorderBrush" Value="{ThemeResource SystemControlTransparentRevealBorderBrush}"/>
-            <Setter Property="BorderThickness" Value="1"/>
-        </Style>
-    </Page.Resources>
-    
-    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -29,19 +21,44 @@
 
         <!-- Navigation -->
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
-            <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" 
-                Click="NavigateToIconListPage_Click" >
-                <StackPanel Orientation="Horizontal">
+            <Button HorizontalAlignment="Center" VerticalAlignment="Stretch" Style="{ThemeResource ButtonRevealStyle}"
+                Click="NavigateToIconListPage_Click" MaxWidth="400" >
+                <Grid VerticalAlignment="Stretch" Height="100">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
                     
-                </StackPanel>
-                
-                
+                    <FontIcon Grid.RowSpan="2" Margin="4,8,8,0" Glyph="&#xED58;" FontSize="36" VerticalAlignment="Top"/>
+                    <TextBlock Grid.Column="1" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}">Icon list</TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="1" Margin="0,4,0,0" TextWrapping="WrapWholeWords" MaxWidth="300">This page contains a list of all Segoe MDL2 icons, that are available across Windows 10.</TextBlock>
+                </Grid>
             </Button>
-            <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" 
-                Click="NavigateToSystemBrushesPage_Click" >
-                <StackPanel Orientation="Horizontal">
-                    
-                </StackPanel>                
+
+            <Border Width="10"/>
+
+            <Button HorizontalAlignment="Center" VerticalAlignment="Stretch" Style="{ThemeResource ButtonRevealStyle}" Padding="10" 
+                Click="NavigateToSystemBrushesPage_Click" MaxWidth="400">
+                <Grid VerticalAlignment="Stretch" Height="100">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <FontIcon Grid.RowSpan="2" Margin="4,8,8,0" Glyph="&#xE170;" FontSize="36" VerticalAlignment="Top"/>
+                    <TextBlock Grid.Column="1" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}">Systembrushes</TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="1" Margin="0,4,0,0" TextWrapping="WrapWholeWords" MaxWidth="300">On this page, you can find a list of system brushes and colors which are provided and themed out of the box.</TextBlock>
+                </Grid>
             </Button>
 
         </StackPanel>

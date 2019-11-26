@@ -7,6 +7,11 @@ namespace UWPResourcesGallery.Controls.IconControls
     public partial class IconItemControl : UserControl
     {
 
+        public UIElement IconViewPresenter 
+        { 
+            get { return IconView; } 
+        }
+
         #region IconItem property
         public static readonly DependencyProperty IconProperty =
             DependencyProperty.Register(

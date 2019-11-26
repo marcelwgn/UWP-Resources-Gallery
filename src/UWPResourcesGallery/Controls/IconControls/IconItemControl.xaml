@@ -20,7 +20,7 @@
         
         <!-- Icon and hex code -->
         <StackPanel VerticalAlignment="Center" Grid.RowSpan="3">
-            <Viewbox Grid.Column="0" Height="50" Width="50" Margin="10,10,0,0">
+            <Viewbox Grid.Column="0" Height="50" Width="50" Margin="10,10,0,0" x:Name="IconView">
                 <FontIcon Margin="0,10" Glyph="{x:Bind Icon.Character}"
                             FontFamily="{StaticResource SymbolThemeFontFamily}"
                             Grid.Row="1"/>

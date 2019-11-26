@@ -1,8 +1,10 @@
-﻿using UWPResourcesGallery.Common;
+﻿using System.Threading.Tasks;
+using UWPResourcesGallery.Common;
 using UWPResourcesGallery.Model.Icon;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
 namespace UWPResourcesGallery.Controls.IconControls
@@ -20,6 +22,11 @@ namespace UWPResourcesGallery.Controls.IconControls
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+            var anim = ConnectedAnimationService.GetForCurrentView().GetAnimation("ForwardConnectedAnimation");
+            if (anim != null)
+            {
+                anim.TryStart(IconViewHeader);
+            }
             if (e.Parameter is IconItem ownIcon)
             {
                 icon = ownIcon;

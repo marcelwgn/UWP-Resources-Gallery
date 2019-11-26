@@ -23,7 +23,7 @@
 
         internal static string GetCustomizedFontIconCode(string glyph,string color,string size)
         {
-            return $"<FontIcon Glyph=\"{glyph}\"\n     ForeGround=\"{color}\"\n     FontSize=\"{size}\"/>";
+            return $"<FontIcon Glyph=\"{glyph}\"\n     Foreground=\"{color}\"\n     FontSize=\"{size}\"/>";
         }
     }
 }
