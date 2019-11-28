@@ -7,7 +7,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
-namespace UWPResourcesGallery.MainPages
+namespace UWPResourcesGallery.Pages
 {
     /// <summary>
     /// Page displaying list of icons

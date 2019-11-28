@@ -10,7 +10,7 @@
         <x:Double x:Key="CodeFontSize">14</x:Double>
     </UserControl.Resources>
     
-    <Grid Margin="0,5" HorizontalAlignment="Stretch" 
+    <Grid Margin="0" HorizontalAlignment="Stretch" 
         Background="{ThemeResource SystemChromeMediumColor}"
         BorderBrush="{ThemeResource SystemControlBackgroundListLowBrush}"
         BorderThickness="1">

@@ -7,7 +7,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
-namespace UWPResourcesGallery.Controls.IconControls
+namespace UWPResourcesGallery.Pages
 {
     public sealed partial class IconDetailPage : Page
     {

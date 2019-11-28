@@ -133,23 +133,23 @@
     <Compile Include="Controls\Common\PageHeader.xaml.cs">
       <DependentUpon>PageHeader.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\IconControls\IconDetailPage.xaml.cs">
+    <Compile Include="Pages\IconDetailPage.xaml.cs">
       <DependentUpon>IconDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\IconControls\IconItemControl.xaml.cs">
       <DependentUpon>IconItemControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Common\ThemeHelper.cs" />
-    <Compile Include="MainPages\IconsListPage.xaml.cs">
+    <Compile Include="Pages\IconsListPage.xaml.cs">
       <DependentUpon>IconsListPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPages\SettingsPage.xaml.cs">
+    <Compile Include="Pages\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPages\StartPage.xaml.cs">
+    <Compile Include="Pages\StartPage.xaml.cs">
       <DependentUpon>StartPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPages\SystemBrushesListPage.xaml.cs">
+    <Compile Include="Pages\SystemBrushesListPage.xaml.cs">
       <DependentUpon>SystemBrushesListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="AppNavigation.xaml.cs">
@@ -237,7 +237,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\IconControls\IconDetailPage.xaml">
+    <Page Include="Pages\IconDetailPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -245,19 +245,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPages\IconsListPage.xaml">
+    <Page Include="Pages\IconsListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPages\SettingsPage.xaml">
+    <Page Include="Pages\SettingsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPages\StartPage.xaml">
+    <Page Include="Pages\StartPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPages\SystemBrushesListPage.xaml">
+    <Page Include="Pages\SystemBrushesListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

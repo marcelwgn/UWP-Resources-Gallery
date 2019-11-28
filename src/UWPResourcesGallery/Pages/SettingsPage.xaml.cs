@@ -3,7 +3,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
 
-namespace UWPResourcesGallery.MainPages
+namespace UWPResourcesGallery.Pages
 {
     /// <summary>
     /// Settings page for the application
