@@ -168,6 +168,7 @@
     <Content Include="Assets\Tiles\LargeTile.scale-150.png" />
     <Content Include="Assets\Tiles\LargeTile.scale-200.png" />
     <Content Include="Assets\Tiles\LargeTile.scale-400.png" />
+    <Content Include="Assets\Tiles\Logo.png" />
     <Content Include="Assets\Tiles\SmallTile.scale-100.png" />
     <Content Include="Assets\Tiles\SmallTile.scale-125.png" />
     <Content Include="Assets\Tiles\SmallTile.scale-150.png" />

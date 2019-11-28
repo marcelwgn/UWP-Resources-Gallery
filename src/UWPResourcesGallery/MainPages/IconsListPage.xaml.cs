@@ -5,6 +5,7 @@ using UWPResourcesGallery.Model.Icon;
 using Windows.Foundation.Metadata;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
+using Windows.UI.Xaml.Navigation;
 
 namespace UWPResourcesGallery.MainPages
 {
@@ -41,7 +42,7 @@ namespace UWPResourcesGallery.MainPages
         private void ItemsGridView_ItemClick(object sender, ItemClickEventArgs e)
         {
             var container = ((sender as GridView).ContainerFromItem(e.ClickedItem) as GridViewItem).ContentTemplateRoot as IconItemControl;
-            var animation = ConnectedAnimationService.GetForCurrentView().PrepareToAnimate("ForwardConnectedAnimation", container.IconViewPresenter);
+            var animation = ConnectedAnimationService.GetForCurrentView().PrepareToAnimate("ForwardConnectedAnimation", container);
             if(animation != null && ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 7))
             {
                 animation.Configuration = new BasicConnectedAnimationConfiguration();

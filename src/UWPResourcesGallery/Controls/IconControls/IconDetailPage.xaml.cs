@@ -25,14 +25,14 @@ namespace UWPResourcesGallery.Controls.IconControls
             var anim = ConnectedAnimationService.GetForCurrentView().GetAnimation("ForwardConnectedAnimation");
             if (anim != null)
             {
-                anim.TryStart(IconViewHeader);
+                anim.TryStart(TransitionReceiver);
             }
             if (e.Parameter is IconItem ownIcon)
             {
                 icon = ownIcon;
                 fontIconCode = SampleTemplateProvider.GetFontIconCodeFromGlyph(icon.StringGlyph);
                 FontIconCodeSample.Code = fontIconCode;
-                CustomIconCode.Code = SampleTemplateProvider.GetCustomizedFontIconCode(icon.StringGlyph, FontIconColorPicker.Color.ToString(), ((int)Size.Value).ToString());
+                CustomIconCode.Code = SampleTemplateProvider.GetCustomizedFontIconCode(icon.StringGlyph, FontIconColorPicker.Color.ToString(), ((int)CustomIconFontSize.Value).ToString());
                 SymbolIconCodeSample.Code = SampleTemplateProvider.GetSymbolIconCodeFromGlyph(icon.Name);
                 Bindings.Update();
             }
@@ -47,18 +47,16 @@ namespace UWPResourcesGallery.Controls.IconControls
             {
                 return;
             }
-            CustomIconCode.Code = SampleTemplateProvider.GetCustomizedFontIconCode(icon.StringGlyph, args.NewColor.ToString(),((int)Size.Value).ToString());
+            CustomIconCode.Code = SampleTemplateProvider.GetCustomizedFontIconCode(icon.StringGlyph, args.NewColor.ToString(),((int)CustomIconFontSize.Value).ToString());
         }
 
         private void Size_ValueChanged(Microsoft.UI.Xaml.Controls.NumberBox sender, Microsoft.UI.Xaml.Controls.NumberBoxValueChangedEventArgs args)
         {
-            LightThemeIcon.FontSize = args.NewValue;
-            DarkThemeIcon.FontSize = args.NewValue;
             if (icon == null)
             {
                 return;
             }
-            CustomIconCode.Code = SampleTemplateProvider.GetCustomizedFontIconCode(icon.StringGlyph, FontIconColorPicker.Color.ToString(), ((int)Size.Value).ToString());
+            CustomIconCode.Code = SampleTemplateProvider.GetCustomizedFontIconCode(icon.StringGlyph, FontIconColorPicker.Color.ToString(), ((int)CustomIconFontSize.Value).ToString());
         }
     }
 }

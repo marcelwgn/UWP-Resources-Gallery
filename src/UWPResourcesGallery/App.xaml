@@ -35,7 +35,7 @@
                 <Setter Property="ToolTipService.ToolTip">
                     <Setter.Value>
                         <ToolTip contract7Present:PlacementRect="0,0,40,0">
-                            Copy value to clipboard
+                            Copy text to clipboard
                         </ToolTip>
                     </Setter.Value>
                 </Setter>

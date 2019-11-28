@@ -9,8 +9,6 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
 
-
-
     <Page.Resources>
         <Style x:Key="CodeNameTextBlock" TargetType="common:CodeSample">
             <Setter Property="Grid.Column" Value="2" />
@@ -35,8 +33,8 @@
         
         <StackPanel Padding="25,10">
             <!-- Header -->
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,30" >
-                <Viewbox x:Name="IconViewHeader">
+            <StackPanel x:Name="TransitionReceiver" Orientation="Horizontal" Margin="0,0,0,30" >
+                <Viewbox>
                     <FontIcon x:Name="IconDisplay" Glyph="{x:Bind icon.Character}" 
                             Height="42" Width="42" FontSize="42"/>
                 </Viewbox>
@@ -51,7 +49,7 @@
                     <!-- Info title -->
                     <TextBlock Style="{ThemeResource SectionHeader}">Info</TextBlock>
                     <!-- Info panel -->
-                    <Grid MaxWidth="800" HorizontalAlignment="Left" Padding="10"
+                    <Grid MaxWidth="800" HorizontalAlignment="Stretch" Padding="10"
                         BorderBrush="{ThemeResource SystemBaseLowColor}" BorderThickness="1" >
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
@@ -86,14 +84,14 @@
                     <TextBlock Margin="0,30,0,0" Style="{ThemeResource SectionHeader}">Icon as control</TextBlock>
                     
                     <!-- SymbolIcon (only show when icon is present in Symbol enum) -->
-                    <StackPanel Visibility="{x:Bind icon.IsSymbol,Converter={StaticResource BoolToVisibilityConverter}}">
+                    <StackPanel HorizontalAlignment="Stretch" Visibility="{x:Bind icon.IsSymbol,Converter={StaticResource BoolToVisibilityConverter}}">
                         <TextBlock  Margin="0,10,0,0" FontSize="16">Symbolicon</TextBlock>
-                        <common:CodeSample x:Name="SymbolIconCodeSample" HorizontalAlignment="Left" IsSyntaxHighlightingEnabled="True"/>
+                        <common:CodeSample x:Name="SymbolIconCodeSample" HorizontalAlignment="Stretch" IsSyntaxHighlightingEnabled="True"/>
                     </StackPanel>
                     
                     <!-- Font icon-->
-                    <TextBlock Margin="0,10,0,0" FontSize="16">Simple FontIcon</TextBlock>
-                    <common:CodeSample x:Name="FontIconCodeSample" HorizontalAlignment="Left" IsSyntaxHighlightingEnabled="True"/>
+                    <TextBlock HorizontalAlignment="Stretch" Margin="0,10,0,0" FontSize="16">FontIcon</TextBlock>
+                    <common:CodeSample HorizontalAlignment="Stretch" x:Name="FontIconCodeSample" IsSyntaxHighlightingEnabled="True"/>
                 </StackPanel>
 
                 <!-- Separator -->
@@ -126,11 +124,11 @@
                             <common:DualThemePresenter Grid.ColumnSpan="2" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left"
                                 Height="140"  Width="300">
                                 <common:DualThemePresenter.LightThemeContent>
-                                    <FontIcon x:Name="LightThemeIcon" Glyph="{x:Bind icon.Character}" FontSize="20" Foreground="#FFFF0000"/>
+                                    <FontIcon x:Name="LightThemeIcon" Glyph="{x:Bind icon.Character}" FontSize="{x:Bind CustomIconFontSize.Value,Mode=OneWay}" Foreground="#FFFF0000"/>
                                 </common:DualThemePresenter.LightThemeContent>
 
                                 <common:DualThemePresenter.DarkThemeContent>
-                                    <FontIcon x:Name="DarkThemeIcon" Glyph="{x:Bind icon.Character}" FontSize="20" Foreground="#FFFF0000"/>
+                                    <FontIcon x:Name="DarkThemeIcon" Glyph="{x:Bind icon.Character}" FontSize="{x:Bind CustomIconFontSize.Value,Mode=OneWay}" Foreground="#FFFF0000"/>
                                 </common:DualThemePresenter.DarkThemeContent>
                             </common:DualThemePresenter>
                             
@@ -139,7 +137,7 @@
                                 IsSyntaxHighlightingEnabled="True"/>
 
                             <TextBlock FontSize="16" Margin="0,8,0,4">Fontsize</TextBlock>
-                            <muxc:NumberBox x:Name="Size" ValueChanged="Size_ValueChanged" Minimum="1" Maximum="100" StepFrequency="1" Value="20"
+                            <muxc:NumberBox x:Name="CustomIconFontSize" ValueChanged="Size_ValueChanged" Minimum="1" Maximum="100" StepFrequency="1" Value="20"
                                 SpinButtonPlacementMode="Inline" ValidationMode="InvalidInputOverwritten"/>
                         </StackPanel>
 
