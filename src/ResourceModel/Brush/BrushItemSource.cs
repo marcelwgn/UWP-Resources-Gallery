@@ -7,7 +7,7 @@ namespace UWPResourcesGallery.Model.Brush
     {
         public static void LoadBrushList()
         {
-            var file = GetJSONFile("/ResourceModel/Assets/ThemeBrushes.json");
+            var file = GetJSONFile("/ResourceModel/Assets/SystemColors.json");
             var list = file["brushes"].GetArray();
             foreach (JsonValue entry in list)
             {

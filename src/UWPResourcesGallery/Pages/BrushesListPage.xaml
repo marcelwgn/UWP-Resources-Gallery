@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="UWPResourcesGallery.Pages.SystemBrushesListPage"
+    x:Class="UWPResourcesGallery.Pages.BrushesListPages"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:UWPResourcesGallery.Pages"
@@ -22,7 +22,7 @@
 
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="14" />
+                <ColumnDefinition Width="25" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
@@ -32,10 +32,16 @@
             <TextBox Grid.Column="2" MinWidth="250" VerticalAlignment="Center" Margin="0,1,0,1" TextChanged="SearchTextBox_TextChanged"></TextBox>
             <Border VerticalAlignment="Bottom" BorderThickness="1" BorderBrush="{StaticResource SystemBaseMediumLowColor}" Grid.ColumnSpan="100"/>
         </Grid>
-        <GridView x:Name="SystemBrushesPresenter" Grid.Row="1" SelectionMode="None">
+        <GridView x:Name="SystemBrushesPresenter" Grid.Row="1" SelectionMode="None" Padding="18">
+            <GridView.Resources>
+                <Style TargetType="GridViewItem">
+                    <Setter Property="Margin" Value="6"/>
+                    <Setter Property="MinHeight" Value="80" />
+                </Style>
+            </GridView.Resources>
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <brushcontrols:BrushItemControl Brush="{Binding}" Margin="10,10,10,10"/>
+                    <brushcontrols:BrushItemControl Brush="{Binding}"/>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>

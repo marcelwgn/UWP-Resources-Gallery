@@ -138,7 +138,10 @@
     <Content Include="Assets\IconList.json" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\ThemeBrushes.json" />
+    <Content Include="Assets\SystemColors.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\SystemBrushes.json" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

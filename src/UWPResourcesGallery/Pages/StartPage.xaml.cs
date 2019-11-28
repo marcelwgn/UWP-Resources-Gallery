@@ -22,7 +22,7 @@ namespace UWPResourcesGallery.Pages
 
         private void NavigateToSystemBrushesPage_Click(object sender, RoutedEventArgs e)
         {
-            AppNavigation.NavigateToPageType(typeof(SystemBrushesListPage));
+            AppNavigation.NavigateToPageType(typeof(BrushesListPages));
         }
     }
 }

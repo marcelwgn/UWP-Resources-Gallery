@@ -149,8 +149,8 @@
     <Compile Include="Pages\StartPage.xaml.cs">
       <DependentUpon>StartPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SystemBrushesListPage.xaml.cs">
-      <DependentUpon>SystemBrushesListPage.xaml</DependentUpon>
+    <Compile Include="Pages\BrushesListPage.xaml.cs">
+      <DependentUpon>BrushesListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="AppNavigation.xaml.cs">
       <DependentUpon>AppNavigation.xaml</DependentUpon>
@@ -257,7 +257,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\SystemBrushesListPage.xaml">
+    <Page Include="Pages\BrushesListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

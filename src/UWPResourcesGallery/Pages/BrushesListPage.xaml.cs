@@ -8,17 +8,16 @@ namespace UWPResourcesGallery.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class SystemBrushesListPage : Page
+    public sealed partial class BrushesListPages : Page
     {
       
         private readonly BrushItemSource source = new BrushItemSource();
 
-        public SystemBrushesListPage()
+        public BrushesListPages()
         {
             InitializeComponent();
             SystemBrushesPresenter.ItemsSource = source.FilteredItems;
         }
-
 
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs args)
         {

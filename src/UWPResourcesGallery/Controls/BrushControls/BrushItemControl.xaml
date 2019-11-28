@@ -10,24 +10,32 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <StackPanel Orientation="Horizontal" MinHeight="20" MinWidth="100">
-        <TextBlock x:Name="BrushName" Text="{x:Bind Brush.Key}"/>
+    <Grid MinHeight="20" MinWidth="100" Width="350"
+        Background="{ThemeResource SystemControlBackgroundListLowBrush}">
+        <StackPanel Orientation="Vertical" Padding="10">
+            <TextBlock x:Name="BrushName" Text="{x:Bind Brush.Key}" FontSize="18" 
+                    HorizontalAlignment="Center" Margin="0,0,0,16"/>
 
-        <common:DualThemePresenter>
-            <common:DualThemePresenter.LightThemeContent>
-                <StackPanel>
-                    <Border Background="{x:Bind Brush.LightHex}" Width="60" Height="40"/>
-                    <common:CodeSample Code="{x:Bind Brush.DarkHex}" IsSyntaxHighlightingEnabled="False"/>
-                </StackPanel>
-            </common:DualThemePresenter.LightThemeContent>
+            <common:DualThemePresenter>
+                <common:DualThemePresenter.LightThemeContent>
+                    <StackPanel Width="130">
+                        <Border Background="{x:Bind Brush.LightHex}" Width="60" Height="40"
+                            BorderThickness="1" Margin="0,0,0,10"
+                            BorderBrush="{ThemeResource SystemControlBackgroundListLowBrush}"/>
+                        <common:CodeSample Code="{x:Bind Brush.DarkHex}" IsSyntaxHighlightingEnabled="False"/>
+                    </StackPanel>
+                </common:DualThemePresenter.LightThemeContent>
 
-            <common:DualThemePresenter.DarkThemeContent>
-                <StackPanel>
-                    <Border Background="{x:Bind Brush.DarkHex}" Width="60" Height="40"/>
-                    <common:CodeSample Code="{x:Bind Brush.DarkHex}" IsSyntaxHighlightingEnabled="False"/>
-                </StackPanel>
-            </common:DualThemePresenter.DarkThemeContent>
+                <common:DualThemePresenter.DarkThemeContent>
+                    <StackPanel Width="130">
+                        <Border Background="{x:Bind Brush.DarkHex}" Width="60" Height="40"
+                            BorderThickness="1" Margin="0,0,0,10"
+                            BorderBrush="{ThemeResource SystemControlBackgroundListLowBrush}"/>
+                        <common:CodeSample Code="{x:Bind Brush.DarkHex}" IsSyntaxHighlightingEnabled="False"/>
+                    </StackPanel>
+                </common:DualThemePresenter.DarkThemeContent>
         
-        </common:DualThemePresenter>
-    </StackPanel>
+            </common:DualThemePresenter>
+        </StackPanel>
+    </Grid>
 </UserControl>

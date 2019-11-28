@@ -74,7 +74,7 @@ namespace UWPResourcesGallery
             {
                 RootNavigation.SelectedItem = _IconsListPage;
             }
-            if (RootFrame.CurrentSourcePageType == typeof(SystemBrushesListPage))
+            if (RootFrame.CurrentSourcePageType == typeof(BrushesListPages))
             {
                 RootNavigation.SelectedItem = _BrushesListPage;
             }
@@ -98,7 +98,7 @@ namespace UWPResourcesGallery
             }
             if (selectedItem == _BrushesListPage)
             {
-                RootFrame.Navigate(typeof(SystemBrushesListPage));
+                RootFrame.Navigate(typeof(BrushesListPages));
             }
         }
 

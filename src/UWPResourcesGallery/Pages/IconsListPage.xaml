@@ -36,7 +36,7 @@
                     SelectionMode="None"
                     IsItemClickEnabled="True"
                     ItemClick="ItemsGridView_ItemClick"
-                    Padding="19" 
+                    Padding="18" 
                     Grid.Row="1">
             <GridView.Transitions>
                 <TransitionCollection>
