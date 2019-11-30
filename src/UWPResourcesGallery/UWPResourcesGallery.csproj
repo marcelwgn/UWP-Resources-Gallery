@@ -121,8 +121,8 @@
     </Compile>
     <Compile Include="Common\BoolToVisibilityConverterClass.cs" />
     <Compile Include="Common\SampleTemplateProvider.cs" />
-    <Compile Include="Controls\BrushControls\BrushItemControl.xaml.cs">
-      <DependentUpon>BrushItemControl.xaml</DependentUpon>
+    <Compile Include="Controls\SystemColorControls\SystemColorPresenter.xaml.cs">
+      <DependentUpon>SystemColorPresenter.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Common\CodeSample.xaml.cs">
       <DependentUpon>CodeSample.xaml</DependentUpon>
@@ -149,8 +149,8 @@
     <Compile Include="Pages\StartPage.xaml.cs">
       <DependentUpon>StartPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\BrushesListPage.xaml.cs">
-      <DependentUpon>BrushesListPage.xaml</DependentUpon>
+    <Compile Include="Pages\SystemColorsPage.xaml.cs">
+      <DependentUpon>SystemColorsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="AppNavigation.xaml.cs">
       <DependentUpon>AppNavigation.xaml</DependentUpon>
@@ -221,7 +221,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Controls\BrushControls\BrushItemControl.xaml">
+    <Page Include="Controls\SystemColorControls\SystemColorPresenter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -257,7 +257,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\BrushesListPage.xaml">
+    <Page Include="Pages\SystemColorsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

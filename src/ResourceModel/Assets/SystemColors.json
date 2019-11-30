@@ -1,5 +1,11 @@
 ﻿{
-  "brushes": [
+  "colors": [
+    {
+      "key": "SystemAccentColor",
+      "name": "Accent",
+      "lightHex": "N/A",
+      "darkHex": "N/A"
+    },
     {
       "key": "SystemAltHighColor",
       "name": "AltHigh",
@@ -103,6 +109,12 @@
       "darkHex": "#FF858585"
     },
     {
+      "key": "SystemChromeGrayColor",
+      "name": "ChromeGray",
+      "lightHex": "#FF767676",
+      "darkHex": "#FF767676"
+    },
+    {
       "key": "SystemChromeHighColor",
       "name": "ChromeHigh",
       "lightHex": "#FFCCCCCC",
@@ -131,6 +143,12 @@
       "name": "ChromeWhite",
       "lightHex": "#FFFFFFFF",
       "darkHex": "#FFFFFFFF"
+    },
+    {
+      "key": "SystemErrorTextColor",
+      "name": "ErrorText",
+      "lightHex": "#FFC50500",
+      "darkHex": "#FFFFF000"
     },
     {
       "key": "SystemListLowColor",

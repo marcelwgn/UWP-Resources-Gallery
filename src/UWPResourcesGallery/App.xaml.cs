@@ -109,7 +109,7 @@ namespace UWPResourcesGallery
             // Load all lists since we will need them anyway
             // This must block as the app can not resume without this data being loaded
             IconItemSource.LoadIconsList();
-            BrushItemSource.LoadBrushList();
+            SystemColorsItemSource.LoadSystemColors();
         }
 
 

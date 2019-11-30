@@ -1,13 +1,11 @@
 ﻿<Page
-    x:Class="UWPResourcesGallery.Pages.BrushesListPages"
+    x:Class="UWPResourcesGallery.Pages.SystemColorsPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:UWPResourcesGallery.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:common="using:UWPResourcesGallery.Controls.Common"
-    xmlns:controls="using:UWPResourcesGallery.Controls.IconControls"
-    xmlns:brushcontrols="using:UWPResourcesGallery.Controls.BrushControls"
+    xmlns:scc="using:UWPResourcesGallery.Controls.SystemColorControls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
@@ -28,11 +26,11 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="14" />
             </Grid.ColumnDefinitions>
-            <TextBlock Margin="0,0,10,1" Grid.Column="1" Text="Search icons:" VerticalAlignment="Center"/>
+            <TextBlock Margin="0,0,10,1" Grid.Column="1" Text="Search system colors:" VerticalAlignment="Center"/>
             <TextBox Grid.Column="2" MinWidth="250" VerticalAlignment="Center" Margin="0,1,0,1" TextChanged="SearchTextBox_TextChanged"></TextBox>
             <Border VerticalAlignment="Bottom" BorderThickness="1" BorderBrush="{StaticResource SystemBaseMediumLowColor}" Grid.ColumnSpan="100"/>
         </Grid>
-        <GridView x:Name="SystemBrushesPresenter" Grid.Row="1" SelectionMode="None" Padding="18">
+        <GridView x:Name="SystemColorsPresenter" Grid.Row="1" SelectionMode="None" Padding="18">
             <GridView.Resources>
                 <Style TargetType="GridViewItem">
                     <Setter Property="Margin" Value="6"/>
@@ -41,7 +39,7 @@
             </GridView.Resources>
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <brushcontrols:BrushItemControl Brush="{Binding}"/>
+                    <scc:SystemColorPresenter SystemColor="{Binding}"/>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>

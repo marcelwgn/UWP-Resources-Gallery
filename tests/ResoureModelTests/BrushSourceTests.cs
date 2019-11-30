@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UWPResourcesGallery.Model.Brush;
+using Windows.ApplicationModel.Core;
 
 namespace ResoureModelTests
 {
@@ -12,18 +13,22 @@ namespace ResoureModelTests
     public class BrushSourceTests
     {
         [ClassInitialize]
-        public static void ClassInitialize(TestContext context)
+        public static async Task ClassInitialize(TestContext context)
         {
-            BrushItemSource.LoadBrushList();
+            // We need the UI thread since we use the XAML loader
+            await CoreApplication.MainView.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Low, () =>
+            {
+                SystemColorsItemSource.LoadSystemColors();
+            });
         }
 
         [TestMethod]
         public void VerifyItemsNotNull()
         {
-            Assert.IsTrue(BrushItemSource.Items.Count > 0);
-            for (int i = 0; i < BrushItemSource.Items.Count; i++)
+            Assert.IsTrue(SystemColorsItemSource.Items.Count > 0);
+            for (int i = 0; i < SystemColorsItemSource.Items.Count; i++)
             {
-                Assert.IsNotNull(BrushItemSource.Items[i]);
+                Assert.IsNotNull(SystemColorsItemSource.Items[i]);
             }
         }
     }

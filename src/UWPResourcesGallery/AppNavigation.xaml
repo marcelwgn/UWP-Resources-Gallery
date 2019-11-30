@@ -53,7 +53,7 @@
                         <FontIcon Glyph="&#xED58;" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
-                <muxc:NavigationViewItem Content="Systembrushes" x:Name="_BrushesListPage">
+                <muxc:NavigationViewItem Content="Systemcolors" x:Name="_SystemColorsPage">
                     <muxc:NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE790;" />
                     </muxc:NavigationViewItem.Icon>

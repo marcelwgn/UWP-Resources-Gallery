@@ -43,7 +43,7 @@ namespace UWPResourcesGallery.Controls.Common
             }
         }
         public static readonly DependencyProperty DarkThemeContentProperty = DependencyProperty.Register(
-                "LightThemeContent",
+                "DarkThemeContent",
                 typeof(FrameworkElement),
                 typeof(DualThemePresenter),
                 new PropertyMetadata(default(FrameworkElement), ThemedContentPropertyChanged)

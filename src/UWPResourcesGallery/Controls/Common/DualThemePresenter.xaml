@@ -9,13 +9,11 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <UserControl.Resources>
-        <Thickness x:Key="ThemedContentPresenterPadding">10</Thickness>
-    </UserControl.Resources>
     
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
@@ -25,8 +23,6 @@
         
         <!-- Light theme content -->
         <Grid Grid.Column="0" RequestedTheme="Light" 
-            Padding="{ThemeResource ThemedContentPresenterPadding}"
-            Margin="0,0,10,0"
             BorderThickness="1"
             BorderBrush="{ThemeResource SystemControlBackgroundListLowBrush}"
             Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
@@ -34,8 +30,7 @@
         </Grid>
 
         <!-- Dark theme content -->
-        <Grid Grid.Column="1" RequestedTheme="Dark" 
-            Padding="{ThemeResource ThemedContentPresenterPadding}" 
+        <Grid Grid.Column="2" RequestedTheme="Dark" 
             BorderThickness="1"
             BorderBrush="{ThemeResource SystemControlBackgroundListLowBrush}"
             Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
