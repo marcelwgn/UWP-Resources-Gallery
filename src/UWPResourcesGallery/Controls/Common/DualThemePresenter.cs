@@ -49,6 +49,19 @@ namespace UWPResourcesGallery.Controls.Common
                 new PropertyMetadata(default(FrameworkElement), ThemedContentPropertyChanged)
             );
         #endregion
+
+        #region ContentOrientation property
+        public Orientation ContentOrientation
+        {
+            get { return (Orientation)GetValue(ContentOrientationProperty); }
+            set { SetValue(ContentOrientationProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ContentOrientationProperty =
+            DependencyProperty.Register("MyProperty", typeof(Orientation), typeof(DualThemePresenter), new PropertyMetadata(0));
+        #endregion
+
         public DualThemePresenter()
         {
             InitializeComponent();

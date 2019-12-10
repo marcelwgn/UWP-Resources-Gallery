@@ -10,16 +10,7 @@
     d:DesignWidth="400">
 
     
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="10"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+    <StackPanel Orientation="{x:Bind ContentOrientation,Mode=OneWay}">
         
         <!-- Light theme content -->
         <Grid Grid.Column="0" RequestedTheme="Light" 
@@ -29,6 +20,9 @@
             <ContentPresenter Content="{x:Bind LightThemeContent}"/>
         </Grid>
 
+        <!-- Adding some spacing -->
+        <Border Margin="5,5,5,5"/>
+
         <!-- Dark theme content -->
         <Grid Grid.Column="2" RequestedTheme="Dark" 
             BorderThickness="1"
@@ -37,5 +31,5 @@
             <ContentPresenter Content="{x:Bind DarkThemeContent}"/>
         </Grid>
 
-    </Grid>
+    </StackPanel>
 </UserControl>

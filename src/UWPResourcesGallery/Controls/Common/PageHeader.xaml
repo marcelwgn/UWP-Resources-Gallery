@@ -9,7 +9,8 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <Grid>
-
-    </Grid>
+    <StackPanel>
+        <TextBlock Text="{x:Bind PageName,Mode=OneWay}" FontSize="22"/>
+        <TextBlock Text="{x:Bind PageDescription,Mode=OneWay}" FontSize="18"/>
+    </StackPanel>
 </UserControl>

@@ -5,7 +5,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:common="using:UWPResourcesGallery.Controls.Common"
-    xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
 
@@ -17,7 +16,7 @@
         </Style>
 
     </Page.Resources>
-    <muxc:ScrollViewer>
+    <ScrollViewer>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
                 <VisualState>
@@ -140,7 +139,7 @@
 
                             <TextBlock FontSize="16" Margin="0,4,0,4">Fontsize</TextBlock>
                             <muxc:NumberBox x:Name="CustomIconFontSize" ValueChanged="Size_ValueChanged" 
-                                Minimum="1" Maximum="100" StepFrequency="1" Value="20"
+                                Minimum="1" Maximum="100" SmallChange="1" Value="20"
                                 SpinButtonPlacementMode="Inline" ValidationMode="InvalidInputOverwritten"/>
                         </StackPanel>
 
@@ -164,5 +163,5 @@
                 </StackPanel>
             </StackPanel>
         </StackPanel>
-    </muxc:ScrollViewer>
+    </ScrollViewer>
 </Page>

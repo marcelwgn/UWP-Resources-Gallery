@@ -4,8 +4,21 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:common="using:UWPResourcesGallery.Controls.Common"
+    xmlns:contract7Present="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <Style x:Key="NavigatingButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="{ThemeResource SystemControlBackgroundListLowBrush}" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="Width" Value="380" />
+        </Style>
+    </Page.Resources>
+    
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -19,48 +32,60 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Navigation -->
-        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
-            <Button HorizontalAlignment="Center" VerticalAlignment="Stretch" Style="{ThemeResource ButtonRevealStyle}"
-                Click="NavigateToIconListPage_Click" MaxWidth="400" >
-                <Grid VerticalAlignment="Stretch" Height="80" Padding="4,0,8,0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="1" >
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    
-                    <FontIcon Grid.RowSpan="2" Margin="4,8,16,0" Glyph="&#xED58;" FontSize="36" VerticalAlignment="Top"/>
-                    <TextBlock Grid.Column="1" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}">Icon list</TextBlock>
-                    <TextBlock Grid.Column="1" Grid.Row="1" Margin="0,4,0,0" TextWrapping="WrapWholeWords" MaxWidth="300">List of all Segoe MDL2 icons that are available across all versions of Windows 10.</TextBlock>
-                </Grid>
-            </Button>
+            <common:PageHeader 
+                PageName="Welcome to the UWP Resources Gallery" 
+                PageDescription="This app contains an list of UWP resources, such as system colors and the Segoe MDL2 icons."/>
 
-            <Border Width="10"/>
+            <!-- Navigation -->
+            <GridView >
+                <GridView.Resources>
+                    <Style TargetType="GridViewItem">
+                        <Setter Property="Width" Value="380" />
+                        <Setter Property="MaxWidth" Value="380" />
+                        <Setter Property="Margin" Value="5,5,5,5" />
+                    </Style>
+                </GridView.Resources>
 
-            <Button HorizontalAlignment="Center" VerticalAlignment="Stretch" Style="{ThemeResource ButtonRevealStyle}" Padding="10" 
-                Click="NavigateToSystemBrushesPage_Click" MaxWidth="400">
-                <Grid VerticalAlignment="Stretch" Height="80" Padding="4,0,8,0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
+                <Button Style="{ThemeResource NavigatingButtonStyle}" Click="NavigateToIconListPage_Click"
+                        contract7Present:CornerRadius="0">
+                    <Grid VerticalAlignment="Stretch" Height="80" Padding="4,0,8,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
-                    <FontIcon Grid.RowSpan="2" Margin="4,8,16,0" Glyph="&#xE790;" FontSize="36" VerticalAlignment="Top"/>
-                    <TextBlock Grid.Column="1" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}">Systemcolors</TextBlock>
-                    <TextBlock Grid.Column="1" Grid.Row="1" Margin="0,4,0,0" TextWrapping="WrapWholeWords" MaxWidth="300">Collection of system colors which are provided by Windows 10.</TextBlock>
-                </Grid>
-            </Button>
+                        <FontIcon Grid.RowSpan="2" Margin="4,8,16,0" Glyph="&#xED58;" FontSize="36" VerticalAlignment="Top"/>
+                        <TextBlock Grid.Column="1" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}">Icon list</TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="1" Margin="0,4,0,0" TextWrapping="WrapWholeWords" MaxWidth="300">List of all Segoe MDL2 icons that are available across all versions of Windows 10.</TextBlock>
+                    </Grid>
+                </Button>
 
+                <Button Style="{ThemeResource NavigatingButtonStyle}" Click="NavigateToSystemBrushesPage_Click" 
+                        contract7Present:CornerRadius="0">
+                    <Grid VerticalAlignment="Stretch" Height="80" Padding="4,0,8,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <FontIcon Grid.RowSpan="2" Margin="4,8,16,0" Glyph="&#xE790;" FontSize="36" VerticalAlignment="Top"/>
+                        <TextBlock Grid.Column="1" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}">Systemcolors</TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="1" Margin="0,4,0,0" TextWrapping="WrapWholeWords" MaxWidth="300">Collection of system colors which are provided by Windows 10.</TextBlock>
+                    </Grid>
+                </Button>
+            </GridView>
         </StackPanel>
 
     </Grid>

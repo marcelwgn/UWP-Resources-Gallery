@@ -18,7 +18,7 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         
-        <Border x:Name="AppTitleBar"
+        <Grid x:Name="AppTitleBar"
                 IsHitTestVisible="True"
                 VerticalAlignment="Top"
                 Background="Transparent"
@@ -26,22 +26,22 @@
                 Height="30"
                 Grid.Column="1"
                 Margin="45,5,0,0">
-            <Windows10version1809:Border.TranslationTransition>
+            <Windows10version1809:Grid.TranslationTransition>
                 <Windows10version1809:Vector3Transition />
-            </Windows10version1809:Border.TranslationTransition>
+            </Windows10version1809:Grid.TranslationTransition>
             <TextBlock x:Name="AppTitle"
-                       Text="UWP Resources Gallery"
-                       VerticalAlignment="Center"
-                       Style="{StaticResource CaptionTextBlockStyle}" >
+                    Text="UWP Resources Gallery"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource CaptionTextBlockStyle}" >
             </TextBlock>
-        </Border>
+        </Grid>
         <muxc:NavigationView x:Name="RootNavigation"
-                             Grid.Column="1"
-                             ItemInvoked="RootNavigation_ItemInvoked" 
-                             PaneOpening="RootNavigation_PaneOpening"
-                             PaneClosing="RootNavigation_PaneClosing"
-                             DisplayModeChanged="RootNavigation_DisplayModeChanged"
-                             IsTitleBarAutoPaddingEnabled="False">
+                Grid.Column="1"
+                ItemInvoked="RootNavigation_ItemInvoked" 
+                PaneOpening="RootNavigation_PaneOpening"
+                PaneClosing="RootNavigation_PaneClosing"
+                DisplayModeChanged="RootNavigation_DisplayModeChanged"
+                IsTitleBarAutoPaddingEnabled="False">
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItem x:Name="_StartPage" Content="Start" IsSelected="True">
                     <muxc:NavigationViewItem.Icon>
@@ -59,7 +59,7 @@
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
             </muxc:NavigationView.MenuItems>
-            <Frame x:Name="RootFrame" Padding="0,40,0,0" >
+            <Frame x:Name="RootFrame" Padding="0,40,0,0">
                 <Frame.ContentTransitions>
                     <TransitionCollection>
                         <NavigationThemeTransition  />
