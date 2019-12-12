@@ -5,9 +5,6 @@
         private const string FontIconWithGlyph =
             "<FontIcon Glyph=\"${Glyph}\"/>";
 
-        private const string FontIconWithGlyphColorSize =
-            "<FontIcon Glyph=\"${Glyph}\" ForeGround=\"${ForeGround}\" FontSize=\"${FontSize}\"/>";
-
         private const string SymbolIconWithGlyph =
             "<SymbolIcon Symbol=\"${Symbol}\"/>";
 

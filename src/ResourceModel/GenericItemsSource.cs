@@ -56,7 +56,8 @@ namespace UWPResourcesGallery.Model
         /// <param name="search">The search filter</param>
         public void Filter(string search)
         {
-            string[] filter = search.Split(" ");
+
+            string[] filter = search?.Split(" ");
 
             FilteredItems.Clear();
 

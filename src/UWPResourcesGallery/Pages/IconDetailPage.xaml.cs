@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using UWPResourcesGallery.Common;
 using UWPResourcesGallery.Model.Icon;
 using Windows.UI.Xaml;
@@ -21,6 +22,10 @@ namespace UWPResourcesGallery.Pages
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            if(e == null)
+            {
+                return;
+            }
             base.OnNavigatedTo(e);
             var anim = ConnectedAnimationService.GetForCurrentView().GetAnimation("ForwardConnectedAnimation");
             if (anim != null)
@@ -47,7 +52,9 @@ namespace UWPResourcesGallery.Pages
             {
                 return;
             }
-            CustomIconCode.Code = SampleTemplateProvider.GetCustomizedFontIconCode(icon.StringGlyph, args.NewColor.ToString(),((int)CustomIconFontSize.Value).ToString());
+            CustomIconCode.Code = SampleTemplateProvider.GetCustomizedFontIconCode(icon.StringGlyph
+                , args.NewColor.ToString()
+                , ((int)CustomIconFontSize.Value).ToString());
         }
 
         private void Size_ValueChanged(Microsoft.UI.Xaml.Controls.NumberBox sender, Microsoft.UI.Xaml.Controls.NumberBoxValueChangedEventArgs args)
@@ -56,7 +63,9 @@ namespace UWPResourcesGallery.Pages
             {
                 return;
             }
-            CustomIconCode.Code = SampleTemplateProvider.GetCustomizedFontIconCode(icon.StringGlyph, FontIconColorPicker.Color.ToString(), ((int)CustomIconFontSize.Value).ToString());
+            CustomIconCode.Code = SampleTemplateProvider.GetCustomizedFontIconCode(icon.StringGlyph
+                , FontIconColorPicker.Color.ToString()
+                , ((int)CustomIconFontSize.Value).ToString());
         }
     }
 }

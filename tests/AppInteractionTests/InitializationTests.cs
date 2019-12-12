@@ -1,4 +1,3 @@
-using ControlTests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AppInteractionTests
@@ -10,7 +9,6 @@ namespace AppInteractionTests
         public void TestMethod1()
         {
             Assert.IsNotNull(TestRunInitializer.Session);
-
         }
     }
 }

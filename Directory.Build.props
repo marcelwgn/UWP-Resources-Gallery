@@ -1,0 +1,15 @@
+﻿<Project>
+  <ItemGroup>
+    <None Include=".\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+  </ItemGroup>
+  
+  
+  <!-- Packages needed in every project -->
+  <ItemGroup>
+    <!-- Code analyzer -->
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
+    </PackageReference>
+  </ItemGroup>
+</Project>

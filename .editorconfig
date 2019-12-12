@@ -1,0 +1,13 @@
+﻿[*.cs]
+
+# CA1303: Do not pass literals as localized parameters
+# Ignore reason: All strings we use are templates or logging and are in english
+dotnet_diagnostic.CA1303.severity = suggestion
+
+# CA1305: Specify IFormatProvider
+# Ignore reason: All strings are english
+dotnet_diagnostic.CA1305.severity = suggestion
+
+# CA1801: Review unused parameters
+# Ignore reasonn: Event listener trigger this rule, resulting in bloated warnings list
+dotnet_diagnostic.CA1801.severity = suggestion

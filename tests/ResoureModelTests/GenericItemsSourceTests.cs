@@ -12,7 +12,7 @@ namespace ResoureModelTests
     public class GenericItemsSourceTests : GenericItemsSource<FilterableString>
     {
         [ClassInitialize]
-        public static void ClassSetup(TestContext _)
+        public static void ClassSetup(TestContext context)
         {
             var file = GetJSONFile("/Assets/testdata.json");
 
@@ -21,12 +21,12 @@ namespace ResoureModelTests
                 Items.Add(new FilterableString(element.GetString()));
             }
         }
-        
+
         [TestMethod]
         public void LoadsDataCorrectly()
         {
             Assert.IsTrue(Items.Count > 0);
-            
+
             for (int i = 0; i < Items.Count; i++)
             {
                 Assert.AreEqual("Item" + i, Items[i].Value);
@@ -54,7 +54,7 @@ namespace ResoureModelTests
 
     public class FilterableString : IFilterable
     {
-        public string Value;
+        public string Value { get; set; }
 
         public FilterableString(string value)
         {
@@ -63,7 +63,7 @@ namespace ResoureModelTests
 
         public bool FitsFilter(string[] keywords)
         {
-            return keywords.All(key => Value.Contains(key));
+            return keywords.All(key => Value.Contains(key,StringComparison.InvariantCultureIgnoreCase));
         }
     }
 }

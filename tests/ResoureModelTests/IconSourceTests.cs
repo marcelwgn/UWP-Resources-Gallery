@@ -12,7 +12,7 @@ namespace ResoureModelTests
     public class IconSourceTests
     {
         [ClassInitialize]
-        public static void ClassInitialize(TestContext _)
+        public static void ClassInitialize(TestContext context)
         {
             IconItemSource.LoadIconsList();
         }

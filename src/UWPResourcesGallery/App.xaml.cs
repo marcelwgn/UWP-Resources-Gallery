@@ -36,6 +36,10 @@ namespace UWPResourcesGallery
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            if(e == null)
+            {
+                return;
+            }
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
             if (!(Window.Current.Content is Frame rootFrame))
@@ -45,16 +49,11 @@ namespace UWPResourcesGallery
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
-                if (e?.PreviousExecutionState == ApplicationExecutionState.Terminated)
-                {
-                    //TODO: Load state from previously suspended application
-                }
-
                 // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
             }
 
-            if (e.PrelaunchActivated == false)
+            if (e!= null && e.PrelaunchActivated == false)
             {
                 if (rootFrame.Content == null)
                 {
