@@ -29,7 +29,7 @@ namespace ControlTests
         
         public ControlsTestPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             Instance = this;
         }
     }

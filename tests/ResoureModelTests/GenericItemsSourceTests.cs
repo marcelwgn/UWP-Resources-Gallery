@@ -14,12 +14,14 @@ namespace ResoureModelTests
         [ClassInitialize]
         public static void ClassSetup(TestContext context)
         {
+            context?.WriteLine("Started loading test setup");
             var file = GetJSONFile("/Assets/testdata.json");
 
             foreach (var element in file["strings"].GetArray())
             {
                 Items.Add(new FilterableString(element.GetString()));
             }
+            context?.WriteLine("Finished test setup");
         }
 
         [TestMethod]
@@ -38,6 +40,8 @@ namespace ResoureModelTests
         {
             Assert.IsTrue(Items.Count > 0);
 
+            Filter(null);
+            
             for (int i = 0; i < Items.Count; i++)
             {
                 Filter("Item" + i);

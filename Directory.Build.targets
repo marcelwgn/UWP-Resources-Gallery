@@ -1,0 +1,12 @@
+﻿<Project>
+  <PropertyGroup>
+    <!--
+      CA1303: Do not pass literals as localized parameters
+      Ignore reason: All strings we use are templates or logging and are in english per design
+
+      CA1305: Specify IFormatProvider
+      Ignore reason: All strings are english-->
+
+    <NoWarn>;$(NoWarn);CA1305;CA1303</NoWarn>
+  </PropertyGroup>
+</Project>

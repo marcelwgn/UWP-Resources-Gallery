@@ -1,10 +1,15 @@
 ﻿<Project>
-  <ItemGroup>
-    <None Include=".\.editorconfig">
-      <Link>.editorconfig</Link>
-    </None>
-  </ItemGroup>
-  
+
+  <!-- Output paths -->
+  <PropertyGroup>
+    <BaseOutputPath>..\..\artifacts\$(Configuration)\</BaseOutputPath>
+
+    <OutputPath>$(BaseOutputPath)\$(MSBuildProjectName)\</OutputPath>
+
+    <!--<BaseIntermediateOutputPath>..\..\artifacts\intermediates\$(Configuration)\$(MSBuildProjectName)\</BaseIntermediateOutputPath>-->
+    <IntermediateOutputPath>..\..\artifacts\intermediates\$(MSBuildProjectName)\</IntermediateOutputPath>
+    <GeneratedFilesDir>..\..\artifacts\intermediates\$(MSBuildProjectName)\Generated Files\</GeneratedFilesDir>
+  </PropertyGroup>
   
   <!-- Packages needed in every project -->
   <ItemGroup>
