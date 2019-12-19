@@ -2,7 +2,7 @@
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace UWPResourcesGallery.Controls.IconControls
+namespace UWPResourcesGallery.Controls.Templates
 {
     public partial class IconItemControl : UserControl
     {

@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Threading.Tasks;
-using UWPResourcesGallery.Controls.IconControls;
+using UWPResourcesGallery.Controls.Templates;
 using UWPResourcesGallery.Model.Icon;
 using Windows.Foundation.Metadata;
 using Windows.UI.Xaml.Controls;
@@ -25,6 +25,8 @@ namespace UWPResourcesGallery.Pages
 
         private void LoadIcons(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
+            // Delegate loading of icons, so we have smooth navigating to this page
+            // and not unecessarly block UI Thread
             Task.Run(delegate ()
             {
                 _ = Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Low, () =>

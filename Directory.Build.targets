@@ -7,6 +7,6 @@
       CA1305: Specify IFormatProvider
       Ignore reason: All strings are english-->
 
-    <NoWarn>;$(NoWarn);CA1305;CA1303</NoWarn>
+    <NoWarn>;$(NoWarn);CA1303;CA1305</NoWarn>
   </PropertyGroup>
 </Project>

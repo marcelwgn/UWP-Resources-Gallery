@@ -123,7 +123,7 @@
     </Compile>
     <Compile Include="Common\BoolToVisibilityConverterClass.cs" />
     <Compile Include="Common\SampleTemplateProvider.cs" />
-    <Compile Include="Controls\SystemColorControls\SystemColorPresenter.xaml.cs">
+    <Compile Include="Controls\Templates\SystemColorPresenter.xaml.cs">
       <DependentUpon>SystemColorPresenter.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Common\CodeSample.xaml.cs">
@@ -138,7 +138,7 @@
     <Compile Include="Pages\IconDetailPage.xaml.cs">
       <DependentUpon>IconDetailPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\IconControls\IconItemControl.xaml.cs">
+    <Compile Include="Controls\Templates\IconItemControl.xaml.cs">
       <DependentUpon>IconItemControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Common\ThemeHelper.cs" />
@@ -223,7 +223,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Controls\SystemColorControls\SystemColorPresenter.xaml">
+    <Page Include="Controls\Templates\SystemColorPresenter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -243,7 +243,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\IconControls\IconItemControl.xaml">
+    <Page Include="Controls\Templates\IconItemControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -294,6 +294,7 @@
       <Name>ResourceModel</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

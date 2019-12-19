@@ -2,7 +2,7 @@
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace UWPResourcesGallery.Controls.SystemColorControls
+namespace UWPResourcesGallery.Controls.Templates
 {
     public sealed partial class SystemColorPresenter : UserControl
     {

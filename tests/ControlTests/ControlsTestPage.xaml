@@ -10,22 +10,24 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel>
-        <Button>Text</Button>
-        <Button>Text</Button>
-        <Button>Text</Button>
+        <common:PageHeader x:Name="StandardPageHeader" 
+                PageName="CommonControls Test page" 
+                PageDescription="This is the test page/app for common controls used in the UWP Resources Gallery"/>
+        
+        <StackPanel Margin="0,12,0,0">
+            <TextBlock>DualThemePresenter</TextBlock>
+            <common:DualThemePresenter x:Name="StandardDualThemePresenter">
+                <common:DualThemePresenter.LightThemeContent>
+                    <TextBlock x:Name="LightThemeText">Light</TextBlock>
+                </common:DualThemePresenter.LightThemeContent>
 
-        <TextBlock>DualThemePresenter</TextBlock>
-        <common:DualThemePresenter >
-            <common:DualThemePresenter.LightThemeContent>
-                <TextBlock x:Name="LightThemeText">Light</TextBlock>
-            </common:DualThemePresenter.LightThemeContent>
+                <common:DualThemePresenter.DarkThemeContent>
+                    <TextBlock x:Name="DarkThemeText">Dark</TextBlock>
+                </common:DualThemePresenter.DarkThemeContent>
+            </common:DualThemePresenter>
+        </StackPanel>
 
-            <common:DualThemePresenter.DarkThemeContent>
-                <TextBlock x:Name="DarkThemeText">Dark</TextBlock>
-            </common:DualThemePresenter.DarkThemeContent>
-        </common:DualThemePresenter>
-
-        <StackPanel RequestedTheme="Dark">
+        <StackPanel RequestedTheme="Dark" Margin="0,12,0,0">
             <TextBlock>CodeSample</TextBlock>
             <common:CodeSample x:Name="CodeSampleNormal" >
                 <common:CodeSample.Code>
@@ -38,6 +40,7 @@
                 </common:CodeSample.Code>
             </common:CodeSample>
         </StackPanel>
+
         
     </StackPanel>
 </Page>
