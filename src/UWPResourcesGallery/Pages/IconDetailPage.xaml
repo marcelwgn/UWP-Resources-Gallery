@@ -122,14 +122,14 @@
                         <!--Left pane-->
                         <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" MaxWidth="350">
                             <common:DualThemePresenter Grid.ColumnSpan="2" Grid.Row="1" 
-                                VerticalAlignment="Top" HorizontalAlignment="Left"
+                                VerticalAlignment="Top" HorizontalAlignment="Left" ContentOrientation="Horizontal"
                                 Height="150"  Width="320">
                                 <common:DualThemePresenter.LightThemeContent>
-                                    <FontIcon x:Name="LightThemeIcon" Glyph="{x:Bind icon.Character}" FontSize="{x:Bind CustomIconFontSize.Value,Mode=OneWay}" Foreground="#FFFF0000"/>
+                                    <FontIcon x:Name="LightThemeIcon" Glyph="{x:Bind icon.Character}" MinWidth="150" FontSize="{x:Bind CustomIconFontSize.Value,Mode=OneWay}" Foreground="#FFFF0000"/>
                                 </common:DualThemePresenter.LightThemeContent>
 
                                 <common:DualThemePresenter.DarkThemeContent>
-                                    <FontIcon x:Name="DarkThemeIcon" Glyph="{x:Bind icon.Character}" FontSize="{x:Bind CustomIconFontSize.Value,Mode=OneWay}" Foreground="#FFFF0000"/>
+                                    <FontIcon x:Name="DarkThemeIcon" Glyph="{x:Bind icon.Character}" MinWidth="150" FontSize="{x:Bind CustomIconFontSize.Value,Mode=OneWay}" Foreground="#FFFF0000"/>
                                 </common:DualThemePresenter.DarkThemeContent>
                             </common:DualThemePresenter>
 

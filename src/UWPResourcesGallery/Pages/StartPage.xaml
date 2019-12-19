@@ -7,47 +7,28 @@
     xmlns:common="using:UWPResourcesGallery.Controls.Common"
     xmlns:contract7Present="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)"
     mc:Ignorable="d"
+    x:Name="StartPageReference"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.Resources>
-        <Style x:Key="NavigatingButtonStyle" TargetType="Button">
-            <Setter Property="Background" Value="{ThemeResource SystemControlBackgroundListLowBrush}" />
+        <Style x:Key="NavigatingButtonStyle" TargetType="Button" BasedOn="{StaticResource ButtonRevealStyle}">
             <Setter Property="HorizontalAlignment" Value="Center" />
             <Setter Property="VerticalAlignment" Value="Stretch" />
-            <Setter Property="Width" Value="380" />
+            <Setter Property="Width" Value="370" />
+            <Setter Property="Margin" Value="5,5,5,5" />
         </Style>
     </Page.Resources>
     
     
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-
-        <StackPanel Grid.Row="1" Grid.Column="1" >
+    <Grid VerticalAlignment="Center">
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
 
             <common:PageHeader Margin="5,5,5,5"
                 PageName="Welcome to the UWP Resources Gallery" 
                 PageDescription="This app contains an list of UWP resources, such as system colors and the Segoe MDL2 icons."/>
 
             <!-- Navigation -->
-            <GridView >
-                <GridView.Resources>
-                    <Style TargetType="GridViewItem">
-                        <Setter Property="Width" Value="380" />
-                        <Setter Property="MaxWidth" Value="380" />
-                        <Setter Property="Margin" Value="5,5,5,5" />
-                    </Style>
-                </GridView.Resources>
-
+            <VariableSizedWrapGrid MaximumRowsOrColumns="2" Orientation="Horizontal">
                 <Button Style="{ThemeResource NavigatingButtonStyle}" Click="NavigateToIconListPage_Click"
                         contract7Present:CornerRadius="0">
                     <Grid VerticalAlignment="Stretch" Height="80" Padding="4,0,8,0">
@@ -57,6 +38,7 @@
                         </Grid.RowDefinitions>
 
                         <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
@@ -77,6 +59,7 @@
 
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
@@ -85,7 +68,7 @@
                         <TextBlock Grid.Column="1" Grid.Row="1" Margin="0,4,0,0" TextWrapping="WrapWholeWords" MaxWidth="300">Collection of system colors which are provided by Windows 10.</TextBlock>
                     </Grid>
                 </Button>
-            </GridView>
+            </VariableSizedWrapGrid>
         </StackPanel>
 
     </Grid>

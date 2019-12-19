@@ -10,7 +10,7 @@
     d:DesignWidth="400">
 
     <StackPanel>
-        <TextBlock Text="{x:Bind PageName,Mode=OneWay}" FontSize="22" AutomationProperties.HeadingLevel="1"/>
-        <TextBlock Text="{x:Bind PageDescription,Mode=OneWay}" FontSize="18" AutomationProperties.HeadingLevel="2"/>
+        <TextBlock Text="{x:Bind PageName,Mode=OneWay}" FontSize="22" AutomationProperties.HeadingLevel="1" TextWrapping="Wrap"/>
+        <TextBlock Text="{x:Bind PageDescription,Mode=OneWay}" FontSize="18" AutomationProperties.HeadingLevel="2" TextWrapping="Wrap"/>
     </StackPanel>
 </UserControl>
