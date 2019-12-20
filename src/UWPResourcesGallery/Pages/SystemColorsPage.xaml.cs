@@ -26,7 +26,7 @@ namespace UWPResourcesGallery.Pages
             // and not unecessarly block UI Thread
             Task.Run(delegate ()
             {
-                _ = Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Low, () =>
+                _ = Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.High, () =>
                 {
                     SystemColorsPresenter.ItemsSource = source.FilteredItems;
                 });

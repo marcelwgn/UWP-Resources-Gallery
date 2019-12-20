@@ -30,10 +30,13 @@ namespace AppInteractionTests
             {
                 var appiumOptions = new AppiumOptions();
                 appiumOptions.AddAdditionalCapability("app", AppUIBasicAppId);
-
-                _session = new WindowsDriver<WindowsElement>(new Uri(WindowsApplicationDriverUrl), appiumOptions);
-                Thread.Sleep(5000);
-                if (Session == null)
+                try
+                {
+                    _session = new WindowsDriver<WindowsElement>(new Uri(WindowsApplicationDriverUrl), appiumOptions);
+                }
+                catch (OpenQA.Selenium.WebDriverException) { }
+                Thread.Sleep(3000);
+                if (_session == null)
                 {
                     // WinAppDriver is probably not running, so lets start it!
                     Process.Start(@"C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe");
@@ -41,19 +44,19 @@ namespace AppInteractionTests
                     Thread.Sleep(10000);
                     _session = new WindowsDriver<WindowsElement>(new Uri(WindowsApplicationDriverUrl), appiumOptions);
                 }
-                Assert.IsNotNull(Session);
-                Assert.IsNotNull(Session.SessionId);
+                Assert.IsNotNull(_session);
+                Assert.IsNotNull(_session.SessionId);
 
                 // Dismiss the disclaimer window that may pop up on the very first application launch
                 // If the disclaimer is not find, this throws an exception, so lets catch that
                 try
                 {
-                    Session.FindElementByName("Disclaimer").FindElementByName("Accept").Click();
+                    _session.FindElementByName("Disclaimer").FindElementByName("Accept").Click();
                 }
                 catch (OpenQA.Selenium.WebDriverException) { }
 
                 // Wait if something is still animating in the visual tree
-                Session.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+                _session.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             }
         }
 

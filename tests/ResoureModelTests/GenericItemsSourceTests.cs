@@ -40,7 +40,7 @@ namespace ResoureModelTests
         {
             Assert.IsTrue(Items.Count > 0);
 
-            Filter(null);
+            Filter("");
             
             for (int i = 0; i < Items.Count; i++)
             {
