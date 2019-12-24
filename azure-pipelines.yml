@@ -44,3 +44,14 @@ steps:
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\Debug\'
     uiTests: true
+
+- task: VSTest@2
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\AppInteractionTests**.dll
+      !**\*Tests.exe
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\Debug\'
+    uiTests: true
