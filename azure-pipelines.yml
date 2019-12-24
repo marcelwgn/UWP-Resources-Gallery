@@ -33,7 +33,7 @@ steps:
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(System.DefaultWorkingDirectory)\artifacts\Debug\'
-    publishLocation: 'pipeline''
+    publishLocation: 'pipeline'
 
 - task: VisualStudioTestPlatformInstaller@1
   inputs:
