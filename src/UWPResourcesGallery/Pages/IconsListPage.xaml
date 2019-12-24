@@ -21,7 +21,7 @@
 
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="15" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
@@ -36,7 +36,7 @@
                     SelectionMode="None"
                     IsItemClickEnabled="True"
                     ItemClick="ItemsGridView_ItemClick"
-                    Padding="18" 
+                    Padding="10" 
                     Grid.Row="1">
             <GridView.Transitions>
                 <TransitionCollection>

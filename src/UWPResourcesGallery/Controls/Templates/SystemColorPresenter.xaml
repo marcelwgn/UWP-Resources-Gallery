@@ -20,7 +20,7 @@
         <common:DualThemePresenter Width="102" Grid.Row="0" Grid.RowSpan="4">
             <common:DualThemePresenter.LightThemeContent>
                 <StackPanel Width="102">
-                    <TextBlock Margin="4,0,0,4">Light theme</TextBlock>
+                    <TextBlock Margin="4,0,0,4" Text="Light theme"/>
                     <Border Width="90" Margin="2,0,8,6" BorderThickness="0">
                         <!--White and black background for opaque colors-->
                         <Border.Background>
@@ -41,7 +41,7 @@
 
             <common:DualThemePresenter.DarkThemeContent>
                 <StackPanel Width="102">
-                    <TextBlock Margin="4,0,0,4">Dark theme</TextBlock>
+                    <TextBlock Margin="4,0,0,4" Text="Dark theme"/>
                     <Border Width="90" Margin="2,0,8,6" BorderThickness="0">
                         <!--Black and white background for opaque colors-->
                         <Border.Background>
@@ -73,7 +73,7 @@
                 HorizontalAlignment="Center" Margin="0,22,0,16" VerticalAlignment="Stretch" IsTextSelectionEnabled="True"
                 Grid.Row="0" Grid.RowSpan="2"/>
 
-            <TextBlock Grid.Row="2" HorizontalAlignment="Stretch" Margin="0,8,0,4">Themeresource snippet</TextBlock>
+            <TextBlock Grid.Row="2" HorizontalAlignment="Stretch" Margin="0,8,0,4" Text="Themeresource snippet"/>
             <common:CodeSample Grid.Row="3" HorizontalAlignment="Stretch" IsSyntaxHighlightingEnabled="True" Code="{x:Bind SystemColor.ThemeResourceString}"/>
         </Grid>
     </Grid>

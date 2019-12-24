@@ -25,7 +25,7 @@
                 Canvas.ZIndex="1"
                 Height="30"
                 Grid.Column="1"
-                Margin="45,5,0,0">
+                Margin="40,5,0,0">
             <Windows10version1809:Grid.TranslationTransition>
                 <Windows10version1809:Vector3Transition />
             </Windows10version1809:Grid.TranslationTransition>

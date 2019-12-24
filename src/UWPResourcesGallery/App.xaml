@@ -19,7 +19,7 @@
 
             <common:BoolToVisibilityConverterClass x:Key="BoolToVisibilityConverter"/>
 
-            <!-- Style defining the look of a copy text button -->
+            <!-- "Copy text" - Button style-->
             <Style x:Key="CopyButtonStyle" TargetType="Button">
                 <Setter Property="Margin" Value="15,5,0,5"/>
                 <Setter Property="Padding" Value="3" />

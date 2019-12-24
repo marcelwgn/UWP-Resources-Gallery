@@ -19,7 +19,6 @@
         </Style>
     </Page.Resources>
     
-    
     <Grid VerticalAlignment="Center">
         <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
 
@@ -44,8 +43,9 @@
                         </Grid.ColumnDefinitions>
 
                         <FontIcon Grid.RowSpan="2" Margin="4,8,16,0" Glyph="&#xED58;" FontSize="36" VerticalAlignment="Top"/>
-                        <TextBlock Grid.Column="1" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}">Icon list</TextBlock>
-                        <TextBlock Grid.Column="1" Grid.Row="1" Margin="0,4,0,0" TextWrapping="WrapWholeWords" MaxWidth="300">List of all Segoe MDL2 icons that are available across all versions of Windows 10.</TextBlock>
+                        <TextBlock Grid.Column="1" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}" Text="Icon list" />
+                        <TextBlock Grid.Column="1" Grid.Row="1" Margin="0,4,0,0" TextWrapping="WrapWholeWords" MaxWidth="300" 
+                                   Text="List of all Segoe MDL2 icons that are available across all versions of Windows 10."/>
                     </Grid>
                 </Button>
 
@@ -64,8 +64,9 @@
                         </Grid.ColumnDefinitions>
 
                         <FontIcon Grid.RowSpan="2" Margin="4,8,16,0" Glyph="&#xE790;" FontSize="36" VerticalAlignment="Top"/>
-                        <TextBlock Grid.Column="1" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}">Systemcolors</TextBlock>
-                        <TextBlock Grid.Column="1" Grid.Row="1" Margin="0,4,0,0" TextWrapping="WrapWholeWords" MaxWidth="300">Collection of system colors which are provided by Windows 10.</TextBlock>
+                        <TextBlock Grid.Column="1" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}" Text="Systemcolors"/>
+                        <TextBlock Grid.Column="1" Grid.Row="1" Margin="0,4,0,0" TextWrapping="WrapWholeWords" MaxWidth="300"
+                                   Text="Collection of system colors which are provided by Windows 10." />
                     </Grid>
                 </Button>
             </VariableSizedWrapGrid>

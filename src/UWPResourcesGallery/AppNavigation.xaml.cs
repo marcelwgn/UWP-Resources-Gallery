@@ -16,26 +16,14 @@ namespace UWPResourcesGallery
     public sealed partial class AppNavigation : Page
     {
 
-        private static AppNavigation Instance;
-
-        public static void NavigateToPageType(Type pageType)
-        {
-            Instance.RootFrame.Navigate(pageType);
-        }
-
-        public static void NavigateToIconsListPage()
-        {
-            Instance._IconsListPage.IsSelected = true;
-            Instance.RootFrame.Navigate(typeof(IconsListPage));
-        }
+        public static AppNavigation Instance;
 
         public AppNavigation()
         {
             InitializeComponent();
             Instance = this;
-
+            
             Window.Current.SetTitleBar(AppTitleBar);
-
 
             RootFrame.Navigate(typeof(StartPage));
 
@@ -48,6 +36,17 @@ namespace UWPResourcesGallery
                 RootFrame.Navigated += RootFrame_Navigated;
                 RootNavigation.BackRequested += RootNavigation_BackRequested;
             };
+        }
+
+        public static void NavigateToPageType(Type pageType)
+        {
+            Instance.RootFrame.Navigate(pageType);
+        }
+
+        public static void NavigateToIconsListPage()
+        {
+            Instance._IconsListPage.IsSelected = true;
+            Instance.RootFrame.Navigate(typeof(IconsListPage));
         }
 
         private void RootNavigation_BackRequested(MUXC.NavigationView sender, MUXC.NavigationViewBackRequestedEventArgs args)
@@ -102,7 +101,7 @@ namespace UWPResourcesGallery
             }
         }
 
-
+        // App title code 
         private void UpdateAppTitleBarPosition(float offSet)
         {
             // We need to check if translations are available to update
@@ -122,7 +121,7 @@ namespace UWPResourcesGallery
         {
             if (sender.DisplayMode != MUXC.NavigationViewDisplayMode.Minimal)
             {
-                UpdateAppTitleBarPosition(20);
+                UpdateAppTitleBarPosition(15);
             }
         }
         
