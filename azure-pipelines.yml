@@ -38,5 +38,5 @@ steps:
       **\*Tests.exe
       !**\*TestAdapter.dll
       !**\obj\**
-    searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\Release\'
+    searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\Debug\'
     uiTests: true
