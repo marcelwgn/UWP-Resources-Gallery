@@ -32,11 +32,26 @@ stages:
             solution: '$(solution)'
             configuration: '$(buildConfiguration)'
             msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" /p:AppxPackageDir="$(appxPackageDir)" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=SideloadOnly /p:AppxPackageSigningEnabled=false'
+        - task: PublishPipelineArtifact@1
+          inputs:
+            targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
+            publishLocation: 'pipeline'
+            
+
 
   - stage: Tests
     dependsOn: Build
     jobs:
+      - job: Download_Artifact
+        steps:
+        - task: DownloadPipelineArtifact@2
+          inputs:
+            buildType: 'current'
+            targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
+
+
       - job: Unit_Tests
+        dependsOn: Download_Artifact
         steps:
           - task: VSTest@2
             inputs:
@@ -45,10 +60,11 @@ stages:
                 **\*Tests**.appxrecipe
                 !**\*TestAdapter.dll
                 !**\obj\**
-              searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\Debug'
+              searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
               uiTests: true
 
       - job: Interaction_Tests
+        dependsOn: Download_Artifact
         steps:
         - task: VSTest@2
           inputs:
@@ -57,7 +73,7 @@ stages:
               **\*UWPResourcesGallery**.appxrecipe
               !**\*TestAdapter.dll
               !**\obj\**
-            searchFolder: '$(System.DefaultWorkingDirectory)'
+            searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
 
   - stage: Publish
     dependsOn: Tests
