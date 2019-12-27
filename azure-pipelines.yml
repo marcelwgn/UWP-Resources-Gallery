@@ -102,13 +102,8 @@ stages:
                 Write-Host "Start adding the PFX file to the certificate store."
                 $CertFile = Get-ChildItem -Filter *.cer -Name
                 $CertFilePath = "$(System.DefaultWorkingDirectory)/appxbundles/" + $CertFile
-                Add-Type -AssemblyName System.Security
-                $cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2
-                $cert.Import($CertFilePath, "", [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]"PersistKeySet")
-                $store = new-object system.security.cryptography.X509Certificates.X509Store -argumentlist "MY", CurrentUser
-                $store.Open([System.Security.Cryptography.X509Certificates.OpenFlags]"ReadWrite")
-                $store.Add($cert)
-                $store.Close()
+
+                Import-Certificate -FilePath $CertFilePath -CertStoreLocation cert:\CurrentUser\Root
 
                 # Find correct folder and run app install script.
 
