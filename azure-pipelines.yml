@@ -68,6 +68,8 @@ stages:
         steps:
           - task: NuGetToolInstaller@1
 
+
+
           - task: NuGetCommand@2
             inputs:
               restoreSolution: '$(solution)'
@@ -75,6 +77,13 @@ stages:
             inputs:
               buildType: 'current'
               targetPath: '$(System.DefaultWorkingDirectory)'
+
+          - task: PublishPipelineArtifact@1
+            inputs:
+              targetPath: '$(System.DefaultWorkingDirectory)'
+              publishLocation: 'pipeline'
+
+          
           - task: VSTest@2
             inputs:
               testSelector: 'testAssemblies'
