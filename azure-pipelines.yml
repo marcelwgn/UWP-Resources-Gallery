@@ -20,6 +20,36 @@ stages:
     jobs:
       - job: Build_Debug
         steps:
+
+        - task: PowerShell@2
+          inputs:
+            targetType: 'inline'
+            script: |
+
+              cd 
+              $pfxpath = '$(System.CurrentWorkingDirectoy)/src/UWPResourcesGallery/UWPResourcesGallery_TemporaryKey.pfx'
+              $password = ''
+              
+              Add-Type -AssemblyName System.Security
+              $cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2
+              $cert.Import("$(System.CurrentWorkingDirectoy)/src/UWPResourcesGallery/UWPResourcesGallery_TemporaryKey.pfx", $password, [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]"PersistKeySet")
+              $store = new-object system.security.cryptography.X509Certificates.X509Store -argumentlist "MY", CurrentUser
+              $store.Open([System.Security.Cryptography.X509Certificates.OpenFlags]"ReadWrite")
+              $store.Add($cert)
+              $store.Close()
+
+              # Find correct folder and run app install script.
+              cd ./appxbundles
+
+              $AppBundle = Get-ChildItem -Filter UWP*Test -Name
+              echo $AppBundle
+              cd $AppBundle
+              ./Add-AppDevPackage.ps1
+            errorActionPreference: 'continue'
+            failOnStderr: true
+            workingDirectory: '$(System.DefaultWorkingDirectory)'
+
+
         - task: NuGetToolInstaller@1
 
         - task: NuGetCommand@2
@@ -90,34 +120,6 @@ stages:
               buildType: 'current'
               artifactName: 'appxbundles'
               targetPath: '$(System.DefaultWorkingDirectory)\appxbundles'
-
-          - task: PowerShell@2
-            inputs:
-              targetType: 'inline'
-              script: |
-
-                cd 
-                $pfxpath = '$(System.CurrentWorkingDirectoy)/src/UWPResourcesGallery/UWPResourcesGallery_TemporaryKey.pfx'
-                $password = ''
-                
-                Add-Type -AssemblyName System.Security
-                $cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2
-                $cert.Import("$(System.CurrentWorkingDirectoy)/src/UWPResourcesGallery/UWPResourcesGallery_TemporaryKey.pfx", $password, [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]"PersistKeySet")
-                $store = new-object system.security.cryptography.X509Certificates.X509Store -argumentlist "MY", CurrentUser
-                $store.Open([System.Security.Cryptography.X509Certificates.OpenFlags]"ReadWrite")
-                $store.Add($cert)
-                $store.Close()
-
-                # Find correct folder and run app install script.
-                cd ./appxbundles
-
-                $AppBundle = Get-ChildItem -Filter UWP*Test -Name
-                echo $AppBundle
-                cd $AppBundle
-                ./Add-AppDevPackage.ps1
-              errorActionPreference: 'continue'
-              failOnStderr: true
-              workingDirectory: '$(System.DefaultWorkingDirectory)'
 
 
           - task: VSTest@2
