@@ -40,7 +40,7 @@ stages:
             
         - task: PublishBuildArtifacts@1
           inputs:
-            PathtoPublish: '$(Build.ArtifactStagingDirectory)\AppxBundles\'
+            PathtoPublish: '$(Build.ArtifactStagingDirectory)\AppxPackages\'
             ArtifactName: 'appxbundles'
             publishLocation: 'Container'
 
