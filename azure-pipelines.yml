@@ -49,7 +49,7 @@ stages:
             inputs:
               buildType: 'current'
               artifactName: 'artifacts'
-              targetPath: '$(System.DefaultWorkingDirectory)'
+              targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
 
         
           - task: PublishPipelineArtifact@1
