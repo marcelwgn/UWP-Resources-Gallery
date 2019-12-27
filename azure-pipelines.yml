@@ -34,7 +34,8 @@ stages:
             msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" /p:AppxPackageDir="$(appxPackageDir)" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=SideloadOnly /p:AppxPackageSigningEnabled=false'
         - task: PublishPipelineArtifact@1
           inputs:
-            targetPath: '$(System.DefaultWorkingDirectory)'
+            targetPath: '$(System.DefaultWorkingDirectory)\artifact\$(buildConfiguration)'
+            artifact: 'artifact'
             publishLocation: 'pipeline'
             
 
