@@ -40,7 +40,9 @@ stages:
             
         - task: PublishBuildArtifacts@1
           inputs:
+            PathtoPublish: '$(Build.ArtifactStagingDirectory)\AppxBundles\'
             ArtifactName: 'appxbundles'
+            publishLocation: 'Container'
 
   - stage: Test
     dependsOn: Build
@@ -95,9 +97,9 @@ stages:
               script: |
                 # Find correct folder and run app install script.
                 cd ./appxbundles
-                $App-Bundle = Get-ChildItem -Filter UWP*Test -Name
-                echo $App-Bundle
-                cd $App-Bundle
+                $AppBundle = Get-ChildItem -Filter UWP*Test -Name
+                echo $AppBundle
+                cd $AppBundle
                 ./Add-AppDevPackage.ps1
 
 
