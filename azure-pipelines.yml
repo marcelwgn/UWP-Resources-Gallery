@@ -76,7 +76,7 @@ stages:
               script: |
                 # Set timeout up.
                 
-                [Environment]::SetEnvironmentVariable("VSTEST_CONNECTION_TIMEOUT ", "180")
+                [Environment]::SetEnvironmentVariable("VSTEST_CONNECTION_TIMEOUT", "180")
 
           - task: NuGetToolInstaller@1
 
