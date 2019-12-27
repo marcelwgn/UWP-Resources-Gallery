@@ -22,9 +22,6 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-- task: VersionAPPX@2
-  displayName: 'Version MSIX'
-  
 - task: VSBuild@1
   inputs:
     platform: 'x86'
