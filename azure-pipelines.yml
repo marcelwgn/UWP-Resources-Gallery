@@ -49,7 +49,6 @@ stages:
               uiTests: true
 
       - job: Interaction_Tests
-        dependsOn: Build
         steps:
         - task: VSTest@2
           inputs:
