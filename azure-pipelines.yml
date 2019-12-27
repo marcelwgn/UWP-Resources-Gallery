@@ -15,52 +15,58 @@ variables:
   buildConfiguration: 'Debug'
   appxPackageDir: '$(build.artifactStagingDirectory)\AppxPackages\\'
 
-jobs:
-  - job: Build
-    steps:
-    - task: NuGetToolInstaller@1
+stages:
+  - stage: Build
+    jobs:
+      - job: Build_Debug
+        steps:
+        - task: NuGetToolInstaller@1
 
-    - task: NuGetCommand@2
-      inputs:
-        restoreSolution: '$(solution)'
+        - task: NuGetCommand@2
+          inputs:
+            restoreSolution: '$(solution)'
 
-    - task: VSBuild@1
-      inputs:
-        platform: 'x86'
-        solution: '$(solution)'
-        configuration: '$(buildConfiguration)'
-        msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" /p:AppxPackageDir="$(appxPackageDir)" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=SideloadOnly /p:AppxPackageSigningEnabled=false'
+        - task: VSBuild@1
+          inputs:
+            platform: 'x86'
+            solution: '$(solution)'
+            configuration: '$(buildConfiguration)'
+            msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" /p:AppxPackageDir="$(appxPackageDir)" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=SideloadOnly /p:AppxPackageSigningEnabled=false'
 
-  - job: Unit_Tests
+  - stage: Tests
     dependsOn: Build
-    steps:
-      - task: VSTest@2
-        inputs:
-          testSelector: 'testAssemblies'
-          testAssemblyVer2: |
-            **\*Tests**.appxrecipe
-            !**\*TestAdapter.dll
-            !**\obj\**
-          searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\Debug'
-          uiTests: true
+    jobs:
+      - job: Unit_Tests
+        steps:
+          - task: VSTest@2
+            inputs:
+              testSelector: 'testAssemblies'
+              testAssemblyVer2: |
+                **\*Tests**.appxrecipe
+                !**\*TestAdapter.dll
+                !**\obj\**
+              searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\Debug'
+              uiTests: true
 
-  - job: Interaction_Tests
-    dependsOn: Build
-    steps:
-    - task: VSTest@2
-      inputs:
-        testSelector: 'testAssemblies'
-        testAssemblyVer2: |
-          **\*UWPResourcesGallery**.appxrecipe
-          !**\*TestAdapter.dll
-          !**\obj\**
-        searchFolder: '$(System.DefaultWorkingDirectory)'
+      - job: Interaction_Tests
+        dependsOn: Build
+        steps:
+        - task: VSTest@2
+          inputs:
+            testSelector: 'testAssemblies'
+            testAssemblyVer2: |
+              **\*UWPResourcesGallery**.appxrecipe
+              !**\*TestAdapter.dll
+              !**\obj\**
+            searchFolder: '$(System.DefaultWorkingDirectory)'
 
-  - job: Publish_Release_Artifact
-    dependsOn: Unit_Tests|Interaction_Tests
-    steps:
-      - task: PublishPipelineArtifact@1
-        inputs:
-          targetPath: '$(System.DefaultWorkingDirectory)\artifacts\Release\'
-          publishLocation: 'pipeline'
+  - stage: Publish
+    dependsOn: Tests
+    jobs:
+      - job: Publish_Release
+        steps:
+        - task: PublishPipelineArtifact@1
+          inputs:
+            targetPath: '$(System.DefaultWorkingDirectory)\artifacts\Release\'
+            publishLocation: 'pipeline'
 
