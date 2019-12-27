@@ -47,7 +47,7 @@ stages:
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: 'current'
-              targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
+              targetPath: '$(System.DefaultWorkingDirectory)'
 
           - task: VSTest@2
             inputs:
@@ -56,7 +56,7 @@ stages:
                 **\*Tests**.appxrecipe
                 !**\*TestAdapter.dll
                 !**\obj\**
-              searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
+              searchFolder: '$(System.DefaultWorkingDirectory)'
               uiTests: true
 
       - job: Interaction_Tests
@@ -64,7 +64,7 @@ stages:
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: 'current'
-              targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
+              targetPath: '$(System.DefaultWorkingDirectory)'
           - task: VSTest@2
             inputs:
               testSelector: 'testAssemblies'
@@ -72,7 +72,7 @@ stages:
                 **\*UWPResourcesGallery**.appxrecipe
                 !**\*TestAdapter.dll
                 !**\obj\**
-              searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
+              searchFolder: '$(System.DefaultWorkingDirectory)'
 
   - stage: Publish
     dependsOn: Tests
