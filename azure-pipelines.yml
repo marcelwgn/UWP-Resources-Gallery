@@ -25,14 +25,7 @@ stages:
           inputs:
             targetType: 'inline'
             script: |
-
-              cd 
-              $workDirectory = Get-Location
-              
-              $pfxpath = join-path $workDirectory '/src/UWPResourcesGallery/UWPResourcesGallery_TemporaryKey.pfx'
-
-              echo $pfxpath
-
+              $pfxpath = join-path Get-Location '/src/UWPResourcesGallery/UWPResourcesGallery_TemporaryKey.pfx'
               $password = ''
               
               Add-Type -AssemblyName System.Security
