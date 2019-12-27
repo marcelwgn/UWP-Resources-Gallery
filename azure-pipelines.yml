@@ -27,7 +27,9 @@ stages:
             script: |
 
               cd 
-              $pfxpath = $(System.CurrentWorkingDirectoy)'/src/UWPResourcesGallery/UWPResourcesGallery_TemporaryKey.pfx'
+              $workDirectory = $(System.CurrentWorkingDirectory)
+              
+              $pfxpath = join-path $workDirectory '/src/UWPResourcesGallery/UWPResourcesGallery_TemporaryKey.pfx'
 
               echo $pfxpath
 
