@@ -22,6 +22,9 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
+- task: VersionAPPX@2
+  displayName: 'Version MSIX'
+  
 - task: VSBuild@1
   inputs:
     platform: 'x86'
@@ -29,6 +32,10 @@ steps:
     configuration: '$(buildConfiguration)'
     msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" /p:AppxPackageDir="$(appxPackageDir)" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=SideloadOnly /p:AppxPackageSigningEnabled=false'
 
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: 'Add-AppPackage -Path "$(System.DefaultWorkingDirectory)\artifacts\Debug\UWPResourcesGallery.Package_$(Build.BuildNumber)_x86.msixbundle"'
 
 - task: PublishPipelineArtifact@1
   inputs:
@@ -39,12 +46,14 @@ steps:
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-      **\**.appxrecipe
+      **\*Tests**.appxrecipe
       !**\*Tests.exe
       !**\*TestAdapter.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\Debug\'
     uiTests: true
+
+
 
 - task: VSTest@2
   inputs:
