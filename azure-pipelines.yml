@@ -97,10 +97,14 @@ stages:
               script: |
                 # Find correct folder and run app install script.
                 cd ./appxbundles
+                echo "Switch"
                 $AppBundle = Get-ChildItem -Filter UWP*Test -Name
                 echo $AppBundle
                 cd $AppBundle
                 ./Add-AppDevPackage.ps1
+              errorActionPreference: 'continue'
+              failOnStderr: true
+              workingDirectory: '$(System.DefaultWorkingDirectory)'
 
 
           - task: VSTest@2
