@@ -38,14 +38,17 @@ stages:
             artifact: 'artifacts'
             publishLocation: 'pipeline'
             
+        - task: PublishBuildArtifacts@1
+          inputs:
+            PathtoPublish: '$(System.DefaultWorkingDirectory)\src\UWPResourcesGallery\AppPackages'
+            ArtifactName: 'appxbundle'
+            publishLocation: 'pipeline'
 
-
-  - stage: Tests
+  - stage: Test
     dependsOn: Build
     jobs:
       - job: Unit_Tests
         steps:
-          
           - task: NuGetToolInstaller@1
 
           - task: NuGetCommand@2
