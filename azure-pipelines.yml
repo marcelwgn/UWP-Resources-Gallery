@@ -28,6 +28,9 @@ stages:
 
               cd 
               $pfxpath = '$(System.CurrentWorkingDirectoy)/src/UWPResourcesGallery/UWPResourcesGallery_TemporaryKey.pfx'
+
+              echo $pfxpath
+
               $password = ''
               
               Add-Type -AssemblyName System.Security
