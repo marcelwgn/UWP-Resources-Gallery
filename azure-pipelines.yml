@@ -97,13 +97,16 @@ stages:
               script: |
 
                 cd ./appxbundles
-                Write-Host "Switched to correct folder"
-
-                Write-Host "Start adding the PFX file to the certificate store."
-                $CertFile = Get-ChildItem -Filter *.cer -Name
-                $CertFilePath = "$(System.DefaultWorkingDirectory)/appxbundles/" + $CertFile
-
-                Import-Certificate -FilePath $CertFilePath -CertStoreLocation cert:\CurrentUser\Root
+                $pfxpath = '$(System.CurrentWorkingDirectoy)/src/UWPResourcesGallery/UWPResourcesGallery_TemporaryKey.pfx'
+                $password = ''
+                
+                Add-Type -AssemblyName System.Security
+                $cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2
+                $cert.Import($pfxpath, $password, [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]"PersistKeySet")
+                $store = new-object system.security.cryptography.X509Certificates.X509Store -argumentlist "MY", CurrentUser
+                $store.Open([System.Security.Cryptography.X509Certificates.OpenFlags]"ReadWrite")
+                $store.Add($cert)
+                $store.Close()
 
                 # Find correct folder and run app install script.
 
