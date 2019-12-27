@@ -45,14 +45,10 @@ stages:
     jobs:
       - job: Unit_Tests
         steps:
-          - task: NuGetToolInstaller@1
-
-          - task: NuGetCommand@2
-            inputs:
-              restoreSolution: '$(solution)'
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: 'current'
+              artifactName: 'artifact'
               targetPath: '$(System.DefaultWorkingDirectory)'
 
           - task: VSTest@2
@@ -67,24 +63,12 @@ stages:
 
       - job: Interaction_Tests
         steps:
-          - task: NuGetToolInstaller@1
-
-
-
-          - task: NuGetCommand@2
-            inputs:
-              restoreSolution: '$(solution)'
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: 'current'
+              artifactName: 'artifact'
               targetPath: '$(System.DefaultWorkingDirectory)'
 
-          - task: PublishPipelineArtifact@1
-            inputs:
-              targetPath: '$(System.DefaultWorkingDirectory)'
-              publishLocation: 'pipeline'
-
-          
           - task: VSTest@2
             inputs:
               testSelector: 'testAssemblies'
