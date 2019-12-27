@@ -38,9 +38,9 @@ stages:
             artifact: 'artifacts'
             publishLocation: 'pipeline'
             
-        - task: PublishBuildArtifacts@1
+        - task: PublishPipelineArtifact@1
           inputs:
-            PathtoPublish: '$(System.DefaultWorkingDirectory)\src\UWPResourcesGallery\'
+            targetPath: '$(System.DefaultWorkingDirectory)\src\UWPResourcesGallery\'
             ArtifactName: 'appxbundle'
             publishLocation: 'pipeline'
 
