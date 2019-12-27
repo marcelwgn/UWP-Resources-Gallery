@@ -32,36 +32,7 @@ steps:
     configuration: '$(buildConfiguration)'
     msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" /p:AppxPackageDir="$(appxPackageDir)" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=SideloadOnly /p:AppxPackageSigningEnabled=false'
 
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: 'Add-AppPackage -Path "$(System.DefaultWorkingDirectory)\artifacts\Debug\UWPResourcesGallery.Package_$(Build.BuildNumber)_x86.msixbundle"'
-
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(System.DefaultWorkingDirectory)\artifacts\Debug\'
     publishLocation: 'pipeline'
-
-- task: VSTest@2
-  inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\*Tests**.appxrecipe
-      !**\*Tests.exe
-      !**\*TestAdapter.dll
-      !**\obj\**
-    searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\Debug\'
-    uiTests: true
-
-
-
-- task: VSTest@2
-  inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\AppInteractionTests**.dll
-      !**\*Tests.exe
-      !**\*TestAdapter.dll
-      !**\obj\**
-    searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\Debug\'
-    uiTests: true
