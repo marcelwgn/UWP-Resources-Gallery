@@ -96,7 +96,7 @@ stages:
               targetType: 'inline'
               script: |
 
-                cd ./appxbundles
+                cd 
                 $pfxpath = '$(System.CurrentWorkingDirectoy)/src/UWPResourcesGallery/UWPResourcesGallery_TemporaryKey.pfx'
                 $password = ''
                 
@@ -109,6 +109,7 @@ stages:
                 $store.Close()
 
                 # Find correct folder and run app install script.
+                cd ./appxbundles
 
                 $AppBundle = Get-ChildItem -Filter UWP*Test -Name
                 echo $AppBundle
