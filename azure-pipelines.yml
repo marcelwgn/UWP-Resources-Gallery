@@ -31,7 +31,7 @@ stages:
             platform: 'x86'
             solution: '$(solution)'
             configuration: '$(buildConfiguration)'
-            msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" /p:AppxPackageDir="$(appxPackageDir)" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=SideloadOnly /p:AppxPackageSigningEnabled=false'
+            msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" /p:AppxPackageDir="$(appxPackageDir)" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=CI /p:AppxPackageSigningEnabled=false'
         - task: PublishPipelineArtifact@1
           inputs:
             targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
@@ -40,7 +40,7 @@ stages:
             
         - task: PublishBuildArtifacts@1
           inputs:
-            PathtoPublish: '$(System.DefaultWorkingDirectory)\src\UWPResourcesGallery\AppPackages'
+            PathtoPublish: '$(System.DefaultWorkingDirectory)\src\UWPResourcesGallery\'
             ArtifactName: 'appxbundle'
             publishLocation: 'pipeline'
 
