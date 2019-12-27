@@ -51,6 +51,13 @@ stages:
               artifactName: 'artifacts'
               targetPath: '$(System.DefaultWorkingDirectory)'
 
+        
+          - task: PublishPipelineArtifact@1
+            inputs:
+              targetPath: '$(System.DefaultWorkingDirectory)'
+              artifact: 'tests'
+              publishLocation: 'pipeline'
+
           - task: VSTest@2
             inputs:
               testSelector: 'testAssemblies'
