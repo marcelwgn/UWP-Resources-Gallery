@@ -44,6 +44,11 @@ stages:
     jobs:
       - job: Unit_Tests
         steps:
+          - task: NuGetToolInstaller@1
+
+          - task: NuGetCommand@2
+            inputs:
+              restoreSolution: '$(solution)'
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: 'current'
@@ -61,6 +66,11 @@ stages:
 
       - job: Interaction_Tests
         steps:
+          - task: NuGetToolInstaller@1
+
+          - task: NuGetCommand@2
+            inputs:
+              restoreSolution: '$(solution)'
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: 'current'
