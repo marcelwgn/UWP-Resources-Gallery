@@ -44,7 +44,7 @@ steps:
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-      **\*Tests**.appxrecipe
+      **\**.appxrecipe
       !**\*Tests.exe
       !**\*TestAdapter.dll
       !**\obj\**
