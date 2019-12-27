@@ -114,11 +114,6 @@ stages:
                 $AppBundle = Get-ChildItem -Filter UWP*Test -Name
                 echo $AppBundle
                 cd $AppBundle
-
-                $workingDirectory = Get-Location
-                $fileName = Get-ChildItem -Filter *.cer -Name
-                Import-Certificate -FilePath "D:\a\1\s\appxbundles\UWPResourcesGallery_1.0.0.0_Debug_Test\UWPResourcesGallery_1.0.0.0_x86_Debug.cer" -CertStoreLocation cert:\CurrentUser\Root
-
                 ./Add-AppDevPackage.ps1 -Force
               errorActionPreference: 'continue'
               failOnStderr: true
