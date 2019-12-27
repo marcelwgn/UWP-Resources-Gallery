@@ -31,18 +31,16 @@ stages:
             platform: 'x86'
             solution: '$(solution)'
             configuration: '$(buildConfiguration)'
-            msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" /p:AppxPackageDir="$(appxPackageDir)" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=SideloadOnly /p:AppxPackageSigningEnabled=false /p:AppxPackageIsForStore=true'
+            msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" /p:AppxPackageDir="$(appxPackageDir)" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=SideloadOnly /p:AppxPackageSigningEnabled=false'
         - task: PublishPipelineArtifact@1
           inputs:
             targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
             artifact: 'artifacts'
             publishLocation: 'pipeline'
             
-        - task: PublishPipelineArtifact@1
+        - task: PublishBuildArtifacts@1
           inputs:
-            targetPath: '$(System.DefaultWorkingDirectory)\src\UWPResourcesGallery\'
             ArtifactName: 'appxbundle'
-            publishLocation: 'pipeline'
 
   - stage: Test
     dependsOn: Build
