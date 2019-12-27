@@ -57,7 +57,7 @@ jobs:
         searchFolder: '$(System.DefaultWorkingDirectory)'
 
   - job: Publish_Release_Artifact
-    dependsOn: Unit_Tests,Interaction_Tests
+    dependsOn: Unit_Tests | Interaction_Tests
     steps:
       - task: PublishPipelineArtifact@1
         inputs:
