@@ -42,17 +42,13 @@ stages:
   - stage: Tests
     dependsOn: Build
     jobs:
-      - job: Download_Artifact
-        steps:
-        - task: DownloadPipelineArtifact@2
-          inputs:
-            buildType: 'current'
-            targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
-
-
       - job: Unit_Tests
-        dependsOn: Download_Artifact
         steps:
+          - task: DownloadPipelineArtifact@2
+            inputs:
+              buildType: 'current'
+              targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
+
           - task: VSTest@2
             inputs:
               testSelector: 'testAssemblies'
@@ -64,16 +60,19 @@ stages:
               uiTests: true
 
       - job: Interaction_Tests
-        dependsOn: Download_Artifact
         steps:
-        - task: VSTest@2
-          inputs:
-            testSelector: 'testAssemblies'
-            testAssemblyVer2: |
-              **\*UWPResourcesGallery**.appxrecipe
-              !**\*TestAdapter.dll
-              !**\obj\**
-            searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
+          - task: DownloadPipelineArtifact@2
+            inputs:
+              buildType: 'current'
+              targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
+          - task: VSTest@2
+            inputs:
+              testSelector: 'testAssemblies'
+              testAssemblyVer2: |
+                **\*UWPResourcesGallery**.appxrecipe
+                !**\*TestAdapter.dll
+                !**\obj\**
+              searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
 
   - stage: Publish
     dependsOn: Tests
