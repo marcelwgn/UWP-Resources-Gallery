@@ -12,18 +12,13 @@ pool:
 variables:
   solution: '**/*.sln'
   buildConfiguration: 'Debug'
+  buildPlatform: 'x86'
   appxPackageDir: '$(build.artifactStagingDirectory)\AppxPackages\\'
 
 stages:
   - stage: Build
     jobs:
       - job: Build_Debug
-        strategy:
-          matrix:
-            x64:
-                buildPlatform: 'x64'
-            x86:
-                buildPlatform: 'x86'
         steps:
 
         - task: NuGetToolInstaller@1
@@ -55,12 +50,6 @@ stages:
     dependsOn: Build
     jobs:
       - job: Unit_Tests
-        strategy:
-          matrix:
-            x64:
-                buildPlatform: 'x64'
-            x86:
-                buildPlatform: 'x86'
         steps:
           - task: NuGetToolInstaller@1
 
@@ -85,12 +74,6 @@ stages:
               uiTests: true
 
       - job: Interaction_Tests
-        strategy:
-          matrix:
-            x64:
-                buildPlatform: 'x64'
-            x86:
-                buildPlatform: 'x86'
         steps:
           - task: NuGetToolInstaller@1
 
