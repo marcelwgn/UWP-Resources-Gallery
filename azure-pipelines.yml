@@ -22,7 +22,7 @@ variables:
 stages:
   - stage: Build
     jobs:
-      - job: Build_Debug
+      - job: Build_Artifacts
         displayName: Build $(buildConfiguration)
         steps:
 
