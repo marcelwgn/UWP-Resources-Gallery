@@ -140,10 +140,10 @@ stages:
             platform: 'x86'
             solution: '$(solution)'
             configuration: 'Release'
-            msbuildArgs: '/p:AppxBundlePlatforms="$(platForm)" /p:AppxPackageDir="$(appxPackageDir)" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=StoreUpload /p:AppxPackageSigningEnabled=true'
+            msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatformRelease)" /p:AppxPackageDir="$(appxPackageDir)" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=StoreUpload /p:AppxPackageSigningEnabled=true'
         
         - task: PublishPipelineArtifact@1
           inputs:
             targetPath: '$(System.DefaultWorkingDirectory)\artifacts\Release\'
-            artifact: 'Release_$(platForm)'
+            artifact: 'Release_$(buildPlatformRelease)'
             publishLocation: 'pipeline'
