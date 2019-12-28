@@ -18,15 +18,13 @@ stages:
   - stage: Build
     jobs:
       - job: Build_Artifacts
-        displayName: ${(buildConfiguration)}
+        displayName: Artifacts
         strategy:
           matrix:
             debug:
-              displayName: 'Debug'
               buildConfiguration: 'Debug'
               
             release:
-              displayName: 'Release'
               buildConfiguration: 'Release'
         steps:
 
