@@ -125,13 +125,10 @@ stages:
         strategy:
           matrix:
             x64:
-              variables:
                 buildPlatformRelease: 'x64'
             x86:
-              variables:
                 buildPlatformRelease: 'x86'
             ARM:
-              variables:
                 buildPlatformRelease: 'ARM'
         steps:
 
