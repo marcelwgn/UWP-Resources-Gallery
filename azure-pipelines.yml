@@ -8,10 +8,14 @@ trigger:
 
 pool:
   vmImage: 'windows-latest'
-
+  strategy:
+    matrix:
+      x64:
+          buildPlatform: 'x64'
+      x86:
+          buildPlatform: 'x86'
 variables:
   solution: '**/*.sln'
-  buildPlatform: 'x86'
   buildConfiguration: 'Debug'
   appxPackageDir: '$(build.artifactStagingDirectory)\AppxPackages\\'
 
@@ -19,6 +23,7 @@ stages:
   - stage: Build
     jobs:
       - job: Build_Debug
+
         steps:
 
         - task: NuGetToolInstaller@1
@@ -122,16 +127,12 @@ stages:
     dependsOn: Test
     jobs:
       - job: Publish_Release
-        strategy:
-          matrix:
-            x64:
-                buildPlatformRelease: 'x64'
-            x86:
-                buildPlatformRelease: 'x86'
-            ARM:
-                buildPlatformRelease: 'ARM'
         steps:
+        - task: NuGetToolInstaller@1
 
+        - task: NuGetCommand@2
+          inputs:
+            restoreSolution: '$(solution)'
         - task: VSBuild@1
           inputs:
             platform: 'x86'
