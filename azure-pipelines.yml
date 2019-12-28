@@ -42,13 +42,13 @@ stages:
         - task: PublishPipelineArtifact@1
           inputs:
             targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
-            artifact: 'artifacts_$(buildMode)_$(buildPlatform)'
+            artifact: 'artifacts_$(buildConfiguration)_$(buildPlatform)'
             publishLocation: 'pipeline'
             
         - task: PublishBuildArtifacts@1
           inputs:
             PathtoPublish: '$(Build.ArtifactStagingDirectory)\AppxPackages\'
-            ArtifactName: 'appxbundles_$(buildMode)_$(buildPlatform)'
+            ArtifactName: 'appxbundles_$(buildConfiguration)_$(buildPlatform)'
             publishLocation: 'Container'
 
   - stage: Test
@@ -71,7 +71,7 @@ stages:
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: 'current'
-              artifactName: 'artifacts_$(buildMode)_$(buildPlatform)'
+              artifactName: 'artifacts_$(buildConfiguration)_$(buildPlatform)'
               targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
 
           - task: VSTest@2
@@ -101,13 +101,13 @@ stages:
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: 'current'
-              artifactName: 'artifacts_$(buildMode)_$(buildPlatform)'
+              artifactName: 'artifacts_$(buildConfiguration)_$(buildPlatform)'
               targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
 
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: 'current'
-              artifactName: 'appxbundles_$(buildMode)_$(buildPlatform)'
+              artifactName: 'appxbundles_$(buildConfiguration)_$(buildPlatform)'
               targetPath: '$(System.DefaultWorkingDirectory)\appxbundles'
 
           - task: PowerShell@2
