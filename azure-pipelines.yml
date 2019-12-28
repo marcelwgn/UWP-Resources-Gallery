@@ -8,7 +8,12 @@ trigger:
 
 pool:
   vmImage: 'windows-latest'
-
+  strategy:
+    matrix:
+      debug:
+        buildConfiguration: 'Debug'
+      release:
+        buildConfiguration: 'Release'
 variables:
   solution: '**/*.sln'
   buildPlatform: 'x86'
@@ -18,12 +23,7 @@ stages:
   - stage: Build
     jobs:
       - job: Build_Debug
-        strategy:
-          matrix:
-            debug:
-              buildConfiguration: 'Debug'
-            release:
-              buildConfiguration: 'Release'
+        displayName: Build $(buildConfiguration)
         steps:
 
         - task: NuGetToolInstaller@1
