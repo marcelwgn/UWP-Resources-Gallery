@@ -57,7 +57,7 @@ stages:
     dependsOn: Build
     jobs:
       - job: Unit_Tests
-        displayName: unit tests
+        displayName: Unit Tests
         strategy:
           matrix:
             debug:
@@ -98,7 +98,7 @@ stages:
               uiTests: true
 
       - job: Interaction_Tests
-        displayName: interaction tests
+        displayName: Interaction Tests
         strategy:
           matrix:
             debug:
@@ -152,7 +152,7 @@ stages:
     dependsOn: Testing
     jobs:
       - job: Publish_Release
-        displayName: release build
+        displayName: Release Build
         steps:
         - task: NuGetToolInstaller@1
 
