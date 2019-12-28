@@ -78,7 +78,17 @@ stages:
             inputs:
               testSelector: 'testAssemblies'
               testAssemblyVer2: |
-                **\*Tests**.appxrecipe
+                **\*ControlTests**Tests**.appxrecipe
+                !**\*TestAdapter.dll
+                !**\obj\**
+              searchFolder: '$(System.DefaultWorkingDirectory)'
+              uiTests: true
+
+          - task: VSTest@2
+            inputs:
+              testSelector: 'testAssemblies'
+              testAssemblyVer2: |
+                **\*ResourceModel**Tests**.appxrecipe
                 !**\*TestAdapter.dll
                 !**\obj\**
               searchFolder: '$(System.DefaultWorkingDirectory)'
