@@ -53,10 +53,11 @@ stages:
             ArtifactName: 'appxbundles_$(buildConfiguration)_$(buildPlatform)'
             publishLocation: 'Container'
 
-  - stage: Test
+  - stage: Testing
     dependsOn: Build
     jobs:
-      - job: Unit_Tests        
+      - job: Unit_Tests
+        displayName: unit tests
         strategy:
           matrix:
             debug:
@@ -97,6 +98,7 @@ stages:
               uiTests: true
 
       - job: Interaction_Tests
+        displayName: interaction tests
         strategy:
           matrix:
             debug:
@@ -147,9 +149,10 @@ stages:
               searchFolder: '$(System.DefaultWorkingDirectory)'
 
   - stage: Publish
-    dependsOn: Test
+    dependsOn: Testing
     jobs:
       - job: Publish_Release
+        displayName: release build
         steps:
         - task: NuGetToolInstaller@1
 
