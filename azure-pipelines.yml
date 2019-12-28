@@ -11,7 +11,6 @@ pool:
 
 variables:
   solution: '**/*.sln'
-  buildConfiguration: 'Debug'
   buildPlatform: 'x86'
   appxPackageDir: '$(build.artifactStagingDirectory)\AppxPackages\\'
 
@@ -19,6 +18,12 @@ stages:
   - stage: Build
     jobs:
       - job: Build_Debug
+        strategy:
+          matrix:
+            debug:
+              buildConfiguration: 'Debug'
+            release:
+              buildConfiguration: 'Release'
         steps:
 
         - task: NuGetToolInstaller@1
@@ -37,19 +42,25 @@ stages:
         - task: PublishPipelineArtifact@1
           inputs:
             targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
-            artifact: 'artifacts_$(buildPlatform)'
+            artifact: 'artifacts_$(buildMode)_$(buildPlatform)'
             publishLocation: 'pipeline'
             
         - task: PublishBuildArtifacts@1
           inputs:
             PathtoPublish: '$(Build.ArtifactStagingDirectory)\AppxPackages\'
-            ArtifactName: 'appxbundles_$(buildPlatform)'
+            ArtifactName: 'appxbundles_$(buildMode)_$(buildPlatform)'
             publishLocation: 'Container'
 
   - stage: Test
     dependsOn: Build
     jobs:
-      - job: Unit_Tests
+      - job: Unit_Tests        
+        strategy:
+          matrix:
+            debug:
+              buildConfiguration: 'Debug'
+            release:
+              buildConfiguration: 'Release'
         steps:
           - task: NuGetToolInstaller@1
 
@@ -60,7 +71,7 @@ stages:
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: 'current'
-              artifactName: 'artifacts_$(buildPlatform)'
+              artifactName: 'artifacts_$(buildMode)_$(buildPlatform)'
               targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
 
           - task: VSTest@2
@@ -74,6 +85,12 @@ stages:
               uiTests: true
 
       - job: Interaction_Tests
+        strategy:
+          matrix:
+            debug:
+              buildConfiguration: 'Debug'
+            release:
+              buildConfiguration: 'Release'
         steps:
           - task: NuGetToolInstaller@1
 
@@ -84,13 +101,13 @@ stages:
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: 'current'
-              artifactName: 'artifacts_$(buildPlatform)'
+              artifactName: 'artifacts_$(buildMode)_$(buildPlatform)'
               targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
 
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: 'current'
-              artifactName: 'appxbundles_$(buildPlatform)'
+              artifactName: 'appxbundles_$(buildMode)_$(buildPlatform)'
               targetPath: '$(System.DefaultWorkingDirectory)\appxbundles'
 
           - task: PowerShell@2
