@@ -8,12 +8,7 @@ trigger:
 
 pool:
   vmImage: 'windows-latest'
-  strategy:
-    matrix:
-      x64:
-          buildPlatform: 'x64'
-      x86:
-          buildPlatform: 'x86'
+
 variables:
   solution: '**/*.sln'
   buildConfiguration: 'Debug'
@@ -23,7 +18,12 @@ stages:
   - stage: Build
     jobs:
       - job: Build_Debug
-
+        strategy:
+          matrix:
+            x64:
+                buildPlatform: 'x64'
+            x86:
+                buildPlatform: 'x86'
         steps:
 
         - task: NuGetToolInstaller@1
@@ -42,19 +42,25 @@ stages:
         - task: PublishPipelineArtifact@1
           inputs:
             targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
-            artifact: 'artifacts'
+            artifact: 'artifacts_$(buildPlatform)'
             publishLocation: 'pipeline'
             
         - task: PublishBuildArtifacts@1
           inputs:
             PathtoPublish: '$(Build.ArtifactStagingDirectory)\AppxPackages\'
-            ArtifactName: 'appxbundles'
+            ArtifactName: 'appxbundles_$(buildPlatform)'
             publishLocation: 'Container'
 
   - stage: Test
     dependsOn: Build
     jobs:
       - job: Unit_Tests
+        strategy:
+          matrix:
+            x64:
+                buildPlatform: 'x64'
+            x86:
+                buildPlatform: 'x86'
         steps:
           - task: NuGetToolInstaller@1
 
@@ -65,7 +71,7 @@ stages:
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: 'current'
-              artifactName: 'artifacts'
+              artifactName: 'artifacts_$(buildPlatform)'
               targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
 
           - task: VSTest@2
@@ -79,6 +85,12 @@ stages:
               uiTests: true
 
       - job: Interaction_Tests
+        strategy:
+          matrix:
+            x64:
+                buildPlatform: 'x64'
+            x86:
+                buildPlatform: 'x86'
         steps:
           - task: NuGetToolInstaller@1
 
@@ -89,13 +101,13 @@ stages:
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: 'current'
-              artifactName: 'artifacts'
+              artifactName: 'artifacts_$(buildPlatform)'
               targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
 
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: 'current'
-              artifactName: 'appxbundles'
+              artifactName: 'appxbundles_$(buildPlatform)'
               targetPath: '$(System.DefaultWorkingDirectory)\appxbundles'
 
           - task: PowerShell@2
@@ -112,7 +124,6 @@ stages:
               errorActionPreference: 'continue'
               failOnStderr: true
               workingDirectory: '$(System.DefaultWorkingDirectory)'
-
 
           - task: VSTest@2
             inputs:
