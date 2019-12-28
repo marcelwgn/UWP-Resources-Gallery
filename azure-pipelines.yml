@@ -126,20 +126,20 @@ stages:
           matrix:
             x64:
               variables:
-                platForm: 'x64'
+                buildPlatformRelease: 'x64'
             x86:
               variables:
-                platForm: 'x86'
+                buildPlatformRelease: 'x86'
             ARM:
               variables:
-                platForm: 'ARM'
+                buildPlatformRelease: 'ARM'
         steps:
 
         - task: VSBuild@1
           inputs:
             platform: 'x86'
             solution: '$(solution)'
-            configuration: '$(buildConfiguration)'
+            configuration: 'Release'
             msbuildArgs: '/p:AppxBundlePlatforms="$(platForm)" /p:AppxPackageDir="$(appxPackageDir)" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=StoreUpload /p:AppxPackageSigningEnabled=true'
         
         - task: PublishPipelineArtifact@1
