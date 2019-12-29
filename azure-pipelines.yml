@@ -85,6 +85,7 @@ stages:
 
       - job: Interaction_Tests
         displayName: Interaction Tests
+        steps:
           - task: NuGetToolInstaller@1
 
           - task: NuGetCommand@2
