@@ -12,6 +12,7 @@ pool:
 variables:
   solution: '**/*.sln'
   buildPlatform: 'x86'
+  buildConfiguration: 'Debug'
   appxPackageDir: '$(build.artifactStagingDirectory)\AppxPackages\\'
 
 stages:
@@ -19,15 +20,7 @@ stages:
     jobs:
       - job: Build_Artifacts
         displayName: Artifacts
-        strategy:
-          matrix:
-            debug:
-              buildConfiguration: 'Debug'
-              
-            release:
-              buildConfiguration: 'Release'
         steps:
-
         - task: NuGetToolInstaller@1
 
         - task: NuGetCommand@2
@@ -58,12 +51,6 @@ stages:
     jobs:
       - job: Unit_Tests
         displayName: Unit Tests
-        strategy:
-          matrix:
-            debug:
-              buildConfiguration: 'Debug'
-            release:
-              buildConfiguration: 'Release'
         steps:
           - task: NuGetToolInstaller@1
 
@@ -99,12 +86,6 @@ stages:
 
       - job: Interaction_Tests
         displayName: Interaction Tests
-        strategy:
-          matrix:
-            debug:
-              buildConfiguration: 'Debug'
-            release:
-              buildConfiguration: 'Release'
         steps:
           - task: NuGetToolInstaller@1
 
