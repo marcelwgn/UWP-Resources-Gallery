@@ -13,11 +13,8 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'x86'
   buildConfiguration: 'Debug'
-
   appxPackageDir: '$(build.artifactStagingDirectory)\AppxPackages\\'
-
         steps:
-
         - task: NuGetToolInstaller@1
 
         - task: NuGetCommand@2
