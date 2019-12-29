@@ -81,7 +81,7 @@ stages:
             inputs:
               testSelector: 'testAssemblies'
               testAssemblyVer2: |
-                **\*ControlTests**Tests**.appxrecipe
+                **\*ControlTests**.appxrecipe
                 !**\*TestAdapter.dll
                 !**\obj\**
               searchFolder: '$(System.DefaultWorkingDirectory)'
@@ -91,7 +91,7 @@ stages:
             inputs:
               testSelector: 'testAssemblies'
               testAssemblyVer2: |
-                **\*ResourceModel**Tests**.appxrecipe
+                **\*ResourceModelTests**.appxrecipe
                 !**\*TestAdapter.dll
                 !**\obj\**
               searchFolder: '$(System.DefaultWorkingDirectory)'
