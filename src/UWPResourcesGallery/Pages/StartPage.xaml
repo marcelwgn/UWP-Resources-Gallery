@@ -25,7 +25,7 @@
 
                 <common:PageHeader Margin="5,5,5,5"
                     PageName="Welcome to the UWP Resources Gallery" 
-                    PageDescription="This app contains an list of UWP resources, such as system colors and the Segoe MDL2 icons."/>
+                    PageDescription="This app contains a list of UWP resources, such as system colors and the Segoe MDL2 icons."/>
 
                 <!-- Navigation -->
                 <VariableSizedWrapGrid MaximumRowsOrColumns="2" Orientation="Horizontal">
