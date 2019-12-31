@@ -20,8 +20,6 @@ namespace AppInteractionTests.Tests
             {
                 TestHelper.NavigateToPage(NavigationName);
             }
-            var fittingItems = TestHelper.GetElementsOfTypeWithContent("ListItem", NavigationName);
-            fittingItems[0].Click();
         }
     }
 }
