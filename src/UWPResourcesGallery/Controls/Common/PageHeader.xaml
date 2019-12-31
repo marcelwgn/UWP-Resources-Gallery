@@ -11,6 +11,7 @@
 
     <StackPanel>
         <TextBlock Text="{x:Bind PageName,Mode=OneWay}" FontSize="22" AutomationProperties.HeadingLevel="1" TextWrapping="Wrap"/>
-        <TextBlock Text="{x:Bind PageDescription,Mode=OneWay}" FontSize="18" AutomationProperties.HeadingLevel="2" TextWrapping="Wrap"/>
+        <TextBlock Text="{x:Bind PageDescription,Mode=OneWay}" FontSize="18" AutomationProperties.HeadingLevel="2" 
+                TextWrapping="Wrap" Visibility="{x:Bind PageDescription,Mode=OneWay,Converter={StaticResource StringValueToVisibilityConverter}}"/>
     </StackPanel>
 </UserControl>

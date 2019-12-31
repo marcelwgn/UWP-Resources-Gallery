@@ -6,11 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:UWPResourcesGallery.Controls.Templates"
+    xmlns:common="using:UWPResourcesGallery.Controls.Common"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
@@ -19,7 +21,9 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Row="0">
+        <common:PageHeader PageName="Segoe MDL2 Icons" />
+
+        <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="15" />
                 <ColumnDefinition Width="Auto" />
@@ -27,17 +31,18 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="14" />
             </Grid.ColumnDefinitions>
-            <TextBlock Margin="0,0,10,1" Grid.Column="1" Text="Search icons:" VerticalAlignment="Center"/>
-            <TextBox Grid.Column="2" MinWidth="250" VerticalAlignment="Center" Margin="0,1,0,1" TextChanged="SearchTextBox_TextChanged"></TextBox>
+            <TextBlock x:Name="SearchIconsLabel" Margin="0,0,10,1" Grid.Column="1" Text="Search icons:" VerticalAlignment="Center"/>
+            <TextBox Grid.Column="2" MinWidth="250" VerticalAlignment="Center" Margin="0,1,0,1" TextChanged="SearchTextBox_TextChanged" AutomationProperties.LabeledBy="{x:Bind SearchIconsLabel}"/>
             <Border VerticalAlignment="Bottom" BorderThickness="1" BorderBrush="{ThemeResource SystemBaseMediumLowColor}" Grid.ColumnSpan="100"/>
         </Grid>
 
         <GridView x:Name="ItemsGridView" 
+                    AutomationProperties.Name="Icons list"
                     SelectionMode="None"
                     IsItemClickEnabled="True"
                     ItemClick="ItemsGridView_ItemClick"
                     Padding="10" 
-                    Grid.Row="1">
+                    Grid.Row="2">
             <GridView.Transitions>
                 <TransitionCollection>
                     <EntranceThemeTransition/>
@@ -52,7 +57,7 @@
             
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <controls:IconItemControl Icon="{Binding}" />
+                    <controls:IconItemControl Icon="{Binding}"/>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>

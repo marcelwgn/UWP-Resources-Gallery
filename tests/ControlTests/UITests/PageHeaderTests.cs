@@ -12,7 +12,7 @@ using Windows.UI.Xaml.Automation;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 
-namespace ControlTests.Tests
+namespace ControlTests.UITests
 {
     [TestClass]
     public class PageHeaderTests

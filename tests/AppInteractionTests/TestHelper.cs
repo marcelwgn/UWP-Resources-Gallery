@@ -1,7 +1,9 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Appium.MultiTouch;
 using OpenQA.Selenium.Appium.Windows;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.Text;
 
@@ -10,30 +12,31 @@ namespace AppInteractionTests
     class TestHelper
     {
 
+        public static ICollection<WindowsElement> GetElementsOfType(string elementType)
+        {
+            return TestRunInitializer.Session.FindElementsByTagName(elementType);
+        }
+
         public static List<WindowsElement> GetElementsOfTypeWithContent(string elementType, string content)
         {
+            return GetItemsWithContent(GetElementsOfType(elementType), content);
+        }
+
+        public static List<WindowsElement> GetItemsWithContent(ICollection<WindowsElement> elements, string content)
+        {
             var elementsToReturn = new List<WindowsElement>();
-            var elements = TestRunInitializer.Session.FindElementsByTagName(elementType);
-            foreach(var element in elements)
+            foreach (var element in elements)
             {
                 if (element.Text.Contains(content, StringComparison.OrdinalIgnoreCase))
                 {
                     elementsToReturn.Add(element);
                     continue;
                 }
-
-                // Did not have the right text
-                // Skip if text exists,continue if children define content
-                if (!string.IsNullOrEmpty(element.Text))
-                {
-                    continue;
-                }
-
-                // Check children
+                // Check children if we did not find it in the items name
                 var children = element.FindElementsByTagName("Text");
-                foreach(var child in children)
+                foreach (var child in children)
                 {
-                    if (child.Text.Contains(content,StringComparison.OrdinalIgnoreCase))
+                    if (child.Text.Contains(content, StringComparison.OrdinalIgnoreCase))
                     {
                         elementsToReturn.Add(element);
                         continue;
@@ -43,6 +46,11 @@ namespace AppInteractionTests
             return elementsToReturn;
         }
 
+        public static void WaitMilli(int milliSeconds)
+        {
+            System.Threading.Thread.Sleep(milliSeconds);
+        }
+
         public static void InvokeButton(string text,int buttonIndex)
         {
             List<WindowsElement> buttons = GetElementsOfTypeWithContent("Button", text);
@@ -50,9 +58,16 @@ namespace AppInteractionTests
             buttons[buttonIndex].Click();
         }
 
+        public static void NavigateToPage(string name)
+        {
+            var container = TestRunInitializer.Session.FindElementByName("Mainnavigation");
+            container.FindElementByName(name).Click();
+        }
+
         public static string CurrentPageInNavigation()
         {
-            var listItems = TestRunInitializer.Session.FindElementsByTagName("ListItem");
+            var container = TestRunInitializer.Session.FindElementByName("Mainnavigation");
+            var listItems = container.FindElementsByTagName("ListItem");
             foreach(var item in listItems)
             {
                 if (item.Selected)
@@ -62,7 +77,5 @@ namespace AppInteractionTests
             }
             return "";
         }
-
-
     }
 }

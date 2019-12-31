@@ -18,7 +18,7 @@ namespace UWPResourcesGallery.Controls.Common
 
         // Using a DependencyProperty as the backing store for PageName.
         public static readonly DependencyProperty PageNameProperty =
-            DependencyProperty.Register("PageName", typeof(string), typeof(PageHeader), new PropertyMetadata(0));
+            DependencyProperty.Register("PageName", typeof(string), typeof(PageHeader), new PropertyMetadata(default(string)));
         #endregion
 
         #region PageDescription property
@@ -30,7 +30,7 @@ namespace UWPResourcesGallery.Controls.Common
 
         // Using a DependencyProperty as the backing store for PageDescription.
         public static readonly DependencyProperty PageDescriptionProperty =
-            DependencyProperty.Register("PageDescription", typeof(string), typeof(PageHeader), new PropertyMetadata(0));
+            DependencyProperty.Register("PageDescription", typeof(string), typeof(PageHeader), new PropertyMetadata(default(string)));
         #endregion
 
         public PageHeader()

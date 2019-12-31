@@ -36,6 +36,7 @@
             </TextBlock>
         </Grid>
         <muxc:NavigationView x:Name="RootNavigation"
+                AutomationProperties.Name="Mainnavigation"
                 Grid.Column="1"
                 ItemInvoked="RootNavigation_ItemInvoked" 
                 PaneOpening="RootNavigation_PaneOpening"

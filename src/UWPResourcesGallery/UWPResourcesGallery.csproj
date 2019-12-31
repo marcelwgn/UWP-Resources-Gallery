@@ -122,7 +122,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Common\BoolToVisibilityConverterClass.cs" />
+    <Compile Include="Common\StandardConverter.cs" />
     <Compile Include="Common\SampleTemplateProvider.cs" />
     <Compile Include="Controls\Templates\SystemColorPresenter.xaml.cs">
       <DependentUpon>SystemColorPresenter.xaml</DependentUpon>

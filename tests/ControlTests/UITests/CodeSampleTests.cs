@@ -13,7 +13,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Core;
 using Windows.UI.ViewManagement;
 
-namespace ControlTests.Tests
+namespace ControlTests.UITests
 {
     [TestClass]
     public class CodeSampleTests

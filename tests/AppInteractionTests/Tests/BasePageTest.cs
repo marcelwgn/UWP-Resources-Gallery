@@ -16,6 +16,10 @@ namespace AppInteractionTests.Tests
         [TestInitialize]
         public void PageSetup()
         {
+            if (!TestHelper.CurrentPageInNavigation().Equals(NavigationName,StringComparison.InvariantCulture))
+            {
+                TestHelper.NavigateToPage(NavigationName);
+            }
             var fittingItems = TestHelper.GetElementsOfTypeWithContent("ListItem", NavigationName);
             fittingItems[0].Click();
         }
