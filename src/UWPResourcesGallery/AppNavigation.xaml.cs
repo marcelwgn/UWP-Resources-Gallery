@@ -16,7 +16,7 @@ namespace UWPResourcesGallery
     public sealed partial class AppNavigation : Page
     {
 
-        public static AppNavigation Instance;
+        private static AppNavigation Instance;
 
         public AppNavigation()
         {

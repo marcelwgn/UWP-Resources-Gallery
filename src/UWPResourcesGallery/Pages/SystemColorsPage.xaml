@@ -6,10 +6,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:scc="using:UWPResourcesGallery.Controls.Templates"
+    xmlns:common="using:UWPResourcesGallery.Controls.Common"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
@@ -18,7 +20,9 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Row="0">
+        <common:PageHeader PageName="Systemcolors" Margin="15,0,0,0"/>
+
+        <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="15" />
                 <ColumnDefinition Width="Auto" />
@@ -30,7 +34,8 @@
             <TextBox Grid.Column="2" MinWidth="250" VerticalAlignment="Center" Margin="0,1,0,1" TextChanged="SearchTextBox_TextChanged"></TextBox>
             <Border VerticalAlignment="Bottom" BorderThickness="1" BorderBrush="{ThemeResource SystemBaseMediumLowColor}" Grid.ColumnSpan="100"/>
         </Grid>
-        <GridView x:Name="SystemColorsPresenter" Grid.Row="1" SelectionMode="None" Padding="10">
+        
+        <GridView x:Name="SystemColorsPresenter" Grid.Row="2" SelectionMode="None" Padding="10">
             <GridView.Resources>
                 <Style TargetType="GridViewItem">
                     <Setter Property="Margin" Value="6"/>

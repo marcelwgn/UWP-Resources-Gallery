@@ -18,7 +18,7 @@ namespace ControlTests.UITests
     public class PageHeaderTests
     {
         private static readonly string[] HeaderTexts = new string[] { "CommonControls Test page"
-            , "This is the test page/app for common controls used in the UWP Resources Gallery" };
+            , "This is the test UI for common controls of the UWP Resources Gallery" };
 
         [UITestMethod]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Globalization", "CA1307:Specify StringComparison", Justification = "Testing just english strings here")]
@@ -56,7 +56,16 @@ namespace ControlTests.UITests
             {
                 Assert.IsTrue(foundValues[i]);
             }
-
         }
+
+        [UITestMethod]
+        public void SizingIsCorrectly()
+        {
+            var pageHeader = (PageHeader)ControlsTestPage.Instance.FindName("StandardPageHeader");
+            var pageHeaderWithoutDescriptions = (PageHeader)ControlsTestPage.Instance.FindName("HeaderWithoutDescription");
+
+            Assert.IsTrue(pageHeader.ActualHeight > pageHeaderWithoutDescriptions.ActualHeight + 14);
+        }
+
     }
 }
