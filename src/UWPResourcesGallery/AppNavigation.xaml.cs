@@ -1,9 +1,11 @@
 ﻿using System;
 using UWPResourcesGallery.Pages;
+using Windows.ApplicationModel.Core;
 using Windows.Foundation.Metadata;
 using Windows.UI;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Automation;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using MUXC = Microsoft.UI.Xaml.Controls;
@@ -23,16 +25,17 @@ namespace UWPResourcesGallery
             InitializeComponent();
             Instance = this;
             
-            Window.Current.SetTitleBar(AppTitleBar);
+            Window.Current.SetTitleBar(WindowDraggingArea);
 
             RootFrame.Navigate(typeof(StartPage));
 
             Loaded += delegate (object sender, RoutedEventArgs e)
             {
                 ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
+
                 titleBar.ButtonBackgroundColor = Colors.Transparent;
                 titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
-
+                
                 RootFrame.Navigated += RootFrame_Navigated;
                 RootNavigation.BackRequested += RootNavigation_BackRequested;
             };
@@ -138,7 +141,7 @@ namespace UWPResourcesGallery
             switch (sender.DisplayMode)
             {
                 case MUXC.NavigationViewDisplayMode.Minimal:
-                    UpdateAppTitleBarPosition((float)sender.CompactPaneLength);
+                    UpdateAppTitleBarPosition((float)sender.CompactPaneLength + 5);
                     break;
                 case MUXC.NavigationViewDisplayMode.Compact:
                     UpdateAppTitleBarPosition(20);
@@ -153,6 +156,31 @@ namespace UWPResourcesGallery
                         UpdateAppTitleBarPosition(20);
                     }
                     break;
+            }
+        }
+
+        private async void SwitchCompactOverlayModeButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(ApplicationView.GetForCurrentView().ViewMode == ApplicationViewMode.Default)
+            {
+                bool modeSwitched = await ApplicationView.GetForCurrentView().TryEnterViewModeAsync(ApplicationViewMode.CompactOverlay);
+                if(modeSwitched){
+                    SwitchCompactOverlayModeButton.SetValue(AutomationProperties.NameProperty, "Switch to normal mode");
+                    ToolTipService.SetToolTip(SwitchCompactOverlayModeButton, "Switch to normal mode");
+                    CompactOverlayArrowsMinimizeIcon.Visibility = Visibility.Collapsed;
+                    CompactOverlayArrowsMaximizeIcon.Visibility = Visibility.Visible;
+                }
+            }
+            else
+            {
+                bool modeSwitched = await ApplicationView.GetForCurrentView().TryEnterViewModeAsync(ApplicationViewMode.Default);
+                if (modeSwitched)
+                {
+                    SwitchCompactOverlayModeButton.SetValue(AutomationProperties.NameProperty, "Switch to overlay mode");
+                    ToolTipService.SetToolTip(SwitchCompactOverlayModeButton, "Switch to overlay mode");
+                    CompactOverlayArrowsMinimizeIcon.Visibility = Visibility.Visible;
+                    CompactOverlayArrowsMaximizeIcon.Visibility = Visibility.Collapsed;
+                }
             }
         }
     }

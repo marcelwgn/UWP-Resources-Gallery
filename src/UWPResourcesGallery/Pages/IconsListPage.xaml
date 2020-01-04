@@ -11,6 +11,29 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <!-- Increase spacing among icon items when we have enough vertical space -->
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.Setters>
+                        <Setter Target="ItemsGridView.Padding" Value="10"/>
+                        <Setter Target="ItemsGridView.ItemContainerStyle">
+                            <Setter.Value>
+                                <Style x:Name="StandardGridViewItemStyle" TargetType="GridViewItem">
+                                    <Setter Property="Margin" Value="6"/>
+                                    <Setter Property="MinHeight" Value="80" />
+                                </Style>
+                            </Setter.Value>
+                        </Setter>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+            
+        </VisualStateManager.VisualStateGroups>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="50"/>
@@ -41,7 +64,7 @@
                     SelectionMode="None"
                     IsItemClickEnabled="True"
                     ItemClick="ItemsGridView_ItemClick"
-                    Padding="10" 
+                    Padding="0" 
                     Grid.Row="2">
             <GridView.Transitions>
                 <TransitionCollection>
@@ -50,14 +73,16 @@
             </GridView.Transitions>
             <GridView.ItemContainerStyle>
                 <Style TargetType="GridViewItem">
-                    <Setter Property="Margin" Value="6"/>
+                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                    <Setter Property="Margin" Value="2"/>
                     <Setter Property="MinHeight" Value="80" />
+                    <Setter Property="MaxWidth" Value="240" />
                 </Style>
             </GridView.ItemContainerStyle>
             
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <controls:IconItemControl Icon="{Binding}"/>
+                    <controls:IconItemControl Icon="{Binding}" HorizontalAlignment="Stretch"/>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
