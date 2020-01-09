@@ -2,7 +2,7 @@
 using System.Linq;
 using Windows.UI.Xaml.Controls;
 
-namespace UWPResourcesGallery.Model.Icon
+namespace UWPResourcesGallery.Model.Icons
 {
     public class IconItem : IFilterable
     {

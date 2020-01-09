@@ -4,7 +4,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Markup;
 using Windows.UI.Xaml.Media;
 
-namespace UWPResourcesGallery.Model.Brush
+namespace UWPResourcesGallery.Model.Colors
 {
     public class SystemColor : IFilterable
     {

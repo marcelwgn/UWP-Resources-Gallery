@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using UWPResourcesGallery.Common;
-using UWPResourcesGallery.Model.Brush;
-using UWPResourcesGallery.Model.Icon;
+using UWPResourcesGallery.Model.Colors;
+using UWPResourcesGallery.Model.Icons;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Core;

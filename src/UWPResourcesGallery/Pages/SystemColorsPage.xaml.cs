@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using UWPResourcesGallery.Model.Brush;
+using UWPResourcesGallery.Model.Colors;
 using Windows.UI.Xaml.Controls;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238

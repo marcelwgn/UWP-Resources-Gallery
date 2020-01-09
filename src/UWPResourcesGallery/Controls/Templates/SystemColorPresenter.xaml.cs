@@ -1,4 +1,4 @@
-﻿using UWPResourcesGallery.Model.Brush;
+﻿using UWPResourcesGallery.Model.Colors;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 

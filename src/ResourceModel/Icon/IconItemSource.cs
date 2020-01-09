@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Windows.Data.Json;
 
-namespace UWPResourcesGallery.Model.Icon
+namespace UWPResourcesGallery.Model.Icons
 {
     public class IconItemSource : GenericItemsSource<IconItem>
     {

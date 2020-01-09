@@ -1,16 +1,13 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using UWPResourcesGallery.Model.Brush;
+using UWPResourcesGallery.Model.Colors;
 using Windows.ApplicationModel.Core;
 
 namespace ResoureModelTests
 {
     [TestClass]
-    public class BrushSourceTests
+    public class SystemColorSourceTests
     {
         [ClassInitialize]
         public static async Task ClassInitialize(TestContext context)

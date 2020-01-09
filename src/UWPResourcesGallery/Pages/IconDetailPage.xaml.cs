@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using UWPResourcesGallery.Common;
-using UWPResourcesGallery.Model.Icon;
+using UWPResourcesGallery.Model.Icons;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;

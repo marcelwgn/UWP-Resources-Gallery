@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Windows.Data.Json;
 
-namespace UWPResourcesGallery.Model.Brush
+namespace UWPResourcesGallery.Model.Colors
 {
     public class SystemColorsItemSource : GenericItemsSource<SystemColor>
     {
