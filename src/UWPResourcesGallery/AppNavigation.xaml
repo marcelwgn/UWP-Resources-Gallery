@@ -1,0 +1,100 @@
+﻿<Page
+    x:Class="UWPResourcesGallery.AppNavigation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+    </Page.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <!-- App title bar -->
+        <Grid x:Name="AppTitleBar" VerticalAlignment="Top"
+                Background="Transparent" Canvas.ZIndex="1"
+                Height="32" Grid.Column="1" IsHitTestVisible="True"
+                Margin="40,3,0,0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Windows10version1809:Grid.TranslationTransition>
+                <Windows10version1809:Vector3Transition />
+            </Windows10version1809:Grid.TranslationTransition>
+
+
+            <!-- App title -->
+            <TextBlock x:Name="AppTitle"
+                    Text="UWP Resources Gallery"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource CaptionTextBlockStyle}"/>
+
+            <!-- Compact overlay button -->
+            <Button x:Name="SwitchCompactOverlayModeButton" Click="SwitchCompactOverlayModeButton_Click"
+                    IsHitTestVisible="True" Canvas.ZIndex="20" Grid.Column="1"
+                    Background="Transparent" Style="{ThemeResource ButtonRevealStyle}"
+                    AutomationProperties.Name="Switch to overlay mode"
+                    Margin="8,2,0,0" Height="30" ToolTipService.ToolTip="Switch to overlay mode">
+                <Grid>
+                    <FontIcon Glyph="&#xEA60;" FontSize="16"/>
+                    <!-- Names to enabling/disabling the correct icon based on state -->
+                    <FontIcon x:Name="CompactOverlayArrowsMinimizeIcon" Glyph="&#xE73F;" FontSize="14"/>
+                    <FontIcon x:Name="CompactOverlayArrowsMaximizeIcon" Glyph="&#xE740;" FontSize="14" Visibility="Collapsed"/>
+                </Grid>
+            </Button>
+
+            <!-- Grid to enable dragging of window using the AppTitleBar -->
+            <Grid x:Name="WindowDraggingArea" Height="30" Background="Transparent" Canvas.ZIndex="2"
+                    IsHitTestVisible="True" Grid.ColumnSpan="3"/>
+        </Grid>
+        <muxc:NavigationView x:Name="RootNavigation"
+                AutomationProperties.Name="Mainnavigation"
+                Grid.Column="1"
+                ItemInvoked="RootNavigation_ItemInvoked" 
+                PaneOpening="RootNavigation_PaneOpening"
+                PaneClosing="RootNavigation_PaneClosing"
+                DisplayModeChanged="RootNavigation_DisplayModeChanged"
+                IsTitleBarAutoPaddingEnabled="False">
+            <muxc:NavigationView.MenuItems>
+                <muxc:NavigationViewItem x:Name="_StartPage" Content="Start" IsSelected="True">
+                    <muxc:NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xF167;"/>
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+                <muxc:NavigationViewItem Content="Icons" x:Name="_IconsListPage">
+                    <muxc:NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xED58;" />
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+                <muxc:NavigationViewItem Content="Systemcolors" x:Name="_SystemColorsPage">
+                    <muxc:NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE790;" />
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+            </muxc:NavigationView.MenuItems>
+            <Frame x:Name="RootFrame" Padding="0,40,0,0">
+                <Frame.ContentTransitions>
+                    <TransitionCollection>
+                        <NavigationThemeTransition  />
+                    </TransitionCollection>
+                </Frame.ContentTransitions>
+            </Frame>
+        </muxc:NavigationView>
+    </Grid>
+</Page>

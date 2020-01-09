@@ -1,0 +1,90 @@
+﻿<Page
+    xmlns:pages="using:UWPResourcesGallery.Pages"
+    x:Class="UWPResourcesGallery.Pages.IconsListPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:UWPResourcesGallery.Controls.Templates"
+    xmlns:common="using:UWPResourcesGallery.Controls.Common"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <!-- Increase spacing among icon items when we have enough vertical space -->
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.Setters>
+                        <Setter Target="ItemsGridView.Padding" Value="10"/>
+                        <Setter Target="ItemsGridView.ItemContainerStyle">
+                            <Setter.Value>
+                                <Style x:Name="StandardGridViewItemStyle" TargetType="GridViewItem">
+                                    <Setter Property="Margin" Value="6"/>
+                                    <Setter Property="MinHeight" Value="80" />
+                                </Style>
+                            </Setter.Value>
+                        </Setter>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+            
+        </VisualStateManager.VisualStateGroups>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <common:PageHeader PageName="Segoe MDL2 Icons" Margin="15,0,0,0"/>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="14" />
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="SearchIconsLabel" Margin="0,0,10,1" Grid.Column="1" Text="Search icons:" VerticalAlignment="Center"/>
+            <TextBox Grid.Column="2" MinWidth="250" VerticalAlignment="Center" Margin="0,1,0,1" TextChanged="SearchTextBox_TextChanged" AutomationProperties.LabeledBy="{x:Bind SearchIconsLabel}"/>
+            <Border VerticalAlignment="Bottom" BorderThickness="1" BorderBrush="{ThemeResource SystemBaseMediumLowColor}" Grid.ColumnSpan="100"/>
+        </Grid>
+
+        <GridView x:Name="ItemsGridView" 
+                    AutomationProperties.Name="Icons list"
+                    SelectionMode="None"
+                    IsItemClickEnabled="True"
+                    ItemClick="ItemsGridView_ItemClick"
+                    Padding="0" 
+                    Grid.Row="2">
+            <GridView.Transitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition/>
+                </TransitionCollection>
+            </GridView.Transitions>
+            <GridView.ItemContainerStyle>
+                <Style TargetType="GridViewItem">
+                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                    <Setter Property="Margin" Value="2"/>
+                    <Setter Property="MinHeight" Value="80" />
+                    <Setter Property="MaxWidth" Value="240" />
+                </Style>
+            </GridView.ItemContainerStyle>
+            
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <controls:IconItemControl Icon="{Binding}" HorizontalAlignment="Stretch"/>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+</Page>

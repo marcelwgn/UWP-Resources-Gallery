@@ -1,0 +1,166 @@
+﻿{
+  "colors": [
+    {
+      "key": "SystemAccentColor",
+      "name": "Accent",
+      "lightHex": "N/A",
+      "darkHex": "N/A"
+    },
+    {
+      "key": "SystemAltHighColor",
+      "name": "AltHigh",
+      "lightHex": "#FFFFFFFF",
+      "darkHex": "#FF000000"
+    },
+    {
+      "key": "SystemAltLowColor",
+      "name": "AltLow",
+      "lightHex": "#33FFFFFF",
+      "darkHex": "#33000000"
+    },
+    {
+      "key": "SystemAltMediumColor",
+      "name": "AltMedium",
+      "lightHex": "#99FFFFFF",
+      "darkHex": "#99000000"
+    },
+    {
+      "key": "SystemAltMediumHighColor",
+      "name": "AltMediumHigh",
+      "lightHex": "#CCFFFFFF",
+      "darkHex": "#CC000000"
+    },
+    {
+      "key": "SystemAltMediumLowColor",
+      "name": "AltMediumLow",
+      "lightHex": "#66FFFFFF",
+      "darkHex": "#66000000"
+    },
+    {
+      "key": "SystemBaseHighColor",
+      "name": "BaseHigh",
+      "lightHex": "#FF000000",
+      "darkHex": "#FFFFFFFF"
+    },
+    {
+      "key": "SystemBaseLowColor",
+      "name": "BaseLow",
+      "lightHex": "#33000000",
+      "darkHex": "#33FFFFFF"
+    },
+    {
+      "key": "SystemBaseMediumColor",
+      "name": "BaseMedium",
+      "lightHex": "#99000000",
+      "darkHex": "#99FFFFFF"
+    },
+    {
+      "key": "SystemBaseMediumHighColor",
+      "name": "BaseMediumHigh",
+      "lightHex": "#CC000000",
+      "darkHex": "#CCFFFFFF"
+    },
+    {
+      "key": "SystemBaseMediumLowColor",
+      "name": "BaseMediumLow",
+      "lightHex": "#66000000",
+      "darkHex": "#66FFFFFF"
+    },
+    {
+      "key": "SystemChromeAltLowColor",
+      "name": "ChromeAltLow",
+      "lightHex": "#FF171717",
+      "darkHex": "#FFF2F2F2"
+    },
+    {
+      "key": "SystemChromeBlackHighColor",
+      "name": "ChromeBlackHigh",
+      "lightHex": "#FF000000",
+      "darkHex": "#FF000000"
+    },
+    {
+      "key": "SystemChromeBlackLowColor",
+      "name": "ChromeBlackLow",
+      "lightHex": "#33000000",
+      "darkHex": "#33000000"
+    },
+    {
+      "key": "SystemChromeBlackMediumLowColor",
+      "name": "ChromeBlackMediumLow",
+      "lightHex": "#66000000",
+      "darkHex": "#66000000"
+    },
+    {
+      "key": "SystemChromeBlackMediumColor",
+      "name": "ChromeBlackMedium",
+      "lightHex": "#CC000000",
+      "darkHex": "#CC000000"
+    },
+    {
+      "key": "SystemChromeDisabledHighColor",
+      "name": "ChromeDisabledHigh",
+      "lightHex": "#FFCCCCCC",
+      "darkHex": "#FF333333"
+    },
+    {
+      "key": "SystemChromeDisabledLowColor",
+      "name": "ChromeDisabledLow",
+      "lightHex": "#FF7A7A7A",
+      "darkHex": "#FF858585"
+    },
+    {
+      "key": "SystemChromeGrayColor",
+      "name": "ChromeGray",
+      "lightHex": "#FF767676",
+      "darkHex": "#FF767676"
+    },
+    {
+      "key": "SystemChromeHighColor",
+      "name": "ChromeHigh",
+      "lightHex": "#FFCCCCCC",
+      "darkHex": "#FF767676"
+    },
+    {
+      "key": "SystemChromeLowColor",
+      "name": "ChromeLow",
+      "lightHex": "#FFF2F2F2",
+      "darkHex": "#FF171717"
+    },
+    {
+      "key": "SystemChromeMediumColor",
+      "name": "ChromeMedium",
+      "lightHex": "#FFE6E6E6",
+      "darkHex": "#FF1F1F1F"
+    },
+    {
+      "key": "SystemChromeMediumLowColor",
+      "name": "ChromeMediumLow",
+      "lightHex": "#FFF2F2F2",
+      "darkHex": "#FF2B2B2B"
+    },
+    {
+      "key": "SystemChromeWhiteColor",
+      "name": "ChromeWhite",
+      "lightHex": "#FFFFFFFF",
+      "darkHex": "#FFFFFFFF"
+    },
+    {
+      "key": "SystemErrorTextColor",
+      "name": "ErrorText",
+      "lightHex": "#FFC50500",
+      "darkHex": "#FFFFF000"
+    },
+    {
+      "key": "SystemListLowColor",
+      "name": "ListLow",
+      "lightHex": "#19000000",
+      "darkHex": "#19FFFFFF"
+    },
+    {
+      "key": "SystemListMediumColor",
+      "name": "ListMedium",
+      "lightHex": "#33000000",
+      "darkHex": "#33FFFFFF"
+    }
+  ]
+}

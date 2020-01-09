@@ -1,0 +1,5 @@
+﻿[*.cs]
+
+# CA1801: Review unused parameters
+# Ignore reasonn: Event listener trigger this rule, resulting in bloated warnings list
+dotnet_diagnostic.CA1801.severity = suggestion

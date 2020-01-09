@@ -1,0 +1,167 @@
+﻿<Page
+    x:Class="UWPResourcesGallery.Pages.IconDetailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:common="using:UWPResourcesGallery.Controls.Common"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <Style x:Key="CodeNameTextBlock" TargetType="common:CodeSample">
+            <Setter Property="Grid.Column" Value="2" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+        </Style>
+
+    </Page.Resources>
+    <ScrollViewer>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.Setters>
+                        <Setter Target="RootFontIconPageContent.Orientation" Value="Horizontal" />
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1500"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.Setters>
+                        <Setter Target="CustomFontIconPanelContent.Orientation" Value="Horizontal" />
+                        <Setter Target="CustomFontIconPanelContent.MaxWidth" Value="1000" />
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="750"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
+        <StackPanel Padding="25,10">
+            <!-- Header -->
+            <StackPanel x:Name="TransitionReceiver" Orientation="Horizontal" Margin="0,0,0,16" >
+                <Viewbox>
+                    <FontIcon x:Name="IconDisplay" Glyph="{x:Bind icon.Character}" 
+                            Height="42" Width="42" FontSize="42"/>
+                </Viewbox>
+                <TextBlock VerticalAlignment="Center" Margin="16,0,0,0"
+                        FontSize="24"  Text="{x:Bind icon.Name}"/>
+            </StackPanel>
+            
+            <!-- Content -->
+            <StackPanel x:Name="RootFontIconPageContent" Orientation="Vertical">
+                <!-- Standard code samples -->
+                <StackPanel MaxWidth="700" HorizontalAlignment="Left">
+                    <!-- Info title -->
+                    <TextBlock Style="{ThemeResource SectionHeader}" Margin="0,0,0,4">Info</TextBlock>
+                    
+                    <!-- Info panel -->
+                    <Grid HorizontalAlignment="Stretch" Padding="11"
+                        BorderBrush="{ThemeResource SystemBaseLowColor}" BorderThickness="1" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="5"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Text="Icon name" Margin="0,0,10,0" FontSize="16"
+                            Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+                        <common:CodeSample Code="{x:Bind icon.Name}" Grid.Row="0" 
+                            Margin="0,5" Style="{ThemeResource CodeNameTextBlock}"/>
+
+                        <TextBlock Text="Unicode point" Margin="0,0,10,0" FontSize="16"
+                            Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+                        <common:CodeSample Code="{x:Bind icon.Code}" Grid.Row="1" 
+                            Margin="0,5" Style="{ThemeResource CodeNameTextBlock}"/>
+
+                        <TextBlock Text="Text glyph" Margin="0,0,10,0" FontSize="16"
+                            Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+                        <common:CodeSample Code="{x:Bind icon.StringGlyph}" Grid.Row="2" 
+                            Margin="0,5" Style="{ThemeResource CodeNameTextBlock}"/>
+                    </Grid>
+
+                    <!--Normal code sample(s)-->
+                    <TextBlock Margin="0,16,0,0" Style="{ThemeResource SectionHeader}">Icon as control</TextBlock>
+                    
+                    <!-- SymbolIcon (only show when icon is present in Symbol enum) -->
+                    <StackPanel HorizontalAlignment="Stretch" Visibility="{x:Bind icon.IsSymbol,Converter={StaticResource BoolToVisibilityConverter}}">
+                        <TextBlock  Margin="0,4,0,4" FontSize="16">Symbolicon</TextBlock>
+                        <common:CodeSample x:Name="SymbolIconCodeSample" Margin="0,0,0,4" 
+                            HorizontalAlignment="Stretch" IsSyntaxHighlightingEnabled="True"/>
+                    </StackPanel>
+                    
+                    <!-- Font icon-->
+                    <TextBlock HorizontalAlignment="Stretch" FontSize="16" Margin="0,0,0,4">FontIcon</TextBlock>
+                    <common:CodeSample HorizontalAlignment="Stretch" x:Name="FontIconCodeSample" IsSyntaxHighlightingEnabled="True"/>
+                </StackPanel>
+
+                <!-- Separator -->
+                <Border Margin="35,8,35,8"
+                        BorderBrush="{ThemeResource SystemBaseLowColor}" 
+                        BorderThickness="0"/>
+
+                <!-- Customized FontIcon -->
+                <StackPanel x:Name="CustomFontIconPanel">
+                    <!--Header-->
+                    <TextBlock Style="{ThemeResource SectionHeader}" Margin="0,0,0,4">Custom FontIcon</TextBlock>
+                    
+                    <!--Customization panel-->
+                    <StackPanel x:Name="CustomFontIconPanelContent" Orientation="Vertical"
+                        HorizontalAlignment="Left" MaxWidth="320">
+                        <!--Left pane-->
+                        <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" MaxWidth="350">
+                            <common:DualThemePresenter Grid.ColumnSpan="2" Grid.Row="1" 
+                                VerticalAlignment="Top" HorizontalAlignment="Left" ContentOrientation="Horizontal"
+                                Height="150"  Width="320">
+                                <common:DualThemePresenter.LightThemeContent>
+                                    <FontIcon x:Name="LightThemeIcon" Glyph="{x:Bind icon.Character}" MinWidth="150" FontSize="{x:Bind CustomIconFontSize.Value,Mode=OneWay}" Foreground="#FFFF0000"/>
+                                </common:DualThemePresenter.LightThemeContent>
+
+                                <common:DualThemePresenter.DarkThemeContent>
+                                    <FontIcon x:Name="DarkThemeIcon" Glyph="{x:Bind icon.Character}" MinWidth="150" FontSize="{x:Bind CustomIconFontSize.Value,Mode=OneWay}" Foreground="#FFFF0000"/>
+                                </common:DualThemePresenter.DarkThemeContent>
+                            </common:DualThemePresenter>
+
+                            <TextBlock FontSize="16" Margin="0,8,0,4">Source code</TextBlock>
+                            <common:CodeSample x:Name="CustomIconCode" MaxWidth="320"
+                                IsSyntaxHighlightingEnabled="True"/>
+
+                            <TextBlock FontSize="16" Margin="0,4,0,4">Fontsize</TextBlock>
+                            <muxc:NumberBox x:Name="CustomIconFontSize" ValueChanged="Size_ValueChanged" 
+                                Minimum="1" Maximum="100" SmallChange="1" Value="20"
+                                SpinButtonPlacementMode="Inline" ValidationMode="InvalidInputOverwritten"/>
+                        </StackPanel>
+
+                        <!--Separator-->
+                        <Border Margin="10" />
+
+                        <!--Colorpicker-->
+                        <muxc:ColorPicker 
+                                x:Name="FontIconColorPicker"
+                                HorizontalAlignment="Center"
+                                IsMoreButtonVisible="True"
+                                IsColorSliderVisible="True"
+                                IsColorChannelTextInputVisible="True"
+                                IsHexInputVisible="True"
+                                IsAlphaEnabled="True"
+                                Color="#FFFF0000"
+                                IsAlphaSliderVisible="True"
+                                ColorChanged="ColorPicker_ColorChanged"
+                                IsAlphaTextInputVisible="True" />
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

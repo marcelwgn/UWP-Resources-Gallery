@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{45C7F2FE-580E-4A64-BD5F-DFF8E21F2EE6}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UWPResourcesGallery</RootNamespace>
+    <AssemblyName>UWP Resources Gallery</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17134.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+    <GenerateAppInstallerFile>True</GenerateAppInstallerFile>
+    <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <GenerateTestArtifacts>True</GenerateTestArtifacts>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
+    <AppInstallerUri>\\test\</AppInstallerUri>
+    <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+    <PackageCertificateThumbprint>0c306b7f34fa4dab66fdde1cdad54e520cd74c1a</PackageCertificateThumbprint>
+    <PackageCertificateKeyFile>UWPResourcesGallery_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\StandardConverter.cs" />
+    <Compile Include="Common\SampleTemplateProvider.cs" />
+    <Compile Include="Controls\Templates\SystemColorPresenter.xaml.cs">
+      <DependentUpon>SystemColorPresenter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\CodeSample.xaml.cs">
+      <DependentUpon>CodeSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\DualThemePresenter.cs">
+      <DependentUpon>DualThemePresenter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\PageHeader.xaml.cs">
+      <DependentUpon>PageHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\IconDetailPage.xaml.cs">
+      <DependentUpon>IconDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Templates\IconItemControl.xaml.cs">
+      <DependentUpon>IconItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ThemeHelper.cs" />
+    <Compile Include="Pages\IconsListPage.xaml.cs">
+      <DependentUpon>IconsListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\StartPage.xaml.cs">
+      <DependentUpon>StartPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SystemColorsPage.xaml.cs">
+      <DependentUpon>SystemColorsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppNavigation.xaml.cs">
+      <DependentUpon>AppNavigation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Tiles\LargeTile.scale-100.png" />
+    <Content Include="Assets\Tiles\LargeTile.scale-125.png" />
+    <Content Include="Assets\Tiles\LargeTile.scale-150.png" />
+    <Content Include="Assets\Tiles\LargeTile.scale-200.png" />
+    <Content Include="Assets\Tiles\LargeTile.scale-400.png" />
+    <Content Include="Assets\Tiles\Logo.png" />
+    <Content Include="Assets\Tiles\SmallTile.scale-100.png" />
+    <Content Include="Assets\Tiles\SmallTile.scale-125.png" />
+    <Content Include="Assets\Tiles\SmallTile.scale-150.png" />
+    <Content Include="Assets\Tiles\SmallTile.scale-200.png" />
+    <Content Include="Assets\Tiles\SmallTile.scale-400.png" />
+    <Content Include="Assets\Tiles\SplashScreen.scale-100.png" />
+    <Content Include="Assets\Tiles\SplashScreen.scale-125.png" />
+    <Content Include="Assets\Tiles\SplashScreen.scale-150.png" />
+    <Content Include="Assets\Tiles\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Tiles\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Tiles\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Tiles\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Tiles\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Tiles\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Tiles\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Tiles\Square44x44Logo.altform-lightunplated_targetsize-16.png" />
+    <Content Include="Assets\Tiles\Square44x44Logo.altform-lightunplated_targetsize-24.png" />
+    <Content Include="Assets\Tiles\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+    <Content Include="Assets\Tiles\Square44x44Logo.altform-lightunplated_targetsize-32.png" />
+    <Content Include="Assets\Tiles\Square44x44Logo.altform-lightunplated_targetsize-48.png" />
+    <Content Include="Assets\Tiles\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Tiles\Square44x44Logo.altform-unplated_targetsize-24.png" />
+    <Content Include="Assets\Tiles\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Tiles\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\Tiles\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\Tiles\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Tiles\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Tiles\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Tiles\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Tiles\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Tiles\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Tiles\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Tiles\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Tiles\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Tiles\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\Tiles\StoreLogo.scale-100.png" />
+    <Content Include="Assets\Tiles\StoreLogo.scale-125.png" />
+    <Content Include="Assets\Tiles\StoreLogo.scale-150.png" />
+    <Content Include="Assets\Tiles\StoreLogo.scale-200.png" />
+    <Content Include="Assets\Tiles\StoreLogo.scale-400.png" />
+    <Content Include="Assets\Tiles\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Tiles\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Tiles\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Tiles\Wide310x150Logo.scale-200.png" />
+    <Content Include="Assets\Tiles\Wide310x150Logo.scale-400.png" />
+    <Content Include="Properties\Default.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Controls\Templates\SystemColorPresenter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\CodeSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\DualThemePresenter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\PageHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\IconDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Templates\IconItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\IconsListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\StartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SystemColorsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AppNavigation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ColorCode.Core">
+      <Version>2.0.6</Version>
+    </PackageReference>
+    <PackageReference Include="ColorCode.UWP">
+      <Version>2.0.6</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers">
+      <Version>2.9.3</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.9</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.UI.Xaml">
+      <Version>2.4.0-prerelease.191217001</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UWPResourcesGallery_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ResourceModel\ResourceModel.csproj">
+      <Project>{957b1e0e-d863-41e3-8042-7fac37a512dd}</Project>
+      <Name>ResourceModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
