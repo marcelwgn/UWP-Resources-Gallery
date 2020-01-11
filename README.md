@@ -4,6 +4,8 @@
 
 This app shows resources provided by Windows 10 to UWP apps, such as the Segoe MDL2 icons and system colors.
 
+You can download the UWP Resources Gallery now [from the Microsoft Store](https://www.microsoft.com/p/uwp-resources-gallery/9pjjl433vx9r?rtc=1).
+
 The idea for this app is based on the XAML Controls Gallery. The XAML Controls Gallery can be found here: https://github.com/microsoft/Xaml-Controls-Gallery
 
 ### Iconspage
