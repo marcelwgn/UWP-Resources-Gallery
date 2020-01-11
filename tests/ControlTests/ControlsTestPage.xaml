@@ -45,6 +45,8 @@
                 </common:CodeSample.Code>
             </common:CodeSample>
         </StackPanel>
-        
+
+
+        <StackPanel x:Name="SystemColorInformationPanel" />
     </StackPanel>
 </Page>

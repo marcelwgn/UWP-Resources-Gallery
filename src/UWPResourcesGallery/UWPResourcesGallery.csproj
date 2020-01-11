@@ -124,6 +124,9 @@
     </Compile>
     <Compile Include="Common\StandardConverter.cs" />
     <Compile Include="Common\SampleTemplateProvider.cs" />
+    <Compile Include="Controls\Templates\SystemColorInformation.xaml.cs">
+      <DependentUpon>SystemColorInformation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Templates\SystemColorPresenter.xaml.cs">
       <DependentUpon>SystemColorPresenter.xaml</DependentUpon>
     </Compile>
@@ -224,6 +227,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\Templates\SystemColorInformation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\Templates\SystemColorPresenter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

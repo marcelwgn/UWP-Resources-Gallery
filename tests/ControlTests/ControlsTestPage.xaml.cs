@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using UWPResourcesGallery.Controls.Templates;
+using UWPResourcesGallery.Model.Colors;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -31,6 +33,11 @@ namespace ControlTests
         {
             InitializeComponent();
             Instance = this;
+
+
+            var systemColor = new SystemColor("SystemAccentColor","colorName","colorLightHex","colorDarkHex");
+            SystemColorInformationPanel.Children.Add(new SystemColorInformation(systemColor));
+            SystemColorInformationPanel.UpdateLayout();
         }
     }
 }

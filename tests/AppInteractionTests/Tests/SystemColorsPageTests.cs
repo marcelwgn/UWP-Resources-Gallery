@@ -15,16 +15,13 @@ namespace AppInteractionTests.Tests
         [TestMethod]
         public void RendersBrushes()
         {
-            string[] brushes = new string[] { "SystemAccentColor", "SystemAltHighColor" };
+            string[] brushes = new string[] { "SystemAltHighColor", "SystemAltLowColor" };
             foreach (string brushName in brushes)
             {
                 var blocks = TestHelper.GetElementsOfTypeWithContent("Text", brushName);
-                Assert.AreEqual(2, blocks.Count);
+                Assert.AreEqual(1, blocks.Count);
 
                 Assert.IsTrue(brushName.Equals(blocks[0].Text, StringComparison.InvariantCulture));
-
-                var snippetString = "{ThemeResource " + brushName + "}\r\n";
-                Assert.IsTrue(snippetString.Equals(blocks[1].Text, StringComparison.InvariantCulture));
             }
         }
 
