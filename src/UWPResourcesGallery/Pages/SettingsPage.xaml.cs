@@ -1,4 +1,5 @@
-﻿using UWPResourcesGallery.Common;
+﻿using System;
+using UWPResourcesGallery.Common;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -10,6 +11,16 @@ namespace UWPResourcesGallery.Pages
     /// </summary>
     public sealed partial class SettingsPage : Page
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1822:Mark members as static", Justification = "Binding does not work for static fields")]
+        public string Version
+        {
+            get
+            {
+                var version = Windows.ApplicationModel.Package.Current.Id.Version;
+                return string.Format("{0}.{1}.{2}.{3}", version.Major, version.Minor, version.Build, version.Revision);
+            }
+        }
+
         public SettingsPage()
         {
             InitializeComponent();
