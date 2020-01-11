@@ -7,6 +7,42 @@
       "darkHex": "N/A"
     },
     {
+      "key": "SystemAccentColorDark1",
+      "name": "Accent Dark 1",
+      "lightHex": "N/A",
+      "darkHex": "N/A"
+    },
+    {
+      "key": "SystemAccentColorDark2",
+      "name": "Accent Dark 2",
+      "lightHex": "N/A",
+      "darkHex": "N/A"
+    },
+    {
+      "key": "SystemAccentColorDark3",
+      "name": "Accent Dark 3",
+      "lightHex": "N/A",
+      "darkHex": "N/A"
+    },
+    {
+      "key": "SystemAccentColorLight1",
+      "name": "Accent Light 1",
+      "lightHex": "N/A",
+      "darkHex": "N/A"
+    },
+    {
+      "key": "SystemAccentColorLight2",
+      "name": "Accent Light 2",
+      "lightHex": "N/A",
+      "darkHex": "N/A"
+    },
+    {
+      "key": "SystemAccentColorLight3",
+      "name": "Accent Light 3",
+      "lightHex": "N/A",
+      "darkHex": "N/A"
+    },
+    {
       "key": "SystemAltHighColor",
       "name": "AltHigh",
       "lightHex": "#FFFFFFFF",
