@@ -1,4 +1,5 @@
-﻿using UWPResourcesGallery.Model.Colors;
+﻿using Microsoft.UI.Xaml.Controls;
+using UWPResourcesGallery.Model.Colors;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -42,6 +43,16 @@ namespace UWPResourcesGallery.Controls.Templates
         private void SystemColorChanged()
         {
             Bindings.Update();
+        }
+
+        private void OpenInfoTeachingTipButton_Click(object sender, RoutedEventArgs e)
+        {
+            var teachingTip = Resources["InfoTeachingTip"] as TeachingTip;
+            teachingTip.Content = new SystemColorInformation(SystemColor);
+            teachingTip.Target = OpenInfoTeachingTipButton;
+            teachingTip.IsOpen = true;
+
+            teachingTip.Subtitle = "";
         }
     }
 }

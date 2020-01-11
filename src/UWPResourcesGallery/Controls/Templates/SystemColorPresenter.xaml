@@ -2,26 +2,32 @@
     x:Class="UWPResourcesGallery.Controls.Templates.SystemColorPresenter"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:UWPResourcesGallery.Controls.Templates"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:common="using:UWPResourcesGallery.Controls.Common"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)"
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <Grid Padding="8" Width="480" Background="{ThemeResource SystemControlBackgroundListLowBrush}">
+    <UserControl.Resources>
+        <muxc:TeachingTip x:Key="InfoTeachingTip" IsLightDismissEnabled="True" Title="Information" Subtitle=""/>
+    </UserControl.Resources>
+
+    <Grid Padding="8" Width="480" Background="{ThemeResource SystemControlBackgroundListLowBrush}" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="16"/>
+            <ColumnDefinition Width="8"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         
+        <!-- Showcase for systemcolor -->
         <common:DualThemePresenter Width="102" Grid.Row="0" Grid.RowSpan="4">
             <common:DualThemePresenter.LightThemeContent>
-                <StackPanel Width="102">
+                <StackPanel Width="92">
                     <TextBlock Margin="4,0,0,0" Text="Light theme"/>
-                    <Border Width="90" Margin="2,0,8,6" BorderThickness="0">
+                    <Border Width="80" Margin="2,0,8,6" BorderThickness="0">
                         <!--White and black background for opaque colors-->
                         <Border.Background>
                             <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
@@ -40,9 +46,9 @@
             </common:DualThemePresenter.LightThemeContent>
 
             <common:DualThemePresenter.DarkThemeContent>
-                <StackPanel Width="102">
+                <StackPanel Width="92">
                     <TextBlock Margin="4,0,0,0" Text="Dark theme"/>
-                    <Border Width="90" Margin="2,0,8,6" BorderThickness="0">
+                    <Border Width="80" Margin="2,0,8,6" BorderThickness="0">
                         <!--Black and white background for opaque colors-->
                         <Border.Background>
                             <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
@@ -61,20 +67,17 @@
             </common:DualThemePresenter.DarkThemeContent>
         </common:DualThemePresenter>
 
-        <Grid Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            
-            <TextBlock x:Name="BrushName" Text="{x:Bind SystemColor.Key}" FontSize="20" Foreground="{ThemeResource SystemAccentColor}"
-                HorizontalAlignment="Center" Margin="0,8,0,16" VerticalAlignment="Stretch" IsTextSelectionEnabled="True"
-                Grid.Row="0" Grid.RowSpan="2"/>
+        <!-- System color name -->
+        <TextBlock x:Name="BrushName" Text="{x:Bind SystemColor.Key}" FontSize="20" Foreground="{ThemeResource SystemAccentColor}"
+            HorizontalAlignment="Center" VerticalAlignment="Center" IsTextSelectionEnabled="True"
+            Grid.Column="2"/>
 
-            <TextBlock Grid.Row="2" HorizontalAlignment="Stretch" Margin="0,8,0,4" Text="Themeresource snippet"/>
-            <common:CodeSample Grid.Row="3" HorizontalAlignment="Stretch" IsSyntaxHighlightingEnabled="True" Code="{x:Bind SystemColor.ThemeResourceString}"/>
-        </Grid>
+        <!-- Info button -->
+        <Button Style="{ThemeResource ButtonRevealStyle}" Grid.ColumnSpan="3"
+                x:Name="OpenInfoTeachingTipButton" Click="OpenInfoTeachingTipButton_Click"
+                VerticalAlignment="Top" HorizontalAlignment="Right" Padding="0" Windows10version1809:CornerRadius="0,0,0,3"
+                Margin="0,-8,-8,0" Height="30" Width="30" ToolTipService.ToolTip="View additional information">
+            <FontIcon Glyph="&#xE946;" VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="30"/>
+        </Button>
     </Grid>
 </UserControl>
