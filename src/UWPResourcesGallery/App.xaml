@@ -23,7 +23,7 @@
             <AcrylicBrush x:Key="NavigationViewExpandedPaneBackground"
                     BackgroundSource="HostBackdrop"
                     TintColor="{ThemeResource SystemChromeMediumColor}"
-                    TintOpacity="0.85"
+                    TintOpacity="0.9"
                     FallbackColor="{ThemeResource SystemChromeMediumColor}"/>
             <!-- "Copy text" - Button style-->
             <Style x:Key="CopyButtonStyle" TargetType="Button">
