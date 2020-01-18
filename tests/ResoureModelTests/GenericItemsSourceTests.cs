@@ -1,8 +1,7 @@
 ﻿
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using UWPResourcesGallery.Model;
 
 namespace ResoureModelTests
@@ -15,9 +14,9 @@ namespace ResoureModelTests
         public static void ClassSetup(TestContext context)
         {
             context?.WriteLine("Started loading test setup");
-            var file = GetJSONFile("/Assets/testdata.json");
+            Windows.Data.Json.JsonObject file = GetJSONFile("/Assets/testdata.json");
 
-            foreach (var element in file["strings"].GetArray())
+            foreach (Windows.Data.Json.IJsonValue element in file["strings"].GetArray())
             {
                 Items.Add(new FilterableString(element.GetString()));
             }
@@ -41,7 +40,7 @@ namespace ResoureModelTests
             Assert.IsTrue(Items.Count > 0);
 
             Filter("");
-            
+
             for (int i = 0; i < Items.Count; i++)
             {
                 Filter("Item" + i);
@@ -67,7 +66,7 @@ namespace ResoureModelTests
 
         public bool FitsFilter(string[] keywords)
         {
-            return keywords.All(key => Value.Contains(key,StringComparison.InvariantCultureIgnoreCase));
+            return keywords.All(key => Value.Contains(key, StringComparison.InvariantCultureIgnoreCase));
         }
     }
 }

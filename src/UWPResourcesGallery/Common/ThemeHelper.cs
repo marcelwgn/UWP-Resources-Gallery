@@ -50,7 +50,7 @@ namespace UWPResourcesGallery.Common
         internal static void Initialize()
         {
             ApplicationWindow = Window.Current;
-            var savedTheme = ApplicationData.Current.LocalSettings.Values[SelectedAppThemeKey];
+            object savedTheme = ApplicationData.Current.LocalSettings.Values[SelectedAppThemeKey];
             if (savedTheme != null)
             {
                 if (Window.Current.Content is FrameworkElement rootElement)

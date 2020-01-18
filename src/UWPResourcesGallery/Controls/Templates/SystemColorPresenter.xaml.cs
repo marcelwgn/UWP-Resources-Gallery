@@ -18,10 +18,7 @@ namespace UWPResourcesGallery.Controls.Templates
 
         public SystemColor SystemColor
         {
-            get
-            {
-                return (SystemColor)GetValue(SystemColorItemDependencyProperty);
-            }
+            get => (SystemColor)GetValue(SystemColorItemDependencyProperty);
             set
             {
                 SetValue(SystemColorItemDependencyProperty, value);
@@ -47,7 +44,7 @@ namespace UWPResourcesGallery.Controls.Templates
 
         private void OpenInfoTeachingTipButton_Click(object sender, RoutedEventArgs e)
         {
-            var teachingTip = Resources["InfoTeachingTip"] as TeachingTip;
+            TeachingTip teachingTip = Resources["InfoTeachingTip"] as TeachingTip;
             teachingTip.Content = new SystemColorInformation(SystemColor);
             teachingTip.Target = OpenInfoTeachingTipButton;
             teachingTip.IsOpen = true;

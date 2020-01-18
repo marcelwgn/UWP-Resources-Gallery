@@ -3,7 +3,7 @@ using UWPResourcesGallery.Model.Colors;
 using Windows.UI.Xaml.Controls;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
- 
+
 namespace UWPResourcesGallery.Pages
 {
     /// <summary>
@@ -11,7 +11,7 @@ namespace UWPResourcesGallery.Pages
     /// </summary>
     public sealed partial class SystemColorsPage : Page
     {
-      
+
         private readonly SystemColorsItemSource source = new SystemColorsItemSource();
 
         public SystemColorsPage()

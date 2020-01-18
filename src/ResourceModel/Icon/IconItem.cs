@@ -11,7 +11,7 @@ namespace UWPResourcesGallery.Model.Icons
 
         public string Character { get; private set; }
 
-        public string StringGlyph { get { return "&#x" + Code + ";"; } }
+        public string StringGlyph => "&#x" + Code + ";";
 
         public bool IsSymbol { get; }
 

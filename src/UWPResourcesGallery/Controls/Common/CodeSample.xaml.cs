@@ -23,10 +23,7 @@ namespace UWPResourcesGallery.Controls.Common
 
         public string Code
         {
-            get
-            {
-                return (string)GetValue(CodeProperty);
-            }
+            get => (string)GetValue(CodeProperty);
             set
             {
                 SetValue(CodeProperty, value);
@@ -36,7 +33,7 @@ namespace UWPResourcesGallery.Controls.Common
 
         private static void OnCodeDependencyPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            var sampleObject = (d as CodeSample);
+            CodeSample sampleObject = (d as CodeSample);
             sampleObject.CodeChanged();
         }
 
@@ -46,10 +43,7 @@ namespace UWPResourcesGallery.Controls.Common
 
         public bool IsSyntaxHighlightingEnabled
         {
-            get
-            {
-                return (bool)GetValue(IsSyntaxHighlightingEnabledProperty);
-            }
+            get => (bool)GetValue(IsSyntaxHighlightingEnabledProperty);
             set
             {
                 SetValue(IsSyntaxHighlightingEnabledProperty, value);
@@ -79,7 +73,7 @@ namespace UWPResourcesGallery.Controls.Common
             }
             if (IsSyntaxHighlightingEnabled)
             {
-                var formatter = new RichTextBlockFormatter(ThemeHelper.AppTheme);
+                RichTextBlockFormatter formatter = new RichTextBlockFormatter(ThemeHelper.AppTheme);
                 if (ThemeHelper.IsDarkTheme())
                 {
                     UpdateFormatterDarkThemeColors(formatter);

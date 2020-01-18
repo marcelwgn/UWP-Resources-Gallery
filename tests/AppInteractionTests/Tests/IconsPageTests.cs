@@ -1,7 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace AppInteractionTests.Tests
 {
@@ -14,11 +12,11 @@ namespace AppInteractionTests.Tests
         public void RendersItems()
         {
             // Clear search before test!
-            var searchIconsBox = TestRunInitializer.Session.FindElementsByName("Search icons:")[1];
+            OpenQA.Selenium.Appium.Windows.WindowsElement searchIconsBox = TestRunInitializer.Session.FindElementsByName("Search icons:")[1];
             searchIconsBox.Clear();
             TestHelper.WaitMilli(500);
-            
-            var listItems = TestHelper.GetElementsOfType("ListItem");
+
+            ICollection<OpenQA.Selenium.Appium.Windows.WindowsElement> listItems = TestHelper.GetElementsOfType("ListItem");
 
             // Just checking a few
             Assert.IsTrue(0 < TestHelper.GetItemsWithContent(listItems, "GlobalNavigationButton").Count);
@@ -35,7 +33,7 @@ namespace AppInteractionTests.Tests
         {
             string[] iconsToTest = new string[] { "AdjustHologram", "A", "DataSenseBar", "EmojiTabCelebrationObjects", "ED55" };
 
-            var searchIconsBox = TestRunInitializer.Session.FindElementsByName("Search icons:")[1];
+            OpenQA.Selenium.Appium.Windows.WindowsElement searchIconsBox = TestRunInitializer.Session.FindElementsByName("Search icons:")[1];
 
             Assert.IsNotNull(searchIconsBox);
             Assert.IsTrue(searchIconsBox.Displayed);

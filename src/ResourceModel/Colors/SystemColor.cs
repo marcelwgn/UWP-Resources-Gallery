@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Markup;
 using Windows.UI.Xaml.Media;
@@ -29,11 +28,11 @@ namespace UWPResourcesGallery.Model.Colors
 
             // Generating SolidColorBrush from XAML code!
             // Light theme brush
-            var grid = XamlReader.Load(@"<Border xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation'
+            Border grid = XamlReader.Load(@"<Border xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation'
                     RequestedTheme='Light'
                     Background='{ThemeResource " + Key + "}'></Border>") as Border;
             LightThemeBrush = grid.Background as SolidColorBrush;
-            
+
             // Dark theme brush
             grid = XamlReader.Load(@"<Border xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation'
                     RequestedTheme='Dark'
@@ -48,7 +47,7 @@ namespace UWPResourcesGallery.Model.Colors
                 || Name.Contains(entry, System.StringComparison.CurrentCultureIgnoreCase)
                 || LightHex.Contains(entry, System.StringComparison.CurrentCultureIgnoreCase)
                 || DarkHex.Contains(entry, System.StringComparison.CurrentCultureIgnoreCase)
-                || ThemeResourceString.Contains(entry,System.StringComparison.CurrentCultureIgnoreCase)
+                || ThemeResourceString.Contains(entry, System.StringComparison.CurrentCultureIgnoreCase)
             );
         }
 

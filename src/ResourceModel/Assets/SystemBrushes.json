@@ -404,7 +404,8 @@
       "BackgroundSource": "HostBackdrop",
       "TintColor": "{StaticResource SystemChromeAltHighColor}",
       "TintOpacity": "0.8",
-      "FallbackColor": "{StaticResource SystemChromeMediumLowColor}"
+      "FallbackColor": "{StaticResource SystemChromeMediumLowColor}",
+      "type": "AcrylicBrush"
     },
     {
       "StaticResource x:Key": "SystemControlDescriptionTextForegroundBrush",
