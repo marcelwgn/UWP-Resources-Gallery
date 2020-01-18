@@ -91,7 +91,7 @@
             <Frame x:Name="RootFrame" Padding="0,40,0,0">
                 <Frame.ContentTransitions>
                     <TransitionCollection>
-                        <NavigationThemeTransition  />
+                        <NavigationThemeTransition/>
                     </TransitionCollection>
                 </Frame.ContentTransitions>
             </Frame>

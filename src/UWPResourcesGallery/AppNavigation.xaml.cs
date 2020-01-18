@@ -38,6 +38,11 @@ namespace UWPResourcesGallery
                 
                 RootFrame.Navigated += RootFrame_Navigated;
                 RootNavigation.BackRequested += RootNavigation_BackRequested;
+
+                if (!ApplicationView.GetForCurrentView().IsViewModeSupported(ApplicationViewMode.CompactOverlay))
+                {
+                    SwitchCompactOverlayModeButton.Visibility = Visibility.Collapsed;
+                }
             };
         }
 
