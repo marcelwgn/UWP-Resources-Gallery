@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Windows.Data.Json;
+﻿using Windows.Data.Json;
 
 namespace UWPResourcesGallery.Model.Icons
 {
@@ -8,8 +7,8 @@ namespace UWPResourcesGallery.Model.Icons
 
         public static void LoadIconsList()
         {
-            var file = GetJSONFile("/ResourceModel/Assets/IconList.json");
-            var list = file["icons"].GetArray();
+            JsonObject file = GetJSONFile("/ResourceModel/Assets/IconList.json");
+            JsonArray list = file["icons"].GetArray();
             lock (Items)
             {
                 foreach (JsonValue entry in list)

@@ -1,5 +1,4 @@
-﻿using System;
-using UWPResourcesGallery.Common;
+﻿using UWPResourcesGallery.Common;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -16,7 +15,7 @@ namespace UWPResourcesGallery.Pages
         {
             get
             {
-                var version = Windows.ApplicationModel.Package.Current.Id.Version;
+                Windows.ApplicationModel.PackageVersion version = Windows.ApplicationModel.Package.Current.Id.Version;
                 return string.Format("{0}.{1}.{2}.{3}", version.Major, version.Minor, version.Build, version.Revision);
             }
         }

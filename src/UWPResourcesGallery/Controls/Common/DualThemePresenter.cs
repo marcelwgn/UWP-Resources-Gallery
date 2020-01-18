@@ -11,10 +11,7 @@ namespace UWPResourcesGallery.Controls.Common
         #region LightThemeContent property
         public FrameworkElement LightThemeContent
         {
-            get
-            {
-                return (FrameworkElement)GetValue(LightThemeContentProperty);
-            }
+            get => (FrameworkElement)GetValue(LightThemeContentProperty);
             set
             {
                 SetValue(LightThemeContentProperty, value);
@@ -32,10 +29,7 @@ namespace UWPResourcesGallery.Controls.Common
         #region DarkThemeContent property
         public FrameworkElement DarkThemeContent
         {
-            get
-            {
-                return (FrameworkElement)GetValue(DarkThemeContentProperty);
-            }
+            get => (FrameworkElement)GetValue(DarkThemeContentProperty);
             set
             {
                 SetValue(DarkThemeContentProperty, value);
@@ -53,8 +47,8 @@ namespace UWPResourcesGallery.Controls.Common
         #region ContentOrientation property
         public Orientation ContentOrientation
         {
-            get { return (Orientation)GetValue(ContentOrientationProperty); }
-            set { SetValue(ContentOrientationProperty, value); }
+            get => (Orientation)GetValue(ContentOrientationProperty);
+            set => SetValue(ContentOrientationProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
@@ -74,7 +68,7 @@ namespace UWPResourcesGallery.Controls.Common
 
         public static void ThemedContentPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            if(d== null)
+            if (d == null)
             {
                 return;
             }

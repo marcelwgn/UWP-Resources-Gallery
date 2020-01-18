@@ -42,9 +42,9 @@ namespace UWPResourcesGallery.Model
         protected static JsonObject GetJSONFile(string fileName)
         {
             Uri iconListJson = new Uri("ms-appx://" + fileName);
-            var task = StorageFile.GetFileFromApplicationUriAsync(iconListJson).AsTask();
+            Task<StorageFile> task = StorageFile.GetFileFromApplicationUriAsync(iconListJson).AsTask();
             StorageFile iconFile = task.Result;
-            var fileTask = FileIO.ReadTextAsync(iconFile).AsTask();
+            Task<string> fileTask = FileIO.ReadTextAsync(iconFile).AsTask();
             string jsonText = fileTask.Result;
 
             return JsonObject.Parse(jsonText);

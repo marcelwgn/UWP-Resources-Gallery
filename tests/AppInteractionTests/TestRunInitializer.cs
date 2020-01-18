@@ -7,16 +7,17 @@ using System.Threading;
 
 namespace AppInteractionTests
 {
-    class TestRunInitializer
+    internal class TestRunInitializer
     {
         private const string WindowsApplicationDriverUrl = "http://127.0.0.1:4723";
         private const string AppUIBasicAppId = "UWP-Resourcess-Gallery_d9qrpd3r6ja58!App";
 
         private static WindowsDriver<WindowsElement> _session;
-        public static WindowsDriver<WindowsElement> Session {
+        public static WindowsDriver<WindowsElement> Session
+        {
             get
             {
-                if(_session == null)
+                if (_session == null)
                 {
                     CreateSession();
                 }
@@ -28,7 +29,7 @@ namespace AppInteractionTests
         {
             if (_session == null)
             {
-                var appiumOptions = new AppiumOptions();
+                AppiumOptions appiumOptions = new AppiumOptions();
                 appiumOptions.AddAdditionalCapability("app", AppUIBasicAppId);
                 try
                 {

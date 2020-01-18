@@ -10,7 +10,7 @@ namespace ControlTests.CodeBehindTests
         [TestMethod]
         public void BoolToVisibilityConverterTest()
         {
-            var converter = new BoolToVisibilityConverter();
+            BoolToVisibilityConverter converter = new BoolToVisibilityConverter();
 
             Assert.AreEqual(Visibility.Collapsed, converter.Convert(false, null, null, null));
             Assert.AreEqual(Visibility.Visible, converter.Convert(true, null, null, null));
@@ -20,7 +20,7 @@ namespace ControlTests.CodeBehindTests
         [TestMethod]
         public void StringValueToVisibilityConverterTest()
         {
-            var converter = new StringValueToVisibilityConverter();
+            StringValueToVisibilityConverter converter = new StringValueToVisibilityConverter();
 
             Assert.AreEqual(Visibility.Collapsed, converter.Convert("", null, null, null));
             Assert.AreEqual(Visibility.Collapsed, converter.Convert(null, null, null, null));

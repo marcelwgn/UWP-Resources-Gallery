@@ -1,11 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting.AppContainer;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UWPResourcesGallery.Controls.Common;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Automation;
@@ -24,17 +18,17 @@ namespace ControlTests.UITests
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Globalization", "CA1307:Specify StringComparison", Justification = "Testing just english strings here")]
         public void RendersCorrectly()
         {
-            var pageHeader = (PageHeader)ControlsTestPage.Instance.FindName("StandardPageHeader");
+            PageHeader pageHeader = (PageHeader)ControlsTestPage.Instance.FindName("StandardPageHeader");
             Assert.IsNotNull(pageHeader);
 
             // All entries false since default(bool) = false
             bool[] foundValues = new bool[HeaderTexts.Length];
 
-            var innerContainer = VisualTreeHelper.GetChild(pageHeader, 0);
+            DependencyObject innerContainer = VisualTreeHelper.GetChild(pageHeader, 0);
             int childCount = VisualTreeHelper.GetChildrenCount(innerContainer);
             for (int childIndex = 0; childIndex < childCount; childIndex++)
             {
-                var child = (TextBlock)VisualTreeHelper.GetChild(innerContainer, childIndex);
+                TextBlock child = (TextBlock)VisualTreeHelper.GetChild(innerContainer, childIndex);
                 if (child == null)
                 {
                     continue;
@@ -61,8 +55,8 @@ namespace ControlTests.UITests
         [UITestMethod]
         public void SizingIsCorrectly()
         {
-            var pageHeader = (PageHeader)ControlsTestPage.Instance.FindName("StandardPageHeader");
-            var pageHeaderWithoutDescriptions = (PageHeader)ControlsTestPage.Instance.FindName("HeaderWithoutDescription");
+            PageHeader pageHeader = (PageHeader)ControlsTestPage.Instance.FindName("StandardPageHeader");
+            PageHeader pageHeaderWithoutDescriptions = (PageHeader)ControlsTestPage.Instance.FindName("HeaderWithoutDescription");
 
             Assert.IsTrue(pageHeader.ActualHeight > pageHeaderWithoutDescriptions.ActualHeight + 14);
         }

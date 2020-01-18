@@ -12,8 +12,8 @@ namespace UWPResourcesGallery.Controls.Common
         #region PageName property
         public string PageName
         {
-            get { return (string)GetValue(PageNameProperty); }
-            set { SetValue(PageNameProperty, value); }
+            get => (string)GetValue(PageNameProperty);
+            set => SetValue(PageNameProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for PageName.
@@ -24,8 +24,8 @@ namespace UWPResourcesGallery.Controls.Common
         #region PageDescription property
         public string PageDescription
         {
-            get { return (string)GetValue(PageDescriptionProperty); }
-            set { SetValue(PageDescriptionProperty, value); }
+            get => (string)GetValue(PageDescriptionProperty);
+            set => SetValue(PageDescriptionProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for PageDescription.

@@ -7,10 +7,7 @@ namespace UWPResourcesGallery.Controls.Templates
     public partial class IconItemControl : UserControl
     {
 
-        public UIElement IconViewPresenter 
-        { 
-            get { return IconView; } 
-        }
+        public UIElement IconViewPresenter => IconView;
 
         #region IconItem property
         public static readonly DependencyProperty IconProperty =
@@ -22,10 +19,7 @@ namespace UWPResourcesGallery.Controls.Templates
 
         public IconItem Icon
         {
-            get
-            {
-                return (IconItem)GetValue(IconProperty);
-            }
+            get => (IconItem)GetValue(IconProperty);
             set
             {
                 SetValue(IconProperty, value);

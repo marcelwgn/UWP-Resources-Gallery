@@ -18,14 +18,14 @@ namespace AppInteractionTests.Tests
         [TestMethod]
         public void VerifyCompactOverlayBehavior()
         {
-            var compactOverlayButton = TestHelper.GetElementsOfTypeWithContent(
+            OpenQA.Selenium.Appium.Windows.WindowsElement compactOverlayButton = TestHelper.GetElementsOfTypeWithContent(
                 "Button", "Switch to overlay mode")[0];
             Assert.IsNotNull(compactOverlayButton);
 
             // Switch to CompactOverlay
             compactOverlayButton.Click();
             TestHelper.WaitMilli(2000);
-            
+
             // Get new button with updated text
             compactOverlayButton = TestHelper.GetElementsOfTypeWithContent(
                 "Button", "Switch to normal mode")[0];

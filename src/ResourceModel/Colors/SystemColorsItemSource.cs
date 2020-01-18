@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Windows.Data.Json;
+﻿using Windows.Data.Json;
 
 namespace UWPResourcesGallery.Model.Colors
 {
@@ -7,12 +6,12 @@ namespace UWPResourcesGallery.Model.Colors
     {
         public static void LoadSystemColors()
         {
-            var file = GetJSONFile("/ResourceModel/Assets/SystemColors.json");
-            var list = file["colors"].GetArray();
+            JsonObject file = GetJSONFile("/ResourceModel/Assets/SystemColors.json");
+            JsonArray list = file["colors"].GetArray();
             foreach (JsonValue entry in list)
             {
                 JsonObject entryObject = entry.GetObject();
-                var brush = new SystemColor(
+                SystemColor brush = new SystemColor(
                     entryObject["key"].GetString(),
                     entryObject["name"].GetString(),
                     entryObject["lightHex"].GetString(),

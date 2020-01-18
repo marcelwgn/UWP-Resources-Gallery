@@ -10,7 +10,7 @@ namespace UWPResourcesGallery.Controls.Templates
 {
     public sealed partial class SystemColorInformation : UserControl
     {
-        private SystemColor SystemColor;
+        private readonly SystemColor SystemColor;
 
         public SystemColorInformation(SystemColor systemColor)
         {

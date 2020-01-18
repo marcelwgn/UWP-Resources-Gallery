@@ -1,8 +1,5 @@
-﻿using System;
-using System.Threading.Tasks;
-using UWPResourcesGallery.Common;
+﻿using UWPResourcesGallery.Common;
 using UWPResourcesGallery.Model.Icons;
-using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
@@ -22,12 +19,12 @@ namespace UWPResourcesGallery.Pages
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            if(e == null)
+            if (e == null)
             {
                 return;
             }
             base.OnNavigatedTo(e);
-            var anim = ConnectedAnimationService.GetForCurrentView().GetAnimation("ForwardConnectedAnimation");
+            ConnectedAnimation anim = ConnectedAnimationService.GetForCurrentView().GetAnimation("ForwardConnectedAnimation");
             if (anim != null)
             {
                 anim.TryStart(TransitionReceiver);
