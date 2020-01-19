@@ -10,7 +10,11 @@ namespace AppInteractionTests
     class TestRunInitializer
     {
         private const string WindowsApplicationDriverUrl = "http://127.0.0.1:4723";
+#if DEBUG
+        private const string AppUIBasicAppId = "UWP-Resourcess-Gallery-Debug_d9qrpd3r6ja58!App";
+#else
         private const string AppUIBasicAppId = "UWP-Resourcess-Gallery_d9qrpd3r6ja58!App";
+#endif
 
         private static WindowsDriver<WindowsElement> _session;
         public static WindowsDriver<WindowsElement> Session {

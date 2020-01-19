@@ -164,7 +164,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AppxManifest Include="Package.appxmanifest">
+    <AppxManifest Include="Package.appxmanifest" Condition="!('$(Configuration)' == 'Debug')">
       <SubType>Designer</SubType>
     </AppxManifest>
   </ItemGroup>
@@ -294,6 +294,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <AppxManifest Include="DebugPackage.appxmanifest" Condition="'$(Configuration)' == 'Debug'">
+      <SubType>Designer</SubType>
+    </AppxManifest>
     <None Include="UWPResourcesGallery_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
