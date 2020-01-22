@@ -122,6 +122,7 @@
       <DependentUpon>UnitTestApp.xaml</DependentUpon>
     </Compile>
     <Compile Include="GenericItemsSourceTests.cs" />
+    <Compile Include="UniversalPlatformVersionSourceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="UnitTestApp.xaml">

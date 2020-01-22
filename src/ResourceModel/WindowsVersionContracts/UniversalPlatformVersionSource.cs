@@ -24,7 +24,7 @@ namespace UWPResourcesGallery.Model.WindowsVersionContracts
                             entryObject["versionName"].GetString(),
                             entryObject["marketingName"].GetString(),
                             entryObject["codeName"].GetString(),
-                            entryObject["versonContracts"].GetArray()
+                            entryObject["versionContracts"].GetArray()
                         );
                     Items.Add(icon);
                 }
