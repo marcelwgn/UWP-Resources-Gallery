@@ -1,0 +1,721 @@
+﻿{
+  "contracts": [
+    {
+      "version": "10.0.10240.0",
+      "buildVersion": "10240",
+      "versionName": "1507",
+      "marketingName": "N/A",
+      "codeName": "Threshold 1",
+      "versionContracts": [
+        {
+          "name": "Windows.Foundation.FoundationContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Foundation.UniversalApiContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Networking.Connectivity.WwanContract",
+          "version": "1.0"
+        }
+      ]
+    },
+    {
+      "version": "10.0.10586.0",
+      "buildVersion": "10586",
+      "versionName": "1511",
+      "marketingName": "November Update",
+      "codeName": "Threshold 2",
+      "versionContracts": [
+        {
+          "name": "Windows.ApplicationModel.Calls.CallsVoipContract",
+          "version": "1.0"
+        },
+        {
+
+          "name": "Windows.Devices.Printers.PrintersContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Foundation.FoundationContract",
+          "version": "1.0"
+
+        },
+        {
+          "name": "Windows.Foundation.UniversalApiContract",
+          "version": "2.0"
+
+        },
+        {
+          "name": "Windows.Graphics.Printing3D.Printing3DContract",
+          "version": "2.0"
+
+        },
+        {
+          "name": "Windows.Networking.Connectivity.WwanContract",
+          "version": "1.0"
+        }
+      ]
+    },
+    {
+      "version": "10.0.14393.0",
+      "buildVersion": "14393",
+      "versionName": "1607",
+      "marketingName": "Anniversary Update",
+      "codeName": "Redstone 1",
+      "versionContracts": [
+        {
+          "name": "Windows.ApplicationModel.Calls.CallsVoipContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.SocialInfo.SocialInfoContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Devices.DevicesLowLevelContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.Devices.Printers.PrintersContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Foundation.FoundationContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.Foundation.UniversalApiContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Graphics.Printing3D.Printing3DContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Networking.Connectivity.WwanContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Services.Store.StoreContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.System.Profile.ProfileHardwareTokenContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.System.Profile.ProfileSharedModeContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.UI.ViewManagement.ViewManagementViewScalingContract",
+          "version": "1.0"
+        }
+      ]
+    },
+    {
+      "version": "10.0.15063.0",
+      "buildVersion": "15063",
+      "versionName": "1703",
+      "marketingName": "Creators Update",
+      "codeName": "Redstone 2",
+      "versionContracts": [
+        {
+          "name": "Windows.ApplicationModel.Calls.CallsVoipContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.SocialInfo.SocialInfoContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.Devices.DevicesLowLevelContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Devices.Printers.PrintersContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Foundation.FoundationContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Foundation.UniversalApiContract",
+          "version": "4.0"
+        },
+        {
+          "name": "Windows.Graphics.Printing3D.Printing3DContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Networking.Connectivity.WwanContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Services.Store.StoreContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.Services.TargetedContent.TargetedContentContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.System.Profile.ProfileHardwareTokenContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.System.Profile.ProfileSharedModeContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.UI.ViewManagement.ViewManagementViewScalingContract",
+          "version": "1.0"
+        }
+      ]
+    },
+    {
+      "version": "10.0.16299.0",
+      "buildVersion": "16299",
+      "versionName": "1703",
+      "marketingName": "Fall Creators Update",
+      "codeName": "Redstone 3",
+      "versionContracts": [
+        {
+          "name": "Windows.ApplicationModel.Calls.CallsVoipContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.SocialInfo.SocialInfoContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.StartupTaskContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.Devices.Custom.CustomDeviceContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Devices.DevicesLowLevelContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Devices.Printers.PrintersContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Devices.SmartCards.SmartCardBackgroundTriggerContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Devices.SmartCards.SmartCardEmulatorContract",
+          "version": "5.0"
+        },
+        {
+          "name": "Windows.Foundation.FoundationContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Foundation.UniversalApiContract",
+          "version": "5.0"
+        },
+        {
+          "name": "Windows.Gaming.XboxLive.StorageApiContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Graphics.Printing3D.Printing3DContract",
+          "version": "4.0"
+        },
+        {
+          "name": "Windows.Networking.Connectivity.WwanContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Services.Store.StoreContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.Services.TargetedContent.TargetedContentContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.System.Profile.ProfileHardwareTokenContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.System.Profile.ProfileSharedModeContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.UI.ViewManagement.ViewManagementViewScalingContract",
+          "version": "1.0"
+        }
+      ]
+    },
+    {
+      "version": "10.0.17134.1",
+      "buildVersion": "17134",
+      "versionName": "1803",
+      "marketingName": "April 2018 Update",
+      "codeName": "Redstone 4",
+      "versionContracts": [
+        {
+          "name": "Windows.AI.MachineLearning.Preview.MachineLearningPreviewContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.Calls.CallsVoipContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.SocialInfo.SocialInfoContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.StartupTaskContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Devices.Custom.CustomDeviceContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Devices.DevicesLowLevelContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Devices.Printers.PrintersContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Devices.SmartCards.SmartCardBackgroundTriggerContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Devices.SmartCards.SmartCardEmulatorContract",
+          "version": "5.0"
+        },
+        {
+          "name": "Windows.Foundation.FoundationContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Foundation.UniversalApiContract",
+          "version": "6.0"
+        },
+        {
+          "name": "Windows.Gaming.XboxLive.StorageApiContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Graphics.Printing3D.Printing3DContract",
+          "version": "4.0"
+        },
+        {
+          "name": "Windows.Networking.Connectivity.WwanContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.Services.Store.StoreContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Services.TargetedContent.TargetedContentContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.System.Profile.ProfileHardwareTokenContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.System.Profile.ProfileSharedModeContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.UI.ViewManagement.ViewManagementViewScalingContract",
+          "version": "1.0"
+        }
+      ]
+    },
+    {
+      "version": "10.0.17763.0",
+      "buildVersion": "17763",
+      "versionName": "1809",
+      "marketingName": "October 2018 Update",
+      "codeName": "Redstone 5",
+      "versionContracts": [
+        {
+          "name": "Windows.AI.MachineLearning.MachineLearningContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.AI.MachineLearning.Preview.MachineLearningPreviewContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.Calls.Background.CallsBackgroundContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.Calls.CallsPhoneContract",
+          "version": "4.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.Calls.CallsVoipContract",
+          "version": "4.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.SocialInfo.SocialInfoContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.StartupTaskContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Devices.Custom.CustomDeviceContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Devices.DevicesLowLevelContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Devices.Printers.PrintersContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Devices.SmartCards.SmartCardBackgroundTriggerContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Devices.SmartCards.SmartCardEmulatorContract",
+          "version": "6.0"
+        },
+        {
+          "name": "Windows.Foundation.FoundationContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Foundation.UniversalApiContract",
+          "version": "7.0"
+        },
+        {
+          "name": "Windows.Gaming.XboxLive.StorageApiContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Graphics.Printing3D.Printing3DContract",
+          "version": "4.0"
+        },
+        {
+          "name": "Windows.Networking.Connectivity.WwanContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.Networking.Sockets.ControlChannelTriggerContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Services.Maps.GuidanceContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Services.Maps.LocalSearchContract",
+          "version": "4.0"
+        },
+        {
+          "name": "Windows.Services.Store.StoreContract",
+          "version": "4.0"
+        },
+        {
+          "name": "Windows.Services.TargetedContent.TargetedContentContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.System.Profile.ProfileHardwareTokenContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.System.Profile.ProfileSharedModeContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.System.Profile.SystemManufacturers.SystemManufacturersContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.System.SystemManagementContract",
+          "version": "6.0"
+        },
+        {
+          "name": "Windows.UI.ViewManagement.ViewManagementViewScalingContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.UI.Xaml.Core.Direct.XamlDirectContract",
+          "version": "1.0"
+        }
+      ]
+    },
+    {
+      "version": "10.0.18362.0",
+      "buildVersion": "18362",
+      "versionName": "1903",
+      "marketingName": "May 2019 Update",
+      "codeName": "19H1",
+      "versionContracts": [
+        {
+          "name": "Windows.AI.MachineLearning.MachineLearningContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.AI.MachineLearning.Preview.MachineLearningPreviewContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.Calls.Background.CallsBackgroundContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.Calls.CallsPhoneContract",
+          "version": "5.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.Calls.CallsVoipContract",
+          "version": "4.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.SocialInfo.SocialInfoContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.StartupTaskContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Devices.Custom.CustomDeviceContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Devices.DevicesLowLevelContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Devices.Printers.PrintersContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Devices.SmartCards.SmartCardBackgroundTriggerContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Devices.SmartCards.SmartCardEmulatorContract",
+          "version": "6.0"
+        },
+        {
+          "name": "Windows.Foundation.FoundationContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Foundation.UniversalApiContract",
+          "version": "8.0"
+        },
+        {
+          "name": "Windows.Gaming.XboxLive.StorageApiContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Graphics.Printing3D.Printing3DContract",
+          "version": "4.0"
+        },
+        {
+          "name": "Windows.Networking.Connectivity.WwanContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.Networking.Sockets.ControlChannelTriggerContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Services.Maps.GuidanceContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Services.Maps.LocalSearchContract",
+          "version": "4.0"
+        },
+        {
+          "name": "Windows.Services.Store.StoreContract",
+          "version": "4.0"
+        },
+        {
+          "name": "Windows.Services.TargetedContent.TargetedContentContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.System.Profile.ProfileHardwareTokenContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.System.Profile.ProfileSharedModeContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.System.Profile.SystemManufacturers.SystemManufacturersContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.System.SystemManagementContract",
+          "version": "6.0"
+        },
+        {
+          "name": "Windows.UI.ViewManagement.ViewManagementViewScalingContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.UI.Xaml.Core.Direct.XamlDirectContract",
+          "version": "2.0"
+        }
+      ]
+    },
+    {
+      "version": "10.0.18363.0",
+      "buildVersion": "18363",
+      "versionName": "1909",
+      "marketingName": "November 2019 Update",
+      "codeName": "19H2",
+      "versionContracts": [
+        {
+          "name": "Windows.AI.MachineLearning.MachineLearningContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.AI.MachineLearning.Preview.MachineLearningPreviewContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.Calls.Background.CallsBackgroundContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.Calls.CallsPhoneContract",
+          "version": "5.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.Calls.CallsVoipContract",
+          "version": "4.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.SocialInfo.SocialInfoContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.ApplicationModel.StartupTaskContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Devices.Custom.CustomDeviceContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Devices.DevicesLowLevelContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Devices.Printers.PrintersContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Devices.SmartCards.SmartCardBackgroundTriggerContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Devices.SmartCards.SmartCardEmulatorContract",
+          "version": "6.0"
+        },
+        {
+          "name": "Windows.Foundation.FoundationContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Foundation.UniversalApiContract",
+          "version": "8.0"
+        },
+        {
+          "name": "Windows.Gaming.XboxLive.StorageApiContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.Graphics.Printing3D.Printing3DContract",
+          "version": "4.0"
+        },
+        {
+          "name": "Windows.Networking.Connectivity.WwanContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.Networking.Sockets.ControlChannelTriggerContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Services.Maps.GuidanceContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.Services.Maps.LocalSearchContract",
+          "version": "4.0"
+        },
+        {
+          "name": "Windows.Services.Store.StoreContract",
+          "version": "4.0"
+        },
+        {
+          "name": "Windows.Services.TargetedContent.TargetedContentContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.System.Profile.ProfileHardwareTokenContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.System.Profile.ProfileSharedModeContract",
+          "version": "2.0"
+        },
+        {
+          "name": "Windows.System.Profile.SystemManufacturers.SystemManufacturersContract",
+          "version": "3.0"
+        },
+        {
+          "name": "Windows.System.SystemManagementContract",
+          "version": "6.0"
+        },
+        {
+          "name": "Windows.UI.ViewManagement.ViewManagementViewScalingContract",
+          "version": "1.0"
+        },
+        {
+          "name": "Windows.UI.Xaml.Core.Direct.XamlDirectContract",
+          "version": "2.0"
+        }
+      ]
+    }
+  ]
+}
