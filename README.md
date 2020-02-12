@@ -11,13 +11,16 @@ The idea for this app is based on the XAML Controls Gallery. The XAML Controls G
 ### Iconspage
 ![Iconspage of UWP Resources Gallery](./docs/Screenshot_Iconspage.png)
 
+### Systembrushes page
+![Systembrushes of UWP Resources Gallery](./docs/Screenshot_Systembrushespage.png)
+
 ### Systemcolors page
 ![Systemcolors of UWP Resources Gallery](./docs/Screenshot_Systemcolorspage.png)
 
 ## The UWP Resources Gallery shows:
  * All Segoe MDL2 icons that are provided by Windows 10
  * How to use Segoe MDL2 icons
- * System colors that are available to UWP apps
+ * System colors and brushes that are available to UWP apps
 
 ## Building the app
 **Note**: The UWP Resources Gallery requires Visual Studio [2017](http://go.microsoft.com/fwlink/?LinkID=532422) or [2019](https://visualstudio.microsoft.com/vs/) to build and Windows 10 to execute.

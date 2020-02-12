@@ -11,10 +11,10 @@
 
     <StackPanel>
         <!--  Hex codes  -->
-        <TextBlock Margin="0,0,0,4" Text="Definition as XAML" />
+        <TextBlock Margin="0,0,0,4" Text="Definition as XAML"   />
         <common:CodeSample
             x:Name="XAMLDefinitionCodeSample"
-            HorizontalAlignment="Left"
+            HorizontalAlignment="Stretch"
             IsSyntaxHighlightingEnabled="True" />
 
         <!--  Themeresource snippet  -->
