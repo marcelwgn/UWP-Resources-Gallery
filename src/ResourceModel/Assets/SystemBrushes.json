@@ -2,415 +2,514 @@
   "brushes": [
     {
       "key": "SystemControlBackgroundAccentBrush",
+      "type": "SolidColorBrush",
       "color": "{ThemeResource SystemAccentColor}"
     },
     {
       "key": "SystemControlBackgroundAltHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemAltHighColor}"
     },
     {
       "key": "SystemControlBackgroundAltMediumHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemAltMediumHighColor}"
     },
     {
       "key": "SystemControlBackgroundAltMediumBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemAltMediumColor}"
     },
     {
       "key": "SystemControlBackgroundAltMediumLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemAltMediumLowColor}"
     },
     {
       "key": "SystemControlBackgroundBaseHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseHighColor}"
     },
     {
       "key": "SystemControlBackgroundBaseLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseLowColor}"
     },
     {
       "key": "SystemControlBackgroundBaseMediumBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseMediumColor}"
     },
     {
       "key": "SystemControlBackgroundBaseMediumHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseMediumHighColor}"
     },
     {
       "key": "SystemControlBackgroundBaseMediumLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseMediumLowColor}"
     },
     {
       "key": "SystemControlBackgroundChromeBlackHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeBlackHighColor}"
     },
     {
       "key": "SystemControlBackgroundChromeBlackMediumBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeBlackMediumColor}"
     },
     {
       "key": "SystemControlBackgroundChromeBlackLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeBlackLowColor}"
     },
     {
       "key": "SystemControlBackgroundChromeBlackMediumLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeBlackMediumLowColor}"
     },
     {
       "key": "SystemControlBackgroundChromeMediumBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeMediumColor}"
     },
     {
       "key": "SystemControlBackgroundChromeMediumLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeMediumLowColor}"
     },
     {
       "key": "SystemControlBackgroundChromeWhiteBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeWhiteColor}"
     },
     {
       "key": "SystemControlBackgroundListLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemListLowColor}"
     },
     {
       "key": "SystemControlBackgroundListMediumBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemListMediumColor}"
     },
     {
       "key": "SystemControlDisabledAccentBrush",
+      "type": "SolidColorBrush",
       "color": "{ThemeResource SystemAccentColor}"
     },
     {
       "key": "SystemControlDisabledBaseHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseHighColor}"
     },
     {
       "key": "SystemControlDisabledBaseLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseLowColor}"
     },
     {
       "key": "SystemControlDisabledBaseMediumLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseMediumLowColor}"
     },
     {
       "key": "SystemControlDisabledChromeDisabledHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeDisabledHighColor}"
     },
     {
       "key": "SystemControlDisabledChromeDisabledLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeDisabledLowColor}"
     },
     {
       "key": "SystemControlDisabledChromeHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeHighColor}"
     },
     {
       "key": "SystemControlDisabledChromeMediumLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeMediumLowColor}"
     },
     {
       "key": "SystemControlDisabledListMediumBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemListMediumColor}"
     },
     {
       "key": "SystemControlDisabledTransparentBrush",
+      "type": "SolidColorBrush",
       "color": "Transparent"
     },
     {
       "key": "SystemControlFocusVisualPrimaryBrush",
+      "type": "SolidColorBrush",
       "color": "{ThemeResource SystemBaseHighColor}"
     },
     {
       "key": "SystemControlFocusVisualSecondaryBrush",
+      "type": "SolidColorBrush",
       "color": "{ThemeResource SystemAltMediumColor}"
     },
     {
       "key": "SystemControlRevealFocusVisualBrush",
+      "type": "SolidColorBrush",
       "color": "{ThemeResource SystemAccentColor}"
     },
     {
       "key": "SystemControlForegroundAccentBrush",
+      "type": "SolidColorBrush",
       "color": "{ThemeResource SystemAccentColor}"
     },
     {
       "key": "SystemControlForegroundAltHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemAltHighColor}"
     },
     {
       "key": "SystemControlForegroundAltMediumHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemAltMediumHighColor}"
     },
     {
       "key": "SystemControlForegroundBaseHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseHighColor}"
     },
     {
       "key": "SystemControlForegroundBaseLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseLowColor}"
     },
     {
       "key": "SystemControlForegroundBaseMediumBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseMediumColor}"
     },
     {
       "key": "SystemControlForegroundBaseMediumHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseMediumHighColor}"
     },
     {
       "key": "SystemControlForegroundBaseMediumLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseMediumLowColor}"
     },
     {
       "key": "SystemControlForegroundChromeBlackHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeBlackHighColor}"
     },
     {
       "key": "SystemControlForegroundChromeHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeHighColor}"
     },
     {
       "key": "SystemControlForegroundChromeMediumBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeMediumColor}"
     },
     {
       "key": "SystemControlForegroundChromeWhiteBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeWhiteColor}"
     },
     {
       "key": "SystemControlForegroundChromeDisabledLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeDisabledLowColor}"
     },
     {
       "key": "SystemControlForegroundChromeGrayBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeGrayColor}"
     },
     {
       "key": "SystemControlForegroundListLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemListLowColor}"
     },
     {
       "key": "SystemControlForegroundListMediumBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemListMediumColor}"
     },
     {
       "key": "SystemControlForegroundTransparentBrush",
+      "type": "SolidColorBrush",
       "color": "Transparent"
     },
     {
       "key": "SystemControlForegroundChromeBlackMediumBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeBlackMediumColor}"
     },
     {
       "key": "SystemControlForegroundChromeBlackMediumLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeBlackMediumLowColor}"
     },
     {
       "key": "SystemControlHighlightAccentBrush",
+      "type": "SolidColorBrush",
       "color": "{ThemeResource SystemAccentColor}"
     },
     {
       "key": "SystemControlHighlightAltAccentBrush",
+      "type": "SolidColorBrush",
       "color": "{ThemeResource SystemAccentColor}"
     },
     {
       "key": "SystemControlHighlightAltAltHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemAltHighColor}"
     },
     {
       "key": "SystemControlHighlightAltBaseHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseHighColor}"
     },
     {
       "key": "SystemControlHighlightAltBaseLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseLowColor}"
     },
     {
       "key": "SystemControlHighlightAltBaseMediumBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseMediumColor}"
     },
     {
       "key": "SystemControlHighlightAltBaseMediumHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseMediumHighColor}"
     },
     {
       "key": "SystemControlHighlightAltAltMediumHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemAltMediumHighColor}"
     },
     {
       "key": "SystemControlHighlightAltBaseMediumLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseMediumLowColor}"
     },
     {
       "key": "SystemControlHighlightAltListAccentHighBrush",
+      "type": "SolidColorBrush",
       "color": "{ThemeResource SystemAccentColor}",
-      "opacity": "0.9"
+      "opacity": 0.9
     },
     {
       "key": "SystemControlHighlightAltListAccentLowBrush",
+      "type": "SolidColorBrush",
       "color": "{ThemeResource SystemAccentColor}",
-      "opacity": "0.6"
+      "opacity": 0.6
     },
     {
       "key": "SystemControlHighlightAltListAccentMediumBrush",
+      "type": "SolidColorBrush",
       "color": "{ThemeResource SystemAccentColor}",
-      "opacity": "0.8"
+      "opacity": 0.8
     },
     {
       "key": "SystemControlHighlightAltChromeWhiteBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeWhiteColor}"
     },
     {
       "key": "SystemControlHighlightAltTransparentBrush",
+      "type": "SolidColorBrush",
       "color": "Transparent"
     },
     {
       "key": "SystemControlHighlightBaseHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseHighColor}"
     },
     {
       "key": "SystemControlHighlightBaseLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseLowColor}"
     },
     {
       "key": "SystemControlHighlightBaseMediumBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseMediumColor}"
     },
     {
       "key": "SystemControlHighlightBaseMediumHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseMediumHighColor}"
     },
     {
       "key": "SystemControlHighlightBaseMediumLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseMediumLowColor}"
     },
     {
       "key": "SystemControlHighlightChromeAltLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeAltLowColor}"
     },
     {
       "key": "SystemControlHighlightChromeHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeHighColor}"
     },
     {
       "key": "SystemControlHighlightListAccentHighBrush",
+      "type": "SolidColorBrush",
       "color": "{ThemeResource SystemAccentColor}",
-      "opacity": "0.9"
+      "opacity": 0.9
     },
     {
       "key": "SystemControlHighlightListAccentLowBrush",
+      "type": "SolidColorBrush",
       "color": "{ThemeResource SystemAccentColor}",
-      "opacity": "0.6"
+      "opacity": 0.6
     },
     {
       "key": "SystemControlHighlightListAccentMediumBrush",
+      "type": "SolidColorBrush",
       "color": "{ThemeResource SystemAccentColor}",
-      "opacity": "0.8"
+      "opacity": 0.8
     },
     {
       "key": "SystemControlHighlightListMediumBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemListMediumColor}"
     },
     {
       "key": "SystemControlHighlightListLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemListLowColor}"
     },
     {
       "key": "SystemControlHighlightChromeWhiteBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeWhiteColor}"
     },
     {
       "key": "SystemControlHighlightTransparentBrush",
+      "type": "SolidColorBrush",
       "color": "Transparent"
     },
     {
       "key": "SystemControlHyperlinkTextBrush",
+      "type": "SolidColorBrush",
       "color": "{ThemeResource SystemAccentColor}"
     },
     {
       "key": "SystemControlHyperlinkBaseHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseHighColor}"
     },
     {
       "key": "SystemControlHyperlinkBaseMediumBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseMediumColor}"
     },
     {
       "key": "SystemControlHyperlinkBaseMediumHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseMediumHighColor}"
     },
     {
       "key": "SystemControlPageBackgroundAltMediumBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemAltMediumColor}"
     },
     {
       "key": "SystemControlPageBackgroundAltHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemAltHighColor}"
     },
     {
       "key": "SystemControlPageBackgroundMediumAltMediumBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemAltMediumColor}"
     },
     {
       "key": "SystemControlPageBackgroundBaseLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseLowColor}"
     },
     {
       "key": "SystemControlPageBackgroundBaseMediumBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseMediumColor}"
     },
     {
       "key": "SystemControlPageBackgroundListLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemListLowColor}"
     },
     {
       "key": "SystemControlPageBackgroundChromeLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeLowColor}"
     },
     {
       "key": "SystemControlPageBackgroundChromeMediumLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeMediumLowColor}"
     },
     {
       "key": "SystemControlPageBackgroundTransparentBrush",
+      "type": "SolidColorBrush",
       "color": "Transparent"
     },
     {
       "key": "SystemControlPageTextBaseHighBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseHighColor}"
     },
     {
       "key": "SystemControlPageTextBaseMediumBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemBaseMediumColor}"
     },
     {
       "key": "SystemControlPageTextChromeBlackMediumLowBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemChromeBlackMediumLowColor}"
     },
     {
       "key": "SystemControlTransparentBrush",
+      "type": "SolidColorBrush",
       "color": "Transparent"
     },
     {
       "key": "SystemControlErrorTextForegroundBrush",
+      "type": "SolidColorBrush",
       "color": "{StaticResource SystemErrorTextColor}"
     },
     {
       "key": "SystemControlTransientBorderBrush",
+      "type": "SolidColorBrush",
       "color": "#000000",
-      "opacity": "0.36"
+      "opacity": 0.36
     },
     {
       "key": "SystemControlTransientBackgroundBrush",
+      "type": "AcrylicBrush",
+      "color": "{StaticResource SystemChromeAltHighColor}",
       "backgroundSource": "HostBackdrop",
       "tintColor": "{StaticResource SystemChromeAltHighColor}",
-      "tintOpacity": "0.8",
-      "fallbackColor": "{StaticResource SystemChromeMediumLowColor}",
-      "type": "AcrylicBrush"
+      "tintOpacity": 0.8,
+      "fallbackColor": "{StaticResource SystemChromeMediumLowColor}"
     },
     {
       "key": "SystemControlDescriptionTextForegroundBrush",
-      "color": "SystemControlPageTextBaseMediumBrush",
-      "type": "StaticResource"
+      "type": "StaticResource",
+      "color": "SystemControlPageTextBaseMediumBrush"
     }
   ]
 }
