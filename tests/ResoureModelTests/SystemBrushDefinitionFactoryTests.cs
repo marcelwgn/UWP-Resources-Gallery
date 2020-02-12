@@ -1,9 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UWPResourcesGallery.Model.Brushes;
 
 namespace ResoureModelTests
@@ -16,11 +11,11 @@ namespace ResoureModelTests
         public void SolidColorBrushDefinitionsAreCorrect()
         {
             Assert.AreEqual(
-                "<SolidColorBrush x:Key=\"MyKey\" Color=\"{MyColor}\" />",
+                "<SolidColorBrush\n  x:Key=\"MyKey\"\n  Color=\"{MyColor}\" />",
                 SystemBrushDefinitionFactory.SolidColorBrushDefinition("MyKey", "{MyColor}"));
 
             Assert.AreEqual(
-                "<SolidColorBrush x:Key=\"MyKey\" Color=\"{MyColor}\" Opacity=\"0.4\" />",
+                "<SolidColorBrush\n  x:Key=\"MyKey\"\n  Color=\"{MyColor}\" Opacity=\"0.4\" />",
                 SystemBrushDefinitionFactory.SolidColorBrushDefinition("MyKey", "{MyColor}", 0.4));
         }
 
@@ -29,8 +24,8 @@ namespace ResoureModelTests
         public void AcrylicBrushDefinitionsAreCorrect()
         {
             Assert.AreEqual(
-                "<AcrylicBrush x:Key=\"MyKey\" BackgroundSource=\"MyBackgroundSource\" " +
-                "TintColor=\"MyTintColor\" TintOpacity=\"0.8\" FallBackColor=\"MyFallBackColor\" />",
+                "<AcrylicBrush\n  x:Key=\"MyKey\"\n  BackgroundSource=\"MyBackgroundSource\"\n  " +
+                "TintColor=\"MyTintColor\"\n  TintOpacity=\"0.8\"\n  FallBackColor=\"MyFallBackColor\" />",
                 SystemBrushDefinitionFactory.AcrylicBrushDefinition("MyKey", "MyBackgroundSource", "MyTintColor", 0.8, "MyFallBackColor"));
         }
 
@@ -38,7 +33,7 @@ namespace ResoureModelTests
         public void StaticResourceDefinitionsAreCorrect()
         {
             Assert.AreEqual(
-                "<StaticResource x:Key=\"MyKey\" ResourceKey=\"MyResourceKey\" />",
+                "<StaticResource\n  x:Key=\"MyKey\"\n  ResourceKey=\"MyResourceKey\" />",
                 SystemBrushDefinitionFactory.StaticResourceDefinition("MyKey", "MyResourceKey"));
         }
     }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Markup;
 using Windows.UI.Xaml.Media;
@@ -28,13 +24,13 @@ namespace UWPResourcesGallery.Model.Brushes
             Border grid = XamlReader.Load(@"<Border xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation'
                     RequestedTheme='Light'
                     Background='{ThemeResource " + Key + "}'></Border>") as Border;
-            LightThemeBrush = grid.Background as SolidColorBrush;
+            LightThemeBrush = grid.Background as Brush;
 
             // Dark theme brush
             grid = XamlReader.Load(@"<Border xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation'
                     RequestedTheme='Dark'
                     Background='{ThemeResource " + Key + "}'></Border>") as Border;
-            DarkThemeBrush = grid.Background as SolidColorBrush;
+            DarkThemeBrush = grid.Background as Brush;
 
             XAMLDefinition = xamlDefinition;
         }

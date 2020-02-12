@@ -38,14 +38,14 @@ namespace ResoureModelTests
         [TestMethod]
         public void FiltersCorrectly()
         {
-            var systemColorSource = new SystemColorsItemSource();
+            SystemColorsItemSource systemColorSource = new SystemColorsItemSource();
 
-            var colorName = "SystemAccentColorLight1";
+            string colorName = "SystemAccentColorLight1";
 
             systemColorSource.Filter(colorName);
 
             Assert.IsTrue(0 < systemColorSource.FilteredItems.Count);
-            foreach (var color in systemColorSource.FilteredItems)
+            foreach (SystemColor color in systemColorSource.FilteredItems)
             {
                 Assert.AreEqual(colorName, color.Key);
             }

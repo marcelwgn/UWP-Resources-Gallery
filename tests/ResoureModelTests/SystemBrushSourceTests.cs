@@ -2,7 +2,6 @@
 using System;
 using System.Threading.Tasks;
 using UWPResourcesGallery.Model.Brushes;
-using UWPResourcesGallery.Model.Colors;
 using Windows.ApplicationModel.Core;
 
 namespace ResoureModelTests
@@ -39,15 +38,15 @@ namespace ResoureModelTests
         [TestMethod]
         public void FiltersCorrectly()
         {
-            var systemBrushSource = new SystemBrushItemSource();
+            SystemBrushItemSource systemBrushSource = new SystemBrushItemSource();
 
-            var brushName = "SystemControlBackgroundAccentBrush";
-            var correctXAML = SystemBrushDefinitionFactory.SolidColorBrushDefinition("SystemControlBackgroundAccentBrush", "{ThemeResource SystemAccentColor}");
+            string brushName = "SystemControlBackgroundAccentBrush";
+            string correctXAML = SystemBrushDefinitionFactory.SolidColorBrushDefinition("SystemControlBackgroundAccentBrush", "{ThemeResource SystemAccentColor}");
 
             systemBrushSource.Filter(brushName);
 
             Assert.IsTrue(0 < systemBrushSource.FilteredItems.Count);
-            foreach (var brush in systemBrushSource.FilteredItems)
+            foreach (SystemBrush brush in systemBrushSource.FilteredItems)
             {
                 Assert.AreEqual(brushName, brush.Key);
                 Assert.AreEqual(correctXAML, brush.XAMLDefinition);

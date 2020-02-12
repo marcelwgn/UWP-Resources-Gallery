@@ -124,8 +124,14 @@
     </Compile>
     <Compile Include="Common\StandardConverter.cs" />
     <Compile Include="Common\SampleTemplateProvider.cs" />
+    <Compile Include="Controls\Templates\SystemBrushInformation.xaml.cs">
+      <DependentUpon>SystemBrushInformation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Templates\SystemColorInformation.xaml.cs">
       <DependentUpon>SystemColorInformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Templates\SystemBrushPresenter.xaml.cs">
+      <DependentUpon>SystemBrushPresenter.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Templates\SystemColorPresenter.xaml.cs">
       <DependentUpon>SystemColorPresenter.xaml</DependentUpon>
@@ -154,6 +160,9 @@
     </Compile>
     <Compile Include="Pages\StartPage.xaml.cs">
       <DependentUpon>StartPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SystemBrushesPage.xaml.cs">
+      <DependentUpon>SystemBrushesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\SystemColorsPage.xaml.cs">
       <DependentUpon>SystemColorsPage.xaml</DependentUpon>
@@ -227,9 +236,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\Templates\SystemBrushInformation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\Templates\SystemColorInformation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Templates\SystemBrushPresenter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\Templates\SystemColorPresenter.xaml">
       <SubType>Designer</SubType>
@@ -266,6 +283,10 @@
     <Page Include="Pages\StartPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SystemBrushesPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\SystemColorsPage.xaml">
       <SubType>Designer</SubType>
