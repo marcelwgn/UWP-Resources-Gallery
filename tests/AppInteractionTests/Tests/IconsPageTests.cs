@@ -50,7 +50,37 @@ namespace AppInteractionTests.Tests
                 Assert.IsTrue(0 < TestHelper.GetElementsOfTypeWithContent("ListItem", icon).Count);
                 Assert.IsTrue(TestHelper.GetElementsOfTypeWithContent("ListItem", icon)[0].Displayed);
             }
+        }
 
+        [TestMethod]
+        public void OnlySymbolsFilterWorksCorrectly()
+        {
+            OpenQA.Selenium.Appium.Windows.WindowsElement searchIconsBox = TestRunInitializer.Session.FindElementsByName("Search icons:")[1];
+            OpenQA.Selenium.Appium.Windows.WindowsElement symbolsOnlyCheckbox = TestRunInitializer.Session.FindElementsByName("Only show symbols")[0];
+            symbolsOnlyCheckbox.Click();
+
+            Assert.IsNotNull(searchIconsBox);
+            Assert.IsTrue(searchIconsBox.Displayed);
+            Assert.IsTrue(searchIconsBox.Enabled);
+
+            searchIconsBox.Clear();
+            TestHelper.WaitMilli(500);
+
+            searchIconsBox.SendKeys("Global");
+            TestHelper.WaitMilli(500);
+
+            Assert.IsTrue(0 < TestHelper.GetElementsOfTypeWithContent("ListItem", "Global").Count);
+            Assert.IsTrue(TestHelper.GetElementsOfTypeWithContent("ListItem", "Global")[0].Displayed);
+
+            searchIconsBox.Clear();
+            TestHelper.WaitMilli(500);
+
+            searchIconsBox.SendKeys("ED55");
+            TestHelper.WaitMilli(500);
+
+            Assert.IsTrue(0 == TestHelper.GetElementsOfTypeWithContent("ListItem", "ED55").Count);
+            searchIconsBox.Clear();
+            symbolsOnlyCheckbox.Click();
         }
     }
 }

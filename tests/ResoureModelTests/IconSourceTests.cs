@@ -21,5 +21,19 @@ namespace ResoureModelTests
                 Assert.IsNotNull(IconItemSource.Items[i]);
             }
         }
+
+        [TestMethod]
+        public void SymbolsOnlyFilterIsCorrect()
+        {
+            var source = new IconItemSource();
+            source.Filter("Global");
+            foreach (var item in source.FilteredSymbolItems)
+            {
+                Assert.IsTrue(item.IsSymbol);
+            }
+
+            source.Filter("ED55");
+            Assert.IsTrue(source.FilteredSymbolItems.Count == 0);
+        }
     }
 }
