@@ -43,7 +43,11 @@
                         Official list of system colors:
                         <Hyperlink NavigateUri="https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/xaml-theme-resources">https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/xaml-theme-resources</Hyperlink>
                     </Paragraph>
-                
+                    <Paragraph>
+                        List of system brushes from generic.xaml file can be found here:
+                        <Hyperlink NavigateUri="https://github.com/MicrosoftDocs/windows-uwp/issues/2072">https://github.com/MicrosoftDocs/windows-uwp/issues/2072</Hyperlink>
+                    </Paragraph>
+                    
                     <Paragraph/>
                 
                     <Paragraph>

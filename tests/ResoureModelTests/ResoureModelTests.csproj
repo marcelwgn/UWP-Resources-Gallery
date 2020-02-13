@@ -113,6 +113,8 @@
     <SDKReference Include="TestPlatform.Universal, Version=$(UnitTestPlatformVersion)" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SystemBrushDefinitionFactoryTests.cs" />
+    <Compile Include="SystemBrushSourceTests.cs" />
     <Compile Include="SystemColorSourceTests.cs" />
     <Compile Include="IconSourceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -34,5 +34,21 @@ namespace ResoureModelTests
                 Assert.IsNotNull(SystemColorsItemSource.Items[i]);
             }
         }
+
+        [TestMethod]
+        public void FiltersCorrectly()
+        {
+            SystemColorsItemSource systemColorSource = new SystemColorsItemSource();
+
+            string colorName = "SystemAccentColorLight1";
+
+            systemColorSource.Filter(colorName);
+
+            Assert.IsTrue(0 < systemColorSource.FilteredItems.Count);
+            foreach (SystemColor color in systemColorSource.FilteredItems)
+            {
+                Assert.AreEqual(colorName, color.Key);
+            }
+        }
     }
 }

@@ -22,6 +22,11 @@ namespace UWPResourcesGallery.Pages
 
         private void NavigateToSystemBrushesPage_Click(object sender, RoutedEventArgs e)
         {
+            AppNavigation.NavigateToPageType(typeof(SystemBrushesPage));
+        }
+
+        private void NavigateToSystemColorsPage_Click(object sender, RoutedEventArgs e)
+        {
             AppNavigation.NavigateToPageType(typeof(SystemColorsPage));
         }
     }

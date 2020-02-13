@@ -1,0 +1,31 @@
+﻿<UserControl
+    x:Class="UWPResourcesGallery.Controls.Templates.SystemBrushInformation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:common="using:UWPResourcesGallery.Controls.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    mc:Ignorable="d">
+
+    <StackPanel>
+        <!--  Hex codes  -->
+        <TextBlock Margin="0,0,0,4" Text="Definition as XAML"   />
+        <common:CodeSample
+            x:Name="XAMLDefinitionCodeSample"
+            HorizontalAlignment="Stretch"
+            IsSyntaxHighlightingEnabled="True" />
+
+        <!--  Themeresource snippet  -->
+        <TextBlock
+            Margin="0,16,0,4"
+            HorizontalAlignment="Stretch"
+            Text="Themeresource snippet" />
+        <common:CodeSample
+            x:Name="ThemeresourceCodeSample"
+            HorizontalAlignment="Stretch"
+            IsSyntaxHighlightingEnabled="True" />
+
+    </StackPanel>
+</UserControl>

@@ -84,6 +84,11 @@ namespace UWPResourcesGallery
             {
                 RootNavigation.SelectedItem = _SystemColorsPage;
             }
+            if (RootFrame.CurrentSourcePageType == typeof(SystemBrushesPage))
+            {
+                RootNavigation.SelectedItem = _SystemBrushesPage;
+            }
+
         }
 
         private void RootNavigation_ItemInvoked(MUXC.NavigationView sender, MUXC.NavigationViewItemInvokedEventArgs args)
@@ -105,6 +110,10 @@ namespace UWPResourcesGallery
             if (selectedItem == _SystemColorsPage)
             {
                 RootFrame.Navigate(typeof(SystemColorsPage));
+            }
+            if (selectedItem == _SystemBrushesPage)
+            {
+                RootFrame.Navigate(typeof(SystemBrushesPage));
             }
         }
 

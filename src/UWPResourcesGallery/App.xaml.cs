@@ -1,5 +1,6 @@
 ﻿using System;
 using UWPResourcesGallery.Common;
+using UWPResourcesGallery.Model.Brushes;
 using UWPResourcesGallery.Model.Colors;
 using UWPResourcesGallery.Model.Icons;
 using Windows.ApplicationModel;
@@ -107,6 +108,7 @@ namespace UWPResourcesGallery
             // This must block as the app can not resume without this data being loaded
             IconItemSource.LoadIconsList();
             SystemColorsItemSource.LoadSystemColors();
+            SystemBrushItemSource.LoadSystemBrushes();
         }
 
 

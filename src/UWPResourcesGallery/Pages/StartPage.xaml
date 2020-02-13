@@ -70,6 +70,27 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
+                            <FontIcon Grid.RowSpan="2" Margin="4,8,16,0" Glyph="&#xEE56;" FontSize="36" VerticalAlignment="Top"/>
+                            <TextBlock Grid.Column="1" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}" Text="Systembrushes"/>
+                            <TextBlock Grid.Column="1" Grid.Row="1" Margin="0,4,0,0" TextWrapping="WrapWholeWords" MaxWidth="300"
+                                    Text="Collection of system brushes and resources which are provided by Windows 10." />
+                        </Grid>
+                    </Button>
+
+                    <Button Style="{ThemeResource NavigatingButtonStyle}" Click="NavigateToSystemColorsPage_Click" 
+                            contract7Present:CornerRadius="0">
+                        <Grid VerticalAlignment="Stretch" Height="80" Padding="4,0,8,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
                             <FontIcon Grid.RowSpan="2" Margin="4,8,16,0" Glyph="&#xE790;" FontSize="36" VerticalAlignment="Top"/>
                             <TextBlock Grid.Column="1" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}" Text="Systemcolors"/>
                             <TextBlock Grid.Column="1" Grid.Row="1" Margin="0,4,0,0" TextWrapping="WrapWholeWords" MaxWidth="300"

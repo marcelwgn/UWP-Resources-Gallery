@@ -110,6 +110,9 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Brushes\SystemBrush.cs" />
+    <Compile Include="Brushes\SystemBrushDefinitionFactory.cs" />
+    <Compile Include="Brushes\SystemBrushItemSource.cs" />
     <Compile Include="Colors\SystemColor.cs" />
     <Compile Include="Colors\SystemColorsItemSource.cs" />
     <Compile Include="GenericItemsSource.cs" />
