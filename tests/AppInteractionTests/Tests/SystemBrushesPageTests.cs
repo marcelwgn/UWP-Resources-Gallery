@@ -13,6 +13,10 @@ namespace AppInteractionTests.Tests
         [TestMethod]
         public void RendersBrushes()
         {
+            OpenQA.Selenium.Appium.Windows.WindowsElement searchIconsBox = TestRunInitializer.Session.FindElementsByName("Search system colors:")[1];
+            searchIconsBox.Clear();
+            TestHelper.WaitMilli(500); 
+            
             string[] brushes = new string[] { "SystemControlBackgroundAccentBrush", "SystemControlBackgroundAltHighBrush" };
             foreach (string brushName in brushes)
             {
