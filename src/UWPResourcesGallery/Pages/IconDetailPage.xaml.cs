@@ -1,4 +1,5 @@
-﻿using UWPResourcesGallery.Common;
+﻿using ColorCode;
+using UWPResourcesGallery.Common;
 using UWPResourcesGallery.Model.Icons;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
@@ -15,6 +16,10 @@ namespace UWPResourcesGallery.Pages
         public IconDetailPage()
         {
             InitializeComponent();
+            SymbolIconCSCodeSample.SyntaxLanguage = Languages.CSharp;
+            ButtonSymbolIconCSCodeSample.SyntaxLanguage = Languages.CSharp;
+            FontIconCSCodeSample.SyntaxLanguage = Languages.CSharp;
+            ButtonFontIconCSCodeSample.SyntaxLanguage = Languages.CSharp;
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -32,10 +37,17 @@ namespace UWPResourcesGallery.Pages
             if (e.Parameter is IconItem ownIcon)
             {
                 icon = ownIcon;
-                fontIconCode = SampleTemplateProvider.GetFontIconCodeFromGlyph(icon.StringGlyph);
-                FontIconCodeSample.Code = fontIconCode;
-                CustomIconCode.Code = SampleTemplateProvider.GetCustomizedFontIconCode(icon.StringGlyph, FontIconColorPicker.Color.ToString(), ((int)CustomIconFontSize.Value).ToString());
-                SymbolIconCodeSample.Code = SampleTemplateProvider.GetSymbolIconCodeFromGlyph(icon.Name);
+                SymbolIconXAMLCodeSample.Code = SampleTemplateProvider.GetXAMLSymbolIconCodeFromGlyph(icon.Name);
+                SymbolIconCSCodeSample.Code = SampleTemplateProvider.GetCSSymbolIconCodeFromGlyph(icon.Name);
+                ButtonSymbolIconXAMLCodeSample.Code = SampleTemplateProvider.GetXAMLButtonIconFromSymbolName(icon.Name);
+                ButtonSymbolIconCSCodeSample.Code = SampleTemplateProvider.GetCSButtonIconFromSymbolName(icon.Name);
+
+                FontIconXAMLCodeSample.Code = SampleTemplateProvider.GetXAMLFontIconCodeFromGlyph(icon.StringGlyph);
+                FontIconCSCodeSample.Code = SampleTemplateProvider.GetCSFontIconCodeFromGlyph(icon.StringGlyph);
+                ButtonFontIconXAMLCodeSample.Code = SampleTemplateProvider.GetXAMLButtonIconFromGlyph(icon.StringGlyph);
+                ButtonFontIconCSCodeSample.Code = SampleTemplateProvider.GetCSButtonIconFromGlyph(icon.StringGlyph);
+
+                CustomIconCode.Code = SampleTemplateProvider.GetXAMLCustomizedFontIconCode(icon.StringGlyph, FontIconColorPicker.Color.ToString(), ((int)CustomIconFontSize.Value).ToString());
                 Bindings.Update();
             }
         }
@@ -49,7 +61,7 @@ namespace UWPResourcesGallery.Pages
             {
                 return;
             }
-            CustomIconCode.Code = SampleTemplateProvider.GetCustomizedFontIconCode(icon.StringGlyph
+            CustomIconCode.Code = SampleTemplateProvider.GetXAMLCustomizedFontIconCode(icon.StringGlyph
                 , args.NewColor.ToString()
                 , ((int)CustomIconFontSize.Value).ToString());
         }
@@ -60,7 +72,7 @@ namespace UWPResourcesGallery.Pages
             {
                 return;
             }
-            CustomIconCode.Code = SampleTemplateProvider.GetCustomizedFontIconCode(icon.StringGlyph
+            CustomIconCode.Code = SampleTemplateProvider.GetXAMLCustomizedFontIconCode(icon.StringGlyph
                 , FontIconColorPicker.Color.ToString()
                 , ((int)CustomIconFontSize.Value).ToString());
         }

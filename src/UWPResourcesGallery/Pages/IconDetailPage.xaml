@@ -40,7 +40,7 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        
+
         <StackPanel Padding="25,10">
             <!-- Header -->
             <StackPanel x:Name="TransitionReceiver" Orientation="Horizontal" Margin="0,0,0,16" >
@@ -51,14 +51,14 @@
                 <TextBlock VerticalAlignment="Center" Margin="16,0,0,0"
                         FontSize="24"  Text="{x:Bind icon.Name}"/>
             </StackPanel>
-            
+
             <!-- Content -->
             <StackPanel x:Name="RootFontIconPageContent" Orientation="Vertical">
                 <!-- Standard code samples -->
                 <StackPanel MaxWidth="700" HorizontalAlignment="Left">
                     <!-- Info title -->
                     <TextBlock Style="{ThemeResource SectionHeader}" Margin="0,0,0,4">Info</TextBlock>
-                    
+
                     <!-- Info panel -->
                     <Grid HorizontalAlignment="Stretch" Padding="11"
                         BorderBrush="{ThemeResource SystemBaseLowColor}" BorderThickness="1" >
@@ -93,17 +93,30 @@
 
                     <!--Normal code sample(s)-->
                     <TextBlock Margin="0,16,0,0" Style="{ThemeResource SectionHeader}">Icon as control</TextBlock>
-                    
+
                     <!-- SymbolIcon (only show when icon is present in Symbol enum) -->
                     <StackPanel HorizontalAlignment="Stretch" Visibility="{x:Bind icon.IsSymbol,Converter={StaticResource BoolToVisibilityConverter}}">
-                        <TextBlock  Margin="0,4,0,4" FontSize="16">Symbolicon</TextBlock>
-                        <common:CodeSample x:Name="SymbolIconCodeSample" Margin="0,0,0,4" 
+                        <TextBlock  Margin="0,4,0,4" FontSize="16">SymbolIcon</TextBlock>
+                        <common:CodeSample x:Name="SymbolIconXAMLCodeSample"
+                            HorizontalAlignment="Stretch" IsSyntaxHighlightingEnabled="True"/>
+                        <common:CodeSample x:Name="SymbolIconCSCodeSample" Margin="0,8,0,4" 
+                            HorizontalAlignment="Stretch" IsSyntaxHighlightingEnabled="True"/>
+                        
+                        <TextBlock  Margin="0,4,0,4" FontSize="16">Button with SymbolIcon</TextBlock>
+                        <common:CodeSample x:Name="ButtonSymbolIconXAMLCodeSample"
+                            HorizontalAlignment="Stretch" IsSyntaxHighlightingEnabled="True"/>
+                        <common:CodeSample x:Name="ButtonSymbolIconCSCodeSample" Margin="0,8,0,4" 
                             HorizontalAlignment="Stretch" IsSyntaxHighlightingEnabled="True"/>
                     </StackPanel>
                     
                     <!-- Font icon-->
-                    <TextBlock HorizontalAlignment="Stretch" FontSize="16" Margin="0,0,0,4">FontIcon</TextBlock>
-                    <common:CodeSample HorizontalAlignment="Stretch" x:Name="FontIconCodeSample" IsSyntaxHighlightingEnabled="True"/>
+                    <TextBlock HorizontalAlignment="Stretch" FontSize="16" Margin="0,4,0,4">FontIcon</TextBlock>
+                    <common:CodeSample HorizontalAlignment="Stretch" x:Name="FontIconXAMLCodeSample" IsSyntaxHighlightingEnabled="True"/>
+                    <common:CodeSample HorizontalAlignment="Stretch" x:Name="FontIconCSCodeSample" IsSyntaxHighlightingEnabled="True" Margin="0,8,0,4"/>
+
+                    <TextBlock HorizontalAlignment="Stretch" FontSize="16" Margin="0,4,0,4">Button with FontIcon</TextBlock>
+                    <common:CodeSample HorizontalAlignment="Stretch" x:Name="ButtonFontIconXAMLCodeSample" IsSyntaxHighlightingEnabled="True"/>
+                    <common:CodeSample HorizontalAlignment="Stretch" x:Name="ButtonFontIconCSCodeSample" IsSyntaxHighlightingEnabled="True" Margin="0,8,0,0"/>
                 </StackPanel>
 
                 <!-- Separator -->
@@ -115,7 +128,7 @@
                 <StackPanel x:Name="CustomFontIconPanel">
                     <!--Header-->
                     <TextBlock Style="{ThemeResource SectionHeader}" Margin="0,0,0,4">Custom FontIcon</TextBlock>
-                    
+
                     <!--Customization panel-->
                     <StackPanel x:Name="CustomFontIconPanelContent" Orientation="Vertical"
                         HorizontalAlignment="Left" MaxWidth="320">

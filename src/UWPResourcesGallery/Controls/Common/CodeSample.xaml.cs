@@ -59,9 +59,25 @@ namespace UWPResourcesGallery.Controls.Common
                 new PropertyMetadata(false, new PropertyChangedCallback(OnCodeDependencyPropertyChanged)));
         #endregion
 
+
+        #region SyteaxmLanguage property
+        public ILanguage SyntaxLanguage
+        {
+            get { return (ILanguage)GetValue(SyntaxLanguageProperty); }
+            set { SetValue(SyntaxLanguageProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for SyntaxLanguage.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty SyntaxLanguageProperty =
+            DependencyProperty.Register("SyntaxLanguage", typeof(Languages), typeof(ILanguage), new PropertyMetadata(0));
+        #endregion
+
+
         public CodeSample()
         {
             InitializeComponent();
+            // Setting default syntax language
+            SyntaxLanguage = Languages.Xml;
         }
 
         private void CodeChanged()
@@ -77,8 +93,12 @@ namespace UWPResourcesGallery.Controls.Common
                 if (ThemeHelper.IsDarkTheme())
                 {
                     UpdateFormatterDarkThemeColors(formatter);
+                    if(SyntaxLanguage != Languages.Xml)
+                    {
+                        formatter = new RichTextBlockFormatter(ElementTheme.Dark);
+                    }
                 }
-                formatter.FormatRichTextBlock(Code, Languages.Xml, CodeBlock);
+                formatter.FormatRichTextBlock(Code, SyntaxLanguage, CodeBlock);
             }
             else
             {
@@ -95,6 +115,16 @@ namespace UWPResourcesGallery.Controls.Common
         private static void UpdateFormatterDarkThemeColors(RichTextBlockFormatter formatter)
         {
             // Replace the default dark theme resources with ones that more closely align to VS Code dark theme.
+            // CS
+            formatter.Styles.Remove(formatter.Styles[ScopeName.ClassName]);
+            formatter.Styles.Add(new ColorCode.Styling.Style(ScopeName.ClassName)
+            {
+                Foreground = "#FF3AC6AD",
+                ReferenceName = "className"
+            });
+
+
+            // XAML
             formatter.Styles.Remove(formatter.Styles[ScopeName.XmlAttribute]);
             formatter.Styles.Remove(formatter.Styles[ScopeName.XmlAttributeQuotes]);
             formatter.Styles.Remove(formatter.Styles[ScopeName.XmlAttributeValue]);
