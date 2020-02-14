@@ -11,7 +11,6 @@ namespace UWPResourcesGallery.Pages
     public sealed partial class IconDetailPage : Page
     {
         private IconItem icon;
-        private string fontIconCode;
 
         public IconDetailPage()
         {
