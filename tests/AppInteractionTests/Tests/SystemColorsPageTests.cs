@@ -13,6 +13,10 @@ namespace AppInteractionTests.Tests
         [TestMethod]
         public void RendersBrushes()
         {
+            OpenQA.Selenium.Appium.Windows.WindowsElement searchIconsBox = TestRunInitializer.Session.FindElementsByName("Search system colors:")[1];
+            searchIconsBox.Clear();
+            TestHelper.WaitMilli(500);
+
             string[] brushes = new string[] { "SystemAltHighColor", "SystemAltLowColor" };
             foreach (string brushName in brushes)
             {
@@ -45,6 +49,7 @@ namespace AppInteractionTests.Tests
                 Assert.IsTrue(0 < TestHelper.GetElementsOfTypeWithContent("ListItem", brush).Count);
                 Assert.IsTrue(TestHelper.GetElementsOfTypeWithContent("ListItem", brush)[0].Displayed);
             }
+            searchIconsBox.Clear();
         }
     }
 }

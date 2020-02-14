@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UWPResourcesGallery.Pages;
 using Windows.Foundation.Metadata;
 using Windows.UI;
@@ -179,6 +179,9 @@ namespace UWPResourcesGallery
                 bool modeSwitched = await ApplicationView.GetForCurrentView().TryEnterViewModeAsync(ApplicationViewMode.CompactOverlay);
                 if (modeSwitched)
                 {
+                    AppTitle.SetValue(Grid.ColumnProperty, 1);
+                    SwitchCompactOverlayModeButton.SetValue(Grid.ColumnProperty, 0);
+
                     SwitchCompactOverlayModeButton.SetValue(AutomationProperties.NameProperty, "Switch to normal mode");
                     ToolTipService.SetToolTip(SwitchCompactOverlayModeButton, "Switch to normal mode");
                     CompactOverlayArrowsMinimizeIcon.Visibility = Visibility.Collapsed;
@@ -190,6 +193,9 @@ namespace UWPResourcesGallery
                 bool modeSwitched = await ApplicationView.GetForCurrentView().TryEnterViewModeAsync(ApplicationViewMode.Default);
                 if (modeSwitched)
                 {
+                    AppTitle.SetValue(Grid.ColumnProperty, 0);
+                    SwitchCompactOverlayModeButton.SetValue(Grid.ColumnProperty, 1);
+
                     SwitchCompactOverlayModeButton.SetValue(AutomationProperties.NameProperty, "Switch to overlay mode");
                     ToolTipService.SetToolTip(SwitchCompactOverlayModeButton, "Switch to overlay mode");
                     CompactOverlayArrowsMinimizeIcon.Visibility = Visibility.Visible;

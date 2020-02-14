@@ -49,5 +49,16 @@ namespace UWPResourcesGallery.Pages
             }
             Frame.Navigate(typeof(IconDetailPage), e.ClickedItem as IconItem, new DrillInNavigationTransitionInfo());
         }
+
+        private void CheckBox_Checked(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            ItemsGridView.ItemsSource = source.FilteredSymbolItems;
+
+        }
+
+        private void CheckBox_Unchecked(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            ItemsGridView.ItemsSource = source.FilteredItems;
+        }
     }
 }

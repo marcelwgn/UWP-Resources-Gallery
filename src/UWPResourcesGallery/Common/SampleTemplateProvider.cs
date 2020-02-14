@@ -1,24 +1,56 @@
-﻿namespace UWPResourcesGallery.Common
+﻿using Windows.UI.Xaml.Controls;
+
+namespace UWPResourcesGallery.Common
 {
     internal static class SampleTemplateProvider
     {
-        private const string FontIconWithGlyph =
-            "<FontIcon Glyph=\"${Glyph}\"/>";
-
-        private const string SymbolIconWithGlyph =
-            "<SymbolIcon Symbol=\"${Symbol}\"/>";
-
-        public static string GetFontIconCodeFromGlyph(string glyph)
+        public static string GetXAMLFontIconCodeFromGlyph(string glyph)
         {
-            return FontIconWithGlyph.Replace("${Glyph}", glyph, System.StringComparison.Ordinal);
+            return "<FontIcon Glyph=\"" + glyph + "\" />";
+        }
+        public static string GetCSFontIconCodeFromGlyph(string glyph)
+        {
+            return "FontIcon icon = new FontIcon();" +
+                "\nicon.Glyph = \"" + glyph + "\";";
         }
 
-        internal static string GetSymbolIconCodeFromGlyph(string name)
+        public static string GetXAMLButtonIconFromGlyph(string glyph)
         {
-            return SymbolIconWithGlyph.Replace("${Symbol}", name, System.StringComparison.Ordinal);
+            return "<Button>" +
+                "\n  " + GetXAMLFontIconCodeFromGlyph(glyph) +
+                "\n</Button>";
+        }
+        public static string GetCSButtonIconFromGlyph(string glyph)
+        {
+            return "Button button = new Button();" +
+                "\nbutton.Content = new FontIcon();" +
+                "\n(button.Content as FontIcon).Glyph = \"" + glyph + "\";";
         }
 
-        internal static string GetCustomizedFontIconCode(string glyph, string color, string size)
+        internal static string GetXAMLSymbolIconCodeFromGlyph(string name)
+        {
+            return "<SymbolIcon Symbol=\"" + name + "\" />";
+        }
+        public static string GetCSSymbolIconCodeFromGlyph(string name)
+        {
+            return "SymbolIcon icon = new SymbolIcon();" +
+                "\nicon.Symbol = Symbol." + name + ";";
+        }
+
+        public static string GetXAMLButtonIconFromSymbolName(string name)
+        {
+            return "<Button>" +
+                "\n  " + GetXAMLSymbolIconCodeFromGlyph(name) +
+                "\n</Button>";
+        }
+        public static string GetCSButtonIconFromSymbolName(string glyph)
+        {
+            return "Button button = new Button();" +
+                "\nbutton.Content = new SymbolIcon();" +
+                "\n(button.Content as SymbolIcon).Symbol = Symbol." + glyph + ";";
+        }
+
+        internal static string GetXAMLCustomizedFontIconCode(string glyph, string color, string size)
         {
             return $"<FontIcon Glyph=\"{glyph}\"\n     Foreground=\"{color}\"\n     FontSize=\"{size}\"/>";
         }

@@ -1,5 +1,4 @@
 ﻿<Page
-    xmlns:pages="using:UWPResourcesGallery.Pages"
     x:Class="UWPResourcesGallery.Pages.IconsListPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -31,9 +30,9 @@
                     </VisualState.StateTriggers>
                 </VisualState>
             </VisualStateGroup>
-            
+
         </VisualStateManager.VisualStateGroups>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="50"/>
@@ -46,29 +45,27 @@
 
         <common:PageHeader PageName="Segoe MDL2 Icons" Margin="14,0,0,0"/>
 
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="15" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="14" />
-            </Grid.ColumnDefinitions>
-            <TextBlock x:Name="SearchIconsLabel" Margin="0,0,10,1" Grid.Column="1" Text="Search icons:" VerticalAlignment="Center"/>
-            <TextBox Grid.Column="2" MinWidth="250" VerticalAlignment="Center" Margin="0,1,0,1" TextChanged="SearchTextBox_TextChanged" AutomationProperties.LabeledBy="{x:Bind SearchIconsLabel}"/>
+        <StackPanel Grid.Row="1">
+            <StackPanel Orientation="Horizontal" Margin="16,4,0,8">
+                <TextBlock x:Name="SearchIconsLabel" Margin="0,0,10,1" Text="Search icons:" VerticalAlignment="Center"/>
+                <TextBox MinWidth="250" VerticalAlignment="Center" Margin="0,1,0,1" 
+                    TextChanged="SearchTextBox_TextChanged" AutomationProperties.LabeledBy="{x:Bind SearchIconsLabel}"/>
+                <CheckBox Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" IsChecked="False" 
+                    Margin="16,2,0,0" Content="Only show symbols"/>
+            </StackPanel>
             <Border VerticalAlignment="Bottom" BorderThickness="1" BorderBrush="{ThemeResource SystemBaseMediumLowColor}" Grid.ColumnSpan="100"/>
-        </Grid>
+        </StackPanel>
 
         <GridView x:Name="ItemsGridView" 
-                    AutomationProperties.Name="Icons list"
-                    SelectionMode="None"
-                    IsItemClickEnabled="True"
-                    ItemClick="ItemsGridView_ItemClick"
-                    Padding="0" 
-                    Grid.Row="2">
+            AutomationProperties.Name="Icons list"
+            SelectionMode="None"
+            IsItemClickEnabled="True"
+            ItemClick="ItemsGridView_ItemClick"
+            Padding="0" 
+            Grid.Row="2">
             <GridView.Transitions>
                 <TransitionCollection>
-                    <EntranceThemeTransition/>
+                    <ContentThemeTransition />
                 </TransitionCollection>
             </GridView.Transitions>
             <GridView.ItemContainerStyle>
@@ -79,7 +76,7 @@
                     <Setter Property="MaxWidth" Value="240" />
                 </Style>
             </GridView.ItemContainerStyle>
-            
+
             <GridView.ItemTemplate>
                 <DataTemplate>
                     <controls:IconItemControl Icon="{Binding}" HorizontalAlignment="Stretch"/>
