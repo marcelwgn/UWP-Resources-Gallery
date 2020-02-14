@@ -45,6 +45,7 @@ namespace AppInteractionTests.Tests
                 Assert.IsTrue(0 < TestHelper.GetElementsOfTypeWithContent("ListItem", brush).Count);
                 Assert.IsTrue(TestHelper.GetElementsOfTypeWithContent("ListItem", brush)[0].Displayed);
             }
+            searchIconsBox.Clear();
         }
     }
 }
