@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <Package
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
@@ -9,7 +9,7 @@
   <Identity
     Name="UWP-Resourcess-Gallery-Debug"
     Publisher="CN=Marcel Wagner"
-    Version="1.1.0.0" />
+    Version="1.1.1.0" />
 
   <mp:PhoneIdentity PhoneProductId="6245fa1a-e391-413d-9b02-a4ae1f060713" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
