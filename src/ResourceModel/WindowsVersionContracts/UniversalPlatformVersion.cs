@@ -16,7 +16,7 @@ namespace UWPResourcesGallery.Model.WindowsVersionContracts
         public string CodeName { get; private set; }
 
 
-        public UniversalPlatformContract[] VersionContracts { get; private set; }
+        public List<UniversalPlatformContract> VersionContracts { get; private set; } = new List<UniversalPlatformContract>();
 
         public UniversalPlatformVersion(string version, string buildVersion,
             string versionName, string marketingName,
@@ -28,21 +28,21 @@ namespace UWPResourcesGallery.Model.WindowsVersionContracts
             MarketingName = marketingName;
             CodeName = codeName;
 
-            if (contractsArray == null)
+            if(contractsArray == null)
             {
-                VersionContracts = Array.Empty<UniversalPlatformContract>();
                 return;
             }
 
-            VersionContracts = new UniversalPlatformContract[contractsArray.Count];
             for (uint index = 0; index < contractsArray.Count; index++)
             {
                 JsonObject entry = contractsArray.GetObjectAt(index);
 
-                VersionContracts[index] = new UniversalPlatformContract(
+                VersionContracts.Add(
+                    new UniversalPlatformContract(
                         entry["name"].GetString(),
                         entry["version"].GetString()
-                    );
+                    )
+                );
             }
         }
 
@@ -70,7 +70,10 @@ namespace UWPResourcesGallery.Model.WindowsVersionContracts
                         {
                             return true;
                         }
-
+                        if(VersionContracts.Any( contract =>  { return contract.FitsFilter(key); }))
+                        {
+                            return true;
+                        }
                         // No matches, return false
                         return false;
                     }
