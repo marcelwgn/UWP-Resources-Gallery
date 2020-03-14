@@ -19,15 +19,15 @@ namespace ResoureModelTests
                 throw new ArgumentNullException(nameof(context));
             }
 
-            UniversalPlatformContractsSource.LoadWindowsVersionContracts();
+            UniversalPlatformVersionSource.LoadWindowsVersionContracts();
         }
 
         [TestMethod]
         public void LoadsWindowsVersionsCorrectly()
         {
-            Assert.IsTrue(UniversalPlatformContractsSource.Items.Count > 8);
+            Assert.IsTrue(UniversalPlatformVersionSource.Items.Count > 8);
 
-            var firstWindowsVersion = UniversalPlatformContractsSource.Items[0];
+            var firstWindowsVersion = UniversalPlatformVersionSource.Items[0];
 
             Assert.IsNotNull(firstWindowsVersion);
             Assert.IsTrue("1507".Equals(
@@ -46,7 +46,7 @@ namespace ResoureModelTests
         [DataRow("Universal", 9)]
         public void FilteringWorksAsExpected(string keywords,int expectedResultsCount)
         {
-            var contactSource = new UniversalPlatformContractsSource();
+            var contactSource = new UniversalPlatformVersionSource();
 
             contactSource.Filter(keywords);
             Assert.AreEqual(expectedResultsCount, contactSource.FilteredItems.Count);

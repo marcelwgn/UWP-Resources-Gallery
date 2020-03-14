@@ -10,7 +10,8 @@ namespace UWPResourcesGallery.Model.WindowsVersionContracts
     {
         public string Name { get; private set; }
         public string Version { get; private set; }
-        
+        public int VersionInt => (int)double.Parse(Version);
+
         public UniversalPlatformContract(string name, string version)
         {
             Name = name;

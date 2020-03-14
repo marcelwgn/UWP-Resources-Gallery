@@ -7,7 +7,7 @@ using Windows.Data.Json;
 
 namespace UWPResourcesGallery.Model.WindowsVersionContracts
 {
-    public class UniversalPlatformContractsSource : GenericItemsSource<UniversalPlatformVersion>
+    public class UniversalPlatformVersionSource : GenericItemsSource<UniversalPlatformVersion>
     {
         public static void LoadWindowsVersionContracts()
         {
