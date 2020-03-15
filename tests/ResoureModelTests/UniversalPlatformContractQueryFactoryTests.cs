@@ -18,16 +18,16 @@ namespace ResoureModelTests
             var contract = new UniversalPlatformContract("My.Contract", "1.0");
 
             var CSharpQuery = UniversalPlatformContractQueryFactory.GetCSharpQuery(contract);
-            Assert.AreEqual("ApiInformation.IsContractPresent(\"My.Contract\", 1)", CSharpQuery);
+            Assert.AreEqual("ApiInformation.IsApiContractPresent(\"My.Contract\", 1)", CSharpQuery);
         }
 
         [TestMethod]
         public void VerifyXAMLNamespaceIsCorrect()
         {
-            var contract = new UniversalPlatformContract("My.Awesome", "1.0");
+            var contract = new UniversalPlatformContract("My.AwesomeContract", "1.0");
 
             var xamlNamespace = UniversalPlatformContractQueryFactory.GetXAMLConditionalNameSpace(contract);
-            Assert.AreEqual("xmlns:ContractAwesomeVersion1Present=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(My.Awesome, 1)\"", xamlNamespace);
+            Assert.AreEqual("xmlns:AwesomeContractVersion1Present=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(My.AwesomeContract, 1)\"", xamlNamespace);
         }
     }
 }

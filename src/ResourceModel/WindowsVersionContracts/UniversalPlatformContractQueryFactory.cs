@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Windows.Foundation.Metadata;
 
 namespace UWPResourcesGallery.Model.WindowsVersionContracts
 {
@@ -12,23 +8,24 @@ namespace UWPResourcesGallery.Model.WindowsVersionContracts
         {
             if (contract == null)
             {
-                throw new ArgumentNullException(nameof(contract));
+                return "";
             }
-            return string.Concat("ApiInformation.IsContractPresent(\"", contract.Name, "\", ", contract.VersionInt, ")");
+            return string.Concat("ApiInformation.IsApiContractPresent(\"", contract.Name, "\", ", contract.VersionInt, ")");
         }
 
         public static string GetXAMLConditionalNameSpace(UniversalPlatformContract contract)
         {
-            if(contract == null)
+            if (contract == null)
             {
-                throw new ArgumentNullException(nameof(contract));
+                return "";
             }
+
             var splitName = contract.Name.Split(".");
-            var name = string.Concat("Contract", splitName[splitName.Length - 1], "Version", contract.VersionInt, "Present");
+            // Construct a suitable namespace name, most contracts are named "...Contract", so this is a reasonable name suggestion
+            var name = string.Concat(splitName[splitName.Length - 1], "Version", contract.VersionInt, "Present");
             return string.Concat("xmlns:", name,
                 "=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(", 
                 contract.Name, ", ", contract.VersionInt, ")\"");
         }
-
     }
 }
