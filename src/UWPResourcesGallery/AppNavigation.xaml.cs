@@ -88,6 +88,10 @@ namespace UWPResourcesGallery
             {
                 RootNavigation.SelectedItem = _SystemBrushesPage;
             }
+            if (RootFrame.CurrentSourcePageType == typeof(UniversalContractsPage))
+            {
+                RootNavigation.SelectedItem = _UniversalContractsPage;
+            }
 
         }
 
@@ -114,6 +118,10 @@ namespace UWPResourcesGallery
             if (selectedItem == _SystemBrushesPage)
             {
                 RootFrame.Navigate(typeof(SystemBrushesPage));
+            }
+            if (selectedItem == _UniversalContractsPage)
+            {
+                RootFrame.Navigate(typeof(UniversalContractsPage));
             }
         }
 

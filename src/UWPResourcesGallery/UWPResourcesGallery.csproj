@@ -145,6 +145,12 @@
     <Compile Include="Controls\Common\PageHeader.xaml.cs">
       <DependentUpon>PageHeader.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Templates\UniversalPlatformContractPresenter.xaml.cs">
+      <DependentUpon>UniversalPlatformContractPresenter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Templates\UniversalPlatformVersionPresenter.xaml.cs">
+      <DependentUpon>UniversalPlatformVersionPresenter.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\IconDetailPage.xaml.cs">
       <DependentUpon>IconDetailPage.xaml</DependentUpon>
     </Compile>
@@ -169,6 +175,9 @@
     </Compile>
     <Compile Include="AppNavigation.xaml.cs">
       <DependentUpon>AppNavigation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UniversalContractsPage.xaml.cs">
+      <DependentUpon>UniversalContractsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -264,6 +273,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\Templates\UniversalPlatformContractPresenter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Templates\UniversalPlatformVersionPresenter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\IconDetailPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -295,6 +312,10 @@
     <Page Include="AppNavigation.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\UniversalContractsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

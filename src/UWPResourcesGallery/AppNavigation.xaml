@@ -90,10 +90,16 @@
                         <FontIcon Glyph="&#xEE56;" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
-                
+
                 <muxc:NavigationViewItem Content="Systemcolors" x:Name="_SystemColorsPage">
                     <muxc:NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE790;" />
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItem Content="Universal API contracts" x:Name="_UniversalContractsPage">
+                    <muxc:NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xEADF;" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
             </muxc:NavigationView.MenuItems>
