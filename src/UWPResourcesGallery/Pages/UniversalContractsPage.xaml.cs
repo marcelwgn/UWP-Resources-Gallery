@@ -1,4 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Diagnostics;
+using System.Threading;
+using System.Threading.Tasks;
 using UWPResourcesGallery.Model.WindowsVersionContracts;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -24,25 +27,12 @@ namespace UWPResourcesGallery.Pages
         public static readonly DependencyProperty SelectedItemProperty =
             DependencyProperty.Register("SelectedItem", typeof(UniversalPlatformVersion), typeof(UniversalContractsPage), new PropertyMetadata(default(UniversalPlatformVersion)));
 
-
         public UniversalContractsPage()
         {
             this.InitializeComponent();
-            Loaded += LoadUWPAPIContract;
-        }
-
-        private void LoadUWPAPIContract(object sender, Windows.UI.Xaml.RoutedEventArgs e)
-        {
-            // Delegate loading of API contracts, so we have smooth navigating to this page 
-            // and not unecessarly block UI Thread
-            Task.Run(delegate ()
-            {
-                _ = Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.High, () =>
-                {
-                    UniveralsVersionsList.ItemsSource = source.FilteredItems;
-                    UniveralsVersionsList.SelectedItem = source.FilteredItems[0];
-                });
-            });
+            SelectedItem = source.FilteredItems[0];
+            UniversalVersionsPresenterContainer.ItemsSource = source.FilteredItems;
+            UniversalVersionsPresenterContainer.SelectedItem = source.FilteredItems[0];
         }
 
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs args)

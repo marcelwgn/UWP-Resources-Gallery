@@ -38,20 +38,22 @@
             <TextBox Grid.Column="2" MinWidth="250" VerticalAlignment="Center" Margin="0,1,0,1" TextChanged="SearchTextBox_TextChanged" 
                     AutomationProperties.LabeledBy="{x:Bind SearchUniversalVersionsLabel}"></TextBox>
         </Grid>
-
-        <GridView x:Name="UniveralsVersionsList" Grid.Row="2" Background="{ThemeResource SystemListLowColor}"
-                SelectionChanged="UniveralsVersionsList_SelectionChanged" Padding="10,0">
-            <GridView.ItemContainerStyle>
-                <Style TargetType="GridViewItem">
-                    <Setter Property="Margin" Value="5,5,5,5"/>
-                </Style>
-            </GridView.ItemContainerStyle>
-            <GridView.ItemTemplate>
-                <DataTemplate x:DataType="windowsversioncontracts:UniversalPlatformVersion">
-                    <controls:UniversalPlatformVersionPresenter UWPVersion="{x:Bind}"/>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
+        <ScrollViewer HorizontalScrollMode="Enabled" IsHorizontalRailEnabled="True"
+            HorizontalScrollBarVisibility="Auto" Grid.Row="2" Margin="10,0">
+            <GridView x:Name="UniversalVersionsPresenterContainer"
+                    SelectionChanged="UniveralsVersionsList_SelectionChanged" Padding="0,10,0,15" MaxHeight="180">
+                <GridView.ItemContainerStyle>
+                    <Style TargetType="GridViewItem">
+                        <Setter Property="Margin" Value="5,5,5,5"/>
+                    </Style>
+                </GridView.ItemContainerStyle>
+                <GridView.ItemTemplate>
+                    <DataTemplate x:DataType="windowsversioncontracts:UniversalPlatformVersion">
+                        <controls:UniversalPlatformVersionPresenter UWPVersion="{x:Bind}"/>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+        </ScrollViewer>
         
         <ScrollViewer Grid.Row="3" Margin="15,5">
             <StackPanel x:DefaultBindMode="OneWay">
@@ -72,13 +74,12 @@
                     <TextBlock Text="{x:Bind SelectedItem.Version}"/>
                 </StackPanel>
 
-                <ListView ItemsSource="{x:Bind SelectedItem.VersionContracts}" SelectionMode="None">
-
+                <ListView ItemsSource="{x:Bind SelectedItem.FilteredContracts}" SelectionMode="None">
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">
                             <Setter Property="MinHeight" Value="0"/>
-                            <Setter Property="BorderBrush" Value="{ThemeResource SystemListMediumColor}"/>
-                            <Setter Property="BorderThickness" Value="1" />
+                            <Setter Property="BorderBrush" Value="{ThemeResource SystemBaseLowColor}"/>
+                            <Setter Property="BorderThickness" Value="2" />
                             <Setter Property="Padding" Value="6"/>
                             <Setter Property="Margin" Value="0,4"/>
                         </Style>

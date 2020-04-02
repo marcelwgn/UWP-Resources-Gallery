@@ -10,7 +10,7 @@
     d:DesignWidth="400">
 
     <StackPanel x:DefaultBindMode="OneWay" Padding="10" MinWidth="220"
-        BorderThickness="2"  BorderBrush="{ThemeResource SystemChromeMediumLowColor}">
+        BorderThickness="2"  BorderBrush="{ThemeResource SystemBaseMediumLowColor}">
         <TextBlock FontSize="18" Text="{x:Bind UWPVersion.MarketingName}"/>
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Build version:" Margin="0,0,4,0"/>

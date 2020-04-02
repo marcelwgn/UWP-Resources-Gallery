@@ -1,5 +1,6 @@
 ﻿using UWPResourcesGallery.Controls.Templates;
 using UWPResourcesGallery.Model.Colors;
+using UWPResourcesGallery.Model.WindowsVersionContracts;
 using Windows.UI.Xaml.Controls;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -16,6 +17,8 @@ namespace ControlTests
 
         public static ControlsTestPage Instance { get; private set; }
 
+        private UniversalPlatformContract universalPlatformContract = new UniversalPlatformContract("MyContract", "1.0");
+
         public ControlsTestPage()
         {
             InitializeComponent();
@@ -25,6 +28,8 @@ namespace ControlTests
             SystemColor systemColor = new SystemColor("SystemAccentColor", "colorName", "colorLightHex", "colorDarkHex");
             SystemColorInformationPanel.Children.Add(new SystemColorInformation(systemColor));
             SystemColorInformationPanel.UpdateLayout();
+
+
         }
     }
 }

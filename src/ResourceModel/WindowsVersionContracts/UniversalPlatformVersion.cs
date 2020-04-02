@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,8 +16,8 @@ namespace UWPResourcesGallery.Model.WindowsVersionContracts
         public string MarketingName { get; private set; }
         public string CodeName { get; private set; }
 
-
         public List<UniversalPlatformContract> VersionContracts { get; private set; } = new List<UniversalPlatformContract>();
+        public ObservableCollection<UniversalPlatformContract> FilteredContracts { get; private set; } = new ObservableCollection<UniversalPlatformContract>();
 
         public UniversalPlatformVersion(string version, string buildVersion,
             string versionName, string marketingName,
@@ -33,21 +34,30 @@ namespace UWPResourcesGallery.Model.WindowsVersionContracts
                 return;
             }
 
+            UniversalPlatformContract contract = null;
             for (uint index = 0; index < contractsArray.Count; index++)
             {
                 JsonObject entry = contractsArray.GetObjectAt(index);
 
-                VersionContracts.Add(
-                    new UniversalPlatformContract(
+                contract = new UniversalPlatformContract(
                         entry["name"].GetString(),
                         entry["version"].GetString()
-                    )
-                );
+                    );
+                VersionContracts.Add(contract);
+                FilteredContracts.Add(contract);
             }
         }
 
         public bool FitsFilter(string[] keywords)
         {
+            FilteredContracts.Clear();
+            VersionContracts.ForEach(contract =>
+            {
+                if (contract.FitsFilter(keywords))
+                {
+                    FilteredContracts.Add(contract);
+                }
+            });
             return keywords.All(key =>
                     {
                         if (Version.Contains(key, StringComparison.InvariantCultureIgnoreCase))
@@ -70,7 +80,7 @@ namespace UWPResourcesGallery.Model.WindowsVersionContracts
                         {
                             return true;
                         }
-                        if(VersionContracts.Any( contract =>  { return contract.FitsFilter(key); }))
+                        if(FilteredContracts.Count > 0)
                         {
                             return true;
                         }
