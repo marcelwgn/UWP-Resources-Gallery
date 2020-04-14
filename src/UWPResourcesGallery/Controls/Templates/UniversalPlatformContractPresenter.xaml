@@ -6,12 +6,15 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:common="using:UWPResourcesGallery.Controls.Common"
-    xmlns:UWPmodel="using:UWPResourcesGallery.Model.WindowsVersionContracts"
+    xmlns:UWPmodel="using:UWPResourcesGallery.Model.WindowsVersionContracts" xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)"
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <StackPanel  x:DefaultBindMode="OneWay">
+    <StackPanel x:DefaultBindMode="OneWay" 
+        BorderBrush="{ThemeResource SystemBaseLowColor}" BorderThickness="1"
+        Padding="6" Margin="0,4"
+        Background="{ThemeResource SystemControlBackgroundListLowBrush}">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="CollapseStates">
                 <VisualState x:Name="Expanded">
@@ -31,17 +34,21 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
-        <StackPanel Orientation="Horizontal">
-            <Button x:Name="RootButton" Click="RootButton_Click" Background="Transparent">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="RootButton" Windows10version1809:CornerRadius="0"
+                    Click="RootButton_Click" Background="Transparent">
                 <StackPanel>
                     <FontIcon x:Name="ChevronDown" Glyph="&#xE70D;" Visibility="Collapsed" AutomationProperties.Name="Collapse contract sample code"/>
                     <FontIcon x:Name="ChevronRight" Glyph="&#xE76C;" AutomationProperties.Name="Expand contract sample code"/>
                 </StackPanel>
             </Button>
-            <TextBlock Text="{x:Bind Contract.Name}" FontSize="16" VerticalAlignment="Center" Margin="8,0,0,5"/>
-            <TextBlock Text=", Version=" FontSize="16" VerticalAlignment="Center" Margin="0,0,0,5"/>
-            <TextBlock Text="{x:Bind Contract.Version}" FontSize="16" VerticalAlignment="Center" Margin="0,0,0,5"/>
-        </StackPanel>
+            <TextBlock x:Name="ContractNamePresenter" Text="{x:Bind ContractName}" Grid.Column="1"
+                FontSize="16" VerticalAlignment="Center" Margin="8,0,0,5" TextWrapping="Wrap"/>
+        </Grid>
         <StackPanel x:Name="SampleCodePanel" Padding="8,0,0,0">
                 <StackPanel>
                     <TextBlock Text="C# query"/>
@@ -52,6 +59,5 @@
                     <common:CodeSample Code="{x:Bind UWPmodel:UniversalPlatformContractQueryFactory.GetXAMLConditionalNameSpace(Contract)}"/>
                 </StackPanel>
         </StackPanel>
-            
     </StackPanel>
 </UserControl>

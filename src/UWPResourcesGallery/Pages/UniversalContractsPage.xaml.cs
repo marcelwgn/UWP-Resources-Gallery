@@ -38,6 +38,8 @@ namespace UWPResourcesGallery.Pages
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs args)
         {
             source.Filter((sender as TextBox).Text);
+            SelectedItem = source.FilteredItems[0];
+            UniversalVersionsPresenterContainer.SelectedItem = source.FilteredItems[0];
         }
 
         private void UniveralsVersionsList_SelectionChanged(object sender, SelectionChangedEventArgs e)

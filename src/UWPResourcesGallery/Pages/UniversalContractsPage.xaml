@@ -13,6 +13,21 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     
     <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Normal">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowHeight="600"/>
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Compact">
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="50"/>
@@ -38,10 +53,11 @@
             <TextBox Grid.Column="2" MinWidth="250" VerticalAlignment="Center" Margin="0,1,0,1" TextChanged="SearchTextBox_TextChanged" 
                     AutomationProperties.LabeledBy="{x:Bind SearchUniversalVersionsLabel}"></TextBox>
         </Grid>
+        <!-- Windows 10 version selector -->
         <ScrollViewer HorizontalScrollMode="Enabled" IsHorizontalRailEnabled="True"
             HorizontalScrollBarVisibility="Auto" Grid.Row="2" Margin="10,0">
             <GridView x:Name="UniversalVersionsPresenterContainer"
-                    SelectionChanged="UniveralsVersionsList_SelectionChanged" Padding="0,10,0,15" MaxHeight="180">
+                    SelectionChanged="UniveralsVersionsList_SelectionChanged" Padding="0,0,0,11" MaxHeight="180">
                 <GridView.ItemContainerStyle>
                     <Style TargetType="GridViewItem">
                         <Setter Property="Margin" Value="5,5,5,5"/>
@@ -54,8 +70,9 @@
                 </GridView.ItemTemplate>
             </GridView>
         </ScrollViewer>
-        
-        <ScrollViewer Grid.Row="3" Margin="15,5">
+                
+        <!-- Content of the selected version -->
+        <ScrollViewer Grid.Row="3" Margin="15,5" Padding="0,0,14,0">
             <StackPanel x:DefaultBindMode="OneWay">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="{x:Bind SelectedItem.MarketingName}" FontSize="26"/>
@@ -65,33 +82,24 @@
                 
                 <StackPanel Orientation="Horizontal" Margin="0,6,0,6">
                     <TextBlock Text="Code name:" Margin="0,0,4,0"/>
-                    <TextBlock Text="{x:Bind SelectedItem.CodeName}"/>
+                    <TextBlock Text="{x:Bind SelectedItem.CodeName}" IsTextSelectionEnabled="True"/>
                 
                     <TextBlock Text="Build version:" Margin="20,0,4,0"/>
-                    <TextBlock Text="{x:Bind SelectedItem.BuildVersion}"/>
+                    <TextBlock Text="{x:Bind SelectedItem.BuildVersion}" IsTextSelectionEnabled="True"/>
                 
                     <TextBlock Text="SDK version:" Margin="20,0,4,0"/>
-                    <TextBlock Text="{x:Bind SelectedItem.Version}"/>
+                    <TextBlock Text="{x:Bind SelectedItem.Version}" IsTextSelectionEnabled="True"/>
                 </StackPanel>
 
-                <ListView ItemsSource="{x:Bind SelectedItem.FilteredContracts}" SelectionMode="None">
-                    <ListView.ItemContainerStyle>
-                        <Style TargetType="ListViewItem">
-                            <Setter Property="MinHeight" Value="0"/>
-                            <Setter Property="BorderBrush" Value="{ThemeResource SystemBaseLowColor}"/>
-                            <Setter Property="BorderThickness" Value="2" />
-                            <Setter Property="Padding" Value="6"/>
-                            <Setter Property="Margin" Value="0,4"/>
-                        </Style>
-                    </ListView.ItemContainerStyle>
-                    
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <controls:UniversalPlatformContractPresenter Contract="{Binding}"/>
+                <muxc:ItemsRepeater ItemsSource="{x:Bind SelectedItem.FilteredContracts}">
+                    <muxc:ItemsRepeater.ItemTemplate>
+                        <DataTemplate x:DataType="windowsversioncontracts:UniversalPlatformContract">
+                            <controls:UniversalPlatformContractPresenter Contract="{x:Bind}"/>
                         </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                    </muxc:ItemsRepeater.ItemTemplate>
+                </muxc:ItemsRepeater>
             </StackPanel>
         </ScrollViewer>
+        
     </Grid>
 </Page>
