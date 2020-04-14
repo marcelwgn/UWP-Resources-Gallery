@@ -24,16 +24,16 @@ To obtain information about Microsoft Visual Studio and the tools for developing
 ## Screenshots
 
 ### Iconspage
-<img alt="Iconspage of UWP Resources Gallery" src="./docs/Screenshot_Iconspage.png" height="200">
+<img alt="Iconspage of UWP Resources Gallery" src="./docs/Screenshot_Iconspage.png" height="300">
 
 ### Systembrushes page
-<img alt="Systembrushes of UWP Resources Gallery" src="./docs/Screenshot_Systembrushespage.png" height="200">
+<img alt="Systembrushes of UWP Resources Gallery" src="./docs/Screenshot_Systembrushespage.png" height="300">
 
 ### Systemcolors page
-<img alt="Systemcolors of UWP Resources Gallery" src="./docs/Screenshot_Systemcolorspage.png" height="200">
+<img alt="Systemcolors of UWP Resources Gallery" src="./docs/Screenshot_Systemcolorspage.png" height="300">
 
 ### Universal API Contracts page
-<img alt="Universal API contracts page of UWP Resources Gallery" src="./docs/Screenshot_UniversalAPIContractsPage.png" height="200">
+<img alt="Universal API contracts page of UWP Resources Gallery" src="./docs/Screenshot_UniversalAPIContractsPage.png" height="300">
 
 ## References:
 
