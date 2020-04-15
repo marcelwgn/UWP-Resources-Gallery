@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using UWPResourcesGallery.Model.Icons;
 
-namespace ResoureModelTests
+namespace ResoureModelTests.SourceTests
 {
     [TestClass]
     public class IconSourceTests

@@ -28,6 +28,9 @@ namespace UWPResourcesGallery
 
             RootFrame.Navigate(typeof(StartPage));
 
+            var value = Windows.UI.Core.SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility;
+
+
             Loaded += delegate (object sender, RoutedEventArgs e)
             {
                 ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;

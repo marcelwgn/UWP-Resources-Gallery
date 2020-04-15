@@ -48,6 +48,16 @@ namespace UWPResourcesGallery.Model.WindowsVersionContracts
             }
         }
 
+        public int FilteredContractsCount(string keyword)
+        {
+            int count = 0;
+            foreach(var item in FilteredContracts)
+            {
+                count += item.FitsFilter(keyword) ? 1 : 0;
+            }
+            return count;
+        }
+
         public bool FitsFilter(string[] keywords)
         {
             FilteredContracts.Clear();
@@ -80,7 +90,7 @@ namespace UWPResourcesGallery.Model.WindowsVersionContracts
                         {
                             return true;
                         }
-                        if(FilteredContracts.Count > 0)
+                        if(FilteredContractsCount(key) > 0)
                         {
                             return true;
                         }

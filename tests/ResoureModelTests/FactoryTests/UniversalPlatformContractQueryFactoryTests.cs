@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UWPResourcesGallery.Model.WindowsVersionContracts;
 
-namespace ResoureModelTests
+namespace ResoureModelTests.FactoryTests
 {
     [TestClass]
     public class UniversalPlatformContractQueryFactoryTests

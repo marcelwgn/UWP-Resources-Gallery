@@ -56,7 +56,7 @@
         <!-- Windows 10 version selector -->
         <ScrollViewer HorizontalScrollMode="Enabled" IsHorizontalRailEnabled="True"
             HorizontalScrollBarVisibility="Auto" Grid.Row="2" Margin="10,0">
-            <GridView x:Name="UniversalVersionsPresenterContainer"
+            <GridView x:Name="UniversalVersionsPresenterContainer" AutomationProperties.Name="Windows 10 versions list"
                     SelectionChanged="UniveralsVersionsList_SelectionChanged" Padding="0,0,0,11" MaxHeight="180">
                 <GridView.ItemContainerStyle>
                     <Style TargetType="GridViewItem">
@@ -72,7 +72,7 @@
         </ScrollViewer>
                 
         <!-- Content of the selected version -->
-        <ScrollViewer Grid.Row="3" Margin="15,5" Padding="0,0,14,0">
+        <ScrollViewer Grid.Row="3" Margin="15,5" Padding="0,0,14,0" x:Name="SelectedItemScroller">
             <StackPanel x:DefaultBindMode="OneWay">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="{x:Bind SelectedItem.MarketingName}" FontSize="26"/>
@@ -100,6 +100,7 @@
                 </muxc:ItemsRepeater>
             </StackPanel>
         </ScrollViewer>
-        
+        <TextBlock x:Name="EmptySearchLabel" Grid.Row="3" Visibility="Collapsed"
+            FontSize="24" Text="No contracts found" HorizontalAlignment="Center"/>
     </Grid>
 </Page>

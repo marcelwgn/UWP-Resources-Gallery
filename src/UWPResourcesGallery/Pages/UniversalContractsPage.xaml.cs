@@ -38,8 +38,20 @@ namespace UWPResourcesGallery.Pages
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs args)
         {
             source.Filter((sender as TextBox).Text);
-            SelectedItem = source.FilteredItems[0];
-            UniversalVersionsPresenterContainer.SelectedItem = source.FilteredItems[0];
+            if(source.FilteredItems.Count > 0)
+            {
+                EmptySearchLabel.Visibility = Visibility.Collapsed;
+                SelectedItemScroller.Visibility = Visibility.Visible;
+                
+                SelectedItem = source.FilteredItems[0];
+                UniversalVersionsPresenterContainer.SelectedItem = source.FilteredItems[0];
+
+            }
+            else
+            {
+                EmptySearchLabel.Visibility = Visibility.Visible;
+                SelectedItemScroller.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void UniveralsVersionsList_SelectionChanged(object sender, SelectionChangedEventArgs e)

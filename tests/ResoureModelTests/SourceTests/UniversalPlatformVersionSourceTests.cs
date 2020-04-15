@@ -1,12 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UWPResourcesGallery.Model.WindowsVersionContracts;
 
-namespace ResoureModelTests
+namespace ResoureModelTests.SourceTests
 {
     [TestClass]
     public class UniversalPlatformVersionSourceTests

@@ -20,9 +20,9 @@ namespace UWPResourcesGallery.Model.WindowsVersionContracts
 
         public bool FitsFilter(string[] keywords)
         {
-            return keywords.All(keyword =>
+            return keywords.Any(keyword =>
             {
-                return FitsFilter(keyword)  ;
+                return FitsFilter(keyword);
             });
         }
 

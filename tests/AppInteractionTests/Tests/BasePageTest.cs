@@ -32,6 +32,7 @@ namespace AppInteractionTests.Tests
         [ClassCleanup]
         public void AppTearDown()
         {
+            TestHelper.NavigateToPage("Start");
             TestRunInitializer.TearDown();
         }
     }
