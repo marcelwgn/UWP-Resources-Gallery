@@ -101,6 +101,12 @@ stages:
               errorActionPreference: 'continue'
               failOnStderr: true
               workingDirectory: '$(System.DefaultWorkingDirectory)'
+
+          - task: Windows Application Driver@0
+            inputs:
+              OperationType: 'Start'
+              AgentResolution: '1080p'
+
           - task: VSTest@2
             inputs:
               testSelector: 'testAssemblies'
@@ -109,6 +115,10 @@ stages:
                 !**\*TestAdapter.dll
                 !**\obj\**
               searchFolder: '$(System.DefaultWorkingDirectory)'
+
+          - task: Windows Application Driver@0
+            inputs:
+              OperationType: 'Stop'
 
   - stage: Publish
     dependsOn: Testing
