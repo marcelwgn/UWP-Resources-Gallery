@@ -62,6 +62,17 @@ stages:
               buildType: 'current'
               artifactName: 'artifacts_$(buildConfiguration)_$(buildPlatform)'
               targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
+          
+          - task: PowerShell@2
+            inputs:
+              targetType: 'inline'
+              script: |
+                # Write your PowerShell commands here.
+                
+                Write-Host "Hello World"
+                
+                
+                Get-ChildItem -Path $(System.DefaultWorkingDirectory) –Recurse
 
           - task: VSTest@2
             inputs:
@@ -73,12 +84,13 @@ stages:
               searchFolder: '$(System.DefaultWorkingDirectory)'
               uiTests: true
 
+
+
           - task: VSTest@2
             inputs:
               testSelector: 'testAssemblies'
               testAssemblyVer2: |
                 **\*ResourceModelTests.build.appxrecipe
-                **\ResoureModelTests_1.0.0.0_$(buildPlatform)_$(buildConfiguration).appx
                 !**\*TestAdapter.dll
                 !**\obj\**
               searchFolder: '$(System.DefaultWorkingDirectory)'
