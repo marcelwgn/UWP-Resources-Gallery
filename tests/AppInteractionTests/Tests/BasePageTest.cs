@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Threading;
 
 namespace AppInteractionTests.Tests
 {
@@ -11,13 +12,27 @@ namespace AppInteractionTests.Tests
             get;
         }
 
+        [ClassInitialize]
+        public void AppLaunch()
+        {
+            TestRunInitializer.Session.Manage().Window.Maximize();
+        }
+
         [TestInitialize]
         public void PageSetup()
         {
+            TestRunInitializer.Session.Manage().Window.Maximize();
             if (!TestHelper.CurrentPageInNavigation().Equals(NavigationName, StringComparison.InvariantCulture))
             {
                 TestHelper.NavigateToPage(NavigationName);
             }
+            Thread.Sleep(TimeSpan.FromSeconds(10));
+        }
+
+        [ClassCleanup]
+        public void AppTearDown()
+        {
+            TestRunInitializer.TearDown();
         }
     }
 }
