@@ -78,7 +78,7 @@ stages:
               testSelector: 'testAssemblies'
               testAssemblyVer2: |
                 **\*ResourceModelTests.build.appxrecipe
-                **\ResoureModelTests_1.0.0.0_$(buildConfiguration)_$(buildPlatform).appx
+                **\ResoureModelTests_1.0.0.0_$(buildPlatform)_$(buildConfiguration).appx
                 !**\*TestAdapter.dll
                 !**\obj\**
               searchFolder: '$(System.DefaultWorkingDirectory)'
