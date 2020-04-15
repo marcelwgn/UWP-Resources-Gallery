@@ -8,7 +8,7 @@ namespace AppInteractionTests.Tests
     {
         public override string NavigationName => "Icons";
 
-        [TestMethod]
+        //[TestMethod]
         public void RendersItems()
         {
             // Clear search before test!
