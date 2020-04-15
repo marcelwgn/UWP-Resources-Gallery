@@ -28,7 +28,7 @@ namespace AppInteractionTests.Tests
         }
 
 
-        [TestMethod]
+        //[TestMethod]
         public void FilterWorks()
         {
             string[] iconsToTest = new string[] { "AdjustHologram", "A", "DataSenseBar", "EmojiTabCelebrationObjects", "ED55" };
