@@ -97,7 +97,7 @@ stages:
                 ResourceModelTests.build.appxrecipe
                 !**\*TestAdapter.dll
                 !**\obj\**
-              searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)\ResourceModelTests\'
+              searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
               uiTests: true
 
       - job: Interaction_Tests
