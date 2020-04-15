@@ -8,7 +8,7 @@ namespace AppInteractionTests.Tests
     {
         public override string NavigationName => "Icons";
 
-        //[TestMethod]
+        [TestMethod]
         public void RendersItems()
         {
             // Clear search before test!
@@ -28,7 +28,7 @@ namespace AppInteractionTests.Tests
         }
 
 
-        //[TestMethod]
+        [TestMethod]
         public void FilterWorks()
         {
             string[] iconsToTest = new string[] { "AdjustHologram", "A", "DataSenseBar", "EmojiTabCelebrationObjects", "ED55" };
@@ -52,7 +52,7 @@ namespace AppInteractionTests.Tests
             }
         }
 
-        //[TestMethod]
+        [TestMethod]
         public void OnlySymbolsFilterWorksCorrectly()
         {
             OpenQA.Selenium.Appium.Windows.WindowsElement searchIconsBox = TestRunInitializer.Session.FindElementsByName("Search icons:")[1];
