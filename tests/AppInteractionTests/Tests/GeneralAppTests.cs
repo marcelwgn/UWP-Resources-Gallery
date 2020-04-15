@@ -14,8 +14,8 @@ namespace AppInteractionTests.Tests
                 , TestRunInitializer.Session.FindElementsByTagName("Text")[0].Text);
         }
 
-
-        [TestMethod]
+        // Disabled because of unreliability
+        //[TestMethod]
         public void VerifyCompactOverlayBehavior()
         {
             OpenQA.Selenium.Appium.Windows.WindowsElement compactOverlayButton = TestHelper.GetElementsOfTypeWithContent(
@@ -27,10 +27,9 @@ namespace AppInteractionTests.Tests
             TestHelper.WaitMilli(2000);
 
             // Get new button with updated text
-            // Disabled as ot doesn't work in CI
-            //compactOverlayButton = TestHelper.GetElementsOfTypeWithContent(
-            //    "Button", "Switch to normal mode")[0];
-            //Assert.IsNotNull(compactOverlayButton);
+            compactOverlayButton = TestHelper.GetElementsOfTypeWithContent(
+                "Button", "Switch to normal mode")[0];
+            Assert.IsNotNull(compactOverlayButton);
 
             // Switch to normal
             compactOverlayButton.Click();

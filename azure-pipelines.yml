@@ -84,7 +84,11 @@ stages:
               searchFolder: '$(System.DefaultWorkingDirectory)'
               uiTests: true
 
-
+          - task: DownloadPipelineArtifact@2
+            inputs:
+              buildType: 'current'
+              artifactName: 'artifacts_$(buildConfiguration)_$(buildPlatform)'
+              targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
 
           - task: VSTest@2
             inputs:
