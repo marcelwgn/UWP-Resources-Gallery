@@ -13,6 +13,24 @@
     </Page.Resources>
     
     <Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="OverlayStates">
+                <VisualState x:Name="NoOverlay"/>
+                <VisualState x:Name="CompactOverlay">
+                    <VisualState.Setters>
+                        <Setter Target="CompactOverlayArrowsMinimizeIcon.Visibility" Value="Visible"/>
+                        <Setter Target="CompactOverlayArrowsMaximizeIcon.Visibility" Value="Collapsed"/>
+                        <Setter Target="AppTitle.(Grid.Column)" Value="1"/>
+                        <Setter Target="AppTitleBar.Margin" Value="30,3,0,0"/>
+                        <Setter Target="SwitchCompactOverlayModeButton.(Grid.Column)" Value="0"/>
+                        <Setter Target="SwitchCompactOverlayModeButton.(AutomationProperties.Name)" Value="Switch to normal mode"/>
+                        <Setter Target="SwitchCompactOverlayModeButton.(ToolTipService.ToolTip)" Value="1"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+
+        </VisualStateManager.VisualStateGroups>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition />
@@ -22,7 +40,7 @@
         <Grid x:Name="AppTitleBar" VerticalAlignment="Top"
                 Background="Transparent" Canvas.ZIndex="1"
                 Height="32" Grid.Column="1" IsHitTestVisible="True"
-                Margin="40,3,0,0">
+                Margin="30,3,0,0">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -50,7 +68,7 @@
                     IsHitTestVisible="True" Canvas.ZIndex="20" Grid.Column="1"
                     Background="Transparent" Style="{ThemeResource ButtonRevealStyle}"
                     AutomationProperties.Name="Switch to overlay mode"
-                    Margin="8,2,0,0" Height="30" ToolTipService.ToolTip="Switch to overlay mode">
+                    Margin="8,2,10,0" Height="30" ToolTipService.ToolTip="Switch to overlay mode">
                 <Grid>
                     <FontIcon Glyph="&#xEA60;" FontSize="16"/>
                     <!-- Names to enabling/disabling the correct icon based on state -->
@@ -90,10 +108,16 @@
                         <FontIcon Glyph="&#xEE56;" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
-                
+
                 <muxc:NavigationViewItem Content="Systemcolors" x:Name="_SystemColorsPage">
                     <muxc:NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE790;" />
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItem Content="Universal API contracts" x:Name="_UniversalContractsPage">
+                    <muxc:NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xEADF;" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
             </muxc:NavigationView.MenuItems>

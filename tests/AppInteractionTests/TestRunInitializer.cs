@@ -29,12 +29,14 @@ namespace AppInteractionTests
             }
         }
 
+        [AssemblyInitialize]
         private static void CreateSession()
         {
             if (_session == null)
             {
                 AppiumOptions appiumOptions = new AppiumOptions();
                 appiumOptions.AddAdditionalCapability("app", AppUIBasicAppId);
+                appiumOptions.AddAdditionalCapability("deviceName", "WindowsPC");
                 try
                 {
                     _session = new WindowsDriver<WindowsElement>(new Uri(WindowsApplicationDriverUrl), appiumOptions);
@@ -62,6 +64,7 @@ namespace AppInteractionTests
 
                 // Wait if something is still animating in the visual tree
                 _session.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+                _session.Manage().Window.Maximize();
             }
         }
 

@@ -17,7 +17,7 @@ namespace UWPResourcesGallery.Pages
 
         private void NavigateToIconListPage_Click(object sender, RoutedEventArgs e)
         {
-            AppNavigation.NavigateToIconsListPage();
+            AppNavigation.NavigateToPageType(typeof(IconsListPage));
         }
 
         private void NavigateToSystemBrushesPage_Click(object sender, RoutedEventArgs e)
@@ -28,6 +28,10 @@ namespace UWPResourcesGallery.Pages
         private void NavigateToSystemColorsPage_Click(object sender, RoutedEventArgs e)
         {
             AppNavigation.NavigateToPageType(typeof(SystemColorsPage));
+        }
+        private void NavigateToUniversalContractsPage_Click(object sender, RoutedEventArgs e)
+        {
+            AppNavigation.NavigateToPageType(typeof(UniversalContractsPage));
         }
     }
 }

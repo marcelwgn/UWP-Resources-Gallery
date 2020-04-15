@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'windows-2019'
 
 variables:
   solution: '**/*.sln'
@@ -52,32 +52,19 @@ stages:
         displayName: Unit Tests
         steps:
           - task: NuGetToolInstaller@1
-
           - task: NuGetCommand@2
             inputs:
               restoreSolution: '$(solution)'
-
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: 'current'
               artifactName: 'artifacts_$(buildConfiguration)_$(buildPlatform)'
               targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
-
           - task: VSTest@2
             inputs:
               testSelector: 'testAssemblies'
               testAssemblyVer2: |
-                **\*ControlTests**.appxrecipe
-                !**\*TestAdapter.dll
-                !**\obj\**
-              searchFolder: '$(System.DefaultWorkingDirectory)'
-              uiTests: true
-
-          - task: VSTest@2
-            inputs:
-              testSelector: 'testAssemblies'
-              testAssemblyVer2: |
-                **\*ResourceModelTests**.appxrecipe
+                **\*Tests**.appxrecipe
                 !**\*TestAdapter.dll
                 !**\obj\**
               searchFolder: '$(System.DefaultWorkingDirectory)'
@@ -87,23 +74,19 @@ stages:
         displayName: Interaction Tests
         steps:
           - task: NuGetToolInstaller@1
-
           - task: NuGetCommand@2
             inputs:
               restoreSolution: '$(solution)'
-        
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: 'current'
               artifactName: 'artifacts_$(buildConfiguration)_$(buildPlatform)'
               targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
-
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: 'current'
               artifactName: 'appxbundles_$(buildConfiguration)_$(buildPlatform)'
               targetPath: '$(System.DefaultWorkingDirectory)\appxbundles'
-
           - task: PowerShell@2
             inputs:
               targetType: 'inline'
@@ -119,6 +102,11 @@ stages:
               failOnStderr: true
               workingDirectory: '$(System.DefaultWorkingDirectory)'
 
+          - task: Windows Application Driver@0
+            inputs:
+              OperationType: 'Start'
+              AgentResolution: '1080p'
+
           - task: VSTest@2
             inputs:
               testSelector: 'testAssemblies'
@@ -127,6 +115,10 @@ stages:
                 !**\*TestAdapter.dll
                 !**\obj\**
               searchFolder: '$(System.DefaultWorkingDirectory)'
+
+          - task: Windows Application Driver@0
+            inputs:
+              OperationType: 'Stop'
 
   - stage: Publish
     dependsOn: Testing

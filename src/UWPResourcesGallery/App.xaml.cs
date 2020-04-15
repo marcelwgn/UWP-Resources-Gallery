@@ -3,6 +3,7 @@ using UWPResourcesGallery.Common;
 using UWPResourcesGallery.Model.Brushes;
 using UWPResourcesGallery.Model.Colors;
 using UWPResourcesGallery.Model.Icons;
+using UWPResourcesGallery.Model.WindowsVersionContracts;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Core;
@@ -109,6 +110,7 @@ namespace UWPResourcesGallery
             IconItemSource.LoadIconsList();
             SystemColorsItemSource.LoadSystemColors();
             SystemBrushItemSource.LoadSystemBrushes();
+            UniversalPlatformVersionSource.LoadWindowsVersionContracts();
         }
 
 

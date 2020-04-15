@@ -97,6 +97,27 @@
                                     Text="Collection of system colors which are provided by Windows 10." />
                         </Grid>
                     </Button>
+
+                    <Button Style="{ThemeResource NavigatingButtonStyle}" Click="NavigateToUniversalContractsPage_Click" 
+                            contract7Present:CornerRadius="0">
+                        <Grid VerticalAlignment="Stretch" Height="80" Padding="4,0,8,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <FontIcon Grid.RowSpan="2" Margin="4,8,16,0" Glyph="&#xEADF;" FontSize="36" VerticalAlignment="Top"/>
+                            <TextBlock Grid.Column="1" FontSize="24" Foreground="{ThemeResource SystemControlForegroundAccentBrush}" Text="Universal API contracts"/>
+                            <TextBlock Grid.Column="1" Grid.Row="1" Margin="0,4,0,0" TextWrapping="WrapWholeWords" MaxWidth="300"
+                                    Text="List of Windows 10 versions and the available API contracts" />
+                        </Grid>
+                    </Button>
                 </VariableSizedWrapGrid>
             </Grid>
         </ScrollViewer>

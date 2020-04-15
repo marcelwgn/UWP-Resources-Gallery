@@ -28,6 +28,9 @@ namespace UWPResourcesGallery
 
             RootFrame.Navigate(typeof(StartPage));
 
+            var value = Windows.UI.Core.SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility;
+
+
             Loaded += delegate (object sender, RoutedEventArgs e)
             {
                 ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
@@ -88,6 +91,10 @@ namespace UWPResourcesGallery
             {
                 RootNavigation.SelectedItem = _SystemBrushesPage;
             }
+            if (RootFrame.CurrentSourcePageType == typeof(UniversalContractsPage))
+            {
+                RootNavigation.SelectedItem = _UniversalContractsPage;
+            }
 
         }
 
@@ -114,6 +121,10 @@ namespace UWPResourcesGallery
             if (selectedItem == _SystemBrushesPage)
             {
                 RootFrame.Navigate(typeof(SystemBrushesPage));
+            }
+            if (selectedItem == _UniversalContractsPage)
+            {
+                RootFrame.Navigate(typeof(UniversalContractsPage));
             }
         }
 
@@ -177,15 +188,10 @@ namespace UWPResourcesGallery
             if (ApplicationView.GetForCurrentView().ViewMode == ApplicationViewMode.Default)
             {
                 bool modeSwitched = await ApplicationView.GetForCurrentView().TryEnterViewModeAsync(ApplicationViewMode.CompactOverlay);
+                Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetPreferredMinSize(new Windows.Foundation.Size(150,50));
                 if (modeSwitched)
                 {
-                    AppTitle.SetValue(Grid.ColumnProperty, 1);
-                    SwitchCompactOverlayModeButton.SetValue(Grid.ColumnProperty, 0);
-
-                    SwitchCompactOverlayModeButton.SetValue(AutomationProperties.NameProperty, "Switch to normal mode");
-                    ToolTipService.SetToolTip(SwitchCompactOverlayModeButton, "Switch to normal mode");
-                    CompactOverlayArrowsMinimizeIcon.Visibility = Visibility.Collapsed;
-                    CompactOverlayArrowsMaximizeIcon.Visibility = Visibility.Visible;
+                    VisualStateManager.GoToState(this, "CompactOverlay", false);
                 }
             }
             else
@@ -193,13 +199,7 @@ namespace UWPResourcesGallery
                 bool modeSwitched = await ApplicationView.GetForCurrentView().TryEnterViewModeAsync(ApplicationViewMode.Default);
                 if (modeSwitched)
                 {
-                    AppTitle.SetValue(Grid.ColumnProperty, 0);
-                    SwitchCompactOverlayModeButton.SetValue(Grid.ColumnProperty, 1);
-
-                    SwitchCompactOverlayModeButton.SetValue(AutomationProperties.NameProperty, "Switch to overlay mode");
-                    ToolTipService.SetToolTip(SwitchCompactOverlayModeButton, "Switch to overlay mode");
-                    CompactOverlayArrowsMinimizeIcon.Visibility = Visibility.Visible;
-                    CompactOverlayArrowsMaximizeIcon.Visibility = Visibility.Collapsed;
+                    VisualStateManager.GoToState(this, "NoOverlay", false);
                 }
             }
         }

@@ -30,11 +30,9 @@
                 <RichTextBlock Padding="0,4,10,0">
                     <Paragraph>
                         This is app is a companion to the system resources available to UWP apps. The official documentation for UWP apps can be found here
-                        <Hyperlink NavigateUri="https://docs.microsoft.com/en-us/windows/uwp/">https://docs.microsoft.com/en-us/windows/uwp/</Hyperlink>.
+                        <Hyperlink NavigateUri="https://docs.microsoft.com/en-us/windows/uwp/">https://docs.microsoft.com/en-us/windows/uwp/</Hyperlink> .
                     </Paragraph>
-                    
-                    <Paragraph/>
-                    
+
                     <Paragraph>
                         Official list of Segoe MDL2 icons:
                         <Hyperlink NavigateUri="https://docs.microsoft.com/en-us/windows/uwp/design/style/segoe-ui-symbol-font">https://docs.microsoft.com/en-us/windows/uwp/design/style/segoe-ui-symbol-font</Hyperlink>
@@ -52,15 +50,15 @@
                 
                     <Paragraph>
                         The source code of this app is available on
-                        <Hyperlink NavigateUri="https://github.com/chingucoding/UWP-Resources-Gallery">https://github.com/chingucoding/UWP-Resources-Gallery</Hyperlink>.
+                        <Hyperlink NavigateUri="https://github.com/chingucoding/UWP-Resources-Gallery">https://github.com/chingucoding/UWP-Resources-Gallery</Hyperlink> .
                     </Paragraph>
-                
+
                     <Paragraph/>
 
                     <Paragraph>
                         The idea for this app is based on the XAML Controls Gallery. You can download the XAML Controls Gallery from
                         <Hyperlink NavigateUri="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Microsoft Store</Hyperlink> or view the project on
-                        <Hyperlink NavigateUri="https://github.com/microsoft/Xaml-Controls-Gallery">https://github.com/microsoft/Xaml-Controls-Gallery</Hyperlink>.
+                        <Hyperlink NavigateUri="https://github.com/microsoft/Xaml-Controls-Gallery">https://github.com/microsoft/Xaml-Controls-Gallery</Hyperlink> .
                     </Paragraph>
                 </RichTextBlock>
                 <TextBlock Margin="0,16,0,0">
@@ -68,7 +66,27 @@
                     <Run Text="{x:Bind Version}" />
                 </TextBlock>
             </StackPanel>
-        
+
+            <StackPanel Style="{ThemeResource SectionPanel}">
+                <TextBlock Text="Official sources"  Padding="0,10,0,10" FontSize="22" />
+
+                <RichTextBlock>
+                    <Paragraph>
+                        Official list of Segoe MDL2 icons:
+                        <Hyperlink NavigateUri="https://docs.microsoft.com/windows/uwp/design/style/segoe-ui-symbol-font">https://docs.microsoft.com/windows/uwp/design/style/segoe-ui-symbol-font</Hyperlink>
+                    </Paragraph>
+                    <Paragraph>
+                        Official list of system colors:
+                        <Hyperlink NavigateUri="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-theme-resources">https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-theme-resources</Hyperlink>
+                    </Paragraph>
+                    <Paragraph>
+                        Official list of Universal device family API contracts:
+                        <Hyperlink NavigateUri="https://docs.microsoft.com/uwp/extension-sdks/windows-universal-sdk">https://docs.microsoft.com/uwp/extension-sdks/windows-universal-sdk</Hyperlink>
+                    </Paragraph>
+                </RichTextBlock>
+
+            </StackPanel>
+
             <StackPanel Style="{ThemeResource SectionPanel}">
                 <TextBlock Text="Dependencies" Padding="0,10,0,10" FontSize="22" />
                 <RichTextBlock>
