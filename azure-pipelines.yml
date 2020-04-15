@@ -88,9 +88,11 @@ stages:
             inputs:
               testSelector: 'testAssemblies'
               testAssemblyVer2: |
-                ResourceModelTests.build.appxrecipe
-              searchFolder: 'D:\a\1\s\artifacts\Debug\ResoureModelTests\'
-              uiTests: true
+                  **\*ResourceModelTests**.appxrecipe
+                  !**\*TestAdapter.dll
+                  !**\obj\**
+              searchFolder: '$(System.DefaultWorkingDirectory)'
+
 
       - job: ResourceModel_Tests
         displayName: Interaction Tests
@@ -110,7 +112,6 @@ stages:
               testAssemblyVer2: |
                 ResourceModelTests.build.appxrecipe
               searchFolder: 'D:\a\1\s\artifacts\Debug\ResoureModelTests\'
-              uiTests: true
 
       - job: Interaction_Tests
         displayName: Interaction Tests
