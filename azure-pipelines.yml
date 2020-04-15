@@ -48,7 +48,7 @@ stages:
   - stage: Testing
     dependsOn: Build
     jobs:
-      - job: Control_Tests
+      - job: Unit_Tests
         displayName: Unit Tests
         steps:
           - task: NuGetToolInstaller@1
@@ -64,7 +64,7 @@ stages:
             inputs:
               testSelector: 'testAssemblies'
               testAssemblyVer2: |
-                **\*ControlTests**.appxrecipe
+                **\*Tests**.appxrecipe
                 !**\*TestAdapter.dll
                 !**\obj\**
               searchFolder: '$(System.DefaultWorkingDirectory)'
@@ -92,26 +92,6 @@ stages:
                   !**\*TestAdapter.dll
                   !**\obj\**
               searchFolder: '$(System.DefaultWorkingDirectory)'
-
-
-      - job: ResourceModel_Tests
-        displayName: Interaction Tests
-        steps:
-          - task: NuGetToolInstaller@1
-          - task: NuGetCommand@2
-            inputs:
-              restoreSolution: '$(solution)'
-          - task: DownloadPipelineArtifact@2
-            inputs:
-              buildType: 'current'
-              artifactName: 'artifacts_$(buildConfiguration)_$(buildPlatform)'
-              targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
-          - task: VSTest@2
-            inputs:
-              testSelector: 'testAssemblies'
-              testAssemblyVer2: |
-                ResourceModelTests.build.appxrecipe
-              searchFolder: 'D:\a\1\s\artifacts\Debug\ResoureModelTests\'
 
       - job: Interaction_Tests
         displayName: Interaction Tests
