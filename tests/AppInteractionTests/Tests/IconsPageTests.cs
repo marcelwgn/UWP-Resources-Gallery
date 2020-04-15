@@ -52,7 +52,7 @@ namespace AppInteractionTests.Tests
             }
         }
 
-        [TestMethod]
+        //[TestMethod]
         public void OnlySymbolsFilterWorksCorrectly()
         {
             OpenQA.Selenium.Appium.Windows.WindowsElement searchIconsBox = TestRunInitializer.Session.FindElementsByName("Search icons:")[1];
