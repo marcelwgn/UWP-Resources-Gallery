@@ -19,6 +19,8 @@ namespace UWPResourcesGallery.Model
         /// <summary>
         /// List containing all items
         /// </summary>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1000:Do not declare static members on generic types", 
+            Justification = "This collection is needed on every source, but does not make sense as non static field.")]
         public static IList<T> Items { get; } = new List<T>();
 
         /// <summary>

@@ -13,6 +13,24 @@
     </Page.Resources>
     
     <Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="OverlayStates">
+                <VisualState x:Name="NoOverlay"/>
+                <VisualState x:Name="CompactOverlay">
+                    <VisualState.Setters>
+                        <Setter Target="CompactOverlayArrowsMinimizeIcon.Visibility" Value="Visible"/>
+                        <Setter Target="CompactOverlayArrowsMaximizeIcon.Visibility" Value="Collapsed"/>
+                        <Setter Target="AppTitle.(Grid.Column)" Value="1"/>
+                        <Setter Target="AppTitleBar.Margin" Value="30,3,0,0"/>
+                        <Setter Target="SwitchCompactOverlayModeButton.(Grid.Column)" Value="0"/>
+                        <Setter Target="SwitchCompactOverlayModeButton.(AutomationProperties.Name)" Value="Switch to normal mode"/>
+                        <Setter Target="SwitchCompactOverlayModeButton.(ToolTipService.ToolTip)" Value="1"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+
+        </VisualStateManager.VisualStateGroups>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition />
