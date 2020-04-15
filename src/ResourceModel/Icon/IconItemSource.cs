@@ -7,7 +7,7 @@ namespace UWPResourcesGallery.Model.Icons
 {
     public class IconItemSource : GenericItemsSource<IconItem>
     {
-        public ObservableCollection<IconItem> FilteredSymbolItems = new ObservableCollection<IconItem>();
+        public ObservableCollection<IconItem> FilteredSymbolItems { get; } = new ObservableCollection<IconItem>();
 
         public IconItemSource()
         {
