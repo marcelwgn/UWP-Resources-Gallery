@@ -63,16 +63,7 @@ stages:
               artifactName: 'artifacts_$(buildConfiguration)_$(buildPlatform)'
               targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
           
-          - task: PowerShell@2
-            inputs:
-              targetType: 'inline'
-              script: |
-                # Write your PowerShell commands here.
-                
-                Write-Host "Hello World"
-                
-                
-                Get-ChildItem -Path $(System.DefaultWorkingDirectory) –Recurse
+
 
           - task: VSTest@2
             inputs:
@@ -89,15 +80,24 @@ stages:
               buildType: 'current'
               artifactName: 'artifacts_$(buildConfiguration)_$(buildPlatform)'
               targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
-
+          - task: PowerShell@2
+            inputs:
+              targetType: 'inline'
+              script: |
+                # Write your PowerShell commands here.
+                
+                Write-Host "Hello World"
+                
+                
+                Get-ChildItem -Path $(System.DefaultWorkingDirectory) –Recurse
           - task: VSTest@2
             inputs:
               testSelector: 'testAssemblies'
               testAssemblyVer2: |
-                **\ResourceModelTests.build.appxrecipe
+                ResourceModelTests.build.appxrecipe
                 !**\*TestAdapter.dll
                 !**\obj\**
-              searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)\ResourceModelTests'
+              searchFolder: 'D:\a\1\s\artifacts\Debug\ResoureModelTests\'
               uiTests: true
 
       - job: Interaction_Tests
