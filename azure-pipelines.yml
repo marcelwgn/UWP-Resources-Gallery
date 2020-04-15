@@ -94,10 +94,10 @@ stages:
             inputs:
               testSelector: 'testAssemblies'
               testAssemblyVer2: |
-                ResourceModelTests.build.appxrecipe
+                **\ResourceModelTests.build.appxrecipe
                 !**\*TestAdapter.dll
                 !**\obj\**
-              searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
+              searchFolder: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)\ResourceModelTests'
               uiTests: true
 
       - job: Interaction_Tests
