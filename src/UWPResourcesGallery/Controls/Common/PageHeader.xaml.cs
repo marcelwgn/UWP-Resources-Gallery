@@ -33,9 +33,38 @@ namespace UWPResourcesGallery.Controls.Common
             DependencyProperty.Register("PageDescription", typeof(string), typeof(PageHeader), new PropertyMetadata(default(string)));
         #endregion
 
+        private static bool isCompact = false;
+
         public PageHeader()
         {
             InitializeComponent();
+
+            Window.Current.SizeChanged += Current_SizeChanged;
+
+            if (((Frame)Window.Current.Content).ActualWidth > 500)
+            {
+                VisualStateManager.GoToState(this, "Normal", false);
+                isCompact = false;
+            }
+            else
+            {
+                VisualStateManager.GoToState(this, "Compact", false);
+                isCompact = true;
+            }
+        }
+
+        private void Current_SizeChanged(object sender, Windows.UI.Core.WindowSizeChangedEventArgs e)
+        {
+            if(e.Size.Width > 500)
+            {
+                VisualStateManager.GoToState(this, "Normal", false);
+                isCompact = false;
+            }
+            else
+            {
+                VisualStateManager.GoToState(this, "Compact", false);
+                isCompact = true;
+            }
         }
     }
 }

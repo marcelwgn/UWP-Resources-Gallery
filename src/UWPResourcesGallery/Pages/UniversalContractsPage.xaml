@@ -13,17 +13,28 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     
     <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
-                <VisualState x:Name="Normal">
+                <VisualState>
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowHeight="600"/>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
                     </VisualState.StateTriggers>
 
                     <VisualState.Setters>
+                        <Setter Target="UniversalVersionsPresenterContainer.Padding" Value="0,0,0,14"/>
+                        <Setter Target="UniversalVersionsPresenterContainer.ItemContainerStyle">
+                            <Setter.Value>
+                                <Style TargetType="GridViewItem">
+                                    <Setter Property="Margin" Value="5"/>
+                                </Style>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="ContractHeaderFirstLabel.FontSize" Value="26"/>
+                        <Setter Target="ContractHeaderSecondLabel.FontSize" Value="26"/>
+                        <Setter Target="ContractHeaderThirdLabel.FontSize" Value="26"/>
+                        <Setter Target="DetailedContractInformationPanel.Margin" Value="0,6"/>
                     </VisualState.Setters>
-                </VisualState>
-                <VisualState x:Name="Compact">
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
@@ -54,13 +65,13 @@
                     AutomationProperties.LabeledBy="{x:Bind SearchUniversalVersionsLabel}"></TextBox>
         </Grid>
         <!-- Windows 10 version selector -->
-        <ScrollViewer HorizontalScrollMode="Enabled" IsHorizontalRailEnabled="True"
-            HorizontalScrollBarVisibility="Auto" Grid.Row="2" Margin="10,0">
+        <ScrollViewer Margin="10,0" HorizontalScrollMode="Enabled" IsHorizontalRailEnabled="True"
+            HorizontalScrollBarVisibility="Auto" Grid.Row="2">
             <GridView x:Name="UniversalVersionsPresenterContainer" AutomationProperties.Name="Windows 10 versions list"
-                    SelectionChanged="UniveralsVersionsList_SelectionChanged" Padding="0,0,0,11" MaxHeight="180">
+                    SelectionChanged="UniveralsVersionsList_SelectionChanged" MaxHeight="180">
                 <GridView.ItemContainerStyle>
                     <Style TargetType="GridViewItem">
-                        <Setter Property="Margin" Value="5,5,5,5"/>
+                        <Setter Property="Margin" Value="5,0"/>
                     </Style>
                 </GridView.ItemContainerStyle>
                 <GridView.ItemTemplate>
@@ -75,12 +86,12 @@
         <ScrollViewer Grid.Row="3" Margin="15,5" Padding="0,0,14,0" x:Name="SelectedItemScroller">
             <StackPanel x:DefaultBindMode="OneWay">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="{x:Bind SelectedItem.MarketingName}" FontSize="26"/>
-                    <TextBlock Text=", Version" Margin="6,0" FontSize="26"/>
-                    <TextBlock Text="{x:Bind SelectedItem.VersionName}" FontSize="26"/>
+                    <TextBlock x:Name="ContractHeaderFirstLabel" Text="{x:Bind SelectedItem.MarketingName}" FontSize="18"/>
+                    <TextBlock x:Name="ContractHeaderSecondLabel" Text=", Version" Margin="6,0" FontSize="18"/>
+                    <TextBlock x:Name="ContractHeaderThirdLabel" Text="{x:Bind SelectedItem.VersionName}" FontSize="18"/>
                 </StackPanel>
                 
-                <StackPanel Orientation="Horizontal" Margin="0,6,0,6">
+                <StackPanel x:Name="DetailedContractInformationPanel" Orientation="Horizontal" Margin="0">
                     <TextBlock Text="Code name:" Margin="0,0,4,0"/>
                     <TextBlock Text="{x:Bind SelectedItem.CodeName}" IsTextSelectionEnabled="True"/>
                 

@@ -8,10 +8,26 @@
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400">
-
     <StackPanel>
-        <TextBlock Text="{x:Bind PageName,Mode=OneWay}" FontSize="28" AutomationProperties.HeadingLevel="1" TextWrapping="Wrap"/>
-        <TextBlock Text="{x:Bind PageDescription,Mode=OneWay}" FontSize="18" AutomationProperties.HeadingLevel="2" 
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="HeaderSizing">
+                <VisualState x:Name="Normal">
+                    <VisualState.Setters>
+                        <Setter Target="PageNameTextBlock.FontSize" Value="28"/>
+                        <Setter Target="PageDescriptionTextBlock.FontSize" Value="18"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Compact">
+                    <VisualState.Setters>
+                        <Setter Target="PageNameTextBlock.FontSize" Value="18"/>
+                        <Setter Target="PageDescriptionTextBlock.FontSize" Value="14"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
+        <TextBlock x:Name="PageNameTextBlock" Text="{x:Bind PageName,Mode=OneWay}" FontSize="28" AutomationProperties.HeadingLevel="1" TextWrapping="Wrap"/>
+        <TextBlock x:Name="PageDescriptionTextBlock" Text="{x:Bind PageDescription,Mode=OneWay}" FontSize="18" AutomationProperties.HeadingLevel="2" 
                 TextWrapping="Wrap" Visibility="{x:Bind PageDescription,Mode=OneWay,Converter={StaticResource StringValueToVisibilityConverter}}"/>
     </StackPanel>
 </UserControl>
