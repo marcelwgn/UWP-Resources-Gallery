@@ -35,8 +35,7 @@
         DisplayName="UWP Resources Gallery Debug"
         Square150x150Logo="Assets\Tiles\Square150x150Logo.png"
         Square44x44Logo="Assets\Tiles\Square44x44Logo.png"
-        Description="This app displays common resources that are available for UWP Apps such as the Segoe icons and color resources."
-        BackgroundColor="#0084f0">
+        Description="This app displays common resources that are available for UWP Apps such as the Segoe icons and color resources." BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Tiles\Wide310x150Logo.png" Square71x71Logo="Assets\Tiles\SmallTile.png" Square310x310Logo="Assets\Tiles\LargeTile.png" >
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="wide310x150Logo"/>
@@ -44,7 +43,7 @@
             <uap:ShowOn Tile="square310x310Logo"/>
           </uap:ShowNameOnTiles>
         </uap:DefaultTile >
-        <uap:SplashScreen Image="Assets\Tiles\SplashScreen.png"  BackgroundColor="#0084f0"/>
+        <uap:SplashScreen Image="Assets\Tiles\SplashScreen.png"  />
         <uap:InitialRotationPreference>
           <uap:Rotation Preference="landscape"/>
           <uap:Rotation Preference="portrait"/></uap:InitialRotationPreference>
