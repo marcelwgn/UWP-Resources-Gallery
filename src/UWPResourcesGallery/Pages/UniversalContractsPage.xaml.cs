@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AppCenter.Analytics;
+using System;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
@@ -33,6 +34,7 @@ namespace UWPResourcesGallery.Pages
             SelectedItem = source.FilteredItems[0];
             UniversalVersionsPresenterContainer.ItemsSource = source.FilteredItems;
             UniversalVersionsPresenterContainer.SelectedItem = source.FilteredItems[0];
+            Analytics.TrackEvent("Visited: UniversalContractsPage");
         }
 
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs args)

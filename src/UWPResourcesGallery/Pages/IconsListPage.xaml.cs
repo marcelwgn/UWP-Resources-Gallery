@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using Microsoft.AppCenter.Analytics;
+using System.Threading.Tasks;
 using UWPResourcesGallery.Controls.Templates;
 using UWPResourcesGallery.Model.Icons;
 using Windows.Foundation.Metadata;
@@ -18,6 +19,7 @@ namespace UWPResourcesGallery.Pages
         {
             InitializeComponent();
 
+            Analytics.TrackEvent("Visited: IconListPage");
             Loaded += LoadIcons;
         }
 

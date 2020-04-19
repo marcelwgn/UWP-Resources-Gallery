@@ -15,6 +15,7 @@ namespace AppInteractionTests.Tests
         [DataRow("1507 AI",0)]
         [DataRow("1507 dasd sadiosadosa",0)]
         [DataRow("1507 contract",1)]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "<Pending>")]
         public void FindsResults(string search, int foundItems)
         {
             OpenQA.Selenium.Appium.Windows.WindowsElement searchContractsBox = TestRunInitializer.Session.FindElementsByName("Search contracts and versions:")[1];

@@ -1,4 +1,5 @@
-﻿using UWPResourcesGallery.Common;
+﻿using Microsoft.AppCenter.Analytics;
+using UWPResourcesGallery.Common;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -24,6 +25,7 @@ namespace UWPResourcesGallery.Pages
         {
             InitializeComponent();
 
+            Analytics.TrackEvent("Visited: SettingsPage");
             foreach (FrameworkElement element in ThemePanel.Children)
             {
 

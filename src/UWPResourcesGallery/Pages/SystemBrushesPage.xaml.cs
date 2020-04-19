@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using Microsoft.AppCenter.Analytics;
+using System.Threading.Tasks;
 using UWPResourcesGallery.Model.Brushes;
 using Windows.UI.Xaml.Controls;
 
@@ -18,6 +19,7 @@ namespace UWPResourcesGallery.Pages
         {
             InitializeComponent();
             Loaded += LoadSystemColors;
+            Analytics.TrackEvent("Visited: SystemBrushesPage");
         }
 
         private void LoadSystemColors(object sender, Windows.UI.Xaml.RoutedEventArgs e)

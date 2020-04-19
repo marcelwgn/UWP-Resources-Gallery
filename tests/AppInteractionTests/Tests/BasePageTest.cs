@@ -13,7 +13,7 @@ namespace AppInteractionTests.Tests
         }
 
         [ClassInitialize]
-        public void AppLaunch()
+        public static void AppLaunch()
         {
             TestRunInitializer.Session.Manage().Window.Maximize();
         }
@@ -30,7 +30,7 @@ namespace AppInteractionTests.Tests
         }
 
         [ClassCleanup]
-        public void AppTearDown()
+        public static void AppTearDown()
         {
             TestHelper.NavigateToPage("Start");
             TestRunInitializer.TearDown();

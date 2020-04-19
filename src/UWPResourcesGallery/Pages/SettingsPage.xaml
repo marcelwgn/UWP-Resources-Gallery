@@ -87,7 +87,7 @@
 
             </StackPanel>
 
-            <StackPanel Style="{ThemeResource SectionPanel}">
+            <StackPanel  >
                 <TextBlock Text="Dependencies" Padding="0,10,0,10" FontSize="22" />
                 <RichTextBlock>
                     <Paragraph Margin="0,10,0,10">
@@ -97,6 +97,10 @@
                         <Hyperlink NavigateUri="https://github.com/WilliamABradley/ColorCode-Universal">ColorCode-Universal</Hyperlink>
                     </Paragraph>
                 </RichTextBlock>
+            </StackPanel>
+
+            <StackPanel Style="{ThemeResource SectionPanel}">
+                <TextBlock Text="This app collects anonymous usage data and crash reports to improve the product. By using this app you agree to the collection of that data."/>
             </StackPanel>
         </StackPanel>
     </ScrollViewer>
