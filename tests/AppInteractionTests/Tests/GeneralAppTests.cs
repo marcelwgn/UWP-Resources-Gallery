@@ -23,7 +23,7 @@ namespace AppInteractionTests.Tests
 
             // Switch to CompactOverlay
             compactOverlayButton.Click();
-            TestHelper.WaitMilli(2000);
+            TestHelper.WaitMilli(10000);
 
             // Get new button with updated text
             try

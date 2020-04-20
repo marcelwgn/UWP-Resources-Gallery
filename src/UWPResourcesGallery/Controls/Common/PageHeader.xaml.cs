@@ -36,6 +36,29 @@ namespace UWPResourcesGallery.Controls.Common
         public PageHeader()
         {
             InitializeComponent();
+
+            Window.Current.SizeChanged += Current_SizeChanged;
+
+            if (((Frame)Window.Current.Content).ActualWidth > 500)
+            {
+                VisualStateManager.GoToState(this, "Normal", false);
+            }
+            else
+            {
+                VisualStateManager.GoToState(this, "Compact", false);
+            }
+        }
+
+        private void Current_SizeChanged(object sender, Windows.UI.Core.WindowSizeChangedEventArgs e)
+        {
+            if(e.Size.Width > 500)
+            {
+                VisualStateManager.GoToState(this, "Normal", false);
+            }
+            else
+            {
+                VisualStateManager.GoToState(this, "Compact", false);
+            }
         }
     }
 }

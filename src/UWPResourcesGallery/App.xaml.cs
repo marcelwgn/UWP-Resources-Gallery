@@ -3,6 +3,7 @@ using UWPResourcesGallery.Common;
 using UWPResourcesGallery.Model.Brushes;
 using UWPResourcesGallery.Model.Colors;
 using UWPResourcesGallery.Model.Icons;
+using UWPResourcesGallery.Model.WindowsVersionContracts;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Core;
@@ -11,6 +12,9 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace UWPResourcesGallery
 {
@@ -27,6 +31,9 @@ namespace UWPResourcesGallery
         {
             InitializeComponent();
             Suspending += OnSuspending;
+            // Analytics
+            AppCenter.Start("a6f839dc-6cf3-4272-b3af-f208cf81c152",
+                typeof(Analytics), typeof(Crashes));
         }
 
         /// <summary>
@@ -109,6 +116,7 @@ namespace UWPResourcesGallery
             IconItemSource.LoadIconsList();
             SystemColorsItemSource.LoadSystemColors();
             SystemBrushItemSource.LoadSystemBrushes();
+            UniversalPlatformVersionSource.LoadWindowsVersionContracts();
         }
 
 

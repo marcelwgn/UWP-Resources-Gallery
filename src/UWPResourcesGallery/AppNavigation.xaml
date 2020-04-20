@@ -68,7 +68,7 @@
                     IsHitTestVisible="True" Canvas.ZIndex="20" Grid.Column="1"
                     Background="Transparent" Style="{ThemeResource ButtonRevealStyle}"
                     AutomationProperties.Name="Switch to overlay mode"
-                    Margin="8,2,0,0" Height="30" ToolTipService.ToolTip="Switch to overlay mode">
+                    Margin="8,2,10,0" Height="30" ToolTipService.ToolTip="Switch to overlay mode">
                 <Grid>
                     <FontIcon Glyph="&#xEA60;" FontSize="16"/>
                     <!-- Names to enabling/disabling the correct icon based on state -->
@@ -108,10 +108,16 @@
                         <FontIcon Glyph="&#xEE56;" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
-                
+
                 <muxc:NavigationViewItem Content="Systemcolors" x:Name="_SystemColorsPage">
                     <muxc:NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE790;" />
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItem Content="Universal API contracts" x:Name="_UniversalContractsPage">
+                    <muxc:NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xEADF;" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
             </muxc:NavigationView.MenuItems>

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using UWPResourcesGallery.Model.Colors;
 using Windows.ApplicationModel.Core;
 
-namespace ResoureModelTests
+namespace ResoureModelTests.SourceTests
 {
     [TestClass]
     public class SystemColorSourceTests

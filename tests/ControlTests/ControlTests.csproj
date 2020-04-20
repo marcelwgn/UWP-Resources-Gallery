@@ -121,6 +121,7 @@
     <Compile Include="UITests\CodeSampleTests.cs" />
     <Compile Include="UITests\PageHeaderTests.cs" />
     <Compile Include="UITests\SystemColorInformationTests.cs" />
+    <Compile Include="UITests\UniversalPlatformContractPresenterTests.cs" />
     <Compile Include="UnitTestApp.xaml.cs">
       <DependentUpon>UnitTestApp.xaml</DependentUpon>
     </Compile>
@@ -149,10 +150,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.2.9</Version>
+      <Version>6.2.10</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml">
-      <Version>2.4.0-prerelease.191217001</Version>
+      <Version>2.4.0-prerelease.200322001</Version>
     </PackageReference>
     <PackageReference Include="MSTest.TestAdapter">
       <Version>1.4.0</Version>

@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using UWPResourcesGallery.Model.Brushes;
 
-namespace ResoureModelTests
+namespace ResoureModelTests.FactoryTests
 {
     [TestClass]
     public class SystemBrushDefinitionFactoryTests

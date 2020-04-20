@@ -1,4 +1,5 @@
 ﻿using ColorCode;
+using Microsoft.AppCenter.Analytics;
 using UWPResourcesGallery.Common;
 using UWPResourcesGallery.Model.Icons;
 using Windows.UI.Xaml.Controls;
@@ -19,6 +20,7 @@ namespace UWPResourcesGallery.Pages
             ButtonSymbolIconCSCodeSample.SyntaxLanguage = Languages.CSharp;
             FontIconCSCodeSample.SyntaxLanguage = Languages.CSharp;
             ButtonFontIconCSCodeSample.SyntaxLanguage = Languages.CSharp;
+            Analytics.TrackEvent("Visited: IconDetailPage");
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)

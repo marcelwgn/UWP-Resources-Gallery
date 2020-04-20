@@ -1,0 +1,117 @@
+﻿<Page
+    x:Class="UWPResourcesGallery.Pages.UniversalContractsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPResourcesGallery.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:common="using:UWPResourcesGallery.Controls.Common"
+    xmlns:controls="using:UWPResourcesGallery.Controls.Templates"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:windowsversioncontracts="using:UWPResourcesGallery.Model.WindowsVersionContracts"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+                        <Setter Target="UniversalVersionsPresenterContainer.Padding" Value="0,0,0,14"/>
+                        <Setter Target="UniversalVersionsPresenterContainer.ItemContainerStyle">
+                            <Setter.Value>
+                                <Style TargetType="GridViewItem">
+                                    <Setter Property="Margin" Value="5"/>
+                                </Style>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="ContractHeaderFirstLabel.FontSize" Value="26"/>
+                        <Setter Target="ContractHeaderSecondLabel.FontSize" Value="26"/>
+                        <Setter Target="ContractHeaderThirdLabel.FontSize" Value="26"/>
+                        <Setter Target="DetailedContractInformationPanel.Margin" Value="0,6"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <common:PageHeader PageName="Universal API contracts" Margin="14,0,0,0"/>
+        
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="14" />
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="SearchUniversalVersionsLabel"  Margin="0,0,10,1" Grid.Column="1" Text="Search contracts and versions:" VerticalAlignment="Center"/>
+            <TextBox Grid.Column="2" MinWidth="250" VerticalAlignment="Center" Margin="0,1,0,1" TextChanged="SearchTextBox_TextChanged" 
+                    AutomationProperties.LabeledBy="{x:Bind SearchUniversalVersionsLabel}"></TextBox>
+        </Grid>
+        <!-- Windows 10 version selector -->
+        <ScrollViewer Margin="10,0" HorizontalScrollMode="Enabled" IsHorizontalRailEnabled="True"
+            HorizontalScrollBarVisibility="Auto" Grid.Row="2">
+            <GridView x:Name="UniversalVersionsPresenterContainer" AutomationProperties.Name="Windows 10 versions list"
+                    SelectionChanged="UniveralsVersionsList_SelectionChanged" MaxHeight="180">
+                <GridView.ItemContainerStyle>
+                    <Style TargetType="GridViewItem">
+                        <Setter Property="Margin" Value="5,0"/>
+                    </Style>
+                </GridView.ItemContainerStyle>
+                <GridView.ItemTemplate>
+                    <DataTemplate x:DataType="windowsversioncontracts:UniversalPlatformVersion">
+                        <controls:UniversalPlatformVersionPresenter UWPVersion="{x:Bind}"/>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+        </ScrollViewer>
+                
+        <!-- Content of the selected version -->
+        <ScrollViewer Grid.Row="3" Margin="15,5" Padding="0,0,14,0" x:Name="SelectedItemScroller">
+            <StackPanel >
+                <StackPanel Orientation="Horizontal" x:DefaultBindMode="OneWay">
+                    <TextBlock x:Name="ContractHeaderFirstLabel" Text="{x:Bind SelectedItem.MarketingName}" FontSize="18"/>
+                    <TextBlock x:Name="ContractHeaderSecondLabel" Text=", Version" Margin="6,0" FontSize="18"/>
+                    <TextBlock x:Name="ContractHeaderThirdLabel" Text="{x:Bind SelectedItem.VersionName}" FontSize="18"/>
+                </StackPanel>
+
+                <StackPanel x:Name="DetailedContractInformationPanel" Orientation="Horizontal" Margin="0" x:DefaultBindMode="OneWay">
+                    <TextBlock Text="Code name:" Margin="0,0,4,0"/>
+                    <TextBlock Text="{x:Bind SelectedItem.CodeName}" IsTextSelectionEnabled="True"/>
+                
+                    <TextBlock Text="Build version:" Margin="20,0,4,0"/>
+                    <TextBlock Text="{x:Bind SelectedItem.BuildVersion}" IsTextSelectionEnabled="True"/>
+                
+                    <TextBlock Text="SDK version:" Margin="20,0,4,0"/>
+                    <TextBlock Text="{x:Bind SelectedItem.Version}" IsTextSelectionEnabled="True"/>
+                </StackPanel>
+
+                <muxc:ItemsRepeater ItemsSource="{x:Bind SelectedItem.FilteredContracts,Mode=OneWay}">
+                    <muxc:ItemsRepeater.ItemTemplate>
+                        <DataTemplate x:DataType="windowsversioncontracts:UniversalPlatformContract">
+                            <controls:UniversalPlatformContractPresenter Contract="{x:Bind}"/>
+                        </DataTemplate>
+                    </muxc:ItemsRepeater.ItemTemplate>
+                </muxc:ItemsRepeater>
+            </StackPanel>
+        </ScrollViewer>
+        <TextBlock x:Name="EmptySearchLabel" Grid.Row="3" Visibility="Collapsed"
+            FontSize="24" Text="No contracts found" HorizontalAlignment="Center"/>
+    </Grid>
+</Page>

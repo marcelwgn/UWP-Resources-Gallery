@@ -8,19 +8,11 @@ You can download the UWP Resources Gallery now [from the Microsoft Store](https:
 
 The idea for this app is based on the XAML Controls Gallery. The XAML Controls Gallery can be found here: https://github.com/microsoft/Xaml-Controls-Gallery
 
-### Iconspage
-![Iconspage of UWP Resources Gallery](./docs/Screenshot_Iconspage.png)
-
-### Systembrushes page
-![Systembrushes of UWP Resources Gallery](./docs/Screenshot_Systembrushespage.png)
-
-### Systemcolors page
-![Systemcolors of UWP Resources Gallery](./docs/Screenshot_Systemcolorspage.png)
-
 ## The UWP Resources Gallery shows:
  * All Segoe MDL2 icons that are provided by Windows 10
  * How to use Segoe MDL2 icons
  * System colors and brushes that are available to UWP apps
+ * List of Windows 10 versions and all available Universal API contracts available
 
 ## Building the app
 **Note**: The UWP Resources Gallery requires Visual Studio [2017](http://go.microsoft.com/fwlink/?LinkID=532422) or [2019](https://visualstudio.microsoft.com/vs/) to build and Windows 10 to execute.
@@ -28,6 +20,20 @@ The idea for this app is based on the XAML Controls Gallery. The XAML Controls G
 To obtain information about Windows 10 development, go to the [Windows Dev Center](https://developer.microsoft.com/windows)
 
 To obtain information about Microsoft Visual Studio and the tools for developing Windows apps, go to [Visual Studio](http://go.microsoft.com/fwlink/?LinkID=532422)
+
+## Screenshots
+
+### Iconspage
+<img alt="Iconspage of UWP Resources Gallery" src="./docs/Screenshot_Iconspage.png" height="300">
+
+### Systembrushes page
+<img alt="Systembrushes of UWP Resources Gallery" src="./docs/Screenshot_Systembrushespage.png" height="300">
+
+### Systemcolors page
+<img alt="Systemcolors of UWP Resources Gallery" src="./docs/Screenshot_Systemcolorspage.png" height="300">
+
+### Universal API Contracts page
+<img alt="Universal API contracts page of UWP Resources Gallery" src="./docs/Screenshot_UniversalAPIContractsPage.png" height="300">
 
 ## References:
 

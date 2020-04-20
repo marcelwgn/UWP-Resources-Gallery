@@ -28,6 +28,9 @@ namespace UWPResourcesGallery
 
             RootFrame.Navigate(typeof(StartPage));
 
+            var value = Windows.UI.Core.SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility;
+
+
             Loaded += delegate (object sender, RoutedEventArgs e)
             {
                 ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
@@ -88,6 +91,10 @@ namespace UWPResourcesGallery
             {
                 RootNavigation.SelectedItem = _SystemBrushesPage;
             }
+            if (RootFrame.CurrentSourcePageType == typeof(UniversalContractsPage))
+            {
+                RootNavigation.SelectedItem = _UniversalContractsPage;
+            }
 
         }
 
@@ -98,22 +105,25 @@ namespace UWPResourcesGallery
                 RootFrame.Navigate(typeof(SettingsPage));
                 return;
             }
-            object selectedItem = sender.SelectedItem;
-            if (selectedItem == _StartPage)
+            if ((string)args.InvokedItem == "Start")
             {
                 RootFrame.Navigate(typeof(StartPage));
             }
-            if (selectedItem == _IconsListPage)
+            if ((string)args.InvokedItem == "Icons")
             {
                 RootFrame.Navigate(typeof(IconsListPage));
             }
-            if (selectedItem == _SystemColorsPage)
+            if ((string)args.InvokedItem == "Systemcolors")
             {
                 RootFrame.Navigate(typeof(SystemColorsPage));
             }
-            if (selectedItem == _SystemBrushesPage)
+            if ((string)args.InvokedItem == "Systembrushes")
             {
                 RootFrame.Navigate(typeof(SystemBrushesPage));
+            }
+            if ((string)args.InvokedItem == "Universal API contracts")
+            {
+                RootFrame.Navigate(typeof(UniversalContractsPage));
             }
         }
 
