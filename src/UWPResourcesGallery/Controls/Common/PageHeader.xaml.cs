@@ -33,8 +33,6 @@ namespace UWPResourcesGallery.Controls.Common
             DependencyProperty.Register("PageDescription", typeof(string), typeof(PageHeader), new PropertyMetadata(default(string)));
         #endregion
 
-        private static bool isCompact = false;
-
         public PageHeader()
         {
             InitializeComponent();
@@ -44,12 +42,10 @@ namespace UWPResourcesGallery.Controls.Common
             if (((Frame)Window.Current.Content).ActualWidth > 500)
             {
                 VisualStateManager.GoToState(this, "Normal", false);
-                isCompact = false;
             }
             else
             {
                 VisualStateManager.GoToState(this, "Compact", false);
-                isCompact = true;
             }
         }
 
@@ -58,12 +54,10 @@ namespace UWPResourcesGallery.Controls.Common
             if(e.Size.Width > 500)
             {
                 VisualStateManager.GoToState(this, "Normal", false);
-                isCompact = false;
             }
             else
             {
                 VisualStateManager.GoToState(this, "Compact", false);
-                isCompact = true;
             }
         }
     }

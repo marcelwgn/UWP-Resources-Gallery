@@ -84,14 +84,14 @@
                 
         <!-- Content of the selected version -->
         <ScrollViewer Grid.Row="3" Margin="15,5" Padding="0,0,14,0" x:Name="SelectedItemScroller">
-            <StackPanel x:DefaultBindMode="OneWay">
-                <StackPanel Orientation="Horizontal">
+            <StackPanel >
+                <StackPanel Orientation="Horizontal" x:DefaultBindMode="OneWay">
                     <TextBlock x:Name="ContractHeaderFirstLabel" Text="{x:Bind SelectedItem.MarketingName}" FontSize="18"/>
                     <TextBlock x:Name="ContractHeaderSecondLabel" Text=", Version" Margin="6,0" FontSize="18"/>
                     <TextBlock x:Name="ContractHeaderThirdLabel" Text="{x:Bind SelectedItem.VersionName}" FontSize="18"/>
                 </StackPanel>
-                
-                <StackPanel x:Name="DetailedContractInformationPanel" Orientation="Horizontal" Margin="0">
+
+                <StackPanel x:Name="DetailedContractInformationPanel" Orientation="Horizontal" Margin="0" x:DefaultBindMode="OneWay">
                     <TextBlock Text="Code name:" Margin="0,0,4,0"/>
                     <TextBlock Text="{x:Bind SelectedItem.CodeName}" IsTextSelectionEnabled="True"/>
                 
