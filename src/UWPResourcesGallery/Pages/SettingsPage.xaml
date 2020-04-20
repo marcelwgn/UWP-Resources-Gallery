@@ -100,7 +100,9 @@
             </StackPanel>
 
             <StackPanel Style="{ThemeResource SectionPanel}">
-                <TextBlock Text="This app collects anonymous usage data and crash reports to improve the product. By using this app you agree to the collection of that data."/>
+                <TextBlock 
+                    TextWrapping="WrapWholeWords"
+                    Text="This app collects anonymous usage data and crash reports to improve the product. By using this app you agree to the collection of that data."/>
             </StackPanel>
         </StackPanel>
     </ScrollViewer>
