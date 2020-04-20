@@ -11,7 +11,7 @@ namespace UWPResourcesGallery.Common
         public static string GetCSFontIconCodeFromGlyph(string glyph)
         {
             return "FontIcon icon = new FontIcon();" +
-                "\nicon.Glyph = \"" + glyph + "\";";
+                "\nicon.Glyph = \"\\u" + glyph.Substring(3, 4) + "\";";
         }
 
         public static string GetXAMLButtonIconFromGlyph(string glyph)
@@ -24,7 +24,7 @@ namespace UWPResourcesGallery.Common
         {
             return "Button button = new Button();" +
                 "\nbutton.Content = new FontIcon();" +
-                "\n(button.Content as FontIcon).Glyph = \"" + glyph + "\";";
+                "\n(button.Content as FontIcon).Glyph = \"\\u" + glyph.Substring(3, 4) + "\";";
         }
 
         internal static string GetXAMLSymbolIconCodeFromGlyph(string name)
