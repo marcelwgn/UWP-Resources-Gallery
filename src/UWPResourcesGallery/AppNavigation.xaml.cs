@@ -105,24 +105,23 @@ namespace UWPResourcesGallery
                 RootFrame.Navigate(typeof(SettingsPage));
                 return;
             }
-            object selectedItem = sender.SelectedItem;
-            if (selectedItem == _StartPage)
+            if ((string)args.InvokedItem == "Start")
             {
                 RootFrame.Navigate(typeof(StartPage));
             }
-            if (selectedItem == _IconsListPage)
+            if ((string)args.InvokedItem == "Icons")
             {
                 RootFrame.Navigate(typeof(IconsListPage));
             }
-            if (selectedItem == _SystemColorsPage)
+            if ((string)args.InvokedItem == "Systemcolors")
             {
                 RootFrame.Navigate(typeof(SystemColorsPage));
             }
-            if (selectedItem == _SystemBrushesPage)
+            if ((string)args.InvokedItem == "Systembrushes")
             {
                 RootFrame.Navigate(typeof(SystemBrushesPage));
             }
-            if (selectedItem == _UniversalContractsPage)
+            if ((string)args.InvokedItem == "Universal API contracts")
             {
                 RootFrame.Navigate(typeof(UniversalContractsPage));
             }
