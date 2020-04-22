@@ -23,17 +23,23 @@ namespace UWPResourcesGallery
     /// </summary>
     public sealed partial class App : Application
     {
+        // This is not really a secret, so it's fine to be public
+        private const string AppSecret = "a6f839dc-6cf3-4272-b3af-f208cf81c152";
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
+        /// 
         public App()
         {
             InitializeComponent();
             Suspending += OnSuspending;
             // Analytics
-            AppCenter.Start("a6f839dc-6cf3-4272-b3af-f208cf81c152",
+#if !DEBUG
+            AppCenter.Start(AppSecret,
                 typeof(Analytics), typeof(Crashes));
+#endif
         }
 
         /// <summary>
