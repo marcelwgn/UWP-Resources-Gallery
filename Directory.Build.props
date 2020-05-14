@@ -2,13 +2,12 @@
 
   <!-- Output paths -->
   <PropertyGroup>
-    <BaseOutputPath>..\..\artifacts\$(Configuration)\</BaseOutputPath>
+    <BaseOutputPath>..\..\artifacts\$(Configuration)\$(Platform)\</BaseOutputPath>
 
     <OutputPath>$(BaseOutputPath)\$(MSBuildProjectName)\</OutputPath>
 
-    <!--<BaseIntermediateOutputPath>..\..\artifacts\intermediates\$(Configuration)\$(MSBuildProjectName)\</BaseIntermediateOutputPath>-->
-    <IntermediateOutputPath>..\..\artifacts\intermediates\$(MSBuildProjectName)\</IntermediateOutputPath>
-    <GeneratedFilesDir>..\..\artifacts\intermediates\$(MSBuildProjectName)\Generated Files\</GeneratedFilesDir>
+    <IntermediateOutputPath>..\..\artifacts\intermediates\$(Platform)\$(MSBuildProjectName)\</IntermediateOutputPath>
+    <GeneratedFilesDir>..\..\artifacts\intermediates\$(Platform)\$(MSBuildProjectName)\Generated Files\</GeneratedFilesDir>
   </PropertyGroup>
   
   <!-- Packages needed in every project -->
