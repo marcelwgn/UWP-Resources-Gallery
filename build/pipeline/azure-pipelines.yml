@@ -17,15 +17,10 @@ variables:
 stages:
   - template: ./templates/build-template.yml
     parameters:
-      - name: "solution"
-        value: '$(solution)'
-      - name: "buildPlatform"
-        value: '$(buildPlatform)'
-      - name: "buildConfiguration"
-        value: '$(buildConfiguration)'
-      - name: "appxPackageDir"
-        value: '$(appxPackageDir)'
-
+      buildPlatform: 'x86'
+      buildConfiguration: 'Debug'
+      appxPackageDir: '$(build.artifactStagingDirectory)\AppxPackages\\'
+  
   - stage: Testing
     dependsOn: Build
     jobs:
