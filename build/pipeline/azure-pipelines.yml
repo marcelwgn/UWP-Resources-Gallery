@@ -15,35 +15,16 @@ variables:
   buildConfiguration: 'Debug'
   appxPackageDir: '$(build.artifactStagingDirectory)\AppxPackages\\'
 stages:
-  - stage: Build
-    jobs:
-      - job: Build_Artifacts
-        displayName: Artifacts
-        steps:
-        - task: NuGetToolInstaller@1
-
-        - task: NuGetCommand@2
-          inputs:
-            restoreSolution: '$(solution)'
-
-        - task: VSBuild@1
-          inputs:
-            platform: 'x86'
-            solution: '$(solution)'
-            configuration: '$(buildConfiguration)'
-            msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" /p:AppxPackageDir="$(appxPackageDir)" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=SideloadOnly /p:AppxPackageSigningEnabled=true'
-        
-        - task: PublishPipelineArtifact@1
-          inputs:
-            targetPath: '$(System.DefaultWorkingDirectory)\artifacts\$(buildConfiguration)'
-            artifact: 'artifacts_$(buildConfiguration)_$(buildPlatform)'
-            publishLocation: 'pipeline'
-            
-        - task: PublishBuildArtifacts@1
-          inputs:
-            PathtoPublish: '$(Build.ArtifactStagingDirectory)\AppxPackages\'
-            ArtifactName: 'appxbundles_$(buildConfiguration)_$(buildPlatform)'
-            publishLocation: 'Container'
+  - template: ./templates/build-template.yml
+    parameters:
+      - name: "solution"
+        value: '$(solution)'
+      - name: "buildPlatform"
+        value: '$(buildPlatform)'
+      - name: "buildConfiguration"
+        value: '$(buildConfiguration)'
+      - name: "appxPackageDir"
+        value: '$(appxPackageDir)'
 
   - stage: Testing
     dependsOn: Build
