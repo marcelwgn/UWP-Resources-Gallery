@@ -1,0 +1,38 @@
+parameters:
+  solution: '**/*.sln'
+  buildPlatform: ''
+  buildConfiguration: ''
+  appxPackageDir: '$(build.artifactStagingDirectory)\AppxPackages\\'
+
+jobs:
+  - job:
+    displayName: Build ${{parameters.buildConfiguration}} ${{parameters.buildPlatform}}
+    steps:
+    - task: NuGetToolInstaller@1
+      displayName: Install NuGet 5.2.0
+      inputs:
+        versionSpec: 5.2.0
+
+    - task: NuGetCommand@2
+      displayName: Restore packages
+      inputs:
+        restoreSolution: '${{parameters.solution}}'
+
+    - task: VSBuild@1
+      inputs:
+        platform: ${{parameters.buildPlatform}}
+        solution: '${{parameters.solution}}'
+        configuration: '${{parameters.buildConfiguration}}'
+        msbuildArgs: '/p:AppxBundlePlatforms="${{parameters.buildPlatform}}" /p:AppxPackageDir="${{parameters.appxPackageDir}}" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=SideloadOnly /p:AppxPackageSigningEnabled=true'
+    
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(System.DefaultWorkingDirectory)\artifacts\${{parameters.buildConfiguration}}'
+        artifact: 'artifacts_${{parameters.buildConfiguration}}_${{parameters.buildPlatform}}'
+        publishLocation: 'pipeline'
+        
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)\AppxPackages\'
+        ArtifactName: 'appxbundles_${{parameters.buildConfiguration}}_${{parameters.buildPlatform}}'
+        publishLocation: 'Container'

@@ -1,0 +1,44 @@
+# Universal Windows Platform
+# Build a Universal Windows Platform project using Visual Studio.
+# Add steps that test and distribute an app, save build artifacts, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-2019'
+
+stages:
+  - stage: Build
+    jobs:
+      - template: ./templates/build-all.yml
+        parameters:
+          buildPlatform: 'x86'
+          buildConfiguration: 'Debug'     
+      - template: ./templates/build-all.yml
+        parameters:
+          buildPlatform: 'x64'
+          buildConfiguration: 'Debug'
+  
+  - stage: Testing
+    dependsOn: Build
+    jobs:
+      - template: ./templates/test-unit-tests.yml
+        parameters:
+          buildPlatform: 'x86'
+          buildConfiguration: 'Debug'       
+      - template: ./templates/test-unit-tests.yml
+        parameters:
+          buildPlatform: 'x64'
+          buildConfiguration: 'Debug'   
+          
+      - template: ./templates/test-interaction-tests.yml
+        parameters:
+          buildPlatform: 'x86'
+          buildConfiguration: 'Debug'      
+      
+      - template: ./templates/test-interaction-tests.yml
+        parameters:
+          buildPlatform: 'x64'
+          buildConfiguration: 'Debug'
