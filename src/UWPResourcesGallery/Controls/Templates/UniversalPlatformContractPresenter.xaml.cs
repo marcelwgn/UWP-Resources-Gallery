@@ -30,11 +30,10 @@ namespace UWPResourcesGallery.Controls.Templates
 
         private static void OnContractChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            var presenter = d as UniversalPlatformContractPresenter;
-            if(presenter != null)
+            if (d is UniversalPlatformContractPresenter presenter)
             {
                 presenter.ContractNamePresenter.Text = presenter.ContractName;
-            }     
+            }
         }
 
         public UniversalPlatformContractPresenter()

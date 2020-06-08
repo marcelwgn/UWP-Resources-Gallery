@@ -24,7 +24,9 @@ namespace UWPResourcesGallery
     public sealed partial class App : Application
     {
         // This is not really a secret, so it's fine to be public
+#pragma warning disable CA1823 // Remove unused private members
         private const string AppSecret = "a6f839dc-6cf3-4272-b3af-f208cf81c152";
+#pragma warning restore CA1823 // Remove unused private members
 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
