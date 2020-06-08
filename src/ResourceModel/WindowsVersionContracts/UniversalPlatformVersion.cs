@@ -34,7 +34,7 @@ namespace UWPResourcesGallery.Model.WindowsVersionContracts
                 return;
             }
 
-            UniversalPlatformContract contract = null;
+            UniversalPlatformContract contract;
             for (uint index = 0; index < contractsArray.Count; index++)
             {
                 JsonObject entry = contractsArray.GetObjectAt(index);

@@ -31,8 +31,8 @@ jobs:
         artifact: 'artifacts_${{parameters.buildConfiguration}}_${{parameters.buildPlatform}}'
         publishLocation: 'pipeline'
         
-    - task: PublishBuildArtifacts@1
+    - task: PublishPipelineArtifact@1
       inputs:
-        PathtoPublish: '$(Build.ArtifactStagingDirectory)\AppxPackages\'
-        ArtifactName: 'appxbundles_${{parameters.buildConfiguration}}_${{parameters.buildPlatform}}'
-        publishLocation: 'Container'
+        targetPath: '$(Build.ArtifactStagingDirectory)\AppxPackages\'
+        artifact: 'appxbundles_${{parameters.buildConfiguration}}_${{parameters.buildPlatform}}'
+        publishLocation: 'pipeline'

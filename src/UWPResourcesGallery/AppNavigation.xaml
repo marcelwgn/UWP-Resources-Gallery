@@ -84,6 +84,8 @@
         <muxc:NavigationView x:Name="RootNavigation"
                 AutomationProperties.Name="Mainnavigation"
                 Grid.Column="1"
+                PaneDisplayMode="Auto"
+                IsPaneOpen="False"
                 ItemInvoked="RootNavigation_ItemInvoked" 
                 PaneOpening="RootNavigation_PaneOpening"
                 PaneClosing="RootNavigation_PaneClosing"

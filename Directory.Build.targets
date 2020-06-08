@@ -5,8 +5,15 @@
       Ignore reason: All strings we use are templates or logging and are in english per design
 
       CA1305: Specify IFormatProvider
-      Ignore reason: All strings are english-->
+      Ignore reason: All strings are english
+      
+      WMC1501: Property is for evaluation purposes
+      Ignore reason: We are fine with that here
+      
+      CS8305: Property is for evaluation purposes
+      Ignore reason: We are fine with that here
+      -->
 
-    <NoWarn>;$(NoWarn);CA1303;CA1305</NoWarn>
+    <NoWarn>;$(NoWarn);CA1303;CA1305;WMC1501;CS8305;</NoWarn>
   </PropertyGroup>
 </Project>

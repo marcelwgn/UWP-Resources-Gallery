@@ -45,6 +45,7 @@ namespace UWPResourcesGallery
                 {
                     SwitchCompactOverlayModeButton.Visibility = Visibility.Collapsed;
                 }
+                RootNavigation.IsPaneOpen = true;
             };
         }
 
