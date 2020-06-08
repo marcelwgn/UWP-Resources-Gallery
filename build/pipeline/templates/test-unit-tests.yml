@@ -20,12 +20,11 @@ jobs:
         inputs:
           restoreSolution: '${{parameters.solution}}'
 
-      - task: DownloadBuildArtifacts@0
+      - task: DownloadPipelineArtifact@2
         inputs:
           buildType: 'current'
-          downloadType: 'single'
           artifactName: 'artifacts_${{parameters.buildConfiguration}}_${{parameters.buildPlatform}}'
-          downloadPath: '$(System.DefaultWorkingDirectory)\artifacts\${{parameters.buildConfiguration}}'
+          targetPath: '$(System.DefaultWorkingDirectory)\artifacts\${{parameters.buildConfiguration}}'
 
       - task: VSTest@2
         inputs:

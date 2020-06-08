@@ -10,19 +10,23 @@ jobs:
     displayName: Interaction tests ${{parameters.buildConfiguration}} ${{parameters.buildPlatform}}
     steps:
       - checkout: none
+      - task: DownloadPipelineArtifact@2
+        inputs:
+          buildType: 'current'
+          artifactName: 'artifacts_${{parameters.buildConfiguration}}_${{parameters.buildPlatform}}'
+          targetPath: '$(System.DefaultWorkingDirectory)\artifacts\${{parameters.buildConfiguration}}'
+      
+      - task: DownloadPipelineArtifact@2
+        inputs:
+          buildType: 'current'
+          artifactName: 'appxbundles_${{parameters.buildConfiguration}}_${{parameters.buildPlatform}}'
+          targetPath: '$(System.DefaultWorkingDirectory)\appxbundles'
 
       - task: DownloadBuildArtifacts@0
         inputs:
           buildType: 'current'
           downloadType: 'single'
           artifactName: 'artifacts_${{parameters.buildConfiguration}}_${{parameters.buildPlatform}}'
-          downloadPath: '$(System.DefaultWorkingDirectory)\artifacts\${{parameters.buildConfiguration}}'
-
-      - task: DownloadBuildArtifacts@0
-        inputs:
-          buildType: 'current'
-          downloadType: 'single'
-          artifactName: 'appxbundles_${{parameters.buildConfiguration}}_${{parameters.buildPlatform}}'
           downloadPath: '$(System.DefaultWorkingDirectory)\appxbundles'
 
       - task: PowerShell@2
