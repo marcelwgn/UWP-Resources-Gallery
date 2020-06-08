@@ -15,6 +15,7 @@ namespace AppInteractionTests.Tests
         }
 
         [TestMethod]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1031:Do not catch general exception types", Justification = "<Pending>")]
         public void VerifyCompactOverlayBehavior()
         {
             OpenQA.Selenium.Appium.Windows.WindowsElement compactOverlayButton = TestHelper.GetElementsOfTypeWithContent(

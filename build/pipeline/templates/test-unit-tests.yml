@@ -1,0 +1,36 @@
+parameters:
+  solution: '**/*.sln'
+  buildPlatform: ''
+  buildConfiguration: ''
+  appxPackageDir: '$(build.artifactStagingDirectory)\AppxPackages\\'
+
+
+jobs: 
+  - job: 
+    displayName: Unit tests ${{parameters.buildConfiguration}} ${{parameters.buildPlatform}}
+    steps:
+
+      - task: NuGetToolInstaller@1
+        displayName: Install NuGet 5.2.0
+        inputs:
+          versionSpec: 5.2.0
+
+      - task: NuGetCommand@2
+        displayName: Restore packages
+        inputs:
+          restoreSolution: '${{parameters.solution}}'
+
+      - task: DownloadPipelineArtifact@2
+        inputs:
+          buildType: 'current'
+          artifactName: 'artifacts_${{parameters.buildConfiguration}}_${{parameters.buildPlatform}}'
+          targetPath: '$(System.DefaultWorkingDirectory)\artifacts\${{parameters.buildConfiguration}}'
+      - task: VSTest@2
+        inputs:
+          testSelector: 'testAssemblies'
+          testAssemblyVer2: |
+            **\*Tests**.appxrecipe
+            !**\*TestAdapter.dll
+            !**\obj\**
+          searchFolder: '$(System.DefaultWorkingDirectory)'
+          uiTests: true
