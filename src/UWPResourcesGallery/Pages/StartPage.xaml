@@ -35,7 +35,9 @@
                 <!-- Navigation -->
                 <VariableSizedWrapGrid MaximumRowsOrColumns="2" Orientation="Horizontal" 
                             Grid.Row="1" HorizontalAlignment="Center">
+
                     <Button Style="{ThemeResource NavigatingButtonStyle}" Click="NavigateToIconListPage_Click"
+                            AutomationProperties.Name="Open IconsList page"
                             contract7Present:CornerRadius="0">
                         <Grid VerticalAlignment="Stretch" Height="80" Padding="4,0,8,0">
                             <Grid.RowDefinitions>
@@ -57,6 +59,7 @@
                     </Button>
 
                     <Button Style="{ThemeResource NavigatingButtonStyle}" Click="NavigateToSystemBrushesPage_Click" 
+                            AutomationProperties.Name="Open SystemBrushes page"
                             contract7Present:CornerRadius="0">
                         <Grid VerticalAlignment="Stretch" Height="80" Padding="4,0,8,0">
                             <Grid.RowDefinitions>
@@ -78,6 +81,7 @@
                     </Button>
 
                     <Button Style="{ThemeResource NavigatingButtonStyle}" Click="NavigateToSystemColorsPage_Click" 
+                            AutomationProperties.Name="Open SystemColors page"
                             contract7Present:CornerRadius="0">
                         <Grid VerticalAlignment="Stretch" Height="80" Padding="4,0,8,0">
                             <Grid.RowDefinitions>
@@ -99,6 +103,7 @@
                     </Button>
 
                     <Button Style="{ThemeResource NavigatingButtonStyle}" Click="NavigateToUniversalContractsPage_Click" 
+                            AutomationProperties.Name="Open universal contracts page"
                             contract7Present:CornerRadius="0">
                         <Grid VerticalAlignment="Stretch" Height="80" Padding="4,0,8,0">
                             <Grid.RowDefinitions>

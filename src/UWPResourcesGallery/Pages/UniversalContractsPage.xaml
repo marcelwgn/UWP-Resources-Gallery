@@ -76,7 +76,7 @@
                 </GridView.ItemContainerStyle>
                 <GridView.ItemTemplate>
                     <DataTemplate x:DataType="windowsversioncontracts:UniversalPlatformVersion">
-                        <controls:UniversalPlatformVersionPresenter UWPVersion="{x:Bind}"/>
+                        <controls:UniversalPlatformVersionPresenter UWPVersion="{x:Bind}" AutomationProperties.Name="{x:Bind UIAName}"/>
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>
@@ -105,7 +105,7 @@
                 <muxc:ItemsRepeater ItemsSource="{x:Bind SelectedItem.FilteredContracts,Mode=OneWay}">
                     <muxc:ItemsRepeater.ItemTemplate>
                         <DataTemplate x:DataType="windowsversioncontracts:UniversalPlatformContract">
-                            <controls:UniversalPlatformContractPresenter Contract="{x:Bind}"/>
+                            <controls:UniversalPlatformContractPresenter Contract="{x:Bind}" AutomationProperties.Name="{x:Bind UIAName}"/>
                         </DataTemplate>
                     </muxc:ItemsRepeater.ItemTemplate>
                 </muxc:ItemsRepeater>

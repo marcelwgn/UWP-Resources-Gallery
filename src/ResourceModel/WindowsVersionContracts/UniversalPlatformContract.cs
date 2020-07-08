@@ -9,6 +9,7 @@ namespace UWPResourcesGallery.Model.WindowsVersionContracts
     public class UniversalPlatformContract : IFilterable
     {
         public string Name { get; private set; }
+        public string UIAName => "UWP contract " + Name;
         public string Version { get; private set; }
         public int VersionInt => (int)double.Parse(Version);
 

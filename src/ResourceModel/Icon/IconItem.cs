@@ -9,6 +9,8 @@ namespace UWPResourcesGallery.Model.Icons
         public string Code { get; private set; }
         public string Name { get; private set; }
 
+        public string UIAName => "Icon " + Name;
+
         public string Character { get; private set; }
 
         public string StringGlyph => "&#x" + Code + ";";

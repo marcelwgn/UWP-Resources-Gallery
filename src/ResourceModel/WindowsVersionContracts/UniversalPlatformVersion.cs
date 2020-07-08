@@ -15,6 +15,7 @@ namespace UWPResourcesGallery.Model.WindowsVersionContracts
         public string VersionName { get; private set; }
         public string MarketingName { get; private set; }
         public string CodeName { get; private set; }
+        public string UIAName => "Windows Build " + BuildVersion;
 
         public List<UniversalPlatformContract> VersionContracts { get; private set; } = new List<UniversalPlatformContract>();
         public ObservableCollection<UniversalPlatformContract> FilteredContracts { get; private set; } = new ObservableCollection<UniversalPlatformContract>();
