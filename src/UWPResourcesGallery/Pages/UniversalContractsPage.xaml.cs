@@ -1,5 +1,6 @@
 ﻿using Microsoft.AppCenter.Analytics;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
@@ -21,7 +22,18 @@ namespace UWPResourcesGallery.Pages
         public UniversalPlatformVersion SelectedItem
         {
             get { return (UniversalPlatformVersion)GetValue(SelectedItemProperty); }
-            set { SetValue(SelectedItemProperty, value); }
+            set { 
+                SetValue(SelectedItemProperty, value);
+                if(value == null)
+                {
+                    ContractsRepeater.ItemsSource = null;
+                }
+                else
+                {
+                    ContractsRepeater.ItemsSource = value.FilteredContracts;
+                }
+                UniversalVersionsPresenterContainer.SelectedItem = value;
+            }
         }
 
         // Using a DependencyProperty as the backing store for SelectedItem.  This enables animation, styling, binding, etc...
@@ -33,25 +45,26 @@ namespace UWPResourcesGallery.Pages
             this.InitializeComponent();
             SelectedItem = source.FilteredItems[0];
             UniversalVersionsPresenterContainer.ItemsSource = source.FilteredItems;
-            UniversalVersionsPresenterContainer.SelectedItem = source.FilteredItems[0];
+            SelectedItem = source.FilteredItems[0];
             Analytics.TrackEvent("Visited: UniversalContractsPage");
         }
 
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs args)
         {
+            UniversalVersionsPresenterContainer.ItemsSource = null;
             source.Filter((sender as TextBox).Text);
             if(source.FilteredItems.Count > 0)
             {
+                UniversalVersionsPresenterContainer.ItemsSource = source.FilteredItems;
                 EmptySearchLabel.Visibility = Visibility.Collapsed;
+                UniversalVersionsPresenterContainer.Visibility = Visibility.Visible;
                 SelectedItemScroller.Visibility = Visibility.Visible;
-                
                 SelectedItem = source.FilteredItems[0];
-                UniversalVersionsPresenterContainer.SelectedItem = source.FilteredItems[0];
-
             }
             else
             {
                 EmptySearchLabel.Visibility = Visibility.Visible;
+                UniversalVersionsPresenterContainer.Visibility = Visibility.Collapsed;
                 SelectedItemScroller.Visibility = Visibility.Collapsed;
             }
         }

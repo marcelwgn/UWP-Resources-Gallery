@@ -30,10 +30,22 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="14" />
             </Grid.ColumnDefinitions>
-            <TextBlock x:Name="SearchSystemColorsLabel"  Margin="0,0,10,1" Grid.Column="1" Text="Search system colors:" VerticalAlignment="Center"/>
-            <TextBox Grid.Column="2" MinWidth="250" VerticalAlignment="Center" Margin="0,1,0,1" TextChanged="SearchTextBox_TextChanged" 
-                    AutomationProperties.LabeledBy="{x:Bind SearchSystemColorsLabel}"></TextBox>
-            <Border VerticalAlignment="Bottom" BorderThickness="1" BorderBrush="{ThemeResource SystemBaseMediumLowColor}" Grid.ColumnSpan="100"/>
+            <TextBlock x:Name="SearchSystemColorsLabel"
+                Margin="0,0,10,1"
+                       Grid.Column="1" 
+                       Text="Search system colors:" 
+                       VerticalAlignment="Center"/>
+            <TextBox Grid.Column="2" 
+                MinWidth="250" 
+                VerticalAlignment="Center" 
+                Margin="0,1,0,1" 
+                TextChanged="SearchTextBox_TextChanged" 
+                AutomationProperties.AutomationId="SearchColorsInput"
+                AutomationProperties.LabeledBy="{x:Bind SearchSystemColorsLabel}"/>
+            <Border VerticalAlignment="Bottom" 
+                BorderThickness="1" 
+                BorderBrush="{ThemeResource SystemBaseMediumLowColor}" 
+                Grid.ColumnSpan="100"/>
         </Grid>
         
         <GridView x:Name="SystemColorsPresenter" Grid.Row="2" SelectionMode="None" Padding="10">

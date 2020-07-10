@@ -47,11 +47,21 @@
 
         <StackPanel Grid.Row="1">
             <StackPanel Orientation="Horizontal" Margin="16,4,0,8">
-                <TextBlock x:Name="SearchIconsLabel" Margin="0,0,10,1" Text="Search icons:" VerticalAlignment="Center"/>
-                <TextBox MinWidth="250" VerticalAlignment="Center" Margin="0,1,0,1" 
-                    TextChanged="SearchTextBox_TextChanged" AutomationProperties.LabeledBy="{x:Bind SearchIconsLabel}"/>
-                <CheckBox Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" IsChecked="False" 
-                    Margin="16,2,0,0" Content="Only show symbols"/>
+                <TextBlock x:Name="SearchIconsLabel" 
+                    Margin="0,0,10,1" 
+                    Text="Search icons:" 
+                    VerticalAlignment="Center"/>
+                <TextBox MinWidth="250" 
+                    VerticalAlignment="Center"
+                    Margin="0,1,0,1"
+                    TextChanged="SearchTextBox_TextChanged"
+                    AutomationProperties.LabeledBy="{x:Bind SearchIconsLabel}"
+                    AutomationProperties.AutomationId="SearchIconsInput"/>
+                <CheckBox Checked="CheckBox_Checked" 
+                    Unchecked="CheckBox_Unchecked" 
+                    IsChecked="False" 
+                    Margin="16,2,0,0" 
+                    Content="Only show symbols"/>
             </StackPanel>
             <Border VerticalAlignment="Bottom" BorderThickness="1" BorderBrush="{ThemeResource SystemBaseMediumLowColor}" Grid.ColumnSpan="100"/>
         </StackPanel>

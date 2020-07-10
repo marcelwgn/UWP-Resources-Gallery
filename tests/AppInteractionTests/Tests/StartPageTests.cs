@@ -10,29 +10,25 @@ namespace AppInteractionTests.Tests
         [TestMethod]
         public void RendersButtonsAndText()
         {
-            // Verifying start page text
-            Assert.AreEqual(1, TestHelper.GetElementsOfTypeWithContent("Text", "Welcome to").Count);
-            Assert.AreEqual(1, TestHelper.GetElementsOfTypeWithContent("Text", "This app contains").Count);
-
             // Verifying buttons exist
-            Assert.AreEqual(1, TestHelper.GetElementsOfTypeWithContent("Button", "Icon list").Count);
-            Assert.AreEqual(1, TestHelper.GetElementsOfTypeWithContent("Button", "Systemcolors").Count);
+            Assert.IsNotNull(TestRunInitializer.Session.FindElementByName("Open IconsList page"));
+            Assert.IsNotNull(TestRunInitializer.Session.FindElementByName("Open SystemBrushes page"));
         }
 
         [TestMethod]
         public void VerifyIconNavigation()
         {
-            TestHelper.InvokeButton("Icon list", 0);
+            TestHelper.InvokeButton("Open Icons page");
 
-            Assert.AreEqual("Icons", TestHelper.CurrentPageInNavigation());
+            Assert.IsTrue(TestHelper.IsCurrentPage("Icons"));
         }
 
         [TestMethod]
         public void VerifySystemColorsNavigation()
         {
-            TestHelper.InvokeButton("Systemcolors", 0);
+            TestHelper.InvokeButton("Open Systembrushes page");
 
-            Assert.AreEqual("Systemcolors", TestHelper.CurrentPageInNavigation());
+            Assert.IsTrue(TestHelper.IsCurrentPage("Systembrushes"));
         }
     }
 }

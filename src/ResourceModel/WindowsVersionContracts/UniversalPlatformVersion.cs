@@ -69,6 +69,13 @@ namespace UWPResourcesGallery.Model.WindowsVersionContracts
                     FilteredContracts.Add(contract);
                 }
             });
+            if(FilteredContracts.Count == 0)
+            {
+                VersionContracts.ForEach(contract =>
+                {
+                    FilteredContracts.Add(contract);
+                });
+            }
             return keywords.All(key =>
                     {
                         if (Version.Contains(key, StringComparison.InvariantCultureIgnoreCase))
