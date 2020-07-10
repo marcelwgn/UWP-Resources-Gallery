@@ -11,6 +11,8 @@ namespace UWPResourcesGallery.Model.Colors
 
         public string Name { get; private set; }
 
+        public string UIAName => "System color " + Name;
+
         public string LightHex { get; private set; }
         public string DarkHex { get; private set; }
 

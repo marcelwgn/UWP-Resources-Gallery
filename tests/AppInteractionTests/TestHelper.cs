@@ -46,31 +46,20 @@ namespace AppInteractionTests
             System.Threading.Thread.Sleep(milliSeconds);
         }
 
-        public static void InvokeButton(string text, int buttonIndex)
+        public static void InvokeButton(string uiaName)
         {
-            List<WindowsElement> buttons = GetElementsOfTypeWithContent("Button", text);
-
-            buttons[buttonIndex].Click();
+            WindowsElement button = TestRunInitializer.Session.FindElementByName(uiaName);
+            button.Click();
         }
 
         public static void NavigateToPage(string name)
         {
-            WindowsElement container = TestRunInitializer.Session.FindElementByName("Mainnavigation");
-            container.FindElementByName(name).Click();
+            TestRunInitializer.Session.FindElementByName("Open " + name + " page").Click();
         }
 
-        public static string CurrentPageInNavigation()
+        public static bool IsCurrentPage(string name)
         {
-            WindowsElement container = TestRunInitializer.Session.FindElementByName("Mainnavigation");
-            System.Collections.ObjectModel.ReadOnlyCollection<OpenQA.Selenium.Appium.AppiumWebElement> listItems = container.FindElementsByTagName("ListItem");
-            foreach (OpenQA.Selenium.Appium.AppiumWebElement item in listItems)
-            {
-                if (item.Selected)
-                {
-                    return item.Text;
-                }
-            }
-            return "";
+            return TestRunInitializer.Session.FindElementByName("Open " + name + " page").Selected;
         }
     }
 }

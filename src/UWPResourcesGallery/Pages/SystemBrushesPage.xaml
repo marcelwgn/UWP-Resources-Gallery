@@ -5,7 +5,7 @@
     xmlns:common="using:UWPResourcesGallery.Controls.Common"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:scc="using:UWPResourcesGallery.Controls.Templates"
+    xmlns:scc="using:UWPResourcesGallery.Controls.Templates" xmlns:brushes="using:UWPResourcesGallery.Model.Brushes"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     mc:Ignorable="d">
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
@@ -41,6 +41,7 @@
                 Margin="0,1,0,1"
                 VerticalAlignment="Center"
                 AutomationProperties.LabeledBy="{x:Bind SearchSystemColorsLabel}"
+                AutomationProperties.AutomationId="SearchBrushesInput"
                 TextChanged="SearchTextBox_TextChanged" />
             <Border
                 Grid.ColumnSpan="100"
@@ -61,8 +62,8 @@
                 </Style>
             </GridView.Resources>
             <GridView.ItemTemplate>
-                <DataTemplate>
-                    <scc:SystemBrushPresenter SystemBrush="{Binding}" />
+                <DataTemplate x:DataType="brushes:SystemBrush">
+                    <scc:SystemBrushPresenter SystemBrush="{x:Bind}" AutomationProperties.Name="{x:Bind UIAName}"/>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>

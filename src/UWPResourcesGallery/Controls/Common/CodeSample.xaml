@@ -27,6 +27,7 @@
         </Grid>
         <Button x:Name="CopyButton" Click="Copy_Click" 
                 VerticalAlignment="Top" Grid.Column="1" 
+                AutomationProperties.Name="Copy text to clipboard"
                 Style="{ThemeResource CopyButtonStyle}" Margin="5,0,0,0"/>
     </Grid>
 </UserControl>

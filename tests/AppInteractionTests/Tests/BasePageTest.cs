@@ -22,11 +22,11 @@ namespace AppInteractionTests.Tests
         public void PageSetup()
         {
             TestRunInitializer.Session.Manage().Window.Maximize();
-            if (!TestHelper.CurrentPageInNavigation().Equals(NavigationName, StringComparison.InvariantCulture))
+            if (!TestHelper.IsCurrentPage(NavigationName))
             {
                 TestHelper.NavigateToPage(NavigationName);
             }
-            Thread.Sleep(TimeSpan.FromSeconds(10));
+            Thread.Sleep(TimeSpan.FromSeconds(1));
         }
 
         [ClassCleanup]

@@ -9,9 +9,6 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Page.Resources>
-    </Page.Resources>
-    
     <Grid>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="OverlayStates">
@@ -93,31 +90,36 @@
                 IsTitleBarAutoPaddingEnabled="False">
             <muxc:NavigationView.MenuItems>
                 
-                <muxc:NavigationViewItem x:Name="_StartPage" Content="Start" IsSelected="True">
+                <muxc:NavigationViewItem x:Name="_StartPage" Content="Start" 
+                                         IsSelected="True" AutomationProperties.Name="Open Start page">
                     <muxc:NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xF167;"/>
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
-                <muxc:NavigationViewItem Content="Icons" x:Name="_IconsListPage">
+                <muxc:NavigationViewItem Content="Icons" x:Name="_IconsListPage" 
+                                         AutomationProperties.Name="Open Icons page">
                     <muxc:NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xED58;" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
-                <muxc:NavigationViewItem Content="Systembrushes" x:Name="_SystemBrushesPage">
+                <muxc:NavigationViewItem Content="Systembrushes" x:Name="_SystemBrushesPage"
+                                         AutomationProperties.Name="Open Systembrushes page">
                     <muxc:NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xEE56;" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
-                <muxc:NavigationViewItem Content="Systemcolors" x:Name="_SystemColorsPage">
+                <muxc:NavigationViewItem Content="Systemcolors" x:Name="_SystemColorsPage"
+                                         AutomationProperties.Name="Open Systemcolors page">
                     <muxc:NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE790;" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
-                <muxc:NavigationViewItem Content="Universal API contracts" x:Name="_UniversalContractsPage">
+                <muxc:NavigationViewItem Content="Universal API contracts" x:Name="_UniversalContractsPage"
+                                         AutomationProperties.Name="Open Universal API contracts page">
                     <muxc:NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xEADF;" />
                     </muxc:NavigationViewItem.Icon>

@@ -59,8 +59,7 @@ namespace UWPResourcesGallery.Controls.Common
                 new PropertyMetadata(false, new PropertyChangedCallback(OnCodeDependencyPropertyChanged)));
         #endregion
 
-
-        #region SyteaxmLanguage property
+        #region SyntaxLanguage property
         public ILanguage SyntaxLanguage
         {
             get { return (ILanguage)GetValue(SyntaxLanguageProperty); }
@@ -71,7 +70,6 @@ namespace UWPResourcesGallery.Controls.Common
         public static readonly DependencyProperty SyntaxLanguageProperty =
             DependencyProperty.Register("SyntaxLanguage", typeof(Languages), typeof(ILanguage), new PropertyMetadata(0));
         #endregion
-
 
         public CodeSample()
         {

@@ -9,6 +9,7 @@ namespace UWPResourcesGallery.Model.Brushes
     {
         public string Key { get; private set; }
         public string Name { get; private set; }
+        public string UIAName => "System brush " + Key;
         public string XAMLDefinition { get; private set; }
         public Brush LightThemeBrush { get; private set; }
         public Brush DarkThemeBrush { get; private set; }

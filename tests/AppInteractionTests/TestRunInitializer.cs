@@ -68,6 +68,12 @@ namespace AppInteractionTests
             }
         }
 
+        [AssemblyCleanup()]
+        public static void TestRunTearDown()
+        {
+            TearDown();
+        }
+
         public static void TearDown()
         {
             if (_session != null)

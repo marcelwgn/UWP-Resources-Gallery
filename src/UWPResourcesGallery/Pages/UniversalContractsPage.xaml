@@ -60,13 +60,26 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="14" />
             </Grid.ColumnDefinitions>
-            <TextBlock x:Name="SearchUniversalVersionsLabel"  Margin="0,0,10,1" Grid.Column="1" Text="Search contracts and versions:" VerticalAlignment="Center"/>
-            <TextBox Grid.Column="2" MinWidth="250" VerticalAlignment="Center" Margin="0,1,0,1" TextChanged="SearchTextBox_TextChanged" 
-                    AutomationProperties.LabeledBy="{x:Bind SearchUniversalVersionsLabel}"></TextBox>
+            <TextBlock x:Name="SearchUniversalVersionsLabel" 
+                Margin="0,0,10,1" 
+                Grid.Column="1" 
+                Text="Search contracts and versions:" 
+                VerticalAlignment="Center"/>
+            <TextBox Grid.Column="2" 
+                MinWidth="250" 
+                VerticalAlignment="Center" 
+                Margin="0,1,0,1"
+                TextChanged="SearchTextBox_TextChanged" 
+                AutomationProperties.LabeledBy="{x:Bind SearchUniversalVersionsLabel}"
+                AutomationProperties.AutomationId="SearchUWPContractsInput"/>
         </Grid>
         <!-- Windows 10 version selector -->
-        <ScrollViewer Margin="10,0" HorizontalScrollMode="Enabled" IsHorizontalRailEnabled="True"
-            HorizontalScrollBarVisibility="Auto" Grid.Row="2">
+        <ScrollViewer Margin="10,0" 
+            HorizontalScrollMode="Enabled" 
+            IsHorizontalRailEnabled="True"
+            HorizontalScrollBarVisibility="Auto"
+            MaxHeight="200"
+            Grid.Row="2">
             <GridView x:Name="UniversalVersionsPresenterContainer" AutomationProperties.Name="Windows 10 versions list"
                     SelectionChanged="UniveralsVersionsList_SelectionChanged" MaxHeight="180">
                 <GridView.ItemContainerStyle>
@@ -76,14 +89,17 @@
                 </GridView.ItemContainerStyle>
                 <GridView.ItemTemplate>
                     <DataTemplate x:DataType="windowsversioncontracts:UniversalPlatformVersion">
-                        <controls:UniversalPlatformVersionPresenter UWPVersion="{x:Bind}"/>
+                        <controls:UniversalPlatformVersionPresenter UWPVersion="{x:Bind}" AutomationProperties.Name="{x:Bind UIAName}"/>
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>
         </ScrollViewer>
                 
         <!-- Content of the selected version -->
-        <ScrollViewer Grid.Row="3" Margin="15,5" Padding="0,0,14,0" x:Name="SelectedItemScroller">
+        <ScrollViewer Grid.Row="3" 
+                Margin="15,5"
+                Padding="0,0,14,0"
+                x:Name="SelectedItemScroller">
             <StackPanel >
                 <StackPanel Orientation="Horizontal" x:DefaultBindMode="OneWay">
                     <TextBlock x:Name="ContractHeaderFirstLabel" Text="{x:Bind SelectedItem.MarketingName}" FontSize="18"/>
@@ -102,10 +118,10 @@
                     <TextBlock Text="{x:Bind SelectedItem.Version}" IsTextSelectionEnabled="True"/>
                 </StackPanel>
 
-                <muxc:ItemsRepeater ItemsSource="{x:Bind SelectedItem.FilteredContracts,Mode=OneWay}">
+                <muxc:ItemsRepeater x:Name="ContractsRepeater">
                     <muxc:ItemsRepeater.ItemTemplate>
                         <DataTemplate x:DataType="windowsversioncontracts:UniversalPlatformContract">
-                            <controls:UniversalPlatformContractPresenter Contract="{x:Bind}"/>
+                            <controls:UniversalPlatformContractPresenter Contract="{x:Bind}" AutomationProperties.Name="{x:Bind UIAName}"/>
                         </DataTemplate>
                     </muxc:ItemsRepeater.ItemTemplate>
                 </muxc:ItemsRepeater>
