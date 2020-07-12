@@ -7,6 +7,7 @@ using System.Threading;
 
 namespace AppInteractionTests
 {
+    [TestClass]
     internal class TestRunInitializer
     {
         private const string WindowsApplicationDriverUrl = "http://127.0.0.1:4723";
@@ -23,14 +24,14 @@ namespace AppInteractionTests
             {
                 if (_session == null)
                 {
-                    CreateSession();
+                    CreateSession(null);
                 }
                 return _session;
             }
         }
 
         [AssemblyInitialize]
-        private static void CreateSession()
+        public static void CreateSession(TestContext _)
         {
             if (_session == null)
             {
@@ -63,7 +64,7 @@ namespace AppInteractionTests
                 catch (OpenQA.Selenium.WebDriverException) { }
 
                 // Wait if something is still animating in the visual tree
-                _session.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+                _session.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
                 _session.Manage().Window.Maximize();
             }
         }
@@ -78,6 +79,7 @@ namespace AppInteractionTests
         {
             if (_session != null)
             {
+                _session.CloseApp();
                 _session.Quit();
                 _session = null;
             }
