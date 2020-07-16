@@ -18,7 +18,7 @@ variables:
 stages:
   - stage: Build
     jobs:
-      - template: ./templates/build-template.yml
+      - template: ./templates/build-all.yml
         parameters:
           buildPlatform: 'x86'
           buildConfiguration: 'Debug'
