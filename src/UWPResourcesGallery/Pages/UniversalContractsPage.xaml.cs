@@ -47,6 +47,12 @@ namespace UWPResourcesGallery.Pages
             UniversalVersionsPresenterContainer.ItemsSource = source.FilteredItems;
             SelectedItem = source.FilteredItems[0];
             Analytics.TrackEvent("Visited: UniversalContractsPage");
+            Loaded += UniversalContractsPage_Loaded;
+        }
+
+        private void UniversalContractsPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            Focus(Windows.UI.Xaml.FocusState.Programmatic);
         }
 
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs args)

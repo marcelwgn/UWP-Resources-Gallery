@@ -24,6 +24,7 @@ namespace UWPResourcesGallery.Pages
 
         private void LoadSystemColors(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
+            Focus(Windows.UI.Xaml.FocusState.Programmatic);
             // Delegate loading of system colors, so we have smooth navigating to this page 
             // and not unecessarly block UI Thread
             Task.Run(delegate ()
