@@ -31,9 +31,15 @@ namespace UWPResourcesGallery.Pages
         {
             AppNavigation.NavigateToPageType(typeof(SystemColorsPage));
         }
+
         private void NavigateToUniversalContractsPage_Click(object sender, RoutedEventArgs e)
         {
             AppNavigation.NavigateToPageType(typeof(UniversalContractsPage));
+        }
+
+        private void NavigateToAcrylicBrushDesignerPage_Click(object sender, RoutedEventArgs e)
+        {
+            AppNavigation.NavigateToPageType(typeof(AcrylicDesignerPage));
         }
     }
 }

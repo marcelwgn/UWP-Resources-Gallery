@@ -76,23 +76,27 @@ namespace UWPResourcesGallery
             {
                 RootNavigation.SelectedItem = RootNavigation.SettingsItem;
             }
-            if (RootFrame.CurrentSourcePageType == typeof(StartPage))
+            else if (RootFrame.CurrentSourcePageType == typeof(StartPage))
             {
                 RootNavigation.SelectedItem = _StartPage;
             }
-            if (RootFrame.CurrentSourcePageType == typeof(IconsListPage))
+            else if (RootFrame.CurrentSourcePageType == typeof(IconsListPage))
             {
                 RootNavigation.SelectedItem = _IconsListPage;
             }
-            if (RootFrame.CurrentSourcePageType == typeof(SystemColorsPage))
+            else if (RootFrame.CurrentSourcePageType == typeof(SystemColorsPage))
             {
                 RootNavigation.SelectedItem = _SystemColorsPage;
             }
-            if (RootFrame.CurrentSourcePageType == typeof(SystemBrushesPage))
+            else if (RootFrame.CurrentSourcePageType == typeof(SystemBrushesPage))
             {
                 RootNavigation.SelectedItem = _SystemBrushesPage;
             }
-            if (RootFrame.CurrentSourcePageType == typeof(UniversalContractsPage))
+            else if (RootFrame.CurrentSourcePageType == typeof(AcrylicDesignerPage))
+            {
+                RootNavigation.SelectedItem = _AcrylicBrushDesigner;
+            }
+            else if (RootFrame.CurrentSourcePageType == typeof(UniversalContractsPage))
             {
                 RootNavigation.SelectedItem = _UniversalContractsPage;
             }
@@ -106,23 +110,27 @@ namespace UWPResourcesGallery
                 RootFrame.Navigate(typeof(SettingsPage));
                 return;
             }
-            if ((string)args.InvokedItem == "Start")
+            else if ((string)args.InvokedItem == "Start")
             {
                 RootFrame.Navigate(typeof(StartPage));
             }
-            if ((string)args.InvokedItem == "Icons")
+            else if ((string)args.InvokedItem == "Icons")
             {
                 RootFrame.Navigate(typeof(IconsListPage));
             }
-            if ((string)args.InvokedItem == "Systemcolors")
+            else if ((string)args.InvokedItem == "Systemcolors")
             {
                 RootFrame.Navigate(typeof(SystemColorsPage));
             }
-            if ((string)args.InvokedItem == "Systembrushes")
+            else if ((string)args.InvokedItem == "Systembrushes")
             {
                 RootFrame.Navigate(typeof(SystemBrushesPage));
             }
-            if ((string)args.InvokedItem == "Universal API contracts")
+            else if ((string)args.InvokedItem == "Acrylic brush designer")
+            {
+                RootFrame.Navigate(typeof(AcrylicDesignerPage));
+            }
+            else if ((string)args.InvokedItem == "Universal API contracts")
             {
                 RootFrame.Navigate(typeof(UniversalContractsPage));
             }
@@ -188,7 +196,7 @@ namespace UWPResourcesGallery
             if (ApplicationView.GetForCurrentView().ViewMode == ApplicationViewMode.Default)
             {
                 bool modeSwitched = await ApplicationView.GetForCurrentView().TryEnterViewModeAsync(ApplicationViewMode.CompactOverlay);
-                Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetPreferredMinSize(new Windows.Foundation.Size(150,50));
+                Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetPreferredMinSize(new Windows.Foundation.Size(150, 50));
                 if (modeSwitched)
                 {
                     VisualStateManager.GoToState(this, "CompactOverlay", false);

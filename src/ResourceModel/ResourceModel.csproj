@@ -110,6 +110,7 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AcrylicBrushSampleCodeFactory.cs" />
     <Compile Include="Brushes\SystemBrush.cs" />
     <Compile Include="Brushes\SystemBrushDefinitionFactory.cs" />
     <Compile Include="Brushes\SystemBrushItemSource.cs" />

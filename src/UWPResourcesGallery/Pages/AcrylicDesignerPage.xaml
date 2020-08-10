@@ -1,0 +1,114 @@
+﻿<Page
+    x:Class="UWPResourcesGallery.Pages.AcrylicDesignerPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:common="using:UWPResourcesGallery.Controls.Common"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="AdaptiveLayoutStates">
+                <VisualState x:Name="Wide">
+                    <VisualState.Setters>
+                        <Setter Target="OptionsPanel.Orientation" Value="Horizontal"/>
+                        <Setter Target="SliderOptionsPanel.Margin" Value="16,0,0,0"/>
+                        <Setter Target="RootStackPanel.Orientation" Value="Horizontal"/>
+                        <Setter Target="AcrylicPresenterGrid.Width" Value="610"/>
+                        <Setter Target="AcrylicPresenterGrid.Margin" Value="0,0,16,0"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1600"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                
+                <VisualState x:Name="Normal">
+                    <VisualState.Setters>
+                        <Setter Target="OptionsPanel.Orientation" Value="Horizontal"/>
+                        <Setter Target="SliderOptionsPanel.Margin" Value="16,0,0,0"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="750"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
+        <StackPanel Padding="32,16,32,16">
+            <TextBlock Text="Acrylic brush designer" FontSize="36" Margin="0,0,0,8"/>
+
+            <StackPanel x:Name="RootStackPanel">
+                <StackPanel>
+                    <Grid x:Name="AcrylicPresenterGrid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" MaxWidth="300"/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*" MaxWidth="300"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Text="HostBackDrop" FontSize="16"/>
+                        <Grid Grid.Row="1">
+                            <Grid.Background>
+                                <AcrylicBrush x:Name="HostBackDropBrush" BackgroundSource="HostBackdrop" FallbackColor="Gray"/>
+                            </Grid.Background>
+                        </Grid>
+
+                        <TextBlock Text="BackDrop" Grid.Column="2" FontSize="16"/>
+                        <Grid Grid.Row="1" Grid.Column="2">
+                            <Image Source="/Assets/SMPTE_Color_Bars.png"/>
+                            <Grid Margin="10">
+                                <Grid.Background>
+                                    <AcrylicBrush x:Name="BackDropBrush" BackgroundSource="Backdrop" FallbackColor="Gray"/>
+                                </Grid.Background>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <common:CodeSample x:Name="AcrylicBrushSourceCode" Margin="0,8" 
+                        HorizontalAlignment="Left"
+                        IsSyntaxHighlightingEnabled="True" MaxWidth="800"/>
+                </StackPanel>
+            
+                <StackPanel HorizontalAlignment="Left" x:Name="OptionsPanel" Orientation="Vertical">
+                    <StackPanel>
+                        <TextBlock Text="Tint color" FontSize="16" Margin="0,0,0,4"/>
+                        <ColorPicker x:Name="Color"
+                            Color="Gray"
+                            IsMoreButtonVisible="True"
+                            ColorChanged="Color_ColorChanged"/>
+                    </StackPanel>
+                    <StackPanel MaxWidth="300" x:Name="SliderOptionsPanel"
+                        HorizontalAlignment="Left">
+                        <TextBlock Text="Tint opacity" FontSize="16"/>
+                        <Slider x:Name="TintOpacity"
+                            AutomationProperties.Name="Tint opacity slider"
+                            HorizontalAlignment="Left"
+                            Width="150" Value="0.5"
+                            ValueChanged="TintOpacity_ValueChanged"
+                            Minimum="0" Maximum="1" 
+                            StepFrequency="0.01"
+                            SmallChange="0.01" LargeChange="0.1"/>
+
+                        <TextBlock Text="Tint luminosity opacity" FontSize="16"/>
+                        <Slider x:Name="TintLuminosity"
+                            AutomationProperties.Name="Tint luminosity opacity slider"
+                            HorizontalAlignment="Left"
+                            Width="150" Value="0.5"
+                            ValueChanged="TintLuminosity_ValueChanged"
+                            Minimum="0" Maximum="1"
+                            StepFrequency="0.01"
+                            SmallChange="0.01" LargeChange="0.1"/>
+                        <TextBlock TextWrapping="WrapWholeWords"
+                            Text="Note that on Windows versions below 1903, the tint luminosity opacity is not available."/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>
