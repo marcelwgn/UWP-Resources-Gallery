@@ -126,7 +126,7 @@ namespace UWPResourcesGallery
             {
                 RootFrame.Navigate(typeof(SystemBrushesPage));
             }
-            else if ((string)args.InvokedItem == "Acrylic brush designer")
+            else if ((string)args.InvokedItem == "AcrylicBrush designer")
             {
                 RootFrame.Navigate(typeof(AcrylicDesignerPage));
             }

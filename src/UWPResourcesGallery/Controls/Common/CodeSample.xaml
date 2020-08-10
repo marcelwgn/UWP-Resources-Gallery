@@ -21,6 +21,7 @@
         <Grid 
             VerticalAlignment="Stretch" Padding="0,5,0,5">
             <RichTextBlock Name="CodeBlock" TextWrapping="Wrap" Margin="5,0,5,2"
+                AutomationProperties.AutomationId="CodeSampleCode"
                 FontFamily="Consolas" IsTextSelectionEnabled="True"
                 FontSize="{ThemeResource CodeFontSize}"
                 HorizontalAlignment="Left" VerticalAlignment="Center"/>

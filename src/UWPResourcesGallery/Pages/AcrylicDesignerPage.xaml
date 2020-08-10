@@ -69,7 +69,8 @@
                             </Grid>
                         </Grid>
                     </Grid>
-                    <common:CodeSample x:Name="AcrylicBrushSourceCode" Margin="0,8" 
+                    <common:CodeSample x:Name="AcrylicBrushSourceCode" Margin="0,8"
+                        AutomationProperties.Name="AcrylicBrush source code"
                         HorizontalAlignment="Left"
                         IsSyntaxHighlightingEnabled="True" MaxWidth="800"/>
                 </StackPanel>
