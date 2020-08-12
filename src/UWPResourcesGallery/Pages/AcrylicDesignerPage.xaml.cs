@@ -35,6 +35,7 @@ namespace UWPResourcesGallery.Pages
             double tintLuminosityOpacity = TintLuminosity != null ? TintLuminosity.Value : 0.5;
 
             HostBackDropBrush.TintColor = Color.Color;
+            HostBackDropBrush.FallbackColor = Color.Color;
             if(ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 7))
             {
                 HostBackDropBrush.TintLuminosityOpacity = tintLuminosityOpacity;
