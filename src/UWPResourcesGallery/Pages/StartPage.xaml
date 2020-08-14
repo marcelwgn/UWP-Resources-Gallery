@@ -21,6 +21,20 @@
     </Page.Resources>
     
     <Grid VerticalAlignment="Center" Margin="2,0,2,0">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="AdaptiveWidthStates">
+                <VisualState x:Name="Normal">
+                    <VisualState.Setters>
+                        <Setter Target="AdditionalContentColumn.Width" Value="Auto"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Narrow" />
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
         <ScrollViewer x:Name="MainScrollViewer" VerticalScrollBarVisibility="Auto">
             <Grid HorizontalAlignment="Center">
 
@@ -28,6 +42,12 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition x:Name="AdditionalContentColumn" Width="0"/>
+                </Grid.ColumnDefinitions>
                 
                 <common:PageHeader Margin="5,5,5,5"
                     PageName="Welcome to the UWP Resources Gallery" 
@@ -147,6 +167,30 @@
                         </Grid>
                     </Button>
                 </VariableSizedWrapGrid>
+
+                <TextBlock Text="Other helpful apps:" Grid.Column="2" 
+                    FontSize="18"
+                    VerticalAlignment="Bottom" Margin="0,5"/>
+                <StackPanel Grid.Row="1" Grid.Column="2" Padding="0,10">
+                    <StackPanel Background="{ThemeResource SystemControlBackgroundBaseLowBrush}"
+                            Padding="10,0,10,10" Width="250" Margin="0,0,0,0">
+                        <HyperlinkButton Content="Fluent XAML Theme Editor" FontSize="16"
+                                NavigateUri="https://www.microsoft.com/store/apps/9N2XD3Q8X57C"/>
+                        <TextBlock TextWrapping="WrapWholeWords"
+                            Text="A design development tool you can use to create custom themes for the Windows Universal Platform."/>
+                    </StackPanel>
+                    <StackPanel Background="{ThemeResource SystemControlBackgroundBaseLowBrush}"
+                            Padding="10,0,10,10" Width="250" Margin="0,10,0,10">
+                        <HyperlinkButton Content="XAML Controls Gallery" NavigateUri="https://www.microsoft.com/store/productId/9MSVH128X2ZT"/>
+                        <TextBlock Text="Shows all of the XAML controls in an interactive format" TextWrapping="WrapWholeWords"/>
+                    </StackPanel>
+                    <StackPanel Background="{ThemeResource SystemControlBackgroundBaseLowBrush}"
+                            Padding="10,0,10,10" Width="250">
+                        <HyperlinkButton Content="XAML Studio" NavigateUri="https://www.microsoft.com/store/apps/9NTLS214TKMQ"/>
+                        <TextBlock TextWrapping="WrapWholeWords"
+                            Text="XAML Studio, a Microsoft Garage project will help you rapidly prototype UWP XAML."/>
+                    </StackPanel>
+                </StackPanel>
             </Grid>
         </ScrollViewer>
 
