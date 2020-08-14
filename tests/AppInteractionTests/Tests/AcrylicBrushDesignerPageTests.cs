@@ -6,10 +6,12 @@ using System.Text;
 
 namespace AppInteractionTests.Tests
 {
+    [TestClass]
     public class AcrylicBrushDesignerPageTests : BasePageTest
     {
         public override string NavigationName => "AcrylicBrush designer";
 
+        [TestMethod]
         public void UpdatesSampleCorrectly()
         {
             var luminositySlider = TestRunInitializer.Session.FindElementByName("Tint luminosity opacity slider");

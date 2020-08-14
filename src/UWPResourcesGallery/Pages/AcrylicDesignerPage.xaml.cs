@@ -36,7 +36,7 @@ namespace UWPResourcesGallery.Pages
 
             HostBackDropBrush.TintColor = Color.Color;
             HostBackDropBrush.FallbackColor = Color.Color;
-            if(ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 7))
+            if (ApiInformation.IsPropertyPresent("Windows.UI.Xaml.Media.AcrylicBrush", "TintLuminosityOpacity"))
             {
                 HostBackDropBrush.TintLuminosityOpacity = tintLuminosityOpacity;
             }
@@ -44,7 +44,7 @@ namespace UWPResourcesGallery.Pages
 
 
             BackDropBrush.TintColor = Color.Color;
-            if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 7))
+            if (ApiInformation.IsPropertyPresent("Windows.UI.Xaml.Media.AcrylicBrush", "TintLuminosityOpacity"))
             {
                 BackDropBrush.TintLuminosityOpacity = tintLuminosityOpacity;
             }
