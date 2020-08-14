@@ -66,6 +66,7 @@
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
 
                         <Grid.ColumnDefinitions>
@@ -85,9 +86,14 @@
                         <common:CodeSample Code="{x:Bind icon.Code}" Grid.Row="1" 
                             Margin="0,5" Style="{ThemeResource CodeNameTextBlock}"/>
 
-                        <TextBlock Text="Text glyph" Margin="0,0,10,0" FontSize="16"
+                        <TextBlock Text="Code glyph" Margin="0,0,10,0" FontSize="16"
                             Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
-                        <common:CodeSample Code="{x:Bind icon.StringGlyph}" Grid.Row="2" 
+                        <common:CodeSample Code="{x:Bind icon.CodeGlyph}" Grid.Row="2" 
+                            Margin="0,5" Style="{ThemeResource CodeNameTextBlock}"/>
+                        
+                        <TextBlock Text="Text glyph" Margin="0,0,10,0" FontSize="16"
+                            Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+                        <common:CodeSample Code="{x:Bind icon.StringGlyph}" Grid.Row="3" 
                             Margin="0,5" Style="{ThemeResource CodeNameTextBlock}"/>
                     </Grid>
 

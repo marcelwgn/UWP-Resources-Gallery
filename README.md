@@ -32,6 +32,9 @@ To obtain information about Microsoft Visual Studio and the tools for developing
 ### Systemcolors page
 <img alt="Systemcolors of UWP Resources Gallery" src="./docs/Screenshot_Systemcolorspage.png" height="300">
 
+### Acrylicbrush Designer Page
+<img alt="Systemcolors of UWP Resources Gallery" src="./docs/Screenshot_Acrylicbrushdesignerpage.png" height="300">
+
 ### Universal API Contracts page
 <img alt="Universal API contracts page of UWP Resources Gallery" src="./docs/Screenshot_UniversalAPIContractsPage.png" height="300">
 

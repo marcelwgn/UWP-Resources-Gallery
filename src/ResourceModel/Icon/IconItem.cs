@@ -15,6 +15,8 @@ namespace UWPResourcesGallery.Model.Icons
 
         public string StringGlyph => "&#x" + Code + ";";
 
+        public string CodeGlyph => "\\u" + Code;
+
         public bool IsSymbol { get; }
 
         public IconItem(string code, string description)

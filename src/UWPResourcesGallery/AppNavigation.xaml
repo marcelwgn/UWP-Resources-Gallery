@@ -118,6 +118,13 @@
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
+                <muxc:NavigationViewItem Content="AcrylicBrush designer" x:Name="_AcrylicBrushDesigner"
+                                         AutomationProperties.Name="AcrylicBrush designer">
+                    <muxc:NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xF5EF;" />
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+
                 <muxc:NavigationViewItem Content="Universal API contracts" x:Name="_UniversalContractsPage"
                                          AutomationProperties.Name="Open Universal API contracts page">
                     <muxc:NavigationViewItem.Icon>
