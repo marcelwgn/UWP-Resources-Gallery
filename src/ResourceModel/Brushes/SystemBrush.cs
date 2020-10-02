@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Windows.UI;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Markup;
 using Windows.UI.Xaml.Media;
@@ -31,19 +32,28 @@ namespace UWPResourcesGallery.Model.Brushes
 
             // Set hex code
             LightThemeHexCode = "";
+            Color lightColor = new Color();
+
             if (LightThemeBrush is SolidColorBrush lightBrush)
             {
-                int lastIndex = 1;
-                LightThemeHexCode = "#";
-                for (int curIndex = 0; curIndex < 4; curIndex++)
+                lightColor = lightBrush.Color;
+                
+            }
+            else if (LightThemeBrush is AcrylicBrush lightAcrylicBrush)
+            {
+                lightColor = lightAcrylicBrush.TintColor;
+            }
+
+            int lastIndex = 1;
+            LightThemeHexCode = "#";
+            for (int curIndex = 0; curIndex < 4; curIndex++)
+            {
+                LightThemeHexCode += lightColor.ToString().Substring(lastIndex, 2);
+                if (curIndex < 3)
                 {
-                    LightThemeHexCode += lightBrush.Color.ToString().Substring(lastIndex, 2);
-                    if(curIndex < 3)
-                    {
-                        LightThemeHexCode += " ";
-                    }
-                    lastIndex += 2;
+                    LightThemeHexCode += " ";
                 }
+                lastIndex += 2;
             }
 
             // Dark theme brush
@@ -54,19 +64,27 @@ namespace UWPResourcesGallery.Model.Brushes
 
             // Set hex code
             DarkThemeHexCode = "";
+            Color darkColor = new Color();
+
             if (DarkThemeBrush is SolidColorBrush darkBrush)
             {
-                int lastIndex = 1;
-                DarkThemeHexCode = "#";
-                for (int curIndex = 0; curIndex < 4; curIndex++)
+                darkColor = darkBrush.Color;
+            }
+            else if(DarkThemeBrush is AcrylicBrush darkAcrylicBrush)
+            {
+                darkColor = darkAcrylicBrush.TintColor;
+            }
+
+            lastIndex = 1;
+            DarkThemeHexCode = "#";
+            for (int curIndex = 0; curIndex < 4; curIndex++)
+            {
+                DarkThemeHexCode += darkColor.ToString().Substring(lastIndex, 2);
+                if (curIndex < 3)
                 {
-                    DarkThemeHexCode += darkBrush.Color.ToString().Substring(lastIndex, 2);
-                    if(curIndex < 3)
-                    {
-                        DarkThemeHexCode += " ";
-                    }
-                    lastIndex += 2;
+                    DarkThemeHexCode += " ";
                 }
+                lastIndex += 2;
             }
 
             XAMLDefinition = xamlDefinition;
@@ -79,8 +97,10 @@ namespace UWPResourcesGallery.Model.Brushes
                 || Name.Contains(entry, System.StringComparison.CurrentCultureIgnoreCase)
                 || XAMLDefinition.Contains(entry, System.StringComparison.CurrentCultureIgnoreCase)
                 || ThemeResourceString.Contains(entry, System.StringComparison.CurrentCultureIgnoreCase)
-                || LightThemeHexCode.Replace(" ","").Contains(entry, System.StringComparison.CurrentCultureIgnoreCase)
-                || DarkThemeHexCode.Replace(" ","").Contains(entry, System.StringComparison.CurrentCultureIgnoreCase)
+                || LightThemeHexCode.Replace(" ", "",System.StringComparison.InvariantCulture)
+                    .Contains(entry, System.StringComparison.CurrentCultureIgnoreCase)
+                || DarkThemeHexCode.Replace(" ", "", System.StringComparison.InvariantCulture)
+                    .Contains(entry, System.StringComparison.CurrentCultureIgnoreCase)
             );
         }
     }
