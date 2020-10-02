@@ -27,5 +27,47 @@
             HorizontalAlignment="Stretch"
             IsSyntaxHighlightingEnabled="True" />
 
+        <!-- Hex codes -->
+        <Grid Margin="0,8,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <!-- Light theme hex code -->
+            <StackPanel>
+                <TextBlock Text="Light theme"/>
+                <Grid Background="{ThemeResource SystemChromeMediumColor}" BorderThickness="1"
+                            BorderBrush="{ThemeResource SystemControlBackgroundListLowBrush}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock x:Name="lightThemeHexCodeBlock" VerticalAlignment="Center" Text="{x:Bind SystemBrush.LightThemeHexCode}"
+                            FontFamily="Consolas" Margin="8,0,4,0" IsTextSelectionEnabled="True"/>
+
+                    <Button Style="{ThemeResource CopyButtonStyle}" Grid.Column="1"
+                            Click="CopyLightThemeHexCode" Margin="4,0,0,0" ToolTipService.ToolTip="Copy unformated hex code to clipboards"/>
+                </Grid>
+            </StackPanel>
+
+            <!-- Dark theme hex code -->
+            <StackPanel Margin="8,0,0,0" Grid.Column="1">
+                <TextBlock Text="Dark theme"/>
+                <Grid Background="{ThemeResource SystemChromeMediumColor}" BorderThickness="1"
+                            BorderBrush="{ThemeResource SystemControlBackgroundListLowBrush}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock x:Name="darkThemeHexCodeBlock" VerticalAlignment="Center" Text="{x:Bind SystemBrush.DarkThemeHexCode}"
+                            FontFamily="Consolas" Margin="8,0,4,0" IsTextSelectionEnabled="True"/>
+
+                    <Button Style="{ThemeResource CopyButtonStyle}" Grid.Column="1"
+                            Click="CopyDarkThemeHexCode" Margin="4,0,0,0" ToolTipService.ToolTip="Copy unformated hex code to clipboards"/>
+                </Grid>
+            </StackPanel>
+        </Grid>
     </StackPanel>
 </UserControl>
