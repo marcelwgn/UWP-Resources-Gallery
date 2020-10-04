@@ -1,5 +1,5 @@
 ﻿using Microsoft.AppCenter.Analytics;
-using UWPResourcesGallery.Model;
+using UWPResourcesGallery.ResourceModel;
 using Windows.Foundation.Metadata;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;

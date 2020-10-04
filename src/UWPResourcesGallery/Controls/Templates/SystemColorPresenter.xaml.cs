@@ -1,5 +1,5 @@
 ﻿using Microsoft.UI.Xaml.Controls;
-using UWPResourcesGallery.Model.Colors;
+using UWPResourcesGallery.ResourceModel.Colors;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 

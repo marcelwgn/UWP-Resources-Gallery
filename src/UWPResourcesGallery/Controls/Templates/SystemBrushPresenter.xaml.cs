@@ -1,5 +1,5 @@
 ﻿using Microsoft.UI.Xaml.Controls;
-using UWPResourcesGallery.Model.Brushes;
+using UWPResourcesGallery.ResourceModel.Brushes;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 

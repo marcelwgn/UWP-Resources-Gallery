@@ -1,6 +1,6 @@
 ﻿using Microsoft.AppCenter.Analytics;
 using System.Threading.Tasks;
-using UWPResourcesGallery.Model.Brushes;
+using UWPResourcesGallery.ResourceModel.Brushes;
 using Windows.UI.Xaml.Controls;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238

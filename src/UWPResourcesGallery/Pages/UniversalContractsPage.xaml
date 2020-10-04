@@ -8,7 +8,7 @@
     xmlns:common="using:UWPResourcesGallery.Controls.Common"
     xmlns:controls="using:UWPResourcesGallery.Controls.Templates"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
-    xmlns:windowsversioncontracts="using:UWPResourcesGallery.Model.WindowsVersionContracts"
+    xmlns:windowsversioncontracts="using:UWPResourcesGallery.ResourceModel.WindowsVersionContracts"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     
