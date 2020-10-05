@@ -2,7 +2,7 @@
 using UWPResourcesGallery.Common;
 using Windows.UI.Xaml;
 
-namespace UWPResourcesGallery.ControlTests.CodeBehindTests
+namespace UWPResourcesGallery.Controls.Tests.CodeBehindTests
 {
     [TestClass]
     public class ConverterTests

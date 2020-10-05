@@ -4,7 +4,7 @@ using System;
 using System.Linq;
 using UWPResourcesGallery.ResourceModel;
 
-namespace UWPResourcesGallery.ResoureModelTests.SourceTests
+namespace UWPResourcesGallery.ResoureModel.Tests.SourceTests
 {
 
     [TestClass]

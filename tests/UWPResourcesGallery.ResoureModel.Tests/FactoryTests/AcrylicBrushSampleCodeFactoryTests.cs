@@ -2,7 +2,7 @@
 using UWPResourcesGallery.ResourceModel;
 using Windows.UI;
 
-namespace UWPResourcesGallery.ResoureModelTests.FactoryTests
+namespace UWPResourcesGallery.ResoureModel.Tests.FactoryTests
 {
     [TestClass]
     public class AcrylicBrushSampleCodeFactoryTests

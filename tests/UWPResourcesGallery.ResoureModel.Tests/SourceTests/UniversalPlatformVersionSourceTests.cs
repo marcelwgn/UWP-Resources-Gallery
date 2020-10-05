@@ -2,7 +2,7 @@
 using System;
 using UWPResourcesGallery.ResourceModel.WindowsVersionContracts;
 
-namespace UWPResourcesGallery.ResoureModelTests.SourceTests
+namespace UWPResourcesGallery.ResoureModel.Tests.SourceTests
 {
     [TestClass]
     public class UniversalPlatformVersionSourceTests

@@ -7,7 +7,7 @@ using Windows.UI;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 
-namespace UWPResourcesGallery.ControlTests.UITests
+namespace UWPResourcesGallery.Controls.Tests.UITests
 {
     [TestClass]
     public class DualThemePresenterTests

@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="UWPResourcesGallery.ControlTests.ControlsTestPage"
+    x:Class="UWPResourcesGallery.Controls.Tests.ControlsTestPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:common="using:UWPResourcesGallery.Controls.Common"
