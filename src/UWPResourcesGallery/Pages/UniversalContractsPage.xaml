@@ -8,7 +8,7 @@
     xmlns:common="using:UWPResourcesGallery.Controls.Common"
     xmlns:controls="using:UWPResourcesGallery.Controls.Templates"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
-    xmlns:windowsversioncontracts="using:UWPResourcesGallery.Model.WindowsVersionContracts"
+    xmlns:windowsversioncontracts="using:UWPResourcesGallery.ResourceModel.WindowsVersionContracts"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     
@@ -80,7 +80,7 @@
             HorizontalScrollBarVisibility="Auto"
             MaxHeight="200"
             Grid.Row="2">
-            <GridView x:Name="UniversalVersionsPresenterContainer" AutomationProperties.Name="Windows 10 versions list"
+            <GridView x:Name="UniversalVersionsPresenterContainer" AutomationProperties.Name="Windows 10 versions"
                     SelectionChanged="UniveralsVersionsList_SelectionChanged" MaxHeight="180">
                 <GridView.ItemContainerStyle>
                     <Style TargetType="GridViewItem">

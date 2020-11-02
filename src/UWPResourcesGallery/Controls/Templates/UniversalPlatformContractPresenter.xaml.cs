@@ -1,5 +1,5 @@
 ﻿using System;
-using UWPResourcesGallery.Model.WindowsVersionContracts;
+using UWPResourcesGallery.ResourceModel.WindowsVersionContracts;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 

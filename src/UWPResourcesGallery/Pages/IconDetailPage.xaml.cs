@@ -1,7 +1,7 @@
 ﻿using ColorCode;
 using Microsoft.AppCenter.Analytics;
 using UWPResourcesGallery.Common;
-using UWPResourcesGallery.Model.Icons;
+using UWPResourcesGallery.ResourceModel.Icons;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;

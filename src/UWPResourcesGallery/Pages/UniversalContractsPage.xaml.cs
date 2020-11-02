@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
-using UWPResourcesGallery.Model.WindowsVersionContracts;
+using UWPResourcesGallery.ResourceModel.WindowsVersionContracts;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 

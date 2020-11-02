@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:scc="using:UWPResourcesGallery.Controls.Templates"
-    xmlns:common="using:UWPResourcesGallery.Controls.Common" xmlns:colors="using:UWPResourcesGallery.Model.Colors"
+    xmlns:common="using:UWPResourcesGallery.Controls.Common" xmlns:colors="using:UWPResourcesGallery.ResourceModel.Colors"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">

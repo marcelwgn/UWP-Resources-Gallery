@@ -1,9 +1,9 @@
 ﻿using System;
 using UWPResourcesGallery.Common;
-using UWPResourcesGallery.Model.Brushes;
-using UWPResourcesGallery.Model.Colors;
-using UWPResourcesGallery.Model.Icons;
-using UWPResourcesGallery.Model.WindowsVersionContracts;
+using UWPResourcesGallery.ResourceModel.Brushes;
+using UWPResourcesGallery.ResourceModel.Colors;
+using UWPResourcesGallery.ResourceModel.Icons;
+using UWPResourcesGallery.ResourceModel.WindowsVersionContracts;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Core;

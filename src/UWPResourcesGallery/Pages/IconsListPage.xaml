@@ -5,7 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:UWPResourcesGallery.Controls.Templates"
-    xmlns:common="using:UWPResourcesGallery.Controls.Common" xmlns:icons="using:UWPResourcesGallery.Model.Icons"
+    xmlns:common="using:UWPResourcesGallery.Controls.Common" xmlns:icons="using:UWPResourcesGallery.ResourceModel.Icons"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -67,7 +67,7 @@
         </StackPanel>
 
         <GridView x:Name="ItemsGridView" 
-            AutomationProperties.Name="Icons list"
+            AutomationProperties.Name="Icons"
             SelectionMode="None"
             IsItemClickEnabled="True"
             ItemClick="ItemsGridView_ItemClick"

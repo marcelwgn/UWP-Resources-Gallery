@@ -1,7 +1,7 @@
 ﻿using Microsoft.AppCenter.Analytics;
 using System.Threading.Tasks;
 using UWPResourcesGallery.Controls.Templates;
-using UWPResourcesGallery.Model.Icons;
+using UWPResourcesGallery.ResourceModel.Icons;
 using Windows.Foundation.Metadata;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;

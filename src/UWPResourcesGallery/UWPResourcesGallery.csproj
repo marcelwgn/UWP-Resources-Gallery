@@ -357,12 +357,11 @@
     <None Include="UWPResourcesGallery_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ResourceModel\ResourceModel.csproj">
-      <Project>{957b1e0e-d863-41e3-8042-7fac37a512dd}</Project>
-      <Name>ResourceModel</Name>
+    <ProjectReference Include="..\UWPResourcesGallery.ResourceModel\UWPResourcesGallery.ResourceModel.csproj">
+      <Project>{957B1E0E-D863-41E3-8042-7FAC37A512DD}</Project>
+      <Name>UWPResourcesGallery.ResourceModel</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
