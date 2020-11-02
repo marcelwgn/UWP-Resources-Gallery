@@ -9,6 +9,7 @@ namespace UWPResourcesGallery.AppInteractionTests.Tests
         public void SessionGetsInitialized()
         {
             Assert.IsNotNull(TestRunInitializer.Session);
+            TestRunInitializer.AccessibilityScanner.Scan();
         }
 
         [TestMethod]

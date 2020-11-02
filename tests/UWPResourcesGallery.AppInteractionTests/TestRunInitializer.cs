@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Axe.Windows.Automation;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Windows;
 using System;
@@ -16,6 +17,8 @@ namespace UWPResourcesGallery.AppInteractionTests
 #else
         private const string AppUIBasicAppId = "UWP-Resources-Gallery_d9qrpd3r6ja58!App";
 #endif
+
+        public static IScanner AccessibilityScanner;
 
         private static WindowsDriver<WindowsElement> _session;
         public static WindowsDriver<WindowsElement> Session
@@ -56,7 +59,7 @@ namespace UWPResourcesGallery.AppInteractionTests
                 Assert.IsNotNull(_session.SessionId);
 
                 // Dismiss the disclaimer window that may pop up on the very first application launch
-                // If the disclaimer is not find, this throws an exception, so lets catch that
+                // If the disclaimer is not found, this throws an exception, so lets catch that
                 try
                 {
                     _session.FindElementByName("Disclaimer").FindElementByName("Accept").Click();
@@ -66,6 +69,13 @@ namespace UWPResourcesGallery.AppInteractionTests
                 // Wait if something is still animating in the visual tree
                 _session.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
                 _session.Manage().Window.Maximize();
+
+                var processes = Process.GetProcessesByName("UWP Resources Gallery");
+                Assert.IsTrue(processes.Length > 0);
+
+                var config = Config.Builder.ForProcessId(processes[0].Id).Build();
+
+                AccessibilityScanner = ScannerFactory.CreateScanner(config);
             }
         }
 

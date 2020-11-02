@@ -22,9 +22,13 @@ namespace UWPResourcesGallery.AppInteractionTests.Tests
         public void PageSetup()
         {
             TestRunInitializer.Session.Manage().Window.Maximize();
+            var result = TestRunInitializer.AccessibilityScanner.Scan();
+            Assert.AreEqual(0, result.ErrorCount);
             if (!TestHelper.IsCurrentPage(NavigationName))
             {
                 TestHelper.NavigateToPage(NavigationName);
+                result = TestRunInitializer.AccessibilityScanner.Scan();
+                Assert.AreEqual(0, result.ErrorCount);
             }
             Thread.Sleep(TimeSpan.FromSeconds(1));
         }
