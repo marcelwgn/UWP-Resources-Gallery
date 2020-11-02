@@ -67,7 +67,7 @@
         </StackPanel>
 
         <GridView x:Name="ItemsGridView" 
-            AutomationProperties.Name="Icons list"
+            AutomationProperties.Name="Icons"
             SelectionMode="None"
             IsItemClickEnabled="True"
             ItemClick="ItemsGridView_ItemClick"

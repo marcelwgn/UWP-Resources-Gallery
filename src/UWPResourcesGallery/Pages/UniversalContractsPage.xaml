@@ -80,7 +80,7 @@
             HorizontalScrollBarVisibility="Auto"
             MaxHeight="200"
             Grid.Row="2">
-            <GridView x:Name="UniversalVersionsPresenterContainer" AutomationProperties.Name="Windows 10 versions list"
+            <GridView x:Name="UniversalVersionsPresenterContainer" AutomationProperties.Name="Windows 10 versions"
                     SelectionChanged="UniveralsVersionsList_SelectionChanged" MaxHeight="180">
                 <GridView.ItemContainerStyle>
                     <Style TargetType="GridViewItem">

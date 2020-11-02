@@ -14,14 +14,14 @@ namespace UWPResourcesGallery.AppInteractionTests.Tests
         [TestMethod]
         public void UpdatesSampleCorrectly()
         {
-            var luminositySlider = TestRunInitializer.Session.FindElementByName("Tint luminosity opacity slider");
+            var luminositySlider = TestRunInitializer.Session.FindElementByName("Choose tint luminosity opacity");
             luminositySlider.Click();
             for (int i = 0; i < 50; i++)
             {
                 luminositySlider.SendKeys(Keys.Right);
             }
             
-            var opacitySlider = TestRunInitializer.Session.FindElementByName("Tint opacity slider");
+            var opacitySlider = TestRunInitializer.Session.FindElementByName("Choose tint opacity");
             opacitySlider.Click();
             for (int i = 0; i < 50; i++)
             {

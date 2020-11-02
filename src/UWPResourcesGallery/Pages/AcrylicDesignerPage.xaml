@@ -76,7 +76,7 @@
                         HorizontalAlignment="Left">
                         <TextBlock Text="Tint opacity" FontSize="16"/>
                         <Slider x:Name="TintOpacity"
-                            AutomationProperties.Name="Tint opacity slider"
+                            AutomationProperties.Name="Choose tint opacity"
                             HorizontalAlignment="Left"
                             Width="150" Value="0.5"
                             ValueChanged="TintOpacity_ValueChanged"
@@ -86,7 +86,7 @@
 
                         <TextBlock Text="Tint luminosity opacity" FontSize="16"/>
                         <Slider x:Name="TintLuminosity"
-                            AutomationProperties.Name="Tint luminosity opacity slider"
+                            AutomationProperties.Name="Choose tint luminosity opacity"
                             HorizontalAlignment="Left"
                             Width="150" Value="0.5"
                             ValueChanged="TintLuminosity_ValueChanged"

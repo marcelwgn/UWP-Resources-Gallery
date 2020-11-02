@@ -17,7 +17,7 @@ namespace UWPResourcesGallery.AppInteractionTests.Tests
             searchIconsBox.Clear();
             TestHelper.WaitMilli(500);
 
-            var rootGrid = TestRunInitializer.Session.FindElementByName("Icons list");
+            var rootGrid = TestRunInitializer.Session.FindElementByName("Icons");
 
             // Just checking a few
             Assert.IsNotNull(rootGrid.FindElementByName("Icon GlobalNavigationButton"));

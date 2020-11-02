@@ -22,6 +22,7 @@
                         <Setter Target="ChevronDown.Visibility" Value="Visible"/>
                         <Setter Target="ChevronRight.Visibility" Value="Collapsed"/>
                         <Setter Target="SampleCodePanel.Visibility" Value="Visible"/>
+                        <Setter Target="RootButton.(AutomationProperties.Name)" Value="Collapse sample"/>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Collapsed">
@@ -29,6 +30,7 @@
                         <Setter Target="ChevronDown.Visibility" Value="Collapsed"/>
                         <Setter Target="ChevronRight.Visibility" Value="Visible"/>
                         <Setter Target="SampleCodePanel.Visibility" Value="Collapsed"/>
+                        <Setter Target="RootButton.(AutomationProperties.Name)" Value="Expand sample"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -39,7 +41,7 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="RootButton" Windows10version1809:CornerRadius="0"
+            <Button x:Name="RootButton" Windows10version1809:CornerRadius="0" AutomationProperties.Name="Expand sample"
                     Click="RootButton_Click" Background="Transparent">
                 <StackPanel>
                     <FontIcon x:Name="ChevronDown" Glyph="&#xE70D;" Visibility="Collapsed" AutomationProperties.Name="Collapse contract sample code"/>
