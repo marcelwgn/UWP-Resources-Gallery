@@ -15,6 +15,8 @@
             <VisualStateGroup>
                 <VisualState>
                     <VisualState.Setters>
+                        <Setter Target="HeaderPanel.Orientation" Value="Horizontal"/>
+                        <Setter Target="SecondRowPanel.Margin" Value="16,2,0,0"/>
                         <Setter Target="ItemsGridView.Padding" Value="10"/>
                         <Setter Target="ItemsGridView.ItemContainerStyle">
                             <Setter.Value>
@@ -26,7 +28,7 @@
                         </Setter>
                     </VisualState.Setters>
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="600"/>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
                     </VisualState.StateTriggers>
                 </VisualState>
             </VisualStateGroup>
@@ -35,7 +37,7 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -46,22 +48,27 @@
         <common:PageHeader PageName="Segoe MDL2 Icons" Margin="14,0,0,0"/>
 
         <StackPanel Grid.Row="1">
-            <StackPanel Orientation="Horizontal" Margin="16,4,0,8">
-                <TextBlock x:Name="SearchIconsLabel" 
-                    Margin="0,0,10,1" 
-                    Text="Search icons:" 
-                    VerticalAlignment="Center"/>
-                <TextBox MinWidth="250" 
-                    VerticalAlignment="Center"
-                    Margin="0,1,0,1"
-                    TextChanged="SearchTextBox_TextChanged"
-                    AutomationProperties.LabeledBy="{x:Bind SearchIconsLabel}"
-                    AutomationProperties.AutomationId="SearchIconsInput"/>
-                <CheckBox Checked="CheckBox_Checked" 
-                    Unchecked="CheckBox_Unchecked" 
-                    IsChecked="False" 
-                    Margin="16,2,0,0" 
-                    Content="Only show symbols"/>
+            <StackPanel x:Name="HeaderPanel" Orientation="Vertical" Margin="16,4,0,8">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="SearchIconsLabel" 
+                        Margin="0,0,10,1" 
+                        Text="Search icons:" 
+                        VerticalAlignment="Center"/>
+                    <TextBox MinWidth="250" 
+                        VerticalAlignment="Center"
+                        Margin="0,1,0,1"
+                        TextChanged="SearchTextBox_TextChanged"
+                        AutomationProperties.LabeledBy="{x:Bind SearchIconsLabel}"
+                        AutomationProperties.AutomationId="SearchIconsInput"/>
+                </StackPanel>
+                <StackPanel x:Name="SecondRowPanel" Orientation="Horizontal">
+                    <CheckBox Checked="CheckBox_Checked" 
+                        Unchecked="CheckBox_Unchecked" 
+                        IsChecked="False" 
+                        Content="Only show symbols"/>
+                    <CheckBox x:Name="CompactLayoutCheckbox" Margin="8,0,0,0" 
+                        Content="Compact layout"/>
+                </StackPanel>
             </StackPanel>
             <Border VerticalAlignment="Bottom" BorderThickness="1" BorderBrush="{ThemeResource SystemBaseMediumLowColor}" Grid.ColumnSpan="100"/>
         </StackPanel>
@@ -89,7 +96,8 @@
 
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="icons:IconItem">
-                    <controls:IconItemControl Icon="{x:Bind}" HorizontalAlignment="Stretch" AutomationProperties.Name="{x:Bind UIAName}"/>
+                    <controls:IconItemControl Icon="{x:Bind}" UseCompactLayout="{Binding IsChecked,ElementName=CompactLayoutCheckbox}"
+                        HorizontalAlignment="Stretch" AutomationProperties.Name="{x:Bind UIAName}"/>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
