@@ -1,4 +1,5 @@
-﻿using UWPResourcesGallery.ResourceModel.Icons;
+﻿using System;
+using UWPResourcesGallery.ResourceModel.Icons;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -9,7 +10,6 @@ namespace UWPResourcesGallery.Controls.Templates
 
         public UIElement IconViewPresenter => IconView;
 
-        #region IconItem property
         public static readonly DependencyProperty IconProperty =
             DependencyProperty.Register(
                 "Icon",
@@ -32,8 +32,27 @@ namespace UWPResourcesGallery.Controls.Templates
             IconItemControl control = d as IconItemControl;
             control.IconChanged();
         }
-        #endregion
 
+        public bool UseCompactLayout
+        {
+            get { return (bool)GetValue(UseCompactLayoutProperty); }
+            set { SetValue(UseCompactLayoutProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for UseCompactLayout.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty UseCompactLayoutProperty =
+            DependencyProperty.Register(
+                "UseCompactLayout",
+                typeof(bool),
+                typeof(IconItemControl),
+                new PropertyMetadata(false,
+                new PropertyChangedCallback(OnUseCompactLayoutPropertyChanged)));
+
+        private static void OnUseCompactLayoutPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            IconItemControl control = d as IconItemControl;
+            control.UseCompactLayoutChanged();
+        }
         public IconItemControl()
         {
             InitializeComponent();
@@ -42,6 +61,18 @@ namespace UWPResourcesGallery.Controls.Templates
         private void IconChanged()
         {
             Bindings.Update();
+        }
+
+        private void UseCompactLayoutChanged()
+        {
+            if(UseCompactLayout)
+            {
+                VisualStateManager.GoToState(this, "CompactLayout", false);
+            }
+            else
+            {
+                VisualStateManager.GoToState(this, "NormalLayout", false);
+            }
         }
     }
 }
