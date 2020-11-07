@@ -28,7 +28,7 @@ namespace UWPResourcesGallery.Pages
             Focus(Windows.UI.Xaml.FocusState.Programmatic);
             
             // Delegate loading of icons, so we have smooth navigating to this page
-            // and not unecessarly block UI Thread
+            // and not unnecessarily block UI Thread
             Task.Run(delegate ()
             {
                 _ = Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.High, () =>
@@ -54,14 +54,26 @@ namespace UWPResourcesGallery.Pages
             Frame.Navigate(typeof(IconDetailPage), e.ClickedItem as IconItem, new DrillInNavigationTransitionInfo());
         }
 
-        private void CheckBox_Checked(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private void ShowSymbols_Checked(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             ItemsGridView.ItemsSource = source.FilteredSymbolItems;
 
         }
 
-        private void CheckBox_Unchecked(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private void ShowSymbols_Unchecked(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
+            ItemsGridView.ItemsSource = source.FilteredItems;
+        }
+
+        private void CompactLayoutCheckbox_Checked(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            ItemsGridView.ItemsSource = null;
+            ItemsGridView.ItemsSource = source.FilteredItems;
+        }
+
+        private void CompactLayoutCheckbox_Unchecked(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            ItemsGridView.ItemsSource = null;
             ItemsGridView.ItemsSource = source.FilteredItems;
         }
     }

@@ -9,7 +9,9 @@
     HorizontalAlignment="Stretch"
     d:DesignWidth="200">
 
-    <Grid x:Name="IconControlRootGrid"  Background="{ThemeResource SystemControlBackgroundListLowBrush}" MinWidth="260" MaxWidth="280"  MinHeight="120">
+    <Grid x:Name="IconControlRootGrid"  Background="{ThemeResource SystemControlBackgroundListLowBrush}"
+        HorizontalAlignment="Stretch"
+        MinWidth="240" MaxWidth="280"  MinHeight="120">
         <!-- Default layout is designed for small sizes. For larger sizes increase space -->
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
