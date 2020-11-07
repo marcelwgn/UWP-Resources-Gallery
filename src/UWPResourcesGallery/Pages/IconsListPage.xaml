@@ -62,11 +62,13 @@
                         AutomationProperties.AutomationId="SearchIconsInput"/>
                 </StackPanel>
                 <StackPanel x:Name="SecondRowPanel" Orientation="Horizontal">
-                    <CheckBox Checked="CheckBox_Checked" 
-                        Unchecked="CheckBox_Unchecked" 
+                    <CheckBox Checked="ShowSymbols_Checked"
+                        Unchecked="ShowSymbols_Unchecked"
                         IsChecked="False" 
                         Content="Only show symbols"/>
-                    <CheckBox x:Name="CompactLayoutCheckbox" Margin="8,0,0,0" 
+                    <CheckBox x:Name="CompactLayoutCheckbox" Margin="8,0,0,0"
+                        Checked="CompactLayoutCheckbox_Checked"
+                        Unchecked="CompactLayoutCheckbox_Unchecked"
                         Content="Compact layout"/>
                 </StackPanel>
             </StackPanel>
