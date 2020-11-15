@@ -10,7 +10,7 @@ namespace UWPResourcesGallery.Controls.Templates
     public sealed partial class UniversalPlatformContractPresenter : UserControl
     {
 
-        private bool isExpanded = false;
+        private bool isExpanded;
 
         public string ContractName => Contract?.Name + ", Version=" + Contract?.VersionInt;
 

@@ -10,7 +10,7 @@ namespace UWPResourcesGallery.Common
     public static class ThemeHelper
     {
         private const string SelectedAppThemeKey = "SelectedAppTheme";
-        private static Window ApplicationWindow = null;
+        private static Window ApplicationWindow;
 
         private static UISettings uiSettings;
         public static ElementTheme AppTheme

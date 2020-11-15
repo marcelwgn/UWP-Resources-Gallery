@@ -25,7 +25,7 @@ namespace UWPResourcesGallery.Controls.Tests.UITests
             Assert.AreEqual("col or Da rk", GetTextBlock(darkStackPanel).Text);
         }
 
-        private TextBlock GetTextBlock(DependencyObject container)
+        private static TextBlock GetTextBlock(DependencyObject container)
         {
             DependencyObject grid = VisualTreeHelper.GetChild(container, 1);
             return VisualTreeHelper.GetChild(grid, 0) as TextBlock;

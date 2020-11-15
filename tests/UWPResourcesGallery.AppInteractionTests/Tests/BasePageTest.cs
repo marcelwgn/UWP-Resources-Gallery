@@ -13,7 +13,7 @@ namespace UWPResourcesGallery.AppInteractionTests.Tests
         }
 
         [ClassInitialize]
-        public static void AppLaunch()
+        public static void AppLaunch(TestContext _)
         {
             TestRunInitializer.Session.Manage().Window.Maximize();
         }
