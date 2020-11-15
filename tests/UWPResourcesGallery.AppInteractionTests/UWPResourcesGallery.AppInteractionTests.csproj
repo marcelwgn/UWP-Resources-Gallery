@@ -11,7 +11,7 @@
     <PackageReference Include="Appium.WebDriver" Version="4.1.1" />
     <PackageReference Include="Axe.Windows" Version="1.0.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
-    <PackageReference Include="MSTest.TestAdapter" Version="1.4.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.1.2" />
     <PackageReference Include="MSTest.TestFramework" Version="1.4.0" />
   </ItemGroup>
 
