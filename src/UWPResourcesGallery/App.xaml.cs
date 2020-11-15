@@ -117,7 +117,7 @@ namespace UWPResourcesGallery
         /// </summary>
         /// <param name="e"></param>
         /// <returns></returns>
-        private void EnsureWindow()
+        private static void EnsureWindow()
         {
             // Load all lists since we will need them anyway
             // This must block as the app can not resume without this data being loaded
