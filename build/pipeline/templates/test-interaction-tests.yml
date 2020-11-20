@@ -62,7 +62,7 @@ jobs:
         inputs:
           testSelector: 'testAssemblies'
           testAssemblyVer2: |
-            **\UWPResourcesGallery.AppInteractionTests.dll
+            **\AnyCPU\UWPResourcesGallery.AppInteractionTests\net5.0\UWPResourcesGallery.AppInteractionTests.dll
             !**\*TestAdapter.dll
             !**\obj\**
           searchFolder: '$(System.DefaultWorkingDirectory)'
