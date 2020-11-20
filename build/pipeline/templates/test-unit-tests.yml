@@ -11,9 +11,9 @@ jobs:
     steps:
 
       - task: NuGetToolInstaller@1
-        displayName: Install NuGet 5.2.0
+        displayName: Install NuGet 5.8.0
         inputs:
-          versionSpec: 5.2.0
+          versionSpec: 5.8.0
 
       - task: NuGetCommand@2
         displayName: Restore packages

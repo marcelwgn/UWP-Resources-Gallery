@@ -9,7 +9,16 @@ jobs:
   - job: 
     displayName: Interaction tests ${{parameters.buildConfiguration}} ${{parameters.buildPlatform}}
     steps:
-      - checkout: none
+      - task: NuGetToolInstaller@1
+        displayName: Install NuGet 5.8.0
+        inputs:
+          versionSpec: 5.8.0
+
+      - task: NuGetCommand@2
+        displayName: Restore packages
+        inputs:
+          restoreSolution: '${{parameters.solution}}'
+
       - task: DownloadPipelineArtifact@2
         inputs:
           buildType: 'current'
@@ -53,7 +62,7 @@ jobs:
         inputs:
           testSelector: 'testAssemblies'
           testAssemblyVer2: |
-            **\*AppInteractionTests**.dll
+            **\AnyCPU\UWPResourcesGallery.AppInteractionTests\net5.0\UWPResourcesGallery.AppInteractionTests.dll
             !**\*TestAdapter.dll
             !**\obj\**
           searchFolder: '$(System.DefaultWorkingDirectory)'
