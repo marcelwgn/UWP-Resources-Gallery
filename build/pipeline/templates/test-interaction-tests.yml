@@ -9,12 +9,21 @@ jobs:
   - job: 
     displayName: Interaction tests ${{parameters.buildConfiguration}} ${{parameters.buildPlatform}}
     steps:
-      - checkout: none
-      - task: DownloadPipelineArtifact@2
+      - task: NuGetToolInstaller@1
+        displayName: Install NuGet 5.8.0
         inputs:
-          buildType: 'current'
-          artifactName: 'artifacts_${{parameters.buildConfiguration}}_${{parameters.buildPlatform}}'
-          targetPath: '$(System.DefaultWorkingDirectory)\artifacts\${{parameters.buildConfiguration}}'
+          versionSpec: 5.8.0
+
+      - task: NuGetCommand@2
+        displayName: Restore packages
+        inputs:
+          restoreSolution: '${{parameters.solution}}'
+
+      - task: DownloadPipelineArtifact@2
+          inputs:
+            buildType: 'current'
+            artifactName: 'artifacts_${{parameters.buildConfiguration}}_${{parameters.buildPlatform}}'
+            targetPath: '$(System.DefaultWorkingDirectory)\artifacts\${{parameters.buildConfiguration}}'
       
       - task: DownloadPipelineArtifact@2
         inputs:
