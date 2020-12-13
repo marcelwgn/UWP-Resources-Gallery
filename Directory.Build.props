@@ -8,12 +8,16 @@
 
     <IntermediateOutputPath>..\..\artifacts\intermediates\$(Platform)\$(MSBuildProjectName)\</IntermediateOutputPath>
     <GeneratedFilesDir>..\..\artifacts\intermediates\$(Platform)\$(MSBuildProjectName)\Generated Files\</GeneratedFilesDir>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
   </PropertyGroup>
-  
+
   <!-- Packages needed in every project -->
   <ItemGroup>
     <!-- Code analyzer -->
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.2">
-    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="5.0.1"/>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.2"/>
+    <PackageReference Include="Microsoft.CodeQuality.Analyzers" Version="3.3.2"/>
   </ItemGroup>
 </Project>
