@@ -5,7 +5,7 @@ using Windows.UI.Xaml.Controls;
 
 namespace UWPResourcesGallery.Controls.Templates
 {
-    public partial class IconItemControl : UserControl
+    public sealed partial class IconItemControl : UserControl
     {
 
         public UIElement IconViewPresenter => IconView;

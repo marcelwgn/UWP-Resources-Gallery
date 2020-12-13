@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 
+[assembly: CLSCompliant(false)]
+
 namespace UWPResourcesGallery.AppInteractionTests
 {
     internal class TestHelper
