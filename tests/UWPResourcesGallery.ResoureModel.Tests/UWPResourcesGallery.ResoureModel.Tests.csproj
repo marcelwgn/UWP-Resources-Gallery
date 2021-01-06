@@ -18,7 +18,7 @@
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnitTestPlatformVersion Condition="'$(UnitTestPlatformVersion)' == ''">$(VisualStudioVersion)</UnitTestPlatformVersion>
     <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
-    <PackageCertificateThumbprint>09C04C3BF99ACF46B726476659E226EC41A653CB</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>4DADFEF3B9F1DEA230C9E638C829A90E26671ACB</PackageCertificateThumbprint>
     <PackageCertificateKeyFile>UWPResourcesGallery.ResoureModel.Tests_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
