@@ -11,7 +11,7 @@ namespace UWPResourcesGallery.ResourceModel.WindowsVersionContracts
         public string Name { get; private set; }
         public string UIAName => "UWP contract " + Name;
         public string Version { get; private set; }
-        public int VersionInt => (int)double.Parse(Version);
+        public int VersionInt => int.Parse(Version.Replace(".0",""));
 
         public UniversalPlatformContract(string name, string version)
         {

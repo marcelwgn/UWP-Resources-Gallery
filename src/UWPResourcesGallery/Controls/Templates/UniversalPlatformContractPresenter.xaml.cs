@@ -12,7 +12,7 @@ namespace UWPResourcesGallery.Controls.Templates
 
         private bool isExpanded;
 
-        public string ContractName => Contract?.Name + ", Version=" + Contract?.VersionInt;
+        public string ContractName => Contract?.Name + ", Version=" + Contract?.Version;
 
         public UniversalPlatformContract Contract
         {
