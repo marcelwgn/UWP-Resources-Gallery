@@ -65,13 +65,15 @@ namespace UWPResourcesGallery.Controls.Templates
 
         private void UseCompactLayoutChanged()
         {
-            if(UseCompactLayout)
+            if (UseCompactLayout)
             {
                 VisualStateManager.GoToState(this, "CompactLayout", false);
+                ToolTipService.SetToolTip(this, "Icon: " + Icon.Name);
             }
             else
             {
                 VisualStateManager.GoToState(this, "NormalLayout", false);
+                ToolTipService.SetToolTip(this, null);
             }
         }
     }
