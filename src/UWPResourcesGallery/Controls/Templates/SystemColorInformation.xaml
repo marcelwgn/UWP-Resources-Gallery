@@ -2,14 +2,14 @@
     x:Class="UWPResourcesGallery.Controls.Templates.SystemColorInformation"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:UWPResourcesGallery.Controls.Templates"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:common="using:UWPResourcesGallery.Controls.Common"
     mc:Ignorable="d"
     d:DesignHeight="300"
-    d:DesignWidth="400">
-    
+    d:DesignWidth="400"
+    xmlns:contract7Present="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)">
+
     <StackPanel>
         <!-- Hex codes -->
         <Grid>
@@ -21,17 +21,21 @@
             <StackPanel>
                 <TextBlock Text="Light theme"/>
                 <Grid Background="{ThemeResource SystemChromeMediumColor}" BorderThickness="1"
-                            BorderBrush="{ThemeResource SystemControlBackgroundListLowBrush}">
+                    contract7Present:CornerRadius="{StaticResource ControlCornerRadius}"
+                    BorderBrush="{ThemeResource SystemControlBackgroundListLowBrush}">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
                     
                     <TextBlock x:Name="lightThemeHexCodeBlock" VerticalAlignment="Center"
-                            FontFamily="Consolas" Margin="8,0,4,0" IsTextSelectionEnabled="True"/>
+                        FontFamily="Consolas" Margin="8,0,4,0" IsTextSelectionEnabled="True"/>
 
-                    <Button Style="{ThemeResource CopyButtonStyle}" Grid.Column="1"
-                            Click="CopyLightThemeHexCode" Margin="4,0,0,0" ToolTipService.ToolTip="Copy unformated hex code to clipboards"/>
+                    <Button Style="{ThemeResource CopyButtonStyle}"
+                        contract7Present:CornerRadius="{StaticResource ControlCornerRadius}"
+                        Grid.Column="1" BorderThickness="0"
+                        Click="CopyLightThemeHexCode" Margin="4,0,0,0"
+                        ToolTipService.ToolTip="Copy unformated hex code to clipboards"/>
                 </Grid>
             </StackPanel>
 
@@ -39,17 +43,21 @@
             <StackPanel Margin="8,0,0,0" Grid.Column="1">
                 <TextBlock Text="Dark theme"/>
                 <Grid Background="{ThemeResource SystemChromeMediumColor}" BorderThickness="1"
-                            BorderBrush="{ThemeResource SystemControlBackgroundListLowBrush}">
+                    contract7Present:CornerRadius="{StaticResource ControlCornerRadius}"
+                    BorderBrush="{ThemeResource SystemControlBackgroundListLowBrush}">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
                     
                     <TextBlock x:Name="darkThemeHexCodeBlock" VerticalAlignment="Center" 
-                            FontFamily="Consolas" Margin="8,0,4,0" IsTextSelectionEnabled="True"/>
-                    
-                    <Button Style="{ThemeResource CopyButtonStyle}" Grid.Column="1"
-                            Click="CopyDarkThemeHexCode" Margin="4,0,0,0" ToolTipService.ToolTip="Copy unformated hex code to clipboards"/>
+                        FontFamily="Consolas" Margin="8,0,4,0" IsTextSelectionEnabled="True"/>
+
+                    <Button Style="{ThemeResource CopyButtonStyle}"
+                        contract7Present:CornerRadius="{StaticResource ControlCornerRadius}"
+                        Grid.Column="1" BorderThickness="0"
+                        Click="CopyDarkThemeHexCode" Margin="4,0,0,0"
+                        ToolTipService.ToolTip="Copy unformated hex code to clipboards"/>
                 </Grid>
             </StackPanel>
         </Grid>

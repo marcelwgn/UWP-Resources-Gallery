@@ -132,8 +132,8 @@
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
             </muxc:NavigationView.MenuItems>
-            
-            <Frame x:Name="RootFrame" Padding="0,40,0,0">
+
+            <Frame x:Name="RootFrame" Padding="0,40,0,0" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
                 <Frame.ContentTransitions>
                     <TransitionCollection>
                         <NavigationThemeTransition/>

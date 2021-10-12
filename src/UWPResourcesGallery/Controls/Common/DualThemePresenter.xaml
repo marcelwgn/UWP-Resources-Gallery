@@ -6,14 +6,17 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     d:DesignHeight="300"
-    d:DesignWidth="400">
+    d:DesignWidth="400"
+    xmlns:contract7Present="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)">
 
-    
+
+
     <StackPanel Orientation="{x:Bind ContentOrientation,Mode=OneWay}">
         
         <!-- Light theme content -->
         <Grid Grid.Column="0" RequestedTheme="Light" 
             BorderThickness="1"
+            contract7Present:CornerRadius="{StaticResource ControlCornerRadius}"
             BorderBrush="{ThemeResource SystemControlBackgroundListLowBrush}"
             Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
             <ContentPresenter Content="{x:Bind LightThemeContent}"/>
@@ -25,6 +28,7 @@
         <!-- Dark theme content -->
         <Grid Grid.Column="2" RequestedTheme="Dark" 
             BorderThickness="1"
+            contract7Present:CornerRadius="{StaticResource ControlCornerRadius}"
             BorderBrush="{ThemeResource SystemControlBackgroundListLowBrush}"
             Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
             <ContentPresenter Content="{x:Bind DarkThemeContent}"/>

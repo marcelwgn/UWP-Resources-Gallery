@@ -78,6 +78,7 @@
                 x:Name="OpenInfoTeachingTipButton"
                 Click="OpenInfoTeachingTipButton_Click"
                 AutomationProperties.Name="View additional information"
+                Background="{ThemeResource SystemBaseLowColor}"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Right"
                 Padding="0"
