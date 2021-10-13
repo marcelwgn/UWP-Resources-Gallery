@@ -24,12 +24,16 @@ namespace UWPResourcesGallery.Controls.Tests.UITests
                 TextBlock lightTextBox = (TextBlock)ControlsTestPage.Instance.FindName("LightThemeText");
                 Assert.IsNotNull(lightTextBox);
                 Assert.AreEqual("Light", lightTextBox.Text);
-                Assert.AreEqual(Colors.Black, (lightTextBox.Foreground as SolidColorBrush).Color);
+                Assert.AreEqual(Colors.Black.R, (lightTextBox.Foreground as SolidColorBrush).Color.R);
+                Assert.AreEqual(Colors.Black.G, (lightTextBox.Foreground as SolidColorBrush).Color.G);
+                Assert.AreEqual(Colors.Black.B, (lightTextBox.Foreground as SolidColorBrush).Color.B);
 
                 TextBlock darkTextBox = (TextBlock)ControlsTestPage.Instance.FindName("DarkThemeText");
                 Assert.IsNotNull(darkTextBox);
                 Assert.AreEqual("Dark", darkTextBox.Text);
-                Assert.AreEqual(Colors.White, (darkTextBox.Foreground as SolidColorBrush).Color);
+                Assert.AreEqual(Colors.White.R, (darkTextBox.Foreground as SolidColorBrush).Color.R);
+                Assert.AreEqual(Colors.White.G, (darkTextBox.Foreground as SolidColorBrush).Color.G);
+                Assert.AreEqual(Colors.White.B, (darkTextBox.Foreground as SolidColorBrush).Color.B);
             }
         }
     }

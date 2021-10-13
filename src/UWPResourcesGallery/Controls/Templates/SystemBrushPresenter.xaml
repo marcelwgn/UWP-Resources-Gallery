@@ -22,8 +22,7 @@
 
     <Grid
         Width="470"
-        Padding="6,8,6,8"
-        Background="{ThemeResource SystemChromeDisabledHighColor}">
+        Padding="6,8,6,8">
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
             <RowDefinition Height="Auto" />

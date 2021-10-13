@@ -5,7 +5,7 @@
 
     <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key="Default">
-            <StaticResource x:Key="GridViewItemBackground" ResourceKey="SystemControlBackgroundListLowBrush" />
+            <StaticResource x:Key="GridViewItemBackground" ResourceKey="SystemControlPageBackgroundChromeMediumLowBrush" />
             <StaticResource x:Key="GridViewItemBackgroundPointerOver" ResourceKey="SystemControlHighlightBaseLowBrush" />
             <StaticResource x:Key="ButtonRevealBackground" ResourceKey="ButtonBackground" />
         </ResourceDictionary>

@@ -12,7 +12,7 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <muxc:Expander HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+    <muxc:Expander x:Name="RootExpander" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
         <muxc:Expander.Header>
             <TextBlock x:Name="ContractNamePresenter" Text="{x:Bind ContractName}" Grid.Column="1"
                 FontSize="16" VerticalAlignment="Center" Margin="8,0,0,5" TextWrapping="Wrap"/>
