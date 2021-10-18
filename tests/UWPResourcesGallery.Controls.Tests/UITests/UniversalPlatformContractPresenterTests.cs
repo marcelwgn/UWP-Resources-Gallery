@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.UI.Xaml.Automation.Peers;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting.AppContainer;
 using System;
 using System.Collections.Generic;
@@ -21,19 +23,12 @@ namespace UWPResourcesGallery.Controls.Tests.UITests
         public void VerifyExpandAndCollapseWorkCorrectly()
         {
             var presenter = (UniversalPlatformContractPresenter)ControlsTestPage.Instance.FindName("TestContractPresenter");
-            var rootButton = new ButtonAutomationPeer((Button)presenter.FindName("RootButton"));
-            var codeSample = (StackPanel)presenter.FindName("SampleCodePanel");
-            Assert.AreEqual(Visibility.Collapsed, codeSample.Visibility);
+            var expander = (Expander)presenter.FindName("RootExpander");
+            var expanderPeer = new ExpanderAutomationPeer(expander);
 
-            rootButton.Invoke();
-            
-            codeSample = (StackPanel)presenter.FindName("SampleCodePanel");
-            Assert.AreEqual(Visibility.Visible, codeSample.Visibility);
-
-            rootButton.Invoke();
-
-            codeSample = (StackPanel)presenter.FindName("SampleCodePanel");
-            Assert.AreEqual(Visibility.Collapsed, codeSample.Visibility);
+            Assert.IsNotNull(expander.Header);
+            Assert.IsNotNull(expander.Content);
+            Assert.AreEqual(expanderPeer.ExpandCollapseState, Windows.UI.Xaml.Automation.ExpandCollapseState.Collapsed);
         }
     }
 }

@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-    xmlns:common="using:UWPResourcesGallery.Controls.Common"
+    xmlns:common="using:UWPResourcesGallery.Controls.Common" xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -23,8 +23,8 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
         
-        <StackPanel Padding="32,16,32,16">
-            <TextBlock Text="Acrylic brush designer" FontSize="36" Margin="0,0,0,8"/>
+        <StackPanel Padding="14,0,14,16">
+            <common:PageHeader PageName="Acrylic brush designer"/>
 
             <StackPanel x:Name="RootStackPanel">
                 <StackPanel>
@@ -40,14 +40,14 @@
                         </Grid.ColumnDefinitions>
 
                         <TextBlock Text="HostBackDrop" FontSize="16"/>
-                        <Grid Grid.Row="1">
+                        <Grid Grid.Row="1" CornerRadius="{ThemeResource ControlCornerRadius}">
                             <Grid.Background>
                                 <AcrylicBrush x:Name="HostBackDropBrush" BackgroundSource="HostBackdrop" FallbackColor="Gray"/>
                             </Grid.Background>
                         </Grid>
 
                         <TextBlock Text="BackDrop" Grid.Column="2" FontSize="16"/>
-                        <Grid Grid.Row="1" Grid.Column="2">
+                        <Grid Grid.Row="1" Grid.Column="2" CornerRadius="{ThemeResource ControlCornerRadius}">
                             <Image Source="/Assets/SMPTE_Color_Bars.png"/>
                             <Grid Margin="10">
                                 <Grid.Background>
@@ -67,9 +67,10 @@
                     Orientation="Vertical">
                     <StackPanel>
                         <TextBlock Text="Tint color" FontSize="16" Margin="0,0,0,4"/>
-                        <ColorPicker x:Name="Color"
+                        <muxc:ColorPicker x:Name="Color"
                             Color="Gray"
                             IsMoreButtonVisible="True"
+                            Orientation="Horizontal"
                             ColorChanged="Color_ColorChanged"/>
                     </StackPanel>
                     <StackPanel MaxWidth="300" x:Name="SliderOptionsPanel"

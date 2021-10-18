@@ -15,7 +15,7 @@
         <muxc:TeachingTip x:Key="InfoTeachingTip" IsLightDismissEnabled="True" Title="Information" Subtitle=""/>
     </UserControl.Resources>
 
-    <Grid Padding="8" Width="470" Background="{ThemeResource SystemControlBackgroundListLowBrush}" >
+    <Grid Padding="8" Width="470">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="8"/>
@@ -78,6 +78,7 @@
                 x:Name="OpenInfoTeachingTipButton"
                 Click="OpenInfoTeachingTipButton_Click"
                 AutomationProperties.Name="View additional information"
+                Background="{ThemeResource SystemBaseLowColor}"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Right"
                 Padding="0"

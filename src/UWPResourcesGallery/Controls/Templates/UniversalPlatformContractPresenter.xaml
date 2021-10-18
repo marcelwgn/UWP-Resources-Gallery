@@ -6,60 +6,26 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:common="using:UWPResourcesGallery.Controls.Common"
-    xmlns:UWPmodel="using:UWPResourcesGallery.ResourceModel.WindowsVersionContracts" xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)"
+    xmlns:UWPmodel="using:UWPResourcesGallery.ResourceModel.WindowsVersionContracts"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <StackPanel x:DefaultBindMode="OneWay" 
-        BorderBrush="{ThemeResource SystemBaseLowColor}" BorderThickness="1"
-        Padding="6" Margin="0,4"
-        Background="{ThemeResource SystemControlBackgroundListLowBrush}">
-        <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup x:Name="CollapseStates">
-                <VisualState x:Name="Expanded">
-                    <VisualState.Setters>
-                        <Setter Target="ChevronDown.Visibility" Value="Visible"/>
-                        <Setter Target="ChevronRight.Visibility" Value="Collapsed"/>
-                        <Setter Target="SampleCodePanel.Visibility" Value="Visible"/>
-                        <Setter Target="RootButton.(AutomationProperties.Name)" Value="Collapse sample"/>
-                    </VisualState.Setters>
-                </VisualState>
-                <VisualState x:Name="Collapsed">
-                    <VisualState.Setters>
-                        <Setter Target="ChevronDown.Visibility" Value="Collapsed"/>
-                        <Setter Target="ChevronRight.Visibility" Value="Visible"/>
-                        <Setter Target="SampleCodePanel.Visibility" Value="Collapsed"/>
-                        <Setter Target="RootButton.(AutomationProperties.Name)" Value="Expand sample"/>
-                    </VisualState.Setters>
-                </VisualState>
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
-
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Button x:Name="RootButton" Windows10version1809:CornerRadius="0" AutomationProperties.Name="Expand sample"
-                    Click="RootButton_Click" Background="Transparent">
-                <StackPanel>
-                    <FontIcon x:Name="ChevronDown" Glyph="&#xE70D;" Visibility="Collapsed" AutomationProperties.Name="Collapse contract sample code"/>
-                    <FontIcon x:Name="ChevronRight" Glyph="&#xE76C;" AutomationProperties.Name="Expand contract sample code"/>
-                </StackPanel>
-            </Button>
+    <muxc:Expander x:Name="RootExpander" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+        <muxc:Expander.Header>
             <TextBlock x:Name="ContractNamePresenter" Text="{x:Bind ContractName}" Grid.Column="1"
                 FontSize="16" VerticalAlignment="Center" Margin="8,0,0,5" TextWrapping="Wrap"/>
-        </Grid>
+        </muxc:Expander.Header>
         <StackPanel x:Name="SampleCodePanel" Padding="8,0,0,0">
-                <StackPanel>
-                    <TextBlock Text="C# query"/>
-                    <common:CodeSample Code="{x:Bind UWPmodel:UniversalPlatformContractQueryFactory.GetCSharpQuery(Contract)}"/>
-                </StackPanel>
-                <StackPanel>
-                    <TextBlock Text="XAML conditional namespace" Margin="0,6,0,0"/>
-                    <common:CodeSample Code="{x:Bind UWPmodel:UniversalPlatformContractQueryFactory.GetXAMLConditionalNameSpace(Contract)}"/>
-                </StackPanel>
+            <StackPanel>
+                <TextBlock Text="C# query"/>
+                <common:CodeSample Code="{x:Bind UWPmodel:UniversalPlatformContractQueryFactory.GetCSharpQuery(Contract)}"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="XAML conditional namespace" Margin="0,6,0,0"/>
+                <common:CodeSample Code="{x:Bind UWPmodel:UniversalPlatformContractQueryFactory.GetXAMLConditionalNameSpace(Contract)}"/>
+            </StackPanel>
         </StackPanel>
-    </StackPanel>
+    </muxc:Expander>
 </UserControl>

@@ -2,6 +2,7 @@
 using UWPResourcesGallery.ResourceModel;
 using Windows.Foundation.Metadata;
 using Windows.UI.Xaml.Controls;
+using MUXC = Microsoft.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 
 namespace UWPResourcesGallery.Pages
@@ -24,7 +25,7 @@ namespace UWPResourcesGallery.Pages
             UpdateAcrylicBrushes();
         }
 
-        private void Color_ColorChanged(ColorPicker sender, ColorChangedEventArgs args)
+        private void Color_ColorChanged(MUXC.ColorPicker sender, MUXC.ColorChangedEventArgs args)
         {
             UpdateAcrylicBrushes();
         }

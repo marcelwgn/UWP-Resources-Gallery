@@ -22,8 +22,7 @@
 
     <Grid
         Width="470"
-        Padding="6,8,6,8"
-        Background="{ThemeResource SystemControlBackgroundListLowBrush}">
+        Padding="6,8,6,8">
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
             <RowDefinition Height="Auto" />
@@ -35,6 +34,7 @@
             x:Name="OpenInfoTeachingTipButton"
             AutomationProperties.Name="View additional information"
             Grid.ColumnSpan="3"
+            Background="{ThemeResource SystemBaseLowColor}"
             Width="30"
             Height="30"
             Margin="0,-8,-6,0"
