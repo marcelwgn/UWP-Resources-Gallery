@@ -53,7 +53,7 @@ namespace UWPResourcesGallery.Controls.Common
 
         // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ContentOrientationProperty =
-            DependencyProperty.Register("MyProperty", typeof(Orientation), typeof(DualThemePresenter), new PropertyMetadata(0));
+            DependencyProperty.Register("ContentOrientation", typeof(Orientation), typeof(DualThemePresenter), new PropertyMetadata(0));
         #endregion
 
         public DualThemePresenter()

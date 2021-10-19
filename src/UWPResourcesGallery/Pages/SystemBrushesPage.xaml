@@ -26,6 +26,7 @@
                 <ColumnDefinition Width="15" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="14" />
             </Grid.ColumnDefinitions>
@@ -43,6 +44,11 @@
                 AutomationProperties.LabeledBy="{x:Bind SearchSystemColorsLabel}"
                 AutomationProperties.AutomationId="SearchBrushesInput"
                 TextChanged="SearchTextBox_TextChanged" />
+            <CheckBox x:Name="CompactLayoutCheckbox"
+                Grid.Column="3" Margin="8,0,0,0"
+                Checked="CompactLayoutCheckbox_Checked"
+                Unchecked="CompactLayoutCheckbox_Unchecked"
+                Content="Compact layout"/>
             <Border
                 Grid.ColumnSpan="100"
                 VerticalAlignment="Bottom"
@@ -51,7 +57,7 @@
         </Grid>
 
         <GridView
-            x:Name="SystemBrushPresenter"
+            x:Name="ItemsGridView"
             Grid.Row="2"
             Padding="10"
             SelectionMode="None">
@@ -63,7 +69,9 @@
             </GridView.Resources>
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="brushes:SystemBrush">
-                    <scc:SystemBrushPresenter SystemBrush="{x:Bind}" AutomationProperties.Name="{x:Bind UIAName}"/>
+                    <scc:SystemBrushPresenter SystemBrush="{x:Bind}"
+                        UseCompactLayout="{Binding IsChecked,ElementName=CompactLayoutCheckbox}"
+                        AutomationProperties.Name="{x:Bind UIAName}"/>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>

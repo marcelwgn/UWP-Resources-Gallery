@@ -31,7 +31,7 @@ namespace UWPResourcesGallery.Pages
             {
                 _ = Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.High, () =>
                 {
-                    SystemColorsPresenter.ItemsSource = source.FilteredItems;
+                    ItemsGridView.ItemsSource = source.FilteredItems;
                 });
             });
         }
@@ -40,6 +40,16 @@ namespace UWPResourcesGallery.Pages
         {
             source.Filter((sender as TextBox).Text);
         }
+        private void CompactLayoutCheckbox_Checked(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            ItemsGridView.ItemsSource = null;
+            ItemsGridView.ItemsSource = source.FilteredItems;
+        }
 
+        private void CompactLayoutCheckbox_Unchecked(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            ItemsGridView.ItemsSource = null;
+            ItemsGridView.ItemsSource = source.FilteredItems;
+        }
     }
 }
