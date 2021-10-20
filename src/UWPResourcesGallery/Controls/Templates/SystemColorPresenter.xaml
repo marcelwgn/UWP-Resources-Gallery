@@ -15,17 +15,58 @@
         <muxc:TeachingTip x:Key="InfoTeachingTip" IsLightDismissEnabled="True" Title="Information" Subtitle=""/>
     </UserControl.Resources>
 
-    <Grid Padding="8" Width="470">
+    <Grid x:Name="RootGrid" Padding="8" Width="470">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="8"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="CompactLayoutStates">
+                <VisualState x:Name="NormalLayout"/>
+                <VisualState x:Name="CompactLayout">
+                    <VisualState.Setters>
+                        <Setter Target="RootGrid.Width" Value="300"/>
+                        <Setter Target="RootGrid.Padding" Value="10,0,4,0"/>
+                        <Setter Target="OpenInfoTeachingTipButton.Margin" Value="0,-10,-4,0"/>
+                        <Setter Target="LightThemeContent.Width" Value="115"/>
+                        <Setter Target="DarkThemeContent.Width" Value="115"/>
+                        <Setter Target="LightThemeContent.Padding" Value="4,0"/>
+                        <Setter Target="DarkThemeContent.Padding" Value="4,0"/>
+                        <Setter Target="ColorsPresenter.Width" Value="250"/>
+                        <Setter Target="ColorsPresenter.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="ColorsPresenter.ContentOrientation" Value="Horizontal"/>
+                        <Setter Target="ColorsPresenter.VerticalAlignment" Value="Center"/>
+                        <Setter Target="ColorsPresenter.HorizontalAlignment" Value="Left"/>
+                        <Setter Target="BrushName.Visibility" Value="Collapsed"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <!-- Info button -->
+        <Button Style="{ThemeResource ButtonRevealStyle}"
+                Grid.ColumnSpan="3"
+                x:Name="OpenInfoTeachingTipButton"
+                Click="OpenInfoTeachingTipButton_Click"
+                AutomationProperties.Name="View additional information"
+                Background="{ThemeResource SystemBaseLowColor}"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Padding="0"
+                Windows10version1809:CornerRadius="0,0,0,3"
+                Margin="0,-8,-8,0"
+                Height="30"
+                Width="30"
+                ToolTipService.ToolTip="View additional information">
+            <FontIcon Glyph="&#xE946;" VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="30"/>
+        </Button>
+
         <!-- Showcase for systemcolor -->
-        <common:DualThemePresenter Width="102">
+        <common:DualThemePresenter x:Name="ColorsPresenter" Width="102" ContentOrientation="Vertical">
             <common:DualThemePresenter.LightThemeContent>
-                <StackPanel Width="92">
+                <StackPanel x:Name="LightThemeContent" Width="92">
                     <TextBlock Margin="4,0,0,0" Text="Light theme"/>
                     <Border Margin="0,0,0,4" BorderThickness="0">
                         <!--White and black background for opaque colors-->
@@ -46,7 +87,7 @@
             </common:DualThemePresenter.LightThemeContent>
 
             <common:DualThemePresenter.DarkThemeContent>
-                <StackPanel Width="92">
+                <StackPanel x:Name="DarkThemeContent" Width="92">
                     <TextBlock Margin="4,0,0,0" Text="Dark theme"/>
                     <Border Margin="0,0,0,4" BorderThickness="0">
                         <!--Black and white background for opaque colors-->
@@ -71,23 +112,5 @@
         <TextBlock x:Name="BrushName" Text="{x:Bind SystemColor.Key}" FontSize="20" Foreground="{ThemeResource SystemAccentColor}"
             HorizontalAlignment="Center" VerticalAlignment="Center" IsTextSelectionEnabled="True"
             Grid.Column="2"/>
-
-        <!-- Info button -->
-        <Button Style="{ThemeResource ButtonRevealStyle}"
-                Grid.ColumnSpan="3"
-                x:Name="OpenInfoTeachingTipButton"
-                Click="OpenInfoTeachingTipButton_Click"
-                AutomationProperties.Name="View additional information"
-                Background="{ThemeResource SystemBaseLowColor}"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Right"
-                Padding="0"
-                Windows10version1809:CornerRadius="0,0,0,3"
-                Margin="0,-8,-8,0"
-                Height="30"
-                Width="30"
-                ToolTipService.ToolTip="View additional information">
-            <FontIcon Glyph="&#xE946;" VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="30"/>
-        </Button>
     </Grid>
 </UserControl>

@@ -31,6 +31,26 @@ namespace UWPResourcesGallery.Controls.Templates
             (sender as SystemColorPresenter).SystemColorChanged();
         }
         #endregion
+        public bool UseCompactLayout
+        {
+            get { return (bool)GetValue(UseCompactLayoutProperty); }
+            set { SetValue(UseCompactLayoutProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for UseCompactLayout.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty UseCompactLayoutProperty =
+            DependencyProperty.Register(
+                "UseCompactLayout",
+                typeof(bool),
+                typeof(SystemColorPresenter),
+                new PropertyMetadata(false,
+                new PropertyChangedCallback(OnUseCompactLayoutPropertyChanged)));
+
+        private static void OnUseCompactLayoutPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            SystemColorPresenter control = d as SystemColorPresenter;
+            control.UseCompactLayoutChanged();
+        }
 
         public SystemColorPresenter()
         {
@@ -50,6 +70,19 @@ namespace UWPResourcesGallery.Controls.Templates
             teachingTip.IsOpen = true;
 
             teachingTip.Subtitle = "";
+        }
+        private void UseCompactLayoutChanged()
+        {
+            if (UseCompactLayout)
+            {
+                VisualStateManager.GoToState(this, "CompactLayout", false);
+                ToolTipService.SetToolTip(this, "Color: " + SystemColor.Key);
+            }
+            else
+            {
+                VisualStateManager.GoToState(this, "NormalLayout", false);
+                ToolTipService.SetToolTip(this, null);
+            }
         }
     }
 }

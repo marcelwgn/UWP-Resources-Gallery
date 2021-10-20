@@ -32,6 +32,27 @@ namespace UWPResourcesGallery.Controls.Templates
         }
         #endregion
 
+        public bool UseCompactLayout
+        {
+            get { return (bool)GetValue(UseCompactLayoutProperty); }
+            set { SetValue(UseCompactLayoutProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for UseCompactLayout.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty UseCompactLayoutProperty =
+            DependencyProperty.Register(
+                "UseCompactLayout",
+                typeof(bool),
+                typeof(SystemBrushPresenter),
+                new PropertyMetadata(false,
+                new PropertyChangedCallback(OnUseCompactLayoutPropertyChanged)));
+
+        private static void OnUseCompactLayoutPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            SystemBrushPresenter control = d as SystemBrushPresenter;
+            control.UseCompactLayoutChanged();
+        }
+
         public SystemBrushPresenter()
         {
             InitializeComponent();
@@ -52,6 +73,20 @@ namespace UWPResourcesGallery.Controls.Templates
             teachingTip.Subtitle = "";
 
             teachingTip.UpdateLayout();
+        }
+
+        private void UseCompactLayoutChanged()
+        {
+            if (UseCompactLayout)
+            {
+                VisualStateManager.GoToState(this, "CompactLayout", false);
+                ToolTipService.SetToolTip(this, "Brush: " + SystemBrush.Key);
+            }
+            else
+            {
+                VisualStateManager.GoToState(this, "NormalLayout", false);
+                ToolTipService.SetToolTip(this, null);
+            }
         }
     }
 }

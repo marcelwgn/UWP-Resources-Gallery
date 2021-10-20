@@ -20,14 +20,34 @@
             Subtitle="" />
     </UserControl.Resources>
 
-    <Grid
+    <Grid x:Name="RootGrid"
         Width="470"
         Padding="6,8,6,8">
         <Grid.RowDefinitions>
-            <RowDefinition Height="30" />
+            <RowDefinition x:Name="TopPaddingRow" Height="30" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="CompactLayoutStates">
+                <VisualState x:Name="NormalLayout"/>
+                <VisualState x:Name="CompactLayout">
+                    <VisualState.Setters>
+                        <Setter Target="ColorPresenter.(Grid.Row)" Value="0"/>
+                        <Setter Target="ColorPresenter.(Grid.RowSpan)" Value="3"/>
+                        <Setter Target="ColorPresenter.Margin" Value="0"/>
+                        <Setter Target="ColorPresenter.HorizontalAlignment" Value="Left"/>
+                        <Setter Target="RootGrid.Width" Value="300"/>
+                        <Setter Target="RootGrid.Padding" Value="10,0,4,0"/>
+                        <Setter Target="OpenInfoTeachingTipButton.Margin" Value="0,-10,-4,0"/>
+                        <Setter Target="LightThemeContent.Width" Value="120"/>
+                        <Setter Target="DarkThemeContent.Width" Value="120"/>
+                        <Setter Target="BrushName.Visibility" Value="Collapsed"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
 
         <!--  Info button  -->
         <Button
@@ -64,19 +84,17 @@
             Text="{x:Bind SystemBrush.Key}"
             TextWrapping="Wrap" />
 
-
         <!--  Showcase for systemcolor  -->
-        <common:DualThemePresenter
+        <common:DualThemePresenter x:Name="ColorPresenter"
             Grid.Row="2"
             Width="Auto"
             Margin="0,8,0,0"
             HorizontalAlignment="Center"
             ContentOrientation="Horizontal">
             <common:DualThemePresenter.LightThemeContent>
-                <StackPanel Width="180" Padding="4,0,4,0">
+                <StackPanel x:Name="LightThemeContent" Width="180" Padding="4,0,4,0">
                     <TextBlock Margin="4,0,0,0" Text="Light theme" />
                     <Border
-                        Width="172"
                         Margin="0,0,0,4"
                         BorderThickness="0">
                         <!--  White and black background for opaque colors  -->
@@ -99,10 +117,9 @@
             </common:DualThemePresenter.LightThemeContent>
 
             <common:DualThemePresenter.DarkThemeContent>
-                <StackPanel Width="180">
+                <StackPanel x:Name="DarkThemeContent" Width="180" Padding="4,0,4,0">
                     <TextBlock Margin="4,0,0,0" Text="Dark theme" />
                     <Border
-                        Width="172"
                         Margin="0,0,2,4"
                         BorderThickness="0">
                         <!--  Black and white background for opaque colors  -->
