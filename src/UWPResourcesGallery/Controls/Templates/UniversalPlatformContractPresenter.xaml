@@ -12,7 +12,7 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <muxc:Expander x:Name="RootExpander" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+    <muxc:Expander x:Name="RootExpander" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" IsExpanded="{x:Bind Contract.IsExpanded, Mode=TwoWay}">
         <muxc:Expander.Header>
             <TextBlock x:Name="ContractNamePresenter" Text="{x:Bind ContractName}" Grid.Column="1"
                 FontSize="16" VerticalAlignment="Center" Margin="8,0,0,5" TextWrapping="Wrap"/>
@@ -20,11 +20,11 @@
         <StackPanel x:Name="SampleCodePanel" Padding="8,0,0,0">
             <StackPanel>
                 <TextBlock Text="C# query"/>
-                <common:CodeSample Code="{x:Bind UWPmodel:UniversalPlatformContractQueryFactory.GetCSharpQuery(Contract)}"/>
+                <common:CodeSample Code="{x:Bind UWPmodel:UniversalPlatformContractQueryFactory.GetCSharpQuery(Contract), Mode=OneWay}"/>
             </StackPanel>
             <StackPanel>
                 <TextBlock Text="XAML conditional namespace" Margin="0,6,0,0"/>
-                <common:CodeSample Code="{x:Bind UWPmodel:UniversalPlatformContractQueryFactory.GetXAMLConditionalNameSpace(Contract)}"/>
+                <common:CodeSample Code="{x:Bind UWPmodel:UniversalPlatformContractQueryFactory.GetXAMLConditionalNameSpace(Contract), Mode=OneWay}"/>
             </StackPanel>
         </StackPanel>
     </muxc:Expander>

@@ -14,6 +14,10 @@ namespace UWPResourcesGallery.Controls.Templates
             get { return (UniversalPlatformContract)GetValue(ContractProperty); }
             set { 
                 SetValue(ContractProperty, value);
+                if(value != null)
+                {
+                    this.RootExpander.IsExpanded = value.IsExpanded;
+                }
             }
         }
 
