@@ -26,7 +26,7 @@
     <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
     <AppInstallerUri>\\test\</AppInstallerUri>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
-    <PackageCertificateThumbprint>B0A79599145DD6D2FFF7B78CC57561EEC3E5A6D5</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>CBEEC780CB3927E66B21D782973B3EC79545C8E9</PackageCertificateThumbprint>
     <PackageCertificateKeyFile>UWPResourcesGallery_TemporaryKey.pfx</PackageCertificateKeyFile>
     <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
     <AppxSymbolPackageEnabled>True</AppxSymbolPackageEnabled>
@@ -362,13 +362,15 @@
     <AppxManifest Include="DebugPackage.appxmanifest" Condition="'$(Configuration)' == 'Debug'">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="UWPResourcesGallery_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UWPResourcesGallery.ResourceModel\UWPResourcesGallery.ResourceModel.csproj">
       <Project>{957B1E0E-D863-41E3-8042-7FAC37A512DD}</Project>
       <Name>UWPResourcesGallery.ResourceModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UWPResourcesGallery_TemporaryKey.pfx" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
