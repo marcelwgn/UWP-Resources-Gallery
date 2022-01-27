@@ -13,6 +13,8 @@ namespace UWPResourcesGallery.ResourceModel.WindowsVersionContracts
         public string Version { get; private set; }
         public int VersionInt => int.Parse(Version.Replace(".0",""));
 
+        public bool IsExpanded;
+
         public UniversalPlatformContract(string name, string version)
         {
             Name = name;
