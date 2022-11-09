@@ -13,16 +13,16 @@ jobs:
       inputs:
         versionSpec: 5.8.0
 
-    - task: NuGetCommand@2
-      displayName: Restore packages
-      inputs:
-        restoreSolution: '${{parameters.solution}}'
-
     - task: UseDotNet@2
       inputs:
         packageType: sdk
         version: 7.0.x
         includePreviewVersions: true
+
+    - task: NuGetCommand@2
+      displayName: Restore packages
+      inputs:
+        restoreSolution: '${{parameters.solution}}'
 
     - task: VSBuild@1
       inputs:
