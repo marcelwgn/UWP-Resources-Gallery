@@ -1,3 +1,4 @@
+using Axe.Windows.Automation.Data;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UWPResourcesGallery.AppInteractionTests.Tests
@@ -9,7 +10,7 @@ namespace UWPResourcesGallery.AppInteractionTests.Tests
         public void SessionGetsInitialized()
         {
             Assert.IsNotNull(TestRunInitializer.Session);
-            TestRunInitializer.AccessibilityScanner.Scan();
+            TestRunInitializer.AccessibilityScanner.Scan(new ScanOptions());
         }
 
         [TestMethod]
