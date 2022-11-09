@@ -4,7 +4,7 @@ pr:
  autoCancel: true
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'windows-2019'
 
 stages:
   - stage: Build

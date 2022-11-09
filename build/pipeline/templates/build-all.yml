@@ -18,6 +18,12 @@ jobs:
       inputs:
         restoreSolution: '${{parameters.solution}}'
 
+    - task: UseDotNet@2
+      inputs:
+        packageType: sdk
+        version: 7.0.x
+        includePreviewVersions: true
+
     - task: VSBuild@1
       inputs:
         platform: ${{parameters.buildPlatform}}
