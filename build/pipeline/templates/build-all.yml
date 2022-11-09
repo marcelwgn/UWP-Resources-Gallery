@@ -26,6 +26,7 @@ jobs:
 
     - task: VSBuild@1
       inputs:
+        vsVersion: '17.0'
         platform: ${{parameters.buildPlatform}}
         solution: '${{parameters.solution}}'
         configuration: '${{parameters.buildConfiguration}}'
