@@ -6,6 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     d:DesignHeight="50"
+    Background="{ThemeResource SystemControlPageBackgroundChromeMediumLowBrush}"
     HorizontalAlignment="Stretch"
     d:DesignWidth="200">
 
