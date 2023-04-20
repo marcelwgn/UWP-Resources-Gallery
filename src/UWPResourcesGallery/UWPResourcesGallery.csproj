@@ -26,7 +26,7 @@
     <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
     <AppInstallerUri>\\test\</AppInstallerUri>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
-    <PackageCertificateThumbprint>CBEEC780CB3927E66B21D782973B3EC79545C8E9</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>69D7E202E0D3ECD5BAF48ABE49A870DBCCFE1CF8</PackageCertificateThumbprint>
     <PackageCertificateKeyFile>UWPResourcesGallery_TemporaryKey.pfx</PackageCertificateKeyFile>
     <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
     <AppxSymbolPackageEnabled>True</AppxSymbolPackageEnabled>

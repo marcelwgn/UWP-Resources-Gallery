@@ -13,12 +13,12 @@ namespace UWPResourcesGallery.AppInteractionTests
     {
         private const string WindowsApplicationDriverUrl = "http://127.0.0.1:4723";
 #if DEBUG
-        private const string AppUIBasicAppId = "UWP-Resources-Gallery-Debug_d9qrpd3r6ja58!App";
+        private const string AppUIBasicAppId = "UWP-Resources-Gallery-Debug_mqanpsdp41yw4!App";
 #else
-        private const string AppUIBasicAppId = "UWP-Resources-Gallery_d9qrpd3r6ja58!App";
+        private const string AppUIBasicAppId = "UWP-Resources-Gallery_mqanpsdp41yw4!App";
 #endif
 
-        public static IScanner AccessibilityScanner;
+		public static IScanner AccessibilityScanner;
 
         private static WindowsDriver<WindowsElement> _session;
         public static WindowsDriver<WindowsElement> Session
