@@ -6,7 +6,7 @@ pr:
       include:
       - '*'  # must quote since "*" is a YAML reserved character; we want a string
 pool:
-  vmImage: 'windows-2019'
+  vmImage: 'windows-2022'
 
 stages:
   - stage: Build
