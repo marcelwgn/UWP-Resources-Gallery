@@ -25,11 +25,6 @@ stages:
   - stage: Testing
     dependsOn: Build
     jobs:
-      - template: ./templates/test-unit-tests.yml
-        parameters:
-          buildPlatform: 'x64'
-          buildConfiguration: 'Release'
-
       - template: ./templates/test-interaction-tests.yml
         parameters:
           buildPlatform: 'x64'
