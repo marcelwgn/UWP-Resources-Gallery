@@ -27,6 +27,7 @@
                             <Setter.Value>
                                 <Style TargetType="GridViewItem">
                                     <Setter Property="Margin" Value="5"/>
+                                    <Setter Property="Background" Value="{ThemeResource SystemControlPageBackgroundChromeMediumLowBrush}"/>
                                 </Style>
                             </Setter.Value>
                         </Setter>
@@ -85,6 +86,7 @@
                 <GridView.ItemContainerStyle>
                     <Style TargetType="GridViewItem">
                         <Setter Property="Margin" Value="5,0"/>
+                        <Setter Property="Background" Value="{ThemeResource SystemControlPageBackgroundChromeMediumLowBrush}"/>
                     </Style>
                 </GridView.ItemContainerStyle>
                 <GridView.ItemTemplate>
