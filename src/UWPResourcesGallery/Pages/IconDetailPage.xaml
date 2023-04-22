@@ -142,7 +142,7 @@
                     <StackPanel x:Name="CustomFontIconPanelContent" Orientation="Vertical"
                         HorizontalAlignment="Left" MaxWidth="320">
                         <!--Left pane-->
-                        <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" MaxWidth="350">
+                        <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" MaxWidth="350" Padding="0,4">
                             <common:DualThemePresenter Grid.ColumnSpan="2" Grid.Row="1" 
                                 VerticalAlignment="Top" HorizontalAlignment="Left" ContentOrientation="Horizontal"
                                 Height="150"  Width="320">
