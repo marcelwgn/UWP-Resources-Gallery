@@ -6,7 +6,7 @@
   IgnorableNamespaces="uap mp">
 
   <Identity Name="65f43dea-85d8-45f1-ac64-f863dbd8159c"
-            Publisher="CN=Marcel Wagner"
+            Publisher="CN=chingucoding"
             Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="65f43dea-85d8-45f1-ac64-f863dbd8159c" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
