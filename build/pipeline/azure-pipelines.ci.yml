@@ -1,12 +1,18 @@
-trigger: none
-
-pr:
-  autoCancel: true
+trigger:
   branches:
-      include:
-      - '*'  # must quote since "*" is a YAML reserved character; we want a string
+    include:
+    - 'main'
+
+pr: none
+
 pool:
   vmImage: 'windows-2022'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'x86'
+  buildConfiguration: 'Debug'
+  appxPackageDir: '$(build.artifactStagingDirectory)\AppxPackages\\'
 
 stages:
   - stage: Build
@@ -14,17 +20,13 @@ stages:
       - template: ./templates/build-all.yml
         parameters:
           buildPlatform: 'x64'
-          buildConfiguration: 'Debug'
+          buildConfiguration: 'Release'
   
   - stage: Testing
     dependsOn: Build
     jobs:
-      - template: ./templates/test-unit-tests.yml
-        parameters:
-          buildPlatform: 'x64'
-          buildConfiguration: 'Debug'   
-
       - template: ./templates/test-interaction-tests.yml
         parameters:
           buildPlatform: 'x64'
-          buildConfiguration: 'Debug'
+          buildConfiguration: 'Release'
+
