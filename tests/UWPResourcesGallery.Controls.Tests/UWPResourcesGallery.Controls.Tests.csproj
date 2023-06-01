@@ -156,7 +156,7 @@
       <Version>2.8.4</Version>
     </PackageReference>
     <PackageReference Include="MSTest.TestAdapter">
-      <Version>3.0.3</Version>
+      <Version>3.0.4</Version>
     </PackageReference>
     <PackageReference Include="MSTest.TestFramework">
       <Version>3.0.3</Version>
