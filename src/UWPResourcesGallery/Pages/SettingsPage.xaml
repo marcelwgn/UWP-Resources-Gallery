@@ -50,7 +50,7 @@
                 
                     <Paragraph>
                         The source code of this app is available on
-                        <Hyperlink NavigateUri="https://github.com/chingucoding/UWP-Resources-Gallery">https://github.com/chingucoding/UWP-Resources-Gallery</Hyperlink> .
+                        <Hyperlink NavigateUri="https://github.com/marcelwgn/UWP-Resources-Gallery">https://github.com/marcelwgn/UWP-Resources-Gallery</Hyperlink> .
                     </Paragraph>
 
                     <Paragraph/>

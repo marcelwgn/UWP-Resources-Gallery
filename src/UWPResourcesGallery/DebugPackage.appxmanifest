@@ -8,7 +8,7 @@
 
   <Identity
     Name="UWP-Resources-Gallery-Debug"
-    Publisher="CN=chingucoding"
+    Publisher="CN=Marcel Wagner"
     Version="1.5.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="6245fa1a-e391-413d-9b02-a4ae1f060713" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
